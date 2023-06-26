@@ -1,5 +1,6 @@
 {
-  "name": "nuxt-app",
+  "name": "bigfive",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "build": "nuxt build",
@@ -10,8 +11,21 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
-    "@types/node": "^18",
+    "@nuxtjs/pwa": "^3.3.5",
+    "@types/node": "^20.3.1",
+    "bootstrap": "^5.3.0",
+    "bootstrap-vue": "^2.23.1",
+    "core-js": "^3.31.0",
+    "jquery": "^3.7.0",
+    "netlify-cli": "^15.6.0",
     "nuxt": "^3.6.0",
-    "typescript": "latest"
+    "typescript": "latest",
+    "vue": "^3.3.4"
+  },
+  "dependencies": {
+    "@bootstrap-vue-next/nuxt": "^0.1.2",
+    "@nuxt/image": "^0.7.1",
+    "bootstrap-vue-next": "^0.9.12",
+    "sass": "^1.63.6"
   }
 }

@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="container d-flex align-items-center flex-row justify-content-center vh-100">
 		<nuxt-link to="/agence">
 			<img src="~/assets/img/logo.svg"
 				alt="logo" />
