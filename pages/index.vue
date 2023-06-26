@@ -1,6 +1,9 @@
 <template>
 	<div>
-		<h1>Bienvenue sur mon site !</h1>
+		<nuxt-link to="/agence">
+			<img src="~/assets/img/logo.svg"
+				alt="logo" />
+		</nuxt-link>
 	</div>
 </template>
 
