@@ -1,5 +1,6 @@
 <template>
 	<div>
+
 		<div class="container d-flex align-items-center flex-row justify-content-center vh-80">
 			<nuxt-link to="/agence">
 				<img src="~/assets/img/logo.svg"
@@ -7,7 +8,8 @@
 			</nuxt-link>
 		</div>
 		<div id="menu">
-			<ul>
+			<ul id="lesros"
+				class="d-flex flex-row justify-content-end">
 				<li v-for="link in socialLinks"
 					:key="link.platform">
 					<a :href="link.url"
@@ -23,6 +25,7 @@
 </template>
 
 <script>
+
 import axios from 'axios';
 
 export default {

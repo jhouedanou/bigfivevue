@@ -1,17 +1,17 @@
 [
 	{
 		"platform": "Facebook",
-		"url": "https://www.facebook.com/your-page",
+		"url": "https://www.facebook.com/BigFiveSolutions2018/?locale=fr_FR",
 		"icon": "assets/img/facebook.svg"
 	},
 	{
 		"platform": "LinkedIn",
-		"url": "https://www.linkedin.com/your-page",
+		"url": "https://ci.linkedin.com/in/bigfivesolutions",
 		"icon": "assets/img/linkedin.svg"
 	},
 	{
 		"platform": "Instagram",
-		"url": "https://www.instagram.com/your-page",
+		"url": "https://www.instagram.com/bigfivesolutions/?hl=fr",
 		"icon": "assets/img/instagram.svg"
 	},
 	{
