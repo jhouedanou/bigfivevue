@@ -2,7 +2,7 @@
   "name": "bigfive",
   "version": "1.0.0",
   "engines": {
-    "node": "16.14.0"
+    "node": ">=16.11.0"
   },
   "private": true,
   "scripts": {
@@ -28,6 +28,7 @@
   "dependencies": {
     "@bootstrap-vue-next/nuxt": "^0.1.2",
     "@nuxt/image": "^0.7.1",
+    "@nuxtjs/axios": "^5.13.6",
     "bootstrap-vue-next": "^0.9.12",
     "sass": "^1.63.6"
   }

@@ -1,0 +1,22 @@
+[
+	{
+		"platform": "Facebook",
+		"url": "https://www.facebook.com/your-page",
+		"icon": "assets/img/facebook.svg"
+	},
+	{
+		"platform": "LinkedIn",
+		"url": "https://www.linkedin.com/your-page",
+		"icon": "assets/img/linkedin.svg"
+	},
+	{
+		"platform": "Instagram",
+		"url": "https://www.instagram.com/your-page",
+		"icon": "assets/img/instagram.svg"
+	},
+	{
+		"platform": "Email",
+		"url": "mailto:your-email@example.com",
+		"icon": "assets/img/enveloppe.svg"
+	}
+]

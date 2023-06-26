@@ -47,6 +47,7 @@ export default defineNuxtConfig({
   components: true,
 
   buildModules: [
+    '@nuxtjs/axios',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
