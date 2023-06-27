@@ -31,6 +31,18 @@ function getIconPath(iconPath) {
 	return `/${iconPath}`;
 }
 
+useHead({
+	title: 'Big Five - Agence de communication digitale à Paris , Abidjan et Capetown',
+	meta: [
+		{
+			name: 'description',
+			content: 'My amazing site.'
+		}
+	],
+	bodyAttrs: {
+		class: 'home'
+	}
+})
 
 </script>
 <template>
