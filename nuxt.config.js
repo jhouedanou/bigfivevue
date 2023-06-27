@@ -9,12 +9,25 @@ export default defineNuxtConfig({
         {
           src: "https://cdnjs.cloudflare.com/ajax/libs/masonry/4.0.0/masonry.pkgd.min.js",
           type: "text/javascript"
-        }/* ,
+        },
         {
-          src: "https://use.typekit.net/your-typekit-id.js"
-        } */
+          src: "https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js",
+          type: "text/javascript"
+        },
+        {
+          src: "https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.extensions.min.js",
+          type: "text/javascript"
+        },
+        {
+          src: "https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/vendors/easings.min.js",
+          type: "text/javascript"
+        },
       ],
       link: [
+        {
+          rel: 'stylesheet',
+          href: 'https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.css'
+        },
         {
           rel: 'stylesheet',
           href: 'https://use.typekit.net/lpb4lmp.css'

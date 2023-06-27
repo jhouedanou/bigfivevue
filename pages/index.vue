@@ -8,7 +8,10 @@ const state = reactive({
 	logoAltText: '',
 	sidebarText: '',
 	logo: '',
+	sloganbigfive: '',
+	metadesc: ''
 });
+
 
 async function mounted() {
 	try {
@@ -21,6 +24,8 @@ async function mounted() {
 		state.sidebarText = textesResponse.data.sidebarText;
 		state.logo = graphiques.data.logo;
 		state.sloganbigfive = textesGlobal.data.sloganbigfive;
+
+
 	} catch (error) {
 		console.error(error);
 	}
@@ -31,18 +36,7 @@ function getIconPath(iconPath) {
 	return `/${iconPath}`;
 }
 
-useHead({
-	title: 'Big Five - Agence de communication digitale à Paris , Abidjan et Capetown',
-	meta: [
-		{
-			name: 'description',
-			content: 'My amazing site.'
-		}
-	],
-	bodyAttrs: {
-		class: 'home'
-	}
-})
+
 
 </script>
 <template>
