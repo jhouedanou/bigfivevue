@@ -43,11 +43,11 @@ watchEffect(() => {
     class="container-fluid">
     <div class="row">
       <div id="sidebar"
-        class="col-2">
+        class="col-3">
         <Menu />
-
+        <Logo :id="2" />
       </div>
-      <div class="col-10 primary-bg vh-100">
+      <div class="col-9 primary-bg vh-100">
         <div></div>
       </div>
     </div>

@@ -58,14 +58,7 @@ watchEffect(() => {
 			class="row w-100">
 			<div id="main"
 				class="col-12 d-flex flex-column justify-content-center align-items-center">
-				<div class="container d-flex align-items-center flex-column justify-content-center">
-					<nuxt-link to="/agence"
-						class="d-flex flex-column align-items-center justify-content-center">
-						<img :src="getIconPath(state.logo)"
-							:alt="state.logoAltText" />
-						{{ state.sloganbigfive }}
-					</nuxt-link>
-				</div>
+				<Logo :id="1" />
 				<SocialLinks />
 			</div>
 		</div>

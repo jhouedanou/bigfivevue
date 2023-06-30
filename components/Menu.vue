@@ -4,9 +4,6 @@ import axios from 'axios';
 const state = reactive({
 	menus: [],
 });
-const getIconPath = (iconPath) => {
-	return `/${iconPath}`;
-};
 onMounted(async () => {
 	try {
 		const menuLinks = await axios.get('/assets/json/menu.json');
