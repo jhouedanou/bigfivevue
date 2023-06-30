@@ -1,10 +1,8 @@
-
 <script setup>
-import { reactive } from 'vue';
+import { reactive, onMounted, watchEffect } from 'vue';
 import axios from 'axios';
-
+import SocialLinks from '@/components/SocialLinks.vue';
 const state = reactive({
-	socialLinks: [],
 	logoAltText: '',
 	sidebarText: '',
 	logo: '',
@@ -12,32 +10,46 @@ const state = reactive({
 	metadesc: ''
 });
 
+const getIconPath = (iconPath) => {
+	return `/${iconPath}`;
+};
 
-async function mounted() {
+onMounted(async () => {
 	try {
-		const socialResponse = await axios.get('/assets/json/social.json');
 		const textesResponse = await axios.get('/assets/json/textesHomepage.json');
 		const graphiques = await axios.get('/assets/json/graphiques.json');
 		const textesGlobal = await axios.get('/assets/json/global.json');
-		state.socialLinks = socialResponse.data;
 		state.logoAltText = textesResponse.data.logoAltText;
 		state.sidebarText = textesResponse.data.sidebarText;
 		state.logo = graphiques.data.logo;
 		state.sloganbigfive = textesGlobal.data.sloganbigfive;
-
-
+		state.metadesc = textesGlobal.data.hompage.metadesc;
+		state.homepageTitle = textesGlobal.data.hompage.title;
 	} catch (error) {
 		console.error(error);
 	}
-}
-mounted();
-//function to get the path of the images
-function getIconPath(iconPath) {
-	return `/${iconPath}`;
-}
-
-
-
+});
+watchEffect(() => {
+	useHead({
+		title: state.homepageTitle, // Use new variable
+		meta: [
+			{
+				hid: 'description',
+				name: 'description',
+				content: state.metadesc
+			},
+			// Open Graph Tags
+			{
+				property: 'og:title',
+				content: state.homepageTitle,
+			},
+			{
+				property: 'og:description',
+				content: state.metadesc,
+			},
+		],
+	});
+});
 </script>
 <template>
 	<div id="homewrapper"
@@ -46,7 +58,7 @@ function getIconPath(iconPath) {
 			class="row w-100">
 			<div id="main"
 				class="col-12 d-flex flex-column justify-content-center align-items-center">
-				<div class="container d-flex align-items-center flex-row justify-content-center">
+				<div class="container d-flex align-items-center flex-column justify-content-center">
 					<nuxt-link to="/agence"
 						class="d-flex flex-column align-items-center justify-content-center">
 						<img :src="getIconPath(state.logo)"
@@ -54,25 +66,11 @@ function getIconPath(iconPath) {
 						{{ state.sloganbigfive }}
 					</nuxt-link>
 				</div>
-				<div id="menu">
-					<ul id="lesros"
-						class="d-flex flex-row justify-content-end">
-						<li v-for="link in state.socialLinks"
-							:key="link.platform">
-							<a :href="link.url"
-								target="_blank">
-								<img :src="getIconPath(link.icon)"
-									:alt="link.platform" />
-							</a>
-						</li>
-					</ul>
-				</div>
+				<SocialLinks />
 			</div>
 		</div>
 	</div>
 </template>
-
-
 <style scoped>
 /* Add your styles here */
 </style>

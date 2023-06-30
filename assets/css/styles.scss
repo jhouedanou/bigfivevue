@@ -49,3 +49,11 @@
 		text-decoration: none !important;
 	}
 }
+$primary: #82368c;
+$secondary: #29348b;
+.primary-bg {
+	background: $primary;
+}
+.secondary-bg {
+	background: $secondary;
+}
