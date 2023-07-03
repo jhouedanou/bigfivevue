@@ -46,7 +46,15 @@ export default defineNuxtConfig({
   buildModules: [
     '@nuxtjs/axios',
   ],
-
+  build: {
+    extend(config, { isClient }) {
+      if (isClient) {
+        config.resolve.alias['ScrollMagic'] = 'scrollmagic/scrollmagic/minified/ScrollMagic.min.js';
+        config.resolve.alias['debug.addIndicators'] = 'scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js';
+        config.resolve.alias['gsap'] = 'gsap/dist/gsap.min.js';
+      }
+    },
+  },
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@fullpage/nuxt-fullpage', '@bootstrap-vue-next/nuxt'],
+  modules: ['@bootstrap-vue-next/nuxt'],
 })

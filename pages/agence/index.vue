@@ -17,11 +17,6 @@ onMounted(async () => {
   } catch (error) {
     console.error(error);
   };
-  new fullpage('#fullpage', {
-    licenseKey: 'null',
-    autoScrolling: true,
-    navigation: true
-  });
 });
 watchEffect(() => {
   useHead({
@@ -62,7 +57,7 @@ watchEffect(() => {
             <p v-html="state.agence?.slide1soustitre ?? ''"></p>
             <h3>{{ state.agence?.slide1fincontenu ?? '' }}</h3>
           </div>
-          <div class="section">2</div>
+          <div class="section">s2</div>
           <div class="section">3</div>
           <div class="section">4</div>
           <div class="section">5</div>
