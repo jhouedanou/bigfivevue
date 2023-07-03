@@ -1,6 +1,7 @@
 <script setup>
 import { reactive } from 'vue';
 import axios from 'axios';
+
 const state = reactive({
   metadesc: ''
 });
@@ -12,9 +13,15 @@ onMounted(async () => {
     const textesGlobal = await axios.get('/assets/json/global.json');
     state.metadesc = textesGlobal.data.agence.metadesc;
     state.pageTitle = textesGlobal.data.agence.title;
+    state.agence = textesGlobal.data.agence;
   } catch (error) {
     console.error(error);
-  }
+  };
+  new fullpage('#fullpage', {
+    licenseKey: 'null',
+    autoScrolling: true,
+    navigation: true
+  });
 });
 watchEffect(() => {
   useHead({
@@ -48,7 +55,18 @@ watchEffect(() => {
         <Logo :id="2" />
       </div>
       <div class="col-9 primary-bg vh-100">
-        <div></div>
+        <div id="fullpage">
+          <div id="presentationagence"
+            class="section">
+            <h3>{{ state.agence?.slide1title ?? '' }}</h3>
+            <p v-html="state.agence?.slide1soustitre ?? ''"></p>
+            <h3>{{ state.agence?.slide1fincontenu ?? '' }}</h3>
+          </div>
+          <div class="section">2</div>
+          <div class="section">3</div>
+          <div class="section">4</div>
+          <div class="section">5</div>
+        </div>
       </div>
     </div>
   </div>

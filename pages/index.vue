@@ -59,6 +59,8 @@ watchEffect(() => {
 			<div id="main"
 				class="col-12 d-flex flex-column justify-content-center align-items-center">
 				<Logo :id="1" />
+				<h1> {{ state.sloganbigfive }}
+				</h1>
 				<SocialLinks />
 			</div>
 		</div>

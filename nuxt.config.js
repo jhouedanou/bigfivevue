@@ -48,5 +48,5 @@ export default defineNuxtConfig({
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@bootstrap-vue-next/nuxt'],
+  modules: ['@fullpage/nuxt-fullpage', '@bootstrap-vue-next/nuxt'],
 })
