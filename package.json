@@ -22,18 +22,21 @@
     "jquery": "^3.7.0",
     "netlify-cli": "^15.6.0",
     "nuxt": "^3.6.0",
+    "scrollmagic": "^2.0.8",
     "typescript": "latest",
     "vue": "^3.3.4"
   },
   "dependencies": {
     "@bootstrap-vue-next/nuxt": "^0.1.2",
+    "@fullpage/nuxt-fullpage": "^0.2.5",
     "@nuxt/image": "^0.7.1",
     "@nuxtjs/axios": "^5.13.6",
     "bootstrap-vue-next": "^0.9.12",
     "gsap": "^3.12.2",
     "nuxt-font-loader": "^2.3.1",
     "sass": "^1.63.6",
-    "scrollmagic": "^2.0.8",
+    "swiper": "^10.0.3",
+    "vue-awesome-swiper": "^5.0.1",
     "vue-scrollmagic": "^1.2.0"
   }
 }

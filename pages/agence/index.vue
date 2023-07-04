@@ -1,33 +1,57 @@
 <script setup>
-import { reactive } from 'vue';
+import { ref, reactive, onMounted, watchEffect } from 'vue';
 import axios from 'axios';
+import Swiper from 'swiper/bundle';
+import 'swiper/css/bundle';
 
+const swiperContainer = ref(null);
+let swiperInstance;
 const state = reactive({
-  metadesc: ''
+  metadesc: '',
+  pageTitle: '',
+  agence: null,
 });
-const getIconPath = (iconPath) => {
-  return `/${iconPath}`;
-};
+
 onMounted(async () => {
   try {
     const textesGlobal = await axios.get('/assets/json/global.json');
     state.metadesc = textesGlobal.data.agence.metadesc;
     state.pageTitle = textesGlobal.data.agence.title;
     state.agence = textesGlobal.data.agence;
+
+    swiperInstance = new Swiper(swiperContainer.value, {
+      direction: 'vertical',
+      slidesPerView: 1,
+      spaceBetween: 30,
+      mousewheel: true,
+      keyboard: true,
+      parallax: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      /* navigation: {
+        prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next',
+      },
+            scrollbar: {
+              el: '.swiper-scrollbar',
+            }, */
+    });
   } catch (error) {
     console.error(error);
-  };
+  }
 });
+
 watchEffect(() => {
   useHead({
-    title: state.pageTitle, // Use new variable
+    title: state.pageTitle,
     meta: [
       {
         hid: 'description',
         name: 'description',
-        content: state.metadesc
+        content: state.metadesc,
       },
-      // Open Graph Tags
       {
         property: 'og:title',
         content: state.pageTitle,
@@ -50,21 +74,35 @@ watchEffect(() => {
         <Logo :id="2" />
       </div>
       <div class="col-9 primary-bg vh-100">
-        <div id="fullpage">
-          <div id="presentationagence"
-            class="section">
-            <h3>{{ state.agence?.slide1title ?? '' }}</h3>
-            <p v-html="state.agence?.slide1soustitre ?? ''"></p>
-            <h3>{{ state.agence?.slide1fincontenu ?? '' }}</h3>
+        <div class="swiper"
+          ref="swiperContainer">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <h3>{{ state.agence?.slide1title ?? '' }}</h3>
+              <p v-html="state.agence?.slide1soustitre ?? ''"></p>
+              <h3>{{ state.agence?.slide1fincontenu ?? '' }}</h3>
+            </div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            <!-- Ajoutez d'autres slides ici -->
           </div>
-          <div class="section">s2</div>
-          <div class="section">3</div>
-          <div class="section">4</div>
-          <div class="section">5</div>
+          <div class="swiper-pagination"></div><!-- 
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-scrollbar"></div> -->
         </div>
       </div>
     </div>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.swiper {
+  width: 100%;
+  height: 100vh;
+}
+
+.swiper-slide {
+  /* Styles pour les slides */
+}
+</style>
