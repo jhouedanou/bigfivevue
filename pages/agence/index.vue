@@ -77,12 +77,16 @@ watchEffect(() => {
         <div class="swiper"
           ref="swiperContainer">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <h3>{{ state.agence?.slide1title ?? '' }}</h3>
-              <p v-html="state.agence?.slide1soustitre ?? ''"></p>
-              <h3>{{ state.agence?.slide1fincontenu ?? '' }}</h3>
+            <div id="agence"
+              class="swiper-slide">
+              <!-- presentation de l'agence -->
+              <h3>{{ state.agence?.slide1?.title ?? '' }}</h3>
+              <p v-html="state.agence?.slide1?.soustitre ?? ''"></p>
+              <h3>{{ state.agence?.slide1?.contenu ?? '' }}</h3>
             </div>
-            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">
+
+            </div>
             <div class="swiper-slide">Slide 3</div>
             <!-- Ajoutez d'autres slides ici -->
           </div>
