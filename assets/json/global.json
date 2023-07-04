@@ -10,7 +10,27 @@
 			"title": "Nous sommes Big Five",
 			"soustitre": "Nous sommes une agence <span>360</span> qui accompagne les entreprises dans leur transition digitale.",
 			"contenu": "Notre mission est de leur permettre de marquer leur industrie de manière créative et durable."
-		}
+		},
+		"slide2": [
+			{
+				"id": 1,
+				"img": "assets/img/coeur.svg",
+				"title": "Marketing",
+				"content": "pour la marque de créer l&rsquo;interactivité avec le consommateur, de savoir l&rsquo;écouter, le comprendre, l&rsquo;analyser pour pouvoir le surprendre et le fidéliser. BIG FIVE aide ses clients à devenir leur propre média pour mieux parler au plus grand nombre et toujours recruter plus d’audience"
+			},
+			{
+				"id": 2,
+				"img": "assets/img/digital.svg",
+				"title": "Digital",
+				"content": "La visibilité, la Data collection et l’expression de marque sont des enjeux stratégiques pour les marques. Chacun des outils digitaux que nous concevons pour y répondre bénéficie d’une veille technologique récurrente garantissant les meilleures fonctionnalités. Un écosystème bien pensé et une communication maîtrisée permettent d’asseoir sa réputation et de laisser une empreinte durable."
+			},
+			{
+				"id": 3,
+				"img": "assets/img/communication.svg",
+				"title": "Communication",
+				"content": "L'image de la marque, ses signes de reconnaissance,ses prises de paroles sont autant de points qui construisent sa réputation et sa visibilité dans un environnement de plus en plus concurrentiel. BIG FIVE assure le lien entre ses clients et leurs publics en imaginant des stratégies de communication créatives et ciblées."
+			}
+		]
 	},
 	"menu": {
 		"agence": "Agence",

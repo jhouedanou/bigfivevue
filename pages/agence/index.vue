@@ -77,15 +77,25 @@ watchEffect(() => {
         <div class="swiper"
           ref="swiperContainer">
           <div class="swiper-wrapper">
-            <div id="agence"
+            <div id="slide1"
               class="swiper-slide">
               <!-- presentation de l'agence -->
               <h3>{{ state.agence?.slide1?.title ?? '' }}</h3>
               <p v-html="state.agence?.slide1?.soustitre ?? ''"></p>
               <h3>{{ state.agence?.slide1?.contenu ?? '' }}</h3>
             </div>
-            <div class="swiper-slide">
-
+            <div id="slide2"
+              class="swiper-slide">
+              <div class="row slide-inner">
+                <div class="col-4"
+                  v-for="slide in state.agence?.slide2 ?? []"
+                  :key="slide.id ?? ''">
+                  <img :src="getIconPath(slide.img ?? '')"
+                    alt="">
+                  <h3>{{ slide.title ?? '' }}</h3>
+                  <p v-html="slide.content ?? ''"></p>
+                </div>
+              </div>
             </div>
             <div class="swiper-slide">Slide 3</div>
             <!-- Ajoutez d'autres slides ici -->
