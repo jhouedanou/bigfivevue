@@ -14,7 +14,7 @@ const state = reactive({
 
 onMounted(async () => {
   try {
-    const textesGlobal = await axios.get('/assets/json/global.json');
+    const textesGlobal = await axios.get('/assets/jsons/global.json');
     state.metadesc = textesGlobal.data.agence.metadesc;
     state.pageTitle = textesGlobal.data.agence.title;
     state.agence = textesGlobal.data.agence;

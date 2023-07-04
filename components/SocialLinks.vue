@@ -12,7 +12,7 @@ const getIconPath = (iconPath) => {
 
 onMounted(async () => {
 	try {
-		const socialResponse = await axios.get('/assets/json/social.json');
+		const socialResponse = await axios.get('/assets/jsons/social.json');
 		state.socialLinks = socialResponse.data;
 	} catch (error) {
 		console.error(error);
