@@ -30,7 +30,35 @@
 				"title": "Communication",
 				"content": "L'image de la marque, ses signes de reconnaissance,ses prises de paroles sont autant de points qui construisent sa réputation et sa visibilité dans un environnement de plus en plus concurrentiel. BIG FIVE assure le lien entre ses clients et leurs publics en imaginant des stratégies de communication créatives et ciblées."
 			}
-		]
+		],
+		"slide3": [
+			{
+				"Id": 1,
+				"titre": "Audit",
+				"nom": "Evaluation des enjeux"
+			},
+			{
+				"Id": 2,
+				"titre": "CONSULTING",
+				"nom": "Réflexion stratégique"
+			},
+			{
+				"Id": 3,
+				"titre": "PRODUCTION",
+				"nom": "Des solutions différenciantes"
+			},
+			{
+				"Id": 4,
+				"titre": "ACCOMPAGNEMENT",
+				"nom": "De la mise en place opérationnelle au contrôle des résultats"
+			},
+			{
+				"Id": 5,
+				"titre": "FORMATION",
+				"nom": "Des BOOT CAMPS immersifs et personnalisés"
+			}
+		],
+		"introslide3": "<p>Pour une bonne transition digitale, une phase d’audit permet d’apprécier le besoin selon l’écosystème en place (propriétés, équipe interne, prestataires marché, positionnement, objectifs, concurrence, organisation).</p><p>Ainsi, nous pouvons accompagner l’entreprise selon une méthodologie bien précise basée sur 5 étapes clés complémentaires ou modulables selon le niveau constaté.</p>"
 	},
 	"menu": {
 		"agence": "Agence",

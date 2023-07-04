@@ -5,6 +5,7 @@ import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 
 const swiperContainer = ref(null);
+const slide3Content = ref([]);
 let swiperInstance;
 const state = reactive({
   metadesc: '',
@@ -14,11 +15,13 @@ const state = reactive({
 
 onMounted(async () => {
   try {
+    //recupération des textes de la page
     const textesGlobal = await axios.get('/assets/jsons/global.json');
     state.metadesc = textesGlobal.data.agence.metadesc;
     state.pageTitle = textesGlobal.data.agence.title;
     state.agence = textesGlobal.data.agence;
 
+    // Initialisation du swiper
     swiperInstance = new Swiper(swiperContainer.value, {
       direction: 'vertical',
       slidesPerView: 1,
@@ -29,15 +32,10 @@ onMounted(async () => {
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
-      },
-      /* navigation: {
-        prevEl: '.swiper-button-prev',
-        nextEl: '.swiper-button-next',
-      },
-            scrollbar: {
-              el: '.swiper-scrollbar',
-            }, */
+      }
     });
+
+
   } catch (error) {
     console.error(error);
   }
@@ -97,13 +95,20 @@ watchEffect(() => {
                 </div>
               </div>
             </div>
-            <div class="swiper-slide">Slide 3</div>
-            <!-- Ajoutez d'autres slides ici -->
+            <div id="slide3"
+              class="swiper-slide">
+              <p v-html="state.agence?.introslide3 ?? ''"></p>
+              <div id="swide">
+                <div v-for="item in state.agence?.slide3 ?? []"
+                  :key="item.Id">
+
+                  <h3>{{ item.Id }}. {{ item.titre }}</h3>
+                  <h4>{{ item.nom }}</h4>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="swiper-pagination"></div><!-- 
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-scrollbar"></div> -->
+          <div class="swiper-pagination"></div>
         </div>
       </div>
     </div>
@@ -114,6 +119,10 @@ watchEffect(() => {
 .swiper {
   width: 100%;
   height: 100vh;
+}
+
+.swiper-horizontal {
+  height: auto;
 }
 
 .swiper-slide {
