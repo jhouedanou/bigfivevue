@@ -49,11 +49,12 @@ export default defineNuxtConfig({
   components: true,
   buildModules: [
     '@nuxtjs/axios',
-  ],
+  ]/* ,
   build: {
 
-  },
+  } */
   // Modules: https://go.nuxtjs.dev/config-modules
+  ,
   modules: ['@bootstrap-vue-next/nuxt'
   ],
 })
