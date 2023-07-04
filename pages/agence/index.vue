@@ -3,7 +3,6 @@ import { ref, reactive, onMounted, watchEffect } from 'vue';
 import axios from 'axios';
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
-
 const swiperContainer = ref(null);
 const slide3Content = ref([]);
 let swiperInstance;
@@ -106,6 +105,20 @@ watchEffect(() => {
                   <h4>{{ item.nom }}</h4>
                 </div>
               </div>
+            </div>
+            <div id="slide4"
+              class="swiper-slide">
+              <ul>
+                <li v-for="item in state.agence?.slide4 ?? []"
+                  :key="item.id">
+                  {{ item.content }}
+                </li>
+              </ul>
+            </div>
+            <div id="slide5"
+              class="swiper-slide">
+              <div id="mouf"
+                v-html="state.agence?.slide5 ?? ''"></div>
             </div>
           </div>
           <div class="swiper-pagination"></div>

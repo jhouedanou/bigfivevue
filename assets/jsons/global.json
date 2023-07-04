@@ -58,7 +58,150 @@
 				"nom": "Des BOOT CAMPS immersifs et personnalisés"
 			}
 		],
-		"introslide3": "<p>Pour une bonne transition digitale, une phase d’audit permet d’apprécier le besoin selon l’écosystème en place (propriétés, équipe interne, prestataires marché, positionnement, objectifs, concurrence, organisation).</p><p>Ainsi, nous pouvons accompagner l’entreprise selon une méthodologie bien précise basée sur 5 étapes clés complémentaires ou modulables selon le niveau constaté.</p>"
+		"introslide3": "<p>Pour une bonne transition digitale, une phase d’audit permet d’apprécier le besoin selon l’écosystème en place (propriétés, équipe interne, prestataires marché, positionnement, objectifs, concurrence, organisation).</p><p>Ainsi, nous pouvons accompagner l’entreprise selon une méthodologie bien précise basée sur 5 étapes clés complémentaires ou modulables selon le niveau constaté.</p>",
+		"slide4": [
+			{
+				"id": 1,
+				"content": "AUDIT"
+			},
+			{
+				"id": 2,
+				"content": "FORMATIONS"
+			},
+			{
+				"id": 3,
+				"content": "CAMPAGNE SOCIA MEDIA"
+			},
+			{
+				"id": 4,
+				"content": "IDENTITÉ"
+			},
+			{
+				"id": 5,
+				"content": "PRINT   TVDE MARQUE\n            RADIO  PRESSE"
+			},
+			{
+				"id": 6,
+				"content": "ACTIVATIONS DIGITALES"
+			},
+			{
+				"id": 7,
+				"content": "ÉDITION"
+			},
+			{
+				"id": 8,
+				"content": "PACKAGING AFFICHAGE"
+			},
+			{
+				"id": 9,
+				"content": "M-COMMERCE"
+			},
+			{
+				"id": 10,
+				"content": "COMMUNICATION"
+			},
+			{
+				"id": 11,
+				"content": "SITES INSTITUTIONNELS"
+			},
+			{
+				"id": 12,
+				"content": "APPLICATIONS MOBILES"
+			},
+			{
+				"id": 13,
+				"content": "E-RÉPUTATION"
+			},
+			{
+				"id": 14,
+				"content": "THÉATRALISATION DES VENTES"
+			},
+			{
+				"id": 15,
+				"content": "PUBLICITÉ"
+			},
+			{
+				"id": 16,
+				"content": "CHARTE   GRAPHIQUE"
+			},
+			{
+				"id": 17,
+				"content": "E-COMMERCE"
+			},
+			{
+				"id": 18,
+				"content": "ARCHITECTURE    DE MARQUE"
+			},
+			{
+				"id": 19,
+				"content": "ANALYSE DES TENDANCES"
+			},
+			{
+				"id": 20,
+				"content": "STRATÉGIE"
+			},
+			{
+				"id": 21,
+				"content": "NAMING      DE MARQUE"
+			},
+			{
+				"id": 22,
+				"content": "CONCEPT"
+			},
+			{
+				"id": 23,
+				"content": "DATA       RETAIL\n      COLLECTION"
+			},
+			{
+				"id": 24,
+				"content": "LANCEMENT"
+			},
+			{
+				"id": 25,
+				"content": "SEO/SEA      DE MARQUE"
+			},
+			{
+				"id": 26,
+				"content": "CAMPAGNES 360"
+			},
+			{
+				"id": 27,
+				"content": "COACHING"
+			},
+			{
+				"id": 28,
+				"content": "MARKETING"
+			},
+			{
+				"id": 29,
+				"content": "SOLUTIONS"
+			},
+			{
+				"id": 30,
+				"content": "LOGOTYPES    DIGITALES"
+			},
+			{
+				"id": 31,
+				"content": "PROGRAMME"
+			},
+			{
+				"id": 32,
+				"content": "SITES VITRINE  DE FIDÉLISATION"
+			},
+			{
+				"id": 33,
+				"content": "BRAND    CONTENT"
+			},
+			{
+				"id": 34,
+				"content": "APPLICATIF"
+			},
+			{
+				"id": 35,
+				"content": "SOCIAL MÉDIA"
+			}
+		],
+		"slide5": "NOUS SOMMES UNE ÉQUIPE<br>MULTICULTURELLE,<br>PLURIDISCIPLINAIRE<br>ET EXPÉRIMENTÉE."
 	},
 	"menu": {
 		"agence": "Agence",
