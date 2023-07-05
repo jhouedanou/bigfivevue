@@ -1,4 +1,4 @@
-{
+const client_manifest = {
   "_Logo.92b78933.js": {
     "resourceType": "script",
     "module": true,
@@ -151,4 +151,7 @@
     "isDynamicEntry": true,
     "src": "pages/realisations/solibra/index.vue"
   }
-}
+};
+
+export { client_manifest as default };
+//# sourceMappingURL=client.manifest.mjs.map
