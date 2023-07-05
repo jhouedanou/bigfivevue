@@ -52,6 +52,9 @@
       ],
       "public/*": [
         "C:/Users/ASUS ROG/Documents/bigfivevue/public/*"
+      ],
+      "#content/server": [
+        "C:/Users/ASUS ROG/Documents/bigfivevue/node_modules/@nuxt/content/dist/runtime/server/index"
       ]
     }
   },

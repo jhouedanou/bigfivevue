@@ -57,3 +57,8 @@ $secondary: #29348b;
 .secondary-bg {
 	background: $secondary;
 }
+#header-alt {
+	position: fixed;
+	z-index: 100;
+	top: 0;
+}
