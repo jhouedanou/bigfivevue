@@ -1,0 +1,1 @@
+import"./axios.8f19e258.js";import{c as e,o as t,a as o}from"./entry.11c9d49a.js";const a=o("h1",null,"Réalisations Page",-1),s=[a],l={__name:"index",setup(n){return(c,_)=>(t(),e("div",null,s))}};export{l as default};

@@ -6,18 +6,18 @@ const state = reactive({
 	socialLinks: [],
 });
 
-const getIconPath = (iconPath) => {
-	return `/${iconPath}`;
-};
 
 onMounted(async () => {
 	try {
-		const socialResponse = await axios.get('/ocial.json');
+		const socialResponse = await axios.get('/jsons/social.json');
 		state.socialLinks = socialResponse.data;
 	} catch (error) {
 		console.error(error);
 	}
 });
+
+
+
 </script>
 
 
@@ -29,7 +29,7 @@ onMounted(async () => {
 				:key="link.id">
 				<a :href="link.url"
 					target="_blank">
-					<img :src="getIconPath(link.icon)"
+					<img :src="link.icon"
 						:alt="link.platform" />
 				</a>
 			</li>

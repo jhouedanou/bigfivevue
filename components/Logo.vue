@@ -15,7 +15,7 @@ const state = reactive({
 
 onMounted(async () => {
 	try {
-		const response = await axios.get('/graphiques.json');
+		const response = await axios.get('/jsons/graphiques.json');
 		state.logo = response.data;
 	} catch (error) {
 		console.log(error);
