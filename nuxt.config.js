@@ -1,16 +1,16 @@
 export default defineNuxtConfig({
   target: 'static',
   devtools: { enabled: true },
-  nitro: {
-    output: {
-      dir: 'dist',
-      publicPath: '/',
-      clean: true,
-      html: {
-
+  /*   nitro: {
+      output: {
+        dir: 'dist',
+        publicPath: '/',
+        clean: true,
+        html: {
+  
+        }
       }
-    }
-  },
+    }, */
   app: {
     head: {
       charset: 'utf-8',
@@ -59,12 +59,12 @@ export default defineNuxtConfig({
   components: true,
   buildModules: [
     '@nuxtjs/axios',
-  ]/* ,
-  build: {
-
-  } */
-  // Modules: https://go.nuxtjs.dev/config-modules
-  ,
+  ],
+  // Axios module configuration: https://go.nuxtjs.dev/config-axios
+  axios: {
+    // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
+    baseURL: '/',
+  },
   modules: ['@bootstrap-vue-next/nuxt'
   ],
 })

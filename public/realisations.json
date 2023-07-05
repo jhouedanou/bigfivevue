@@ -1,0 +1,46 @@
+[
+	{
+		"id": 1,
+		"client": "Client 1",
+		"accroche": "Accroche 1",
+		"texte": "Texte 1",
+		"imgalaune": "path/to/image1.jpg",
+		"galerie": [
+			"path/to/image1.jpg",
+			"path/to/image2.jpg"
+		]
+	},
+	{
+		"id": 2,
+		"client": "Client 2",
+		"accroche": "Accroche 2",
+		"texte": "Texte 2",
+		"imgalaune": "path/to/image3.jpg",
+		"galerie": [
+			"path/to/image3.jpg",
+			"path/to/image4.jpg"
+		]
+	},
+	{
+		"id": 3,
+		"client": "Client 3",
+		"accroche": "Accroche 3",
+		"texte": "Texte 3",
+		"imgalaune": "path/to/image5.jpg",
+		"galerie": [
+			"path/to/image5.jpg",
+			"path/to/image6.jpg"
+		]
+	},
+	{
+		"id": 4,
+		"client": "Client 4",
+		"accroche": "Accroche 4",
+		"texte": "Texte 4",
+		"imgalaune": "path/to/image7.jpg",
+		"galerie": [
+			"path/to/image7.jpg",
+			"path/to/image8.jpg"
+		]
+	}
+]

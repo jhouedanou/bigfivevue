@@ -16,9 +16,9 @@ const getIconPath = (iconPath) => {
 
 onMounted(async () => {
 	try {
-		const textesResponse = await axios.get('/assets/jsons/textesHomepage.json');
-		const graphiques = await axios.get('/assets/jsons/graphiques.json');
-		const textesGlobal = await axios.get('/assets/jsons/global.json');
+		const textesResponse = await axios.get('/textesHomepage.json');
+		const graphiques = await axios.get('/graphiques.json');
+		const textesGlobal = await axios.get('/global.json');
 		state.logoAltText = textesResponse.data.logoAltText;
 		state.sidebarText = textesResponse.data.sidebarText;
 		state.logo = graphiques.data.logo;

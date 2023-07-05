@@ -1,0 +1,14 @@
+[
+	{
+		"id": 1,
+		"src": "assets/img/logo.svg"
+	},
+	{
+		"id": 2,
+		"src": "assets/img/logo-mini.svg"
+	},
+	{
+		"id": 3,
+		"src": "assets/img/logo-alt.svg"
+	}
+]

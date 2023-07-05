@@ -15,7 +15,7 @@ const state = reactive({
 onMounted(async () => {
   try {
     //recupération des textes de la page
-    const textesGlobal = await axios.get('/assets/jsons/global.json');
+    const textesGlobal = await axios.get('/global.json');
     state.metadesc = textesGlobal.data.agence.metadesc;
     state.pageTitle = textesGlobal.data.agence.title;
     state.agence = textesGlobal.data.agence;
