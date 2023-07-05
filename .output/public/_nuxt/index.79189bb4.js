@@ -1,1 +1,0 @@
-import{_ as e,c as t,o,a}from"./entry.229a0fc3.js";const n={name:"ContactPage"},c=a("h1",null,"Contact Page",-1),s=[c];function r(_,d,i,l,p,f){return o(),t("div",null,s)}const m=e(n,[["render",r]]);export{m as default};
