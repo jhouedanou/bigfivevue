@@ -1,0 +1,64 @@
+{
+  "compilerOptions": {
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "jsx": "preserve",
+    "jsxFactory": "h",
+    "jsxFragmentFactory": "Fragment",
+    "paths": {
+      "#imports": [
+        "C:/Users/ASUS ROG/Documents/bigfivevue/.nuxt/types/nitro-imports"
+      ],
+      "#paths": [
+        "C:/Users/ASUS ROG/Documents/bigfivevue/node_modules/nuxt/dist/core/runtime/nitro/paths"
+      ],
+      "~": [
+        "C:/Users/ASUS ROG/Documents/bigfivevue"
+      ],
+      "~/*": [
+        "C:/Users/ASUS ROG/Documents/bigfivevue/*"
+      ],
+      "@": [
+        "C:/Users/ASUS ROG/Documents/bigfivevue"
+      ],
+      "@/*": [
+        "C:/Users/ASUS ROG/Documents/bigfivevue/*"
+      ],
+      "~~": [
+        "C:/Users/ASUS ROG/Documents/bigfivevue"
+      ],
+      "~~/*": [
+        "C:/Users/ASUS ROG/Documents/bigfivevue/*"
+      ],
+      "@@": [
+        "C:/Users/ASUS ROG/Documents/bigfivevue"
+      ],
+      "@@/*": [
+        "C:/Users/ASUS ROG/Documents/bigfivevue/*"
+      ],
+      "assets": [
+        "C:/Users/ASUS ROG/Documents/bigfivevue/assets"
+      ],
+      "assets/*": [
+        "C:/Users/ASUS ROG/Documents/bigfivevue/assets/*"
+      ],
+      "public": [
+        "C:/Users/ASUS ROG/Documents/bigfivevue/public"
+      ],
+      "public/*": [
+        "C:/Users/ASUS ROG/Documents/bigfivevue/public/*"
+      ]
+    }
+  },
+  "include": [
+    "C:/Users/ASUS ROG/Documents/bigfivevue/.nuxt/types/nitro-nuxt.d.ts",
+    "./types/nitro.d.ts",
+    "../**/*",
+    "../server/**/*"
+  ]
+}
