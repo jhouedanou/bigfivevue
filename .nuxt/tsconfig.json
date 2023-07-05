@@ -85,6 +85,6 @@
   ],
   "exclude": [
     "../dist",
-    "../.output"
+    "../server/dist"
   ]
 }
