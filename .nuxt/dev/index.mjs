@@ -281,7 +281,12 @@ const _inlineRuntimeConfig = {
     "experimental": {
       "clientDB": false,
       "stripQueryParameters": false
-    }
+    },
+    "dir": "content",
+    "fullTextSearchFields": [
+      "title",
+      "description"
+    ]
   }
 };
 const ENV_PREFIX = "NITRO_";

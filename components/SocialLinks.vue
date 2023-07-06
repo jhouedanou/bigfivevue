@@ -9,7 +9,7 @@ const state = reactive({
 
 onMounted(async () => {
 	try {
-		const socialResponse = await axios.get('/jsons/social.json');
+		const socialResponse = await axios.get('/api/social.json');
 		state.socialLinks = socialResponse.data;
 	} catch (error) {
 		console.error(error);

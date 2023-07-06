@@ -134,6 +134,10 @@ declare module 'nuxt/schema' {
 
          stripQueryParameters: boolean,
       },
+
+      dir: string,
+
+      fullTextSearchFields: Array<string>,
    },
   }
   interface PublicRuntimeConfig {

@@ -10,15 +10,12 @@ const state = reactive({
 	metadesc: ''
 });
 
-const getIconPath = (iconPath) => {
-	return `/${iconPath}`;
-};
 
 onMounted(async () => {
 	try {
-		const textesResponse = await axios.get('/jsons/textesHomepage.json');
-		const graphiques = await axios.get('/jsons/graphiques.json');
-		const textesGlobal = await axios.get('/jsons/global.json');
+		const textesResponse = await axios.get('/api/textesHomepage.json');
+		const graphiques = await axios.get('/api/graphiques.json');
+		const textesGlobal = await axios.get('/api/global.json');
 		state.logoAltText = textesResponse.data.logoAltText;
 		state.sidebarText = textesResponse.data.sidebarText;
 		state.logo = graphiques.data.logo;

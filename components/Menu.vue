@@ -6,7 +6,7 @@ const state = reactive({
 });
 onMounted(async () => {
 	try {
-		const menuLinks = await axios.get('/jsons/menu.json');
+		const menuLinks = await axios.get('/api/menu.json');
 		state.menuLinks = menuLinks.data;
 	} catch (error) {
 		console.log(error);

@@ -1,4 +1,4 @@
-globalThis._importMeta_=globalThis._importMeta_||{url:"file:///_entry.js",env:process.env};import 'node-fetch-native/polyfill';
+globalThis._importMeta_ = globalThis._importMeta_ || { url: "file:///_entry.js", env: process.env }; import 'node-fetch-native/polyfill';
 import { Server as Server$1 } from 'node:http';
 import { Server } from 'node:https';
 import destr from 'destr';
@@ -125,15 +125,15 @@ const assets$1 = {
   getKeys() {
     return Promise.resolve(Object.keys(_assets))
   },
-  hasItem (id) {
+  hasItem(id) {
     id = normalizeKey(id);
     return Promise.resolve(id in _assets)
   },
-  getItem (id) {
+  getItem(id) {
     id = normalizeKey(id);
     return Promise.resolve(_assets[id] ? _assets[id].import() : null)
   },
-  getMeta (id) {
+  getMeta(id) {
     id = normalizeKey(id);
     return Promise.resolve(_assets[id] ? _assets[id].meta : {})
   }
@@ -444,7 +444,7 @@ function getRouteRulesForPath(path) {
 }
 
 const plugins = [
-  
+
 ];
 
 function hasReqHeader(event, name, includes) {
@@ -688,47 +688,47 @@ const assets = {
     "size": 2051,
     "path": "../public/img/logo.svg"
   },
-  "/jsons/global.json": {
+  "/api/global.json": {
     "type": "application/json",
     "etag": "\"19e0-P1eetVffL0AU3CQBgDLCa9mPD2I\"",
     "mtime": "2023-07-05T15:29:08.447Z",
     "size": 6624,
-    "path": "../public/jsons/global.json"
+    "path": "../public/api/global.json"
   },
-  "/jsons/graphiques.json": {
+  "/api/graphiques.json": {
     "type": "application/json",
     "etag": "\"99-JdyfH600iblvL7Sl7IvSax8NuYo\"",
     "mtime": "2023-07-05T15:22:44.603Z",
     "size": 153,
-    "path": "../public/jsons/graphiques.json"
+    "path": "../public/api/graphiques.json"
   },
-  "/jsons/menu.json": {
+  "/api/menu.json": {
     "type": "application/json",
     "etag": "\"c6-h51Bq5GfOXt8Xp+Qn6EBngFdB7s\"",
     "mtime": "2023-06-30T13:11:28.322Z",
     "size": 198,
-    "path": "../public/jsons/menu.json"
+    "path": "../public/api/menu.json"
   },
-  "/jsons/realisations.json": {
+  "/api/realisations.json": {
     "type": "application/json",
     "etag": "\"343-jSipn9H7TNIL6BHCIS9WmLmWyeo\"",
     "mtime": "2023-07-03T15:52:01.768Z",
     "size": 835,
-    "path": "../public/jsons/realisations.json"
+    "path": "../public/api/realisations.json"
   },
-  "/jsons/social.json": {
+  "/api/social.json": {
     "type": "application/json",
     "etag": "\"212-pN9hyEXzkYO7fXzPlXhlLv6F2UQ\"",
     "mtime": "2023-07-05T15:44:14.875Z",
     "size": 530,
-    "path": "../public/jsons/social.json"
+    "path": "../public/api/social.json"
   },
-  "/jsons/textesHomepage.json": {
+  "/api/textesHomepage.json": {
     "type": "application/json",
     "etag": "\"5a-fWC+FJSPSXDpde/WfhV/iESdDng\"",
     "mtime": "2023-06-27T10:59:12.878Z",
     "size": 90,
-    "path": "../public/jsons/textesHomepage.json"
+    "path": "../public/api/textesHomepage.json"
   },
   "/types/app.config.d.ts": {
     "type": "video/mp2t",
@@ -998,12 +998,12 @@ const assets = {
   }
 };
 
-function readAsset (id) {
+function readAsset(id) {
   const serverDir = dirname(fileURLToPath(globalThis._importMeta_.url));
   return promises.readFile(resolve(serverDir, assets[id].path))
 }
 
-const publicAssetBases = {"/_nuxt":{"maxAge":31536000}};
+const publicAssetBases = { "/_nuxt": { "maxAge": 31536000 } };
 
 function isPublicAssetURL(id = '') {
   if (assets[id]) {
@@ -1015,7 +1015,7 @@ function isPublicAssetURL(id = '') {
   return false
 }
 
-function getAsset (id) {
+function getAsset(id) {
   return assets[id]
 }
 

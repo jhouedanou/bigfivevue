@@ -66,7 +66,19 @@ export default defineNuxtConfig({
     baseURL: '/',
   },
   modules: [
-    '@bootstrap-vue-next/nuxt',
-    '@nuxt/content'
+    '@bootstrap-vue-next/nuxt', '@nuxt/content'
   ],
+  content: {
+    dir: 'content', // Path to the "content" directory
+    fullTextSearchFields: ['title', 'description'] // Optional: Specify fields for full-text search
+  },
+  router: {
+    extendRoutes(routes, resolve) {
+      routes.push({
+        name: 'realisation',
+        path: '/realisations/:slug',
+        component: resolve(__dirname, 'pages/realisations/_realisation.vue')
+      })
+    }
+  }
 })
