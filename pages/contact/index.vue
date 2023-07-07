@@ -1,11 +1,14 @@
 <template>
   <div>
-    <div id="contacts">
+    <div id="contacts"
+      class="container">
       <div class="row">
-        <div class="col-4">h2</div>
-        <div class="col-4">h2</div>
-        <div class="col-4">h2</div>
-        <div class="col-4">h2</div>
+        <div class="col-3"
+          v-for="texte in state.textespageContacts"
+          :key="state.textespageContacts.id">
+          <h2>{{ texte.titre }}</h2>
+          <h4>{{ texte.adresse }}</h4>
+        </div>
       </div>
     </div>
     <form action="https://public.herotofu.com/v1/1c419dc0-1cd8-11ee-b0a7-9f000c4c1540"
@@ -41,6 +44,21 @@
 </template>
 
 <script setup>
+import { ref, onMounted } from 'vue'
+import axios from 'axios';
+
+const state = reactive({
+  textespageContact: null,
+  formFields: null
+})
+const route = useRoute()
+
+onMounted(async () => {
+  const response = await axios.get('/api/contact.json');
+  state.textespageContacts = response.data.contactData;
+  state.formFields = response.data.formFields;
+  console.log(state.textespageContacts);
+})
 </script>
 
 <style scoped></style>
