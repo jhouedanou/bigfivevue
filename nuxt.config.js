@@ -59,6 +59,7 @@ export default defineNuxtConfig({
   components: true,
   buildModules: [
     '@nuxtjs/axios',
+    '@nuxtjs/composition-api/module'
   ],
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
@@ -72,13 +73,13 @@ export default defineNuxtConfig({
     dir: 'content', // Path to the "content" directory
     fullTextSearchFields: ['title', 'description'] // Optional: Specify fields for full-text search
   },
+  // In your nuxt.config.js file
   router: {
-    extendRoutes(routes, resolve) {
-      routes.push({
-        name: 'realisation',
-        path: '/realisations/:slug',
-        component: resolve(__dirname, 'pages/realisations/_realisation.vue')
-      })
-    }
-  }
+    routes: [
+      {
+        path: '/realisations/:id',
+        component: '~/pages/realisations.vue',
+      },
+    ],
+  },
 })

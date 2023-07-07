@@ -20,6 +20,7 @@ const realisations = ref([])
 onMounted(async () => {
 	const response = await axios.get('/api/realisations.json');
 	realisations.value = response.data;
+	console.log(realisations.value);
 })
 
 </script>
