@@ -15,10 +15,10 @@ const state = reactive({
 onMounted(async () => {
   try {
     //recupération des textes de la page
-    const textesGlobal = await axios.get('/api/global.json');
-    state.metadesc = textesGlobal.data.agence.metadesc;
-    state.pageTitle = textesGlobal.data.agence.title;
-    state.agence = textesGlobal.data.agence;
+    const textesGlobal = await axios.get('/api/agence.json');
+    state.metadesc = textesGlobal.data.metadesc;
+    state.pageTitle = textesGlobal.data.title;
+    state.agence = textesGlobal.data;
 
     // Initialisation du swiper
     swiperInstance = new Swiper(swiperContainer.value, {

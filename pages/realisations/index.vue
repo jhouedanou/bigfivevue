@@ -1,3 +1,17 @@
+
+<script setup>
+import { ref, onMounted } from 'vue'
+import axios from 'axios';
+
+const realisations = ref([])
+
+onMounted(async () => {
+	const response = await axios.get('/api/realisations.json');
+	realisations.value = response.data.realisationsData;
+})
+
+</script>
+
 <template>
 	<div>
 		<h1>Realisations</h1>
@@ -10,17 +24,3 @@
 	</div>
 </template>
 
-
-<script setup="">
-import { ref, onMounted } from 'vue'
-import axios from 'axios';
-
-const realisations = ref([])
-
-onMounted(async () => {
-	const response = await axios.get('/api/realisations.json');
-	realisations.value = response.data;
-	console.log(realisations.value);
-})
-
-</script>

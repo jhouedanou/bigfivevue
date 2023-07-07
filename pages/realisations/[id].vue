@@ -7,7 +7,7 @@ const route = useRoute()
 
 onMounted(async () => {
 	const response = await axios.get('/api/realisations.json');
-	realisations.value = response.data;
+	realisations.value = response.data.realisationsData;
 })
 const matchingRealisation = computed(() => {
 	const filterValue = route.fullPath.substring('/realisations/'.length)

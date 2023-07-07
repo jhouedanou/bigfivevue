@@ -1,0 +1,22 @@
+[
+	{
+		"id": 1,
+		"titre": "Talents",
+		"adresse": "jobs@bigfive.com"
+	},
+	{
+		"id": 2,
+		"titre": "Clients & partenaires",
+		"adresse": "contact@bigfive.com"
+	},
+	{
+		"id": 3,
+		"titre": "Paris",
+		"adresse": "+33 1 75 51 70 40"
+	},
+	{
+		"id": 4,
+		"titre": "Abidjan",
+		"adresse": "+225 27 21 59 42 28"
+	}
+]
