@@ -1,9 +1,6 @@
 {
   "name": "bigfive",
   "version": "1.0.0",
-  "engines": {
-    "node": ">=16.11.0"
-  },
   "private": true,
   "scripts": {
     "build": "nuxt build",
