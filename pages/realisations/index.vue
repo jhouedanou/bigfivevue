@@ -6,8 +6,8 @@ import axios from 'axios';
 const realisations = ref([])
 
 onMounted(async () => {
-	const response = await axios.get('/api/realisations.json');
-	realisations.value = response.data.realisationsData;
+	const response = await axios.get('/api/clients.json');
+	realisations.value = response.data;
 })
 
 </script>
