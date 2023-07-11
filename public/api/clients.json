@@ -1,15 +1,21 @@
 [
     {
         "client": "SOLIBRA  ",
-        "titre": "UNE CAMPAGNE AU TOP",
+        "titre": "AU PLUS PROCHE<br>DE CONSOMMATEURS",
         "pays": "Côte d'Ivoire",
-        "lien": "stave",
-        "image": "images/caseStudies/stave/stave.jpg",
+        "lien": "solibra",
+        "image": "/img/socity/index.jpg",
+        "banniere": "/img/socity/banniere.jpg",
         "galerie": [
-            "images/caseStudies/stave/groupestave.png"
+            "/img/socity/01.jpg",
+            "/img/socity/02.jpg",
+            "/img/socity/03.jpg",
+            "/img/socity/04.jpg",
+            "/img/socity/05.jpg",
+            "/img/socity/06.jpg",
+            "/img/socity/07.jpg"
         ],
-        "banniere": "images/caseStudies/stave/banniere.jpg",
-        "contenu": "<h3>Le challenge TOP PÂTISSIER fait rayonner Saint-Avé lors d’une campagne de recrutement sur les réseaux sociaux.</h3><p>Destinée aux amateurs de pâtisserie, la compétition consistait à reproduire chaque semaine, pendant 8 semaines, une recette de pâtisserie à base de margarine Saint-Avé. Les participants devaient ensuite soumettre les photos de leurs créations aux votes des internautes sur Facebook. 7 lauréats se sont vus qualifiés pour la grande finale et ont remporté chacun un équipement de pâtisserie.</p><p>La grande gagnante élue “TOP PÂTISSIER Saint-Avé 2020” a remporté une semaine de formation en pâtisserie et un kit complet de matériel de cuisine.</p><p>123 Participant(e)s</p><p>57.853 Votants</p><p>+14 567 nouveaux abonnées recrutés</p><p>665 121 personnes touchées par les publications</p><p>127 551 interactions avec les publications</p><p>19,2% de taux d'engagement</p>",
+        "description": "<h3>SOLIBRA, premier brasseur de Côte d’Ivoire, lance SoCITY, l’application 100% gratuite qui met Abidjan dans votre poche !</h3><p>Au cœur d’un marché ultra concurrentiel, il fallait à SOLIBRA trouver de quoi appuyer son image de marque moderne, mieux appréhender les habitudes de ses consommateurs et renforcer le lien avec son réseau de partenaires.</p><p>Pour aider SOLIBRA à atteindre ces objectifs, nous avons imaginé et développé l’application SoCITY. L’application, pionnière dans son genre, propose un annuaire géolocalisé d’Abidjan répertoriant ses adresses incontournables. Les établissements inscrits peuvent alimenter eux-mêmes leurs contenus et proposer des bons plans, des promotions ou encore communiquer sur leurs évènements. Les utilisateurs quant à eux reçoivent directement des notifications de la marque et de ses partenaires.</p><img src='/img/socity/illu.jpg'><p></p><iframe width='560' height='415' src='https://www.youtube.com/embed/kaskETo_Ap4' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowfullscreen></iframe>",
         "video": "",
         "alaune": "oui",
         "dansleslider": "non"

@@ -20,14 +20,6 @@ export default defineNuxtConfig({
           src: "https://cdnjs.cloudflare.com/ajax/libs/masonry/4.0.0/masonry.pkgd.min.js",
           type: "text/javascript"
         },
-        /*  {
-           src: "https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js",
-           type: "text/javascript"
-         },
-         {
-           src: "https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.extensions.min.js",
-           type: "text/javascript"
-         }, */
         {
           src: "https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/vendors/easings.min.js",
           type: "text/javascript"
@@ -41,12 +33,7 @@ export default defineNuxtConfig({
         {
           rel: 'stylesheet',
           href: 'https://use.typekit.net/lpb4lmp.css'
-        }/* ,
-        { src: '/fullpage.js/dist/fullpage.min.js' },
-        { src: '/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js' },
-        { src: '/scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js' },
-        { src: '/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js' },
- */
+        }
       ]
     }
   },
@@ -54,7 +41,10 @@ export default defineNuxtConfig({
     '@/assets/css/styles.scss',
     'bootstrap/dist/css/bootstrap.min.css'
   ],
-  plugins: [],
+  plugins: [
+    //{ src: '~/plugins/vue-masonry-wall.js', mode: 'client' },
+
+  ],
 
   components: true,
   buildModules: [
