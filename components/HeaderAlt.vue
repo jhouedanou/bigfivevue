@@ -7,7 +7,7 @@
 		class="container-fluid fixed">
 		<div class="row">
 			<div class="col-8">
-				<Logo :id="2" />
+				<Logo :id="3" />
 			</div>
 			<div class="col-4 d-flex justify-content-end">
 				<Menu />

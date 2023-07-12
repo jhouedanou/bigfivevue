@@ -3,6 +3,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     'Footer': typeof import("../components/Footer.vue")['default']
     'Header': typeof import("../components/Header.vue")['default']
+    'HeaderAlt': typeof import("../components/HeaderAlt.vue")['default']
     'Logo': typeof import("../components/Logo.vue")['default']
     'Menu': typeof import("../components/Menu.vue")['default']
     'Realisations': typeof import("../components/Realisations.vue")['default']
@@ -163,6 +164,7 @@ declare module 'vue' {
     'Body': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
     'LazyFooter': typeof import("../components/Footer.vue")['default']
     'LazyHeader': typeof import("../components/Header.vue")['default']
+    'LazyHeaderAlt': typeof import("../components/HeaderAlt.vue")['default']
     'LazyLogo': typeof import("../components/Logo.vue")['default']
     'LazyMenu': typeof import("../components/Menu.vue")['default']
     'LazyRealisations': typeof import("../components/Realisations.vue")['default']
@@ -326,6 +328,7 @@ declare module 'vue' {
 
 export const Footer: typeof import("../components/Footer.vue")['default']
 export const Header: typeof import("../components/Header.vue")['default']
+export const HeaderAlt: typeof import("../components/HeaderAlt.vue")['default']
 export const Logo: typeof import("../components/Logo.vue")['default']
 export const Menu: typeof import("../components/Menu.vue")['default']
 export const Realisations: typeof import("../components/Realisations.vue")['default']
@@ -486,6 +489,7 @@ export const Html: typeof import("../node_modules/nuxt/dist/head/runtime/compone
 export const Body: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
 export const LazyFooter: typeof import("../components/Footer.vue")['default']
 export const LazyHeader: typeof import("../components/Header.vue")['default']
+export const LazyHeaderAlt: typeof import("../components/HeaderAlt.vue")['default']
 export const LazyLogo: typeof import("../components/Logo.vue")['default']
 export const LazyMenu: typeof import("../components/Menu.vue")['default']
 export const LazyRealisations: typeof import("../components/Realisations.vue")['default']

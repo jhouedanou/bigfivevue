@@ -2,10 +2,12 @@
 import { ref, reactive, onMounted, watchEffect } from 'vue';
 import axios from 'axios';
 import Swiper from 'swiper/bundle';
+import ContenuAltLayout from '@/layouts/contenuAlt.vue';
 import 'swiper/css/bundle';
 const swiperContainer = ref(null);
 let swiperInstance;
 const realisations = ref([]);
+
 onMounted(async () => {
 	const response = await axios.get('/api/clients.json');
 	realisations.value = response.data;
@@ -22,32 +24,35 @@ onMounted(async () => {
 		}
 	});
 })
+
 </script>
 <template>
-	<div id="realisationList">
-		<div class="swiper"
-			ref="swiperContainer">
-			<div class="swiper-wrapper">
-				<div :id="`slide-${realisation.id}`"
-					v-for="realisation in realisations"
-					:key="realisation.lien"
-					class="swiper-slide">
-					<div class="realisationwrapper">
-						<div class="cartouche">
-							<span>{{ realisation.client }}</span>
-							<h3 v-html="realisation.titre"></h3>
-							<NuxtLink :to="`/realisations/${realisation.lien}`"
-								class="btn">Voir plus</NuxtLink>
+	<ContenuAltLayout>
+		<div id="realisationList">
+			<div class="swiper"
+				ref="swiperContainer">
+				<div class="swiper-wrapper">
+					<div :id="`slide-${realisation.id}`"
+						v-for="realisation in realisations"
+						:key="realisation.lien"
+						class="swiper-slide">
+						<div class="realisationwrapper">
+							<div class="cartouche">
+								<span>{{ realisation.client }}</span>
+								<h3 v-html="realisation.titre"></h3>
+								<NuxtLink :to="`/realisations/${realisation.lien}`"
+									class="btn">Voir plus</NuxtLink>
+							</div>
+							<img :src="realisation.image"
+								alt=""
+								class="img-fluid">
 						</div>
-						<img :src="realisation.image"
-							alt=""
-							class="img-fluid">
 					</div>
 				</div>
+				<div class="swiper-pagination"></div>
 			</div>
-			<div class="swiper-pagination"></div>
 		</div>
-	</div>
+	</ContenuAltLayout>
 </template>
 
 <style lang="scss" scoped>
