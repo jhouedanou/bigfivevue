@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "client": "SOLIBRA  ",
+        "titre": "AU PLUS PROCHE<br>DE CONSOMMATEURS",
+        "pays": "Côte d'Ivoire",
+        "lien": "solibra",
+        "image": "/img/socity/index.jpg",
+        "banniere": "/img/socity/banniere.jpg",
+        "galerie": [
+            "/img/socity/01.jpg",
+            "/img/socity/02.jpg",
+            "/img/socity/03.jpg",
+            "/img/socity/04.jpg",
+            "/img/socity/05.jpg",
+            "/img/socity/06.jpg",
+            "/img/socity/07.jpg"
+        ],
+        "description": "<h3>SOLIBRA, premier brasseur de Côte d’Ivoire, lance SoCITY, l’application 100% gratuite qui met Abidjan dans votre poche !</h3><p>Au cœur d’un marché ultra concurrentiel, il fallait à SOLIBRA trouver de quoi appuyer son image de marque moderne, mieux appréhender les habitudes de ses consommateurs et renforcer le lien avec son réseau de partenaires.</p><p>Pour aider SOLIBRA à atteindre ces objectifs, nous avons imaginé et développé l’application SoCITY. L’application, pionnière dans son genre, propose un annuaire géolocalisé d’Abidjan répertoriant ses adresses incontournables. Les établissements inscrits peuvent alimenter eux-mêmes leurs contenus et proposer des bons plans, des promotions ou encore communiquer sur leurs évènements. Les utilisateurs quant à eux reçoivent directement des notifications de la marque et de ses partenaires.</p><img src='/img/socity/illu.jpg'><p></p><div style='padding:56.25% 0 0 0;position:relative;'><iframe src='https://player.vimeo.com/video/386437476?h=40da53bea9' style='position:absolute;top:0;left:0;width:100%;height:100%;' frameborder='0' allow='autoplay; fullscreen; picture-in-picture' allowfullscreen></iframe></div><script src='https://player.vimeo.com/api/player.js'></script><p><a href='https://vimeo.com/386437476'>socity</a> from <a href='https://vimeo.com/user40659202'>BigFives</a> on <a href='https://vimeo.com'>Vimeo</a>.</p>",
+        "alaune": "oui",
+        "dansleslider": "non"
+    },
+    {
+        "id": 2,
+        "client": "ST-AVÉ",
+        "titre": "UNE CAMPAGNE<br>AU TOP",
+        "pays": "Côte d'Ivoire",
+        "lien": "stave",
+        "image": "/img/stave/index.jpg",
+        "banniere": "/img/stave/banniere.jpg",
+        "galerie": [
+            "/img/stave/01.jpg",
+            "/img/stave/02.jpg",
+            "/img/stave/03.jpg",
+            "/img/stave/04.jpg",
+            "/img/stave/05.jpg",
+            "/img/stave/06.jpg",
+            "/img/stave/07.jpg"
+        ],
+        "description": "<h3>Réhausser la notoriété et la visibilité de SAINT AVÉ, c’est l’objectif que s’est fixé l’agence BIG FIVE lorsque la marque lui a confié sa stratégie média.</h3><pCette stratégie allie passion et découverte sur les réseaux sociaux mais aussi à travers des activations qu’elles soient online ou offline. Chaque action est mise en place dans le but de permettre à la marque d’affirmer son positionnement et se démarquer de la concurrence. C’est dans cette démarche qu’est né le concours Top Pâtissier, qui fort de son succès en est déjà à sa troisième édition.</p><p>Ce concours de pâtisserie, dédié aux amateurs, est découpé en différentes étapes sur une période de deux mois, et intervient aussi bien en online qu’en offline. C’est donc une vraie campagne 360 qui permet à St-Avé de confirmer son positionnement dans le secteur de la pâtisserie, de se dynamiser grâce à un concept jeune et d’actualité ainsi que d’accroître et engager sa communauté. </p><iframe src='https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FSaintAveSANIA%2Fvideos%2F350093593369076%2F&show_text=false&width=560&t=0' width='560' height='314' style='border:none;overflow:hidden' scrolling='no' frameborder='0' allowfullscreen='true' allow='autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share' allowFullScreen='true'></iframe></p><img src='/img/stave/illu.jpg'><p>",
+        "alaune": "oui",
+        "dansleslider": "non"
+    }
+]
