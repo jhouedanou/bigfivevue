@@ -1,5 +1,0 @@
-const styles = "#lesros,#lesros li{list-style:none;list-style-type:none}#lesros li{padding:0 2rem}.neworder{font-weight:400}.neworder,.newordermed{font-family:new-order,sans-serif;font-style:normal}.newordermed{font-weight:500}.newordersemibold{font-weight:600}.neworderbold,.newordersemibold{font-family:new-order,sans-serif;font-style:normal}.neworderbold{font-weight:700}*{box-sizing:border-box;font-weight:400;margin:0;padding:0}#main a,*{font-family:new-order,sans-serif}#main a{color:#000!important;font-size:5em;font-style:normal;font-weight:700;text-decoration:none;text-decoration:none!important;text-transform:uppercase}.primary-bg{background:#82368c}.secondary-bg{background:#29348b}#header-alt{position:fixed;top:0;z-index:100}.button{background-color:#4caf50;border:none;border-radius:8px;color:#fff;cursor:pointer;display:inline-block;font-size:16px;margin:4px 2px;padding:10px 20px;text-align:center;text-decoration:none}";
-export {
-  styles as default
-};
-//# sourceMappingURL=entry-styles-1.mjs-d11bda7c.js.map

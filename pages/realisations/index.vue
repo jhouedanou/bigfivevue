@@ -7,10 +7,7 @@ import 'swiper/css/bundle';
 const swiperContainer = ref(null);
 let swiperInstance;
 const realisations = ref([]);
-
-onMounted(async () => {
-	const response = await axios.get('/api/clients.json');
-	realisations.value = response.data;
+onMounted(() => {
 	swiperInstance = new Swiper(swiperContainer.value, {
 		direction: 'vertical',
 		slidesPerView: 1,
@@ -23,6 +20,11 @@ onMounted(async () => {
 			clickable: true,
 		}
 	});
+});
+onMounted(async () => {
+	const response = await axios.get('/api/clients.json');
+	realisations.value = response.data;
+
 })
 
 </script>
