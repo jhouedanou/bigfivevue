@@ -31,7 +31,7 @@ onMounted(async () => {
 	list-style: none;
 	display: flex;
 	align-items: center;
-	justify-content: start;
+	justify-content: flex-start;
 	flex-direction: row;
 
 	li {
