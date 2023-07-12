@@ -1,5 +1,6 @@
 [
     {
+        "id": 1,
         "client": "SOLIBRA  ",
         "titre": "AU PLUS PROCHE<br>DE CONSOMMATEURS",
         "pays": "Côte d'Ivoire",
@@ -20,7 +21,8 @@
         "dansleslider": "non"
     },
     {
-        "client": "SOLIBRA  ",
+        "id": 2,
+        "client": "SOLIBRA ",
         "titre": "AU PLUS PROCHE<br>DE CONSOMMATEURS",
         "pays": "Côte d'Ivoire",
         "lien": "solibra",

@@ -1,38 +1,52 @@
-
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, reactive, onMounted, watchEffect } from 'vue';
 import axios from 'axios';
-
-const realisations = ref([])
-
+import Swiper from 'swiper/bundle';
+import 'swiper/css/bundle';
+const swiperContainer = ref(null);
+let swiperInstance;
+const realisations = ref([]);
 onMounted(async () => {
 	const response = await axios.get('/api/clients.json');
 	realisations.value = response.data;
+	swiperInstance = new Swiper(swiperContainer.value, {
+		direction: 'vertical',
+		slidesPerView: 1,
+		spaceBetween: 30,
+		mousewheel: true,
+		keyboard: true,
+		parallax: true,
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+		}
+	});
 })
-
 </script>
-
 <template>
-	<div>
-		<h1>Realisations</h1>
-		<ul>
-			<li v-for="realisation in realisations"
-				:key="realisation.lien">
-				<div class="realisationwrapper">
-					<div class="cartouche">
-
-						<span>{{ realisation.client }}</span>
-						<h3 v-html="realisation.titre"></h3>
-						<NuxtLink :to="`/realisations/${realisation.lien}`"
-							class="btn">Voir plus</NuxtLink>
+	<div id="realisationList">
+		<div class="swiper"
+			ref="swiperContainer">
+			<div class="swiper-wrapper">
+				<div :id="`slide-${realisation.id}`"
+					v-for="realisation in realisations"
+					:key="realisation.lien"
+					class="swiper-slide">
+					<div class="realisationwrapper">
+						<div class="cartouche">
+							<span>{{ realisation.client }}</span>
+							<h3 v-html="realisation.titre"></h3>
+							<NuxtLink :to="`/realisations/${realisation.lien}`"
+								class="btn">Voir plus</NuxtLink>
+						</div>
+						<img :src="realisation.image"
+							alt=""
+							class="img-fluid">
 					</div>
-					<img :src="realisation.image"
-						alt=""
-						class="img-fluid">
 				</div>
-
-			</li>
-		</ul>
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
 	</div>
 </template>
 
@@ -46,13 +60,9 @@ onMounted(async () => {
 	.cartouche {
 		position: absolute;
 		padding: 1em;
-
-
 	}
 
 	span {
-
-
 		font-family: "New Order", sans-serif;
 		font-size: 50px;
 		line-height: 52px;
@@ -62,7 +72,6 @@ onMounted(async () => {
 	}
 
 	h3 {
-
 		font-family: "New Order", sans-serif;
 		font-size: 112px;
 		line-height: 110px;
@@ -84,8 +93,13 @@ onMounted(async () => {
 		font-weight: 600;
 		border: 2px solid white;
 		border-radius: 20px;
-
 	}
+}
+
+.realisationwrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 ul,
@@ -93,5 +107,18 @@ li {
 	list-style: none;
 	margin: 0;
 	padding: 0;
+}
+
+.swiper {
+	width: 100%;
+	height: 100vh;
+}
+
+.swiper-horizontal {
+	height: auto;
+}
+
+.swiper-slide {
+	/* Styles pour les slides */
 }
 </style>

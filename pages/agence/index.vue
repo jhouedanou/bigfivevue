@@ -11,7 +11,6 @@ const state = reactive({
   pageTitle: '',
   agence: null,
 });
-
 onMounted(async () => {
   try {
     //recupération des textes de la page
@@ -33,8 +32,6 @@ onMounted(async () => {
         clickable: true,
       }
     });
-
-
   } catch (error) {
     console.error(error);
   }
@@ -127,7 +124,6 @@ watchEffect(() => {
     </div>
   </div>
 </template>
-
 <style scoped>
 .swiper {
   width: 100%;
