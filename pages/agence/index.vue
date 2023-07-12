@@ -84,7 +84,7 @@ watchEffect(() => {
                 <div class="col-4"
                   v-for="slide in state.agence?.slide2 ?? []"
                   :key="slide.id ?? ''">
-                  <img :src="getIconPath(slide.img ?? '')"
+                  <img :src="slide.img ?? ''"
                     alt="">
                   <h3>{{ slide.title ?? '' }}</h3>
                   <p v-html="slide.content ?? ''"></p>
