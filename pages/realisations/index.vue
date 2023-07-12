@@ -4,11 +4,11 @@ import axios from 'axios';
 import Swiper from 'swiper/bundle';
 import ContenuAltLayout from '@/layouts/contenuAlt.vue';
 import 'swiper/css/bundle';
-const swiperContainer = ref(null);
-let swiperInstance;
+const swiperContainerAlt = ref(null);
+let swiperInstanceAlt;
 const realisations = ref([]);
 onMounted(() => {
-	swiperInstance = new Swiper(swiperContainer.value, {
+	swiperInstanceAlt = new Swiper(swiperContainerAlt.value, {
 		direction: 'vertical',
 		slidesPerView: 1,
 		spaceBetween: 30,
@@ -32,7 +32,7 @@ onMounted(async () => {
 	<ContenuAltLayout>
 		<div id="realisationList">
 			<div class="swiper"
-				ref="swiperContainer">
+				ref="swiperContainerAlt">
 				<div class="swiper-wrapper">
 					<div :id="`slide-${realisation.id}`"
 						v-for="realisation in realisations"

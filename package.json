@@ -13,7 +13,6 @@
     "@nuxt/devtools": "latest",
     "@nuxtjs/pwa": "^3.3.5",
     "@types/node": "^20.3.1",
-    "@yeger/vue-masonry-wall": "^4.1.0",
     "bootstrap": "^5.3.0",
     "bootstrap-vue": "^2.23.1",
     "core-js": "^3.31.0",
@@ -33,14 +32,10 @@
     "@nuxtjs/axios": "^5.13.6",
     "bootstrap-vue-next": "^0.9.12",
     "gsap": "^3.12.2",
-    "magnific-popup": "^1.1.0",
-    "masonry-layout": "^4.2.2",
     "nuxt-font-loader": "^2.3.1",
     "sass": "^1.63.6",
     "swiper": "^8.0.0",
     "vue-awesome-swiper": "^5.0.1",
-    "vue-masonry": "^0.16.0",
-    "vue-scrollmagic": "^1.2.0",
     "vue-ssr-carousel": "^2.3.2"
   }
 }
