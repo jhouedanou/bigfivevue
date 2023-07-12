@@ -13,7 +13,6 @@
     "@nuxt/devtools": "latest",
     "@nuxtjs/pwa": "^3.3.5",
     "@types/node": "^20.3.1",
-    "bootstrap": "^5.3.0",
     "bootstrap-vue": "^2.23.1",
     "core-js": "^3.31.0",
     "jquery": "^3.7.0",

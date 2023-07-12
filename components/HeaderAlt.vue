@@ -10,8 +10,8 @@
 				<Logo :id="3" />
 			</div>
 			<div class="col-4 d-flex justify-content-end">
-				<Menu />
-				<SocialLinks></SocialLinks>
+				<MenuAlt />
+				<SocialLinksAlt></SocialLinksAlt>
 			</div>
 		</div>
 	</div>
