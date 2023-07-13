@@ -7,7 +7,7 @@
 			<div v-html="matchingRealisation.description"></div>
 			<div id="galerie"
 				class="container">
-				<div class="grid-wrapper">
+				<vue-masonry>
 					<div v-for="(image, index) in matchingRealisation?.galerie"
 						:key="index"
 						class="element grid-item">
@@ -15,7 +15,7 @@
 							alt="Image"
 							class="img-fluid">
 					</div>
-				</div>
+				</vue-masonry>
 			</div>
 		</div>
 	</div>
@@ -27,7 +27,7 @@
 import { ref, onMounted, computed } from 'vue'
 import axios from 'axios'
 import { useRoute } from 'vue-router'
-
+import VueMasonry from 'vue-masonry';
 const realisations = ref([])
 const route = useRoute()
 

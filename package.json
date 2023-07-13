@@ -13,6 +13,7 @@
     "@nuxt/devtools": "latest",
     "@nuxtjs/pwa": "^3.3.5",
     "@types/node": "^20.3.1",
+    "bootstrap": "^5.3.0",
     "bootstrap-vue": "^2.23.1",
     "core-js": "^3.31.0",
     "jquery": "^3.7.0",
@@ -35,6 +36,7 @@
     "sass": "^1.63.6",
     "swiper": "^8.0.0",
     "vue-awesome-swiper": "^5.0.1",
+    "vue-masonry": "^0.16.0",
     "vue-ssr-carousel": "^2.3.2"
   }
 }
