@@ -2,16 +2,16 @@
 	{
 		"id": 1,
 		"nom": "Agence",
-		"url": "agence"
+		"url": "/agence"
 	},
 	{
 		"id": 2,
 		"nom": "Réalisations",
-		"url": "realisations"
+		"url": "/realisations"
 	},
 	{
 		"id": 3,
 		"nom": "Contact",
-		"url": "contact"
+		"url": "/contact"
 	}
 ]
