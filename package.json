@@ -21,8 +21,7 @@
     "nuxt": "^3.6.0",
     "scrollmagic": "^2.0.8",
     "typescript": "latest",
-    "vue": "^3.3.4",
-    "vue-masonry-css": "^1.0.3"
+    "vue": "^3.3.4"
   },
   "dependencies": {
     "@bootstrap-vue-next/nuxt": "^0.1.2",
@@ -32,11 +31,12 @@
     "@nuxtjs/axios": "^5.13.6",
     "bootstrap-vue-next": "^0.9.12",
     "gsap": "^3.12.2",
+    "imagesloaded": "^5.0.0",
+    "masonry-layout": "^4.2.2",
     "nuxt-font-loader": "^2.3.1",
     "sass": "^1.63.6",
     "swiper": "^8.0.0",
     "vue-awesome-swiper": "^5.0.1",
-    "vue-masonry": "^0.16.0",
     "vue-ssr-carousel": "^2.3.2"
   }
 }

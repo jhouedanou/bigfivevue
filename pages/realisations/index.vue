@@ -1,3 +1,32 @@
+
+<template>
+	<ContenuAltLayout>
+		<div id="realisationList">
+			<div class="swiper"
+				ref="swiperContainerAlt">
+				<div class="swiper-wrapper">
+					<div :id="`slide-${realisation.id}`"
+						v-for="realisation in realisations"
+						:key="realisation.lien"
+						class="swiper-slide">
+						<div class="realisationwrapper">
+							<div class="cartouche">
+								<span>{{ realisation.client }}</span>
+								<h3 v-html="realisation.titre"></h3>
+								<NuxtLink :to="`/realisations/${realisation.lien}`"
+									class="btn">Voir plus</NuxtLink>
+							</div>
+							<img :src="realisation.image"
+								alt=""
+								class="img-fluid">
+						</div>
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+	</ContenuAltLayout>
+</template>
 <script setup>
 import { ref, reactive, onMounted, watchEffect } from 'vue';
 import axios from 'axios';
@@ -28,35 +57,6 @@ onMounted(async () => {
 })
 
 </script>
-<template>
-	<ContenuAltLayout>
-		<div id="realisationList">
-			<div class="swiper"
-				ref="swiperContainerAlt">
-				<div class="swiper-wrapper">
-					<div :id="`slide-${realisation.id}`"
-						v-for="realisation in realisations"
-						:key="realisation.lien"
-						class="swiper-slide">
-						<div class="realisationwrapper">
-							<div class="cartouche">
-								<span>{{ realisation.client }}</span>
-								<h3 v-html="realisation.titre"></h3>
-								<NuxtLink :to="`/realisations/${realisation.lien}`"
-									class="btn">Voir plus</NuxtLink>
-							</div>
-							<img :src="realisation.image"
-								alt=""
-								class="img-fluid">
-						</div>
-					</div>
-				</div>
-				<div class="swiper-pagination"></div>
-			</div>
-		</div>
-	</ContenuAltLayout>
-</template>
-
 <style lang="scss" scoped>
 .realisationwrapper {
 	display: flex;

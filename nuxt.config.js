@@ -5,15 +5,10 @@ export default defineNuxtConfig({
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
-      script: [
-
-        {
-          src: "https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/vendors/easings.min.js",
-          type: "text/javascript"
-        },
-      ],
+      /*       script: [
+  
+            ], */
       link: [
-
         {
           rel: 'stylesheet',
           href: 'https://use.typekit.net/lpb4lmp.css'
@@ -21,13 +16,22 @@ export default defineNuxtConfig({
       ]
     }
   },
+  script: [
+    {
+      src: "https://cdnjs.cloudflare.com/ajax/libs/masonry/4.0.0/masonry.pkgd.min.js",
+      type: "text/javascript"
+    },
+    {
+      src: "https://unpkg.com/vue-masonry@0.12.1/dist/vue-masonry.min.js",
+      type: "text/javascript"
+    }
+  ],
   css: [
     '@/assets/css/styles.scss',
     'bootstrap/dist/css/bootstrap.min.css'
   ],
   plugins: [
   ],
-
   components: true,
   buildModules: [
     '@nuxtjs/axios',
