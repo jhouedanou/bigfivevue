@@ -20,9 +20,9 @@ onMounted(async () => {
 
 			const masonry = new Masonry.default(grid.value, {
 				itemSelector: '.element',
-				layoutMode: 'masonry'/* ,
-				columnWidth: '.grid-sizer',
-				percentPosition: true */
+				layoutMode: 'packery',/* ,
+				columnWidth: '.grid-sizer', percentPosition: true
+				 */
 			});
 
 			imagesLoaded.default(grid.value).on('progress', () => {
@@ -55,19 +55,17 @@ const matchingRealisation = computed(() => {
 				:key="matchingRealisation.lien">
 				<h1>{{ matchingRealisation.client }}</h1>
 				<div v-html="matchingRealisation.description"></div>
-				<div id="gridcontainer"
-					class="container">
+				<div id="gridcontainer">
 					<div id="galerie"
-						class="row grid-wrapper"
+						class="grid-wrapper"
 						ref="grid">
-						<div v-for="(image, index) in matchingRealisation?.galerie"
+						<img v-for="(image, index) in matchingRealisation?.galerie"
 							:key="index"
 							:id="'div-' + index + '-' + matchingRealisation.lien"
-							class="element grid-item col-md-6 mb-4">
-							<img :src="image"
-								alt="Image"
-								class="img-fluid" />
-						</div>
+							:src="image"
+							alt="Image"
+							class="element grid-item mb-4 p-0 m-0" />
+
 					</div>
 				</div>
 			</div>
@@ -92,27 +90,73 @@ const matchingRealisation = computed(() => {
 	border-radius: 8px;
 }
 
-#div-stave {
-	img {
-		min-height: 447px;
-	}
-}
+#galerie {
 
-#div-10-stave {
-	width: 100%;
-
-	img {
-		width: 100%;
-	}
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	background: red;
+	max-width: 80vw;
+	margin: 0 auto;
 
 }
 
-#div-11-stave {
-	width: 100%;
-
-	img {
-		width: 100%;
+#div-solibra {
+	#galerie {
+		img {
+			width: 50%;
+		}
 	}
+}
 
+
+#div-candia {
+	#galerie {
+		img {
+			&:nth-of-type(1) {
+				width: auto;
+				height: 452px
+			}
+
+			&:nth-of-type(2) {
+				width: auto;
+				height: 452px
+			}
+
+			&:nth-of-type(3) {}
+
+			&:nth-of-type(4) {}
+
+			&:nth-of-type(5) {}
+
+			&:nth-of-type(6) {}
+
+			&:nth-of-type(7) {}
+
+			&:nth-of-type(8) {}
+
+			&:nth-of-type(9) {}
+
+			&:nth-of-type(10) {}
+
+			&:nth-of-type(11) {}
+
+			&:nth-of-type(12) {}
+
+			&:nth-of-type(13) {}
+
+			&:nth-of-type(14) {}
+
+			&:nth-of-type(15) {}
+
+			&:nth-of-type(16) {}
+
+			&:nth-of-type(17) {}
+
+			&:nth-of-type(18) {}
+		}
+	}
 }
 </style>
