@@ -45,10 +45,11 @@ onMounted(async () => {
 	swiperInstanceAlt = new Swiper(swiperContainerAlt.value, {
 		direction: 'vertical',
 		slidesPerView: 1,
-		spaceBetween: 30,
+		spaceBetween: 0,
 		mousewheel: true,
 		keyboard: true,
-		parallax: true,
+		//observer: true,
+		//observeParents: true,
 		pagination: {
 			el: '.swiper-pagination',
 			clickable: true,
