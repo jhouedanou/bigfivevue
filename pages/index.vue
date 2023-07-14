@@ -57,7 +57,8 @@ watchEffect(() => {
 				class="col-12 d-flex flex-column justify-content-center align-items-center">
 				<!-- <Logo :id="1" /> -->
 				<img src="img/01.gif"
-					alt="">
+					alt="logo animé de Big Five"
+					class="img-fluid">
 				<!-- <h1> {{ state.sloganbigfive }}
 				</h1> -->
 				<SocialLinks />
