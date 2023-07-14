@@ -128,5 +128,7 @@ li {
 
 .swiper-slide {
 	/* Styles pour les slides */
+	width: 100%;
+	height: 100vh;
 }
 </style>
