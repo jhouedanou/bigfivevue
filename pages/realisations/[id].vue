@@ -53,7 +53,6 @@ const matchingRealisation = computed(() => {
 			<div id="pargrapheIntro"
 				v-if="matchingRealisation"
 				:key="matchingRealisation.lien">
-				<h1>{{ matchingRealisation.client }}</h1>
 				<div v-html="matchingRealisation.description"></div>
 				<div id="gridcontainer">
 					<div id="galerie"
