@@ -14,6 +14,9 @@ onMounted(async () => {
 		if (process.client && typeof window !== 'undefined') {
 			const response = await axios.get('/api/clients.json');
 			realisations.value = response.data;
+			const lesTextesResponse = await axios.get('/api/realisations.json');
+			const lestextes = lesTextesResponse.data;
+			console.log(lestextes);
 
 			const Masonry = await import('masonry-layout');
 			const imagesLoaded = await import('imagesloaded');
@@ -40,6 +43,9 @@ const matchingRealisation = computed(() => {
 		(realisation) => realisation.lien === filterValue
 	);
 });
+
+const id = matchingRealisation.id;
+console.log(id);
 </script>
 <template>
 	<ContenuAltLayout>
@@ -68,6 +74,16 @@ const matchingRealisation = computed(() => {
 					</div>
 				</div>
 			</div>
+		</div>
+		<div id="projectnavgation">
+			<ul>
+				<li><nuxt-link v-if="matchingRealisation"
+						to="">{{ lestextes.projetPrecedent }}</nuxt-link></li>
+				<li><nuxt-link to="/realisations"><img src="/img/PATCWORK.svg"
+							alt="" /></nuxt-link> </li>
+				<li><nuxt-link v-if="matchingRealisation"
+						to="">{{ lestextes.projetSuivant }}</nuxt-link></li>
+			</ul>
 		</div>
 	</ContenuAltLayout>
 </template>
