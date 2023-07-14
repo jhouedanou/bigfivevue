@@ -58,7 +58,7 @@ watchEffect(() => {
 				<!-- <Logo :id="1" /> -->
 
 				<nuxt-link to="/agence">
-					<img src="img/01.gif"
+					<img src="/img/01.gif"
 						alt="logo animé de Big Five"
 						class="img-fluid">
 				</nuxt-link>
