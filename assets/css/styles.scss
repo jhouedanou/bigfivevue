@@ -498,6 +498,7 @@ $viewport-width: 100%;
 		align-items: center;
 		flex-direction: column;
 		text-align: center;
+		height: 45vh;
 	}
 }
 .vanhouan {
@@ -542,9 +543,10 @@ form {
 form div {
 	margin-bottom: 10px;
 }
-
+textarea,
 input[type="text"],
 input[type="email"],
+input[type="textarea"],
 input[type="message"],
 input[type="submit"] {
 	background-color: transparent;

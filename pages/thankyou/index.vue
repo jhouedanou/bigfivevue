@@ -12,7 +12,7 @@
 					</div>
 				</div>
 				<div id="untel">
-					<h3>Nous vous remercions d'avoir envoyé ce message et vous recontacterons le plus vite possile</h3>
+					<h3>Nous vous remercions d'avoir envoyé ce message et vous recontacterons le plus vite possible</h3>
 				</div>
 
 			</div>
