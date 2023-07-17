@@ -23,16 +23,16 @@
                 required />
             </div>
             <div>
-              <input name="message"
+              <textarea name="message"
                 id="message"
                 type="message"
                 placeholder="Message"
-                required />
+                required></textarea>
             </div>
             <div>
               <input type="submit"
                 value="Envoyer un message" />
-              <div style="text-indent:-99999px; white-space:nowrap; overflow:hidden; position:absolute;"
+              <div style="text-indent:-99999px; white-space:nowrap; overflow:hiddendsqd; position:absolute;"
                 aria-hidden="true">
                 <input type="text"
                   name="_gotcha"
