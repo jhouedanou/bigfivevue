@@ -66,7 +66,7 @@ watchEffect(() => {
     <div class="row">
       <div id="sidebar"
         class="sidebar">
-        <Menu />
+        <Menu :page="'/agence'" />
         <Logo :id="2" />
       </div>
       <div id="lemain"

@@ -120,27 +120,49 @@ $secondary: #29348b;
 	cursor: pointer;
 	border-radius: 8px;
 }
-/* Add your styles here */
-#menulinks {
-	margin: 0;
-	padding: 3em 1em 1em 1em;
-	list-style: none;
-	display: flex;
-	align-items: flex-start;
-	justify-content: flex-start;
-	flex-direction: column;
-	li {
-		margin: 1em 0.5em;
-		padding: 0.5em;
+//sidebar
+#sidebar {
+}
+#menuhomepage {
+	#menulinks {
+		margin: 0;
+		padding: 3em 1em 1em 1em;
+		list-style: none;
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-start;
+		flex-direction: column;
+		li {
+			margin: 1em 0.5em;
+			padding: 0.5em;
+			&.active {
+				a {
+					color: $primary;
+				}
+			}
+			a {
+				font-family: "New Order";
+				font-weight: 700;
+				color: rgb(0, 0, 0);
+				font-size: 20px;
+				text-decoration: none;
+				&:hover {
+					color: $primary;
+				}
+			}
+		}
+	}
+}
 
+#lagence {
+	.logocontainer {
 		a {
-			font-family: "New Order";
-			font-weight: 700;
-			color: rgb(0, 0, 0);
-			font-size: 20px;
-			text-decoration: none;
-			&:hover {
-				color: $primary;
+			justify-content: center;
+			display: flex;
+			align-items: center;
+			img {
+				width: 80%;
+				height: auto;
 			}
 		}
 	}

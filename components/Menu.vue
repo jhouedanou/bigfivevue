@@ -4,6 +4,12 @@ import axios from 'axios';
 const state = reactive({
 	menus: [],
 });
+const props = defineProps({
+	page: {
+		type: String,
+		required: true
+	}
+});
 onMounted(async () => {
 	try {
 		const menuLinks = await axios.get('/api/menu.json');
@@ -14,10 +20,12 @@ onMounted(async () => {
 });
 </script>
 <template>
-	<div class="menucontainer">
+	<div id="menuhomepage"
+		class="menucontainer">
 		<ul id="menulinks">
 			<li v-for="link in state.menuLinks"
-				:key="link.id">
+				:key="link.id"
+				:class="{ active: link.url === props.page }">
 				<nuxt-link :to="link.url">{{ link.nom }}</nuxt-link>
 			</li>
 		</ul>
