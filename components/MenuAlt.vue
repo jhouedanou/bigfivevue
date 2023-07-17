@@ -23,26 +23,4 @@ onMounted(async () => {
 		</ul>
 	</div>
 </template>
-<style lang="scss" scoped>
-/* Add your styles here */
-#menulinks {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	display: flex;
-	align-items: center;
-	justify-content: flex-start;
-	flex-direction: row;
-
-	li {
-		margin: 0 0.5em;
-		padding: 0.5em;
-
-		a {
-			font-family: "New Order";
-			font-weight: 700;
-			color: white;
-		}
-	}
-}
-</style>
+<style lang="scss" scoped></style>

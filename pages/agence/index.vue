@@ -65,11 +65,12 @@ watchEffect(() => {
     class="container-fluid">
     <div class="row">
       <div id="sidebar"
-        class="col-3">
+        class="sidebar">
         <Menu />
         <Logo :id="2" />
       </div>
-      <div class="col-9 primary-bg vh-100">
+      <div id="lemain"
+        class="main primary-bg vh-100">
         <div class="swiper"
           ref="swiperContainer">
           <div class="swiper-wrapper">
@@ -126,7 +127,24 @@ watchEffect(() => {
     </div>
   </div>
 </template>
-<style scoped>
+<style lang="scss" scoped>
+$sidebar-width: 20.5%;
+$viewport-width: 100%;
+
+#lagence {
+  .sidebar {
+    width: $sidebar-width;
+  }
+
+  #lemain {
+    width: calc(#{$viewport-width} - #{$sidebar-width});
+  }
+}
+
+#menulinks {
+  padding: 4em 1em 1em 2em;
+}
+
 .swiper {
   width: 100%;
   height: 100vh;
