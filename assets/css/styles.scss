@@ -174,7 +174,17 @@ $secondary: #29348b;
 		}
 	}
 }
+.slide5-background {
+	background: url("/img/visages.jpg");
+	background-position: 50% 50%;
+	transition: background-position 0.5s ease-out;
+}
 
+.slide5-background:hover {
+	background-position: 50% 70%;
+	/* Adjust the background position as needed */
+	transition: background-position 0.5s ease-out;
+}
 $sidebar-width: 20.5%;
 $viewport-width: 100%;
 #slide1 {
