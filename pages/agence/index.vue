@@ -1,73 +1,13 @@
-<script setup>
-import { ref, reactive, onMounted, watchEffect } from 'vue';
-import axios from 'axios';
-import Swiper from 'swiper/bundle';
-import 'swiper/css/bundle';
-const swiperContainer = ref(null);
-const slide3Content = ref([]);
-let swiperInstance;
-const state = reactive({
-  metadesc: '',
-  pageTitle: '',
-  agence: null,
-});
-onMounted(async () => {
-  try {
-    //recupération des textes de la page
-    const textesGlobal = await axios.get('/api/agence.json');
-    state.metadesc = textesGlobal.data.metadesc;
-    state.pageTitle = textesGlobal.data.title;
-    state.agence = textesGlobal.data;
 
-    // Initialisation du swiper
-    swiperInstance = new Swiper(swiperContainer.value, {
-      direction: 'vertical',
-      slidesPerView: 1,
-      spaceBetween: 0,
-      mousewheel: true,
-      keyboard: true,
-      parallax: true,
-      //observer: true,
-      //observeParents: true,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      }
-    });
-  } catch (error) {
-    console.error(error);
-  }
-});
-
-watchEffect(() => {
-  useHead({
-    title: state.pageTitle,
-    meta: [
-      {
-        hid: 'description',
-        name: 'description',
-        content: state.metadesc,
-      },
-      {
-        property: 'og:title',
-        content: state.pageTitle,
-      },
-      {
-        property: 'og:description',
-        content: state.metadesc,
-      },
-    ],
-  });
-});
-</script>
 <template>
   <div id="lagence"
     class="container-fluid">
     <div class="row">
       <div id="sidebar"
-        class="sidebar">
-        <Menu :page="'/agence'" />
+        class="sidebar"
+        :class="{ flipit: state.isSlide1Active }">
         <Logo :id="2" />
+        <Menu :page="'/agence'" />
       </div>
       <div id="lemain"
         class="main primary-bg vh-100">
@@ -79,7 +19,7 @@ watchEffect(() => {
               <!-- presentation de l'agence -->
               <h3>{{ state.agence?.slide1?.title ?? '' }}</h3>
               <p v-html="state.agence?.slide1?.soustitre ?? ''"></p>
-              <h3>{{ state.agence?.slide1?.contenu ?? '' }}</h3>
+              <h3 v-html="state.agence?.slide1?.contenu ?? ''"></h3>
             </div>
             <div id="slide2"
               class="swiper-slide">
@@ -123,26 +63,102 @@ watchEffect(() => {
           </div>
           <div class="swiper-pagination"></div>
         </div>
+        <div id="kpaflotage">
+
+        </div>
       </div>
     </div>
   </div>
 </template>
-<style lang="scss" scoped>
-$sidebar-width: 20.5%;
-$viewport-width: 100%;
+<script setup>
+import { ref, reactive, onMounted, watchEffect } from 'vue';
+import axios from 'axios';
+import Swiper from 'swiper/bundle';
+import 'swiper/css/bundle';
+const swiperContainer = ref(null);
+const slide3Content = ref([]);
+let swiperInstance;
+const state = reactive({
+  metadesc: '',
+  pageTitle: '',
+  agence: null,
+  isSlide1Active: '',
+});
 
+onMounted(async () => {
+  try {
+    //recupération des textes de la page
+    const textesGlobal = await axios.get('/api/agence.json');
+    state.metadesc = textesGlobal.data.metadesc;
+    state.pageTitle = textesGlobal.data.title;
+    state.agence = textesGlobal.data;
+
+    // Initialisation du swiper
+    swiperInstance = new Swiper(swiperContainer.value, {
+      direction: 'vertical',
+      slidesPerView: 1,
+      spaceBetween: 0,
+      mousewheel: true,
+      keyboard: true,
+      parallax: true,
+      //observer: true,
+      //observeParents: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      }
+    });
+
+    //gestion de la disposition de la sidebar 
+    swiperInstance.on('slideChange', () => {
+      console.log(swiperInstance.activeIndex);
+      if (swiperInstance.activeIndex == 0) {
+        state.isSlide1Active = true;
+      } else {
+        state.isSlide1Active = false;
+      }
+    })
+  } catch (error) {
+    console.error(error);
+  }
+});
+
+watchEffect(() => {
+  useHead({
+    title: state.pageTitle,
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: state.metadesc,
+      },
+      {
+        property: 'og:title',
+        content: state.pageTitle,
+      },
+      {
+        property: 'og:description',
+        content: state.metadesc,
+      },
+    ],
+  });
+});
+</script>
+<style lang="scss" scoped>
 #lagence {
   .sidebar {
-    width: $sidebar-width;
-  }
-
-  #lemain {
-    width: calc(#{$viewport-width} - #{$sidebar-width});
+    &.flipit {}
   }
 }
 
-#menulinks {
-  padding: 4em 1em 1em 2em;
+.main {
+  padding: 0;
+  margin: 0;
+}
+
+.swiper-wrapper {
+  background: linear-gradient(to bottom, #80368c, #2c348b);
+  height: auto;
 }
 
 .swiper {
