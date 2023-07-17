@@ -606,3 +606,43 @@ input::-ms-input-placeholder {
 input::placeholder {
 	color: #ffffff;
 }
+input::-webkit-input-placeholder {
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+}
+input::-moz-placeholder {
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+}
+input:-ms-input-placeholder {
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+}
+input::-ms-input-placeholder {
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+}
+input::placeholder {
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+}
+textarea::-webkit-input-placeholder {
+	color: #bdbdbd;
+}
+textarea::-moz-placeholder {
+	color: #bdbdbd;
+}
+textarea:-ms-input-placeholder {
+	color: #bdbdbd;
+}
+textarea::-ms-input-placeholder {
+	color: #bdbdbd;
+}
+textarea::placeholder {
+	color: #bdbdbd;
+}
