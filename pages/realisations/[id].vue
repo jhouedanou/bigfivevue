@@ -14,10 +14,6 @@ onMounted(async () => {
 		if (process.client && typeof window !== 'undefined') {
 			const response = await axios.get('/api/clients.json');
 			realisations.value = response.data;
-			const lesTextesResponse = await axios.get('/api/realisations.json');
-			const lestextes = lesTextesResponse.data;
-			console.log(lestextes);
-
 			const Masonry = await import('masonry-layout');
 			const imagesLoaded = await import('imagesloaded');
 
@@ -27,7 +23,6 @@ onMounted(async () => {
 				columnWidth: '.grid-sizer', percentPosition: true
 				 */
 			});
-
 			imagesLoaded.default(grid.value).on('progress', () => {
 				masonry.layout();
 			});
@@ -39,13 +34,18 @@ onMounted(async () => {
 
 const matchingRealisation = computed(() => {
 	const filterValue = route.fullPath.substring('/realisations/'.length);
-	return realisations.value.find(
+	const index = realisations.value.findIndex(
 		(realisation) => realisation.lien === filterValue
 	);
+	const previousRealisation = realisations.value[index - 1];
+	const nextRealisation = realisations.value[index + 1];
+	return {
+		...realisations.value[index],
+		previousLink: previousRealisation ? previousRealisation.lien : null,
+		nextLink: nextRealisation ? nextRealisation.lien : null
+	};
 });
 
-const id = matchingRealisation.id;
-console.log(id);
 </script>
 <template>
 	<ContenuAltLayout>
@@ -77,12 +77,24 @@ console.log(id);
 		</div>
 		<div id="projectnavgation">
 			<ul>
-				<li><nuxt-link v-if="matchingRealisation"
-						to="">{{ lestextes.projetPrecedent }}</nuxt-link></li>
-				<li><nuxt-link to="/realisations"><img src="/img/PATCWORK.svg"
-							alt="" /></nuxt-link> </li>
-				<li><nuxt-link v-if="matchingRealisation"
-						to="">{{ lestextes.projetSuivant }}</nuxt-link></li>
+				<li>
+					<nuxt-link v-if="matchingRealisation.previousLink"
+						:to="'/realisations/' + matchingRealisation.previousLink">
+						projet précédent
+					</nuxt-link>
+				</li>
+				<li>
+					<nuxt-link to="/realisations">
+						<img src="/img/PATCWORK.svg"
+							alt="" />
+					</nuxt-link>
+				</li>
+				<li>
+					<nuxt-link v-if="matchingRealisation.nextLink"
+						:to="'/realisations/' + matchingRealisation.nextLink">
+						projet suivant
+					</nuxt-link>
+				</li>
 			</ul>
 		</div>
 	</ContenuAltLayout>
@@ -173,5 +185,4 @@ console.log(id);
 			&:nth-of-type(18) {}
 		}
 	}
-}
-</style>
+}</style>

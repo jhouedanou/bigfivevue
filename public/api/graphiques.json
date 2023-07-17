@@ -1,14 +1,14 @@
 [
 	{
 		"id": 1,
-		"src": "/img/logo.svg"
+		"src": "/img/logo.png"
 	},
 	{
 		"id": 2,
-		"src": "/img/logo-mini.svg"
+		"src": "/img/logo-mini.png"
 	},
 	{
 		"id": 3,
-		"src": "/img/logo-alt.svg"
+		"src": "/img/logo-alt.png"
 	}
 ]

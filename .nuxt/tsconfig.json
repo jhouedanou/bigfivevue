@@ -9,7 +9,7 @@
     "skipLibCheck": true,
     "strict": true,
     "allowJs": true,
-    "baseUrl": "C:/Users/ASUS ROG/Documents/bigfivevue",
+    "baseUrl": "/Users/apple/Documents/bigfivevue",
     "noEmit": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
@@ -18,64 +18,64 @@
     ],
     "paths": {
       "~": [
-        "C:/Users/ASUS ROG/Documents/bigfivevue"
+        "/Users/apple/Documents/bigfivevue"
       ],
       "~/*": [
-        "C:/Users/ASUS ROG/Documents/bigfivevue/*"
+        "/Users/apple/Documents/bigfivevue/*"
       ],
       "@": [
-        "C:/Users/ASUS ROG/Documents/bigfivevue"
+        "/Users/apple/Documents/bigfivevue"
       ],
       "@/*": [
-        "C:/Users/ASUS ROG/Documents/bigfivevue/*"
+        "/Users/apple/Documents/bigfivevue/*"
       ],
       "~~": [
-        "C:/Users/ASUS ROG/Documents/bigfivevue"
+        "/Users/apple/Documents/bigfivevue"
       ],
       "~~/*": [
-        "C:/Users/ASUS ROG/Documents/bigfivevue/*"
+        "/Users/apple/Documents/bigfivevue/*"
       ],
       "@@": [
-        "C:/Users/ASUS ROG/Documents/bigfivevue"
+        "/Users/apple/Documents/bigfivevue"
       ],
       "@@/*": [
-        "C:/Users/ASUS ROG/Documents/bigfivevue/*"
+        "/Users/apple/Documents/bigfivevue/*"
       ],
       "assets": [
-        "C:/Users/ASUS ROG/Documents/bigfivevue/assets"
+        "/Users/apple/Documents/bigfivevue/assets"
       ],
       "assets/*": [
-        "C:/Users/ASUS ROG/Documents/bigfivevue/assets/*"
+        "/Users/apple/Documents/bigfivevue/assets/*"
       ],
       "public": [
-        "C:/Users/ASUS ROG/Documents/bigfivevue/public"
+        "/Users/apple/Documents/bigfivevue/public"
       ],
       "public/*": [
-        "C:/Users/ASUS ROG/Documents/bigfivevue/public/*"
+        "/Users/apple/Documents/bigfivevue/public/*"
       ],
       "#app": [
-        "C:/Users/ASUS ROG/Documents/bigfivevue/node_modules/nuxt/dist/app"
+        "/Users/apple/Documents/bigfivevue/node_modules/nuxt/dist/app"
       ],
       "#app/*": [
-        "C:/Users/ASUS ROG/Documents/bigfivevue/node_modules/nuxt/dist/app/*"
+        "/Users/apple/Documents/bigfivevue/node_modules/nuxt/dist/app/*"
       ],
       "vue-demi": [
-        "C:/Users/ASUS ROG/Documents/bigfivevue/node_modules/nuxt/dist/app/compat/vue-demi"
+        "/Users/apple/Documents/bigfivevue/node_modules/nuxt/dist/app/compat/vue-demi"
       ],
       "#vue-router": [
-        "C:/Users/ASUS ROG/Documents/bigfivevue/.nuxt/vue-router"
+        "/Users/apple/Documents/bigfivevue/.nuxt/vue-router"
       ],
       "#imports": [
-        "C:/Users/ASUS ROG/Documents/bigfivevue/.nuxt/imports"
+        "/Users/apple/Documents/bigfivevue/.nuxt/imports"
       ],
       "#build": [
-        "C:/Users/ASUS ROG/Documents/bigfivevue/.nuxt"
+        "/Users/apple/Documents/bigfivevue/.nuxt"
       ],
       "#build/*": [
-        "C:/Users/ASUS ROG/Documents/bigfivevue/.nuxt/*"
+        "/Users/apple/Documents/bigfivevue/.nuxt/*"
       ],
       "#components": [
-        "C:/Users/ASUS ROG/Documents/bigfivevue/.nuxt/components"
+        "/Users/apple/Documents/bigfivevue/.nuxt/components"
       ]
     }
   },
