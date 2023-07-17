@@ -4,11 +4,13 @@
 		<div id="realisationList">
 			<div class="swiper"
 				ref="swiperContainerAlt">
-				<div class="swiper-wrapper">
+				<div class="swiper-wrapper"
+					style="">
 					<div :id="`slide-${realisation.id}`"
 						v-for="realisation in realisations"
 						:key="realisation.lien"
-						class="swiper-slide">
+						class="swiper-slide"
+						:style="{ backgroundImage: `url(${realisation.image})` }">
 						<div class="realisationwrapper">
 							<div class="cartouche">
 								<span>{{ realisation.client }}</span>
@@ -16,9 +18,6 @@
 								<NuxtLink :to="`/realisations/${realisation.lien}`"
 									class="btn">Voir plus</NuxtLink>
 							</div>
-							<img :src="realisation.image"
-								alt=""
-								class="img-fluid">
 						</div>
 					</div>
 				</div>
@@ -127,5 +126,29 @@ li {
 
 .swiper-slide {
 	/* Styles pour les slides */
+	min-height: 100vh !important;
+	height: 100% !important;
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin: 0;
+	padding: 0;
+
+	.cartouche {
+		width: 100vw !important;
+		padding: 0em !important;
+		max-width: 1480px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		flex-direction: column;
+	}
+
+	.realisationwrapper {
+		min-height: 100vh !important;
+		height: 100% !important;
+		margin: 0;
+		padding: 0;
+	}
 }
 </style>

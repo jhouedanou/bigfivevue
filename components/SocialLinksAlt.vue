@@ -42,6 +42,4 @@ onMounted(async () => {
 </template>
 
 
-<style lang="scss" scoped>
-.d {}
-</style>
+<style lang="scss" scoped></style>

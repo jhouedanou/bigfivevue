@@ -55,20 +55,15 @@ watchEffect(() => {
 			class="row w-100">
 			<div id="main"
 				class="col-12 d-flex flex-column justify-content-center align-items-center">
-				<!-- <Logo :id="1" /> -->
-
 				<nuxt-link to="/agence">
 					<img src="/img/01.gif"
 						alt="logo animé de Big Five"
 						class="img-fluid">
 				</nuxt-link>
-				<!-- <h1> {{ state.sloganbigfive }}
-				</h1> -->
 				<SocialLinks />
 			</div>
 		</div>
 	</div>
 </template>
-<style scoped>
-/* Add your styles here */
-</style>
+
+<style lang="scss" scoped></style>
