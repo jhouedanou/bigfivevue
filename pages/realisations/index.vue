@@ -16,9 +16,11 @@
 								<NuxtLink :to="`/realisations/${realisation.lien}`"
 									class="btn">Voir plus</NuxtLink>
 							</div>
-							<nuxt-img fit="cover"
+							<nuxt-img fit="contain"
 								format="webp"
-								:src="realisation.image" />
+								quality="80"
+								:src="realisation.image"
+								loading="lazy" />
 
 						</div>
 					</div>

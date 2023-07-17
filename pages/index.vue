@@ -56,9 +56,14 @@ watchEffect(() => {
 			<div id="main"
 				class="col-12 d-flex flex-column justify-content-center align-items-center">
 				<nuxt-link to="/agence">
-					<img src="/img/01.gif"
-						alt="logo animé de Big Five"
+					<video autoplay
+						loop
+						muted
 						class="img-fluid">
+						<source src="/video/01.mp4"
+							type="video/mp4">
+						Your browser does not support the video tag.
+					</video>
 				</nuxt-link>
 				<SocialLinks />
 			</div>
