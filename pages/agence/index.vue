@@ -152,8 +152,8 @@ onMounted(async () => {
     // Add event listener for mouse movement
     slide5Element.addEventListener('mousemove', (event) => {
       // Calculate the new background position based on the mouse coordinates
-      const posX = event.clientX / slide5Element.offsetWidth * 100;
-      const posY = event.clientY / slide5Element.offsetHeight * 100;
+      const posX = event.clientX / slide5Element.offsetWidth * 200;
+      const posY = event.clientY / slide5Element.offsetHeight * 200;
 
       // Set the new background position
       slide5Element.style.backgroundPosition = `${posX}% ${posY}%`;
