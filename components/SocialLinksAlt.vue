@@ -33,7 +33,7 @@ onMounted(async () => {
 				:key="link.id">
 				<a :href="link.url"
 					target="_blank">
-					<img :src="link.icon"
+					<img :src="link.iconAlt"
 						:alt="link.platform" />
 				</a>
 			</li>

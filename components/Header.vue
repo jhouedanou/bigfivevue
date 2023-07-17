@@ -3,15 +3,18 @@
 </script>
 
 <template>
-	<div id="header-alt"
+	<div id="header"
 		class="container-fluid fixed">
-		<div class="row">
-			<div class="col-8">
-				<Logo :id="2" />
-			</div>
-			<div class="col-4 d-flex justify-content-end">
-				<Menu />
-				<SocialLinks></SocialLinks>
+		<div class="innerzr">
+
+			<div class="row">
+				<div class="col-md-6 col-sm-12">
+					<Logo :id="2" />
+				</div>
+				<div class="col-md-6 col-sm-12 d-flex">
+					<Menu />
+					<SocialLinks></SocialLinks>
+				</div>
 			</div>
 		</div>
 	</div>

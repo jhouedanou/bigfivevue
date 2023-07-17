@@ -5,16 +5,18 @@
 <template>
 	<div id="header-alt"
 		class="container-fluid fixed">
-		<div class="row">
-			<div class="col-8">
-				<Logo :id="3" />
-			</div>
-			<div class="col-4 d-flex justify-content-end">
-				<MenuAlt />
-				<SocialLinksAlt></SocialLinksAlt>
+		<div class="innerzr">
+			<div class="row">
+				<div class="col-md-6 col-sm-12">
+					<Logo :id="3" />
+				</div>
+				<div class="col-md-6 col-sm-12 d-flex">
+					<MenuAlt />
+					<SocialLinksAlt></SocialLinksAlt>
+				</div>
 			</div>
 		</div>
+
 	</div>
 </template>
-
-<style scoped></style>
+<style lang="scss" scoped></style>
