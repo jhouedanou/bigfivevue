@@ -43,8 +43,13 @@ export default defineNuxtConfig({
     baseURL: '/',
   },
   modules: [
-    '@bootstrap-vue-next/nuxt', '@nuxt/content'
+    '@bootstrap-vue-next/nuxt', '@nuxt/content', '@nuxt/image',
+
   ],
+  image: {
+    format: ['webp'],
+    quality: 80
+  },
   content: {
     dir: 'content', // Path to the "content" directory
     fullTextSearchFields: ['title', 'description'] // Optional: Specify fields for full-text search

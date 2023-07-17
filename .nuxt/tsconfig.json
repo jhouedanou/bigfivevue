@@ -62,6 +62,12 @@
       "vue-demi": [
         "C:/Users/ASUS ROG/Documents/bigfivevue/node_modules/nuxt/dist/app/compat/vue-demi"
       ],
+      "#image": [
+        "C:/Users/ASUS ROG/Documents/bigfivevue/node_modules/@nuxt/image/dist/runtime"
+      ],
+      "#image/*": [
+        "C:/Users/ASUS ROG/Documents/bigfivevue/node_modules/@nuxt/image/dist/runtime/*"
+      ],
       "#vue-router": [
         "C:/Users/ASUS ROG/Documents/bigfivevue/.nuxt/vue-router"
       ],

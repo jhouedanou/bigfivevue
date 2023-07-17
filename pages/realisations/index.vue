@@ -8,8 +8,7 @@
 					<div :id="`slide-${realisation.id}`"
 						v-for="realisation in realisations"
 						:key="realisation.lien"
-						class="swiper-slide"
-						:style="{ backgroundImage: `url(${realisation.image})` }">
+						class="swiper-slide">
 						<div class="realisationwrapper">
 							<div class="cartouche">
 								<span>{{ realisation.client }}</span>
@@ -17,6 +16,10 @@
 								<NuxtLink :to="`/realisations/${realisation.lien}`"
 									class="btn">Voir plus</NuxtLink>
 							</div>
+							<nuxt-img fit="cover"
+								format="webp"
+								:src="realisation.image" />
+
 						</div>
 					</div>
 				</div>
@@ -138,6 +141,11 @@ li {
 	background-repeat: no-repeat;
 	margin: 0;
 	padding: 0;
+
+	img {
+		width: auto;
+		height: 100vh;
+	}
 
 	.cartouche {
 		width: 100vw !important;

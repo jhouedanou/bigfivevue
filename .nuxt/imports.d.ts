@@ -10,4 +10,5 @@ export { useContentHead } from '../node_modules/@nuxt/content/dist/runtime/compo
 export { useContentPreview } from '../node_modules/@nuxt/content/dist/runtime/composables/preview';
 export { withContentBase, useUnwrap, useContentDisabled as useContentState, useContentDisabled as useContent } from '../node_modules/@nuxt/content/dist/runtime/composables/utils';
 export { fetchContentNavigation } from '../node_modules/@nuxt/content/dist/runtime/composables/navigation';
+export { useImage } from '../node_modules/@nuxt/image/dist/runtime/composables';
 export { definePageMeta } from '../node_modules/nuxt/dist/pages/runtime/composables';
