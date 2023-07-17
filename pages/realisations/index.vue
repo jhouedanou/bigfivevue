@@ -1,4 +1,3 @@
-
 <template>
 	<ContenuAltLayout>
 		<div id="realisationList">
@@ -35,12 +34,14 @@ import 'swiper/css/bundle';
 const swiperContainerAlt = ref(null);
 let swiperInstanceAlt;
 const realisations = ref([]);
-onBeforeMount(async () => {
 
-});
 onMounted(async () => {
+	console.log('Before fetching data');
 	const response = await axios.get('/api/clients.json');
 	realisations.value = response.data;
+	console.log('Data fetched:', realisations.value);
+
+
 	swiperInstanceAlt = new Swiper(swiperContainerAlt.value, {
 		direction: 'vertical',
 		slidesPerView: 1,
@@ -54,7 +55,9 @@ onMounted(async () => {
 			clickable: true,
 		}
 	});
-})
+	console.log('Swiper instance created:', swiperInstanceAlt);
+
+});
 
 </script>
 <style lang="scss" scoped>
@@ -123,11 +126,12 @@ li {
 }
 
 .swiper-horizontal {
-	height: auto;
+
+	width: 100%;
+	height: 100vh;
 }
 
 .swiper-slide {
-	/* Styles pour les slides */
 	min-height: 100vh !important;
 	height: 100% !important;
 	background-size: cover;
