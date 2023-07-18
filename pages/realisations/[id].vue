@@ -52,13 +52,9 @@ const matchingRealisation = computed(() => {
 		<div :id="`div-${matchingRealisation.lien}`"
 			v-if="matchingRealisation">
 			<div id="banner">
-				<nuxt-img alt="Image"
-					class="img-fluid"
-					fit="contain"
-					format="webp"
-					quality="80"
-					:src="matchingRealisation.banniere"
-					loading="lazy" />
+				<img :src="matchingRealisation.banniere"
+					alt="Image"
+					class="img-fluid" />
 			</div>
 			<div id="pargrapheIntro"
 				v-if="matchingRealisation"
@@ -68,11 +64,7 @@ const matchingRealisation = computed(() => {
 					<div id="galerie"
 						class="grid-wrapper"
 						ref="grid">
-						<nuxt-img v-for="(image, index) in matchingRealisation?.galerie"
-							fit="cover"
-							format="webp"
-							quality="80"
-							loading="lazy"
+						<img v-for="(image, index) in matchingRealisation?.galerie"
 							:key="index"
 							:id="'div-' + index + '-' + matchingRealisation.lien"
 							:src="image"

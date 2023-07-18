@@ -12,6 +12,10 @@ export default defineNuxtConfig({
         {
           rel: 'stylesheet',
           href: 'https://use.typekit.net/lpb4lmp.css'
+        },
+        {
+          rel: 'stylesheet',
+          href: 'https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.css'
         }
       ]
     }
@@ -26,7 +30,8 @@ export default defineNuxtConfig({
       type: "text/javascript"
     },
     {
-      src: '@/assets/js/slider.js',
+      src: "https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/vendors/easings.js",
+      type: "text/javascript"
 
     }
   ],
@@ -35,6 +40,7 @@ export default defineNuxtConfig({
     'bootstrap/dist/css/bootstrap.min.css'
   ],
   plugins: [
+
   ],
   components: true,
   buildModules: [
