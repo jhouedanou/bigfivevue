@@ -43,8 +43,12 @@ export default defineNuxtConfig({
     baseURL: '/',
   },
   modules: [
-    '@bootstrap-vue-next/nuxt', '@nuxt/content', '@nuxt/image',
-
+    '@bootstrap-vue-next/nuxt',
+    '@nuxt/content',
+    '@nuxt/image',
+    ['@openafg/nuxt-fullpage', {
+      // Options
+    }]
   ],
   image: {
     format: ['webp'],

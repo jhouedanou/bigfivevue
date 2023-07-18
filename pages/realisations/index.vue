@@ -1,37 +1,33 @@
 <template>
 	<ContenuAltLayout>
 		<div id="realisationList">
-			<div class="swiper"
-				ref="swiperContainerAlt">
-				<div class="swiper-wrapper"
-					style="">
-					<div :id="`slide-${realisation.id}`"
-						v-for="realisation in realisations"
-						:key="realisation.lien"
-						class="swiper-slide">
-						<div class="realisationwrapper">
-							<div class="cartouche">
-								<span>{{ realisation.client }}</span>
-								<h3 v-html="realisation.titre"></h3>
-								<NuxtLink :to="`/realisations/${realisation.lien}`"
-									class="btn">Voir plus</NuxtLink>
-							</div>
-							<nuxt-img fit="contain"
-								format="webp"
-								quality="80"
-								:src="realisation.image"
-								loading="lazy" />
-
+			<div id="fullpage">
+				<div :id="`slide-${realisation.id}`"
+					v-for="realisation in realisations"
+					:key="realisation.lien"
+					class="section">
+					<div class="realisationwrapper">
+						<div class="cartouche">
+							<span>{{ realisation.client }}</span>
+							<h3 v-html="realisation.titre"></h3>
+							<NuxtLink :to="`/realisations/${realisation.lien}`"
+								class="btn">Voir plus</NuxtLink>
 						</div>
+						<nuxt-img fit="contain"
+							format="webp"
+							quality="80"
+							class="img-fluid"
+							:src="realisation.image"
+							loading="lazy" />
 					</div>
 				</div>
-				<div class="swiper-pagination"></div>
 			</div>
 		</div>
 	</ContenuAltLayout>
 </template>
+
 <script setup>
-import { ref, reactive, onMounted, watchEffect } from 'vue';
+import { ref, onMounted, onBeforeUnmount } from 'vue';
 import axios from 'axios';
 import Swiper from 'swiper/bundle';
 import ContenuAltLayout from '@/layouts/contenuAlt.vue';
@@ -46,23 +42,32 @@ onMounted(async () => {
 	realisations.value = response.data;
 	console.log('Data fetched:', realisations.value);
 
-
-	swiperInstanceAlt = new Swiper(swiperContainerAlt.value, {
-		direction: 'vertical',
-		slidesPerView: 1,
-		spaceBetween: 0,
-		mousewheel: true,
-		keyboard: true,
-		//observer: true,
-		//observeParents: true,
-		pagination: {
-			el: '.swiper-pagination',
-			clickable: true,
-		}
+	new fullpage('#fullpage', {
+		licenseKey: 'null',
+		autoScrolling: true,
+		navigation: true
 	});
-	console.log('Swiper instance created:', swiperInstanceAlt);
 
 });
+// Trigger a viewport resize event to fix the issue
+
+onMounted(() => {
+	const triggerViewportResize = () => {
+		if (process.client) {
+			const resizeEvent = new Event('resize');
+			window.innerWidth = window.innerWidth - 10000;
+			window.dispatchEvent(resizeEvent);
+			console.log('cest gaté');
+			setTimeout(() => {
+				window.innerWidth = window.innerWidth + 10000;
+				window.dispatchEvent(resizeEvent);
+			}, 100);
+		}
+	};
+
+	triggerViewportResize();
+});
+
 
 </script>
 <style lang="scss" scoped>

@@ -2,6 +2,7 @@
 /// <reference types="@bootstrap-vue-next/nuxt" />
 /// <reference types="@nuxt/content" />
 /// <reference types="@nuxt/image" />
+/// <reference types="@fullpage/nuxt-fullpage" />
 /// <reference types="@nuxt/devtools" />
 /// <reference types="@nuxt/telemetry" />
 /// <reference types="nuxt" />
