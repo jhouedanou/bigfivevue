@@ -24,6 +24,10 @@ export default defineNuxtConfig({
     {
       src: "https://unpkg.com/vue-masonry@0.12.1/dist/vue-masonry.min.js",
       type: "text/javascript"
+    },
+    {
+      src: '@/assets/js/slider.js',
+
     }
   ],
   css: [
@@ -45,11 +49,7 @@ export default defineNuxtConfig({
   modules: [
     '@bootstrap-vue-next/nuxt',
     '@nuxt/content',
-    '@nuxt/image',
-    ['@openafg/nuxt-fullpage', {
-      // Options
-    }]
-  ],
+    '@nuxt/image'],
   image: {
     format: ['webp'],
     quality: 80

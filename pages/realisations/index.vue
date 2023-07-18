@@ -1,39 +1,37 @@
 <template>
 	<ContenuAltLayout>
 		<div id="realisationList">
-			<div id="fullpage">
-				<div :id="`slide-${realisation.id}`"
+			<div class="slides">
+				<section :id="`slide-${realisation.id}`"
 					v-for="realisation in realisations"
 					:key="realisation.lien"
-					class="section">
-					<div class="realisationwrapper">
-						<div class="cartouche">
-							<span>{{ realisation.client }}</span>
-							<h3 v-html="realisation.titre"></h3>
-							<NuxtLink :to="`/realisations/${realisation.lien}`"
-								class="btn">Voir plus</NuxtLink>
-						</div>
-						<nuxt-img fit="contain"
-							format="webp"
-							quality="80"
-							class="img-fluid"
-							:src="realisation.image"
-							loading="lazy" />
+					class="section"
+					:style="{ backgroundImage: `url(${realisation.image})` }">
+
+					<div class="cartouche">
+						<span>{{ realisation.client }}</span>
+						<h3 v-html="realisation.titre"></h3>
+						<NuxtLink :to="`/realisations/${realisation.lien}`"
+							class="btn">Voir plus</NuxtLink>
 					</div>
-				</div>
+					<!-- <nuxt-img fit="contain"
+						format="webp"
+						quality="80"
+						class="img-fluid"
+						:src="realisation.image"
+						loading="lazy" /> -->
+
+				</section>
 			</div>
 		</div>
 	</ContenuAltLayout>
 </template>
-
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue';
+
+
+import { ref, onMounted } from 'vue';
 import axios from 'axios';
-import Swiper from 'swiper/bundle';
 import ContenuAltLayout from '@/layouts/contenuAlt.vue';
-import 'swiper/css/bundle';
-const swiperContainerAlt = ref(null);
-let swiperInstanceAlt;
 const realisations = ref([]);
 
 onMounted(async () => {
@@ -42,30 +40,7 @@ onMounted(async () => {
 	realisations.value = response.data;
 	console.log('Data fetched:', realisations.value);
 
-	new fullpage('#fullpage', {
-		licenseKey: 'null',
-		autoScrolling: true,
-		navigation: true
-	});
 
-});
-// Trigger a viewport resize event to fix the issue
-
-onMounted(() => {
-	const triggerViewportResize = () => {
-		if (process.client) {
-			const resizeEvent = new Event('resize');
-			window.innerWidth = window.innerWidth - 10000;
-			window.dispatchEvent(resizeEvent);
-			console.log('cest gaté');
-			setTimeout(() => {
-				window.innerWidth = window.innerWidth + 10000;
-				window.dispatchEvent(resizeEvent);
-			}, 100);
-		}
-	};
-
-	triggerViewportResize();
 });
 
 
@@ -78,10 +53,15 @@ onMounted(() => {
 	align-items: center;
 	width: 100vw;
 
-	.cartouche {
-		position: absolute;
-		padding: 1em;
-	}
+
+
+
+}
+
+.cartouche {
+	position: absolute;
+	padding: 1em;
+	min-width: 80vw;
 
 	span {
 		font-family: "New Order", sans-serif;
@@ -141,6 +121,15 @@ li {
 	height: 100vh;
 }
 
+.section {
+
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
 .swiper-slide {
 	min-height: 100vh !important;
 	height: 100% !important;
@@ -171,5 +160,63 @@ li {
 		margin: 0;
 		padding: 0;
 	}
+}
+
+body,
+html {
+	height: 100%;
+}
+
+body.slider__body {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+.slider__container {
+	position: fixed;
+	display: block;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	-webkit-transition: -webkit-transform 500ms ease-in-out;
+	transition: -webkit-transform 500ms ease-in-out;
+	-o-transition: transform 500ms ease-in-out;
+	transition: transform 500ms ease-in-out;
+}
+
+.slider__page {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.slider__indicators {
+	position: fixed;
+	left: 18px;
+	top: 50%;
+	z-index: 2;
+	margin: 0;
+	padding: 0;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.slider__indicator {
+	display: block;
+	width: 10px;
+	height: 10px;
+	margin: 10px 0;
+	border-radius: 100px;
+	background-color: #fff;
+	cursor: default;
+}
+
+.slider__indicator--active {
+	opacity: 0.3;
 }
 </style>

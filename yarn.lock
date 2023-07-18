@@ -833,11 +833,6 @@
     serve-static "^1.14.1"
     workbox-cdn "^5.1.4"
 
-"@openafg/nuxt-fullpage@^1.0.5":
-  version "1.0.5"
-  resolved "https://registry.npmjs.org/@openafg/nuxt-fullpage/-/nuxt-fullpage-1.0.5.tgz"
-  integrity sha512-9CnOYXXd1tCQm78Ug12zNhjlWFIpbYmhf5K/+dh+NoNmwe1+w5U0EA+vUHYXUFhCZq9U0esrIbZjgNYd9R6ulg==
-
 "@pkgjs/parseargs@^0.11.0":
   version "0.11.0"
   resolved "https://registry.npmjs.org/@pkgjs/parseargs/-/parseargs-0.11.0.tgz"
