@@ -49,6 +49,7 @@
               </div>
               <div id="moufmideh">
                 <div id="swide">
+
                   <div :id="`outerswide-${item.Id}`"
                     class="lemoukouagne"
                     v-for="item in state.agence?.slide3 ?? []"
@@ -93,7 +94,6 @@ import { ref, reactive, onMounted, watchEffect } from 'vue';
 import axios from 'axios';
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
-import VueSsrCarousel from 'vue-ssr-carousel';
 
 import anime from 'animejs/lib/anime.es.js';
 
@@ -155,6 +155,19 @@ onMounted(async () => {
       if (swiperInstance.activeIndex == 0) {
         state.isSlide1Active = true;
         document.querySelector('.slide1').classList.add('slide1-active');
+
+      } else if (swiperInstance.activeIndex == 2) {
+        // const slide3Items = document.querySelectorAll('#slide3 .lemoukouagne');
+        // slide3Items.forEach((item, index) => {
+        //   anime({
+        //     targets: item,
+        //     translateX: ['0vw', '100vw'],
+        //     opacity: [0, 1],
+        //     duration: 1000,
+        //     delay: (slide3Items.length - index - 1) * 1000,
+        //     easing: 'easeOutCubic',
+        //   });
+        // });
 
       } else if (swiperInstance.activeIndex === 3) {
         const slide4Items = document.querySelectorAll('#slide4 li');
