@@ -750,21 +750,24 @@ textarea::placeholder {
 		white-space: nowrap;
 		word-break: unset;
 		font-size: 6em;
+		line-height: 72px;
+		margin-bottom: 0em;
+		position: relative;
 	}
 	h4 {
-		text-transform: uppercase;
 		font-weight: bold;
-		font-size: 2em;
+		font-size: 41px;
 		word-break: unset;
 		white-space: nowrap;
+		padding-left: 2em;
 	}
 }
 .lemoukouagne {
-	padding: 0 0 0 1em;
+	padding: 0 9em 0 1em;
 }
 div#moufmideh {
-	height: 334px;
-	padding: 0 15em 0 23em;
+	height: 302px;
+	padding: 0 15em 0 11.5vw;
 	width: 100%;
 	display: block;
 }
