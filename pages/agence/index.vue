@@ -95,7 +95,6 @@ import { ref, reactive, onMounted, watchEffect } from 'vue';
 import axios from 'axios';
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
-import anime from 'animejs/lib/anime.es.js';
 const swiperContainer = ref(null);
 const slide3Content = ref([]);
 let swiperInstance;

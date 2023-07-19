@@ -28,7 +28,6 @@ import axios from 'axios';
 import ContenuAltLayout from '@/layouts/contenuAlt.vue';
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
-import anime from 'animejs/lib/anime.es.js';
 const swiperContainer = ref(null);
 const slide3Content = ref([]);
 let swiperInstance;
@@ -262,4 +261,5 @@ body.slider__body {
 
 .slider__indicator--active {
 	opacity: 0.3;
-}</style>
+}
+</style>
