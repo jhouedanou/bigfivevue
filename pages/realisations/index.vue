@@ -1,13 +1,13 @@
 <template>
 	<ContenuAltLayout>
 		<div id="realisationList">
-			<div class="swiper"
+			<div class="swipers"
 				ref="swiperContainer">
-				<div class="swiper-wrapper">
+				<div class="fullpage">
 					<div v-for="realisation in realisations"
 						:key="realisation.lien"
 						:id="`slide-${realisation.id}`"
-						class="swiper-slide"
+						class="section"
 						:style="{ backgroundImage: `url(${realisation.image})`, height: '110vh !important', minHeight: '100vh !important' }">
 						<div class="cartouche">
 							<span>{{ realisation.client }}</span>
@@ -210,6 +210,13 @@ body.slider__body {
 	overflow: hidden;
 }
 
+.section {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
 .slider__container {
 	position: fixed;
 	display: block;
@@ -255,5 +262,4 @@ body.slider__body {
 
 .slider__indicator--active {
 	opacity: 0.3;
-}
-</style>
+}</style>
