@@ -38,6 +38,6 @@
     "sass": "^1.63.6",
     "swiper": "^8.4.7",
     "vue-awesome-swiper": "^5.0.1",
-    "vue-ssr-carousel": "^2.3.2"
+    "vue-flickity": "^1.2.1"
   }
 }

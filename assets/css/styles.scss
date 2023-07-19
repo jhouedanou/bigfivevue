@@ -776,4 +776,44 @@ div#moufmideh {
 	align-items: center !important;
 	flex-direction: column;
 	justify-content: center !important;
+
+	.carousel {
+		max-width: 100%;
+		padding: 0 0 0 14em;
+	}
+	.carousel__slide--active {
+		filter: alpha(opacity=100) !important;
+		-khtml-opacity: 1 !important;
+		-moz-opacity: 1 !important;
+		opacity: 1 !important;
+		-webkit-filter: alpha(opacity=100) !important;
+	}
+	.carousel__slide {
+		justify-content: flex-start;
+		flex-direction: column;
+		width: auto !important;
+
+		filter: alpha(opacity=50); /* internet explorer */
+		-khtml-opacity: 0.5; /* khtml, old safari */
+		-moz-opacity: 0.5; /* mozilla, netscape */
+		opacity: 0.5; /* fx, safari, opera */
+
+		h3 {
+			text-transform: uppercase;
+			font-weight: bold;
+			white-space: nowrap;
+			word-break: unset;
+			font-size: 6em;
+			line-height: 72px;
+			margin-bottom: 0em;
+			position: relative;
+		}
+		h4 {
+			font-weight: bold;
+			font-size: 41px;
+			word-break: unset;
+			white-space: nowrap;
+			padding-left: 2em;
+		}
+	}
 }
