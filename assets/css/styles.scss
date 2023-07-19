@@ -723,23 +723,7 @@ textarea::placeholder {
 	.moungoue {
 	}
 }
-.lemoukouagne:first-of-type {
-	filter: alpha(opacity=100); /* internet explorer */
-	-khtml-opacity: 1; /* khtml, old safari */
-	-moz-opacity: 1; /* mozilla, netscape */
-	opacity: 1; /* fx, safari, opera */
-}
-.lemoukouagne {
-	filter: alpha(opacity=25);
-	/*internetexplorer*/
-	-khtml-opacity: 0.25;
-	/*khtml,oldsafari*/
-	-moz-opacity: 0.25;
-	/*mozilla,netscape*/
-	opacity: 0.25;
-	/*fx,safari,opera*/
-	-webkit-filter: alpha(opacity=25);
-}
+
 #swide {
 	display: flex;
 	align-items: flex-end;
