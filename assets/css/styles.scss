@@ -760,7 +760,14 @@ div#moufmideh {
 	align-items: center !important;
 	flex-direction: column;
 	justify-content: center !important;
-
+	.swiper-slide {
+		flex-shrink: 0;
+		width: auto;
+		height: 100%;
+		position: relative;
+		transition-property: transform;
+		display: inline-block;
+	}
 	.carousel {
 		max-width: 100%;
 		padding: 0 0 0 14em;

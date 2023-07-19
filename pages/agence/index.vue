@@ -49,15 +49,16 @@
               </div>
               <div id="moufmideh">
                 <div id="swide">
-
-                  <div :id="`outerswide-${item.Id}`"
-                    class="lemoukouagne"
-                    v-for="item in state.agence?.slide3 ?? []"
-                    :key="item.Id">
-                    <div :id="`swide-${item.Id}`">
-                      <h3>{{ item.Id }}. {{ item.titre }}</h3>
-                      <h4>{{ item.nom }}</h4>
+                  <div class="swiper-horizontal">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide"
+                        v-for="item in state.agence?.slide3 ?? []"
+                        :key="item.Id">
+                        <h3>{{ item.Id }}. {{ item.titre }}</h3>
+                        <h4>{{ item.nom }}</h4>
+                      </div>
                     </div>
+                    <div class="swiper-pagination-2"></div>
                   </div>
                 </div>
               </div>
@@ -94,12 +95,11 @@ import { ref, reactive, onMounted, watchEffect } from 'vue';
 import axios from 'axios';
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
-
 import anime from 'animejs/lib/anime.es.js';
-
 const swiperContainer = ref(null);
 const slide3Content = ref([]);
 let swiperInstance;
+let swiperHorizontalInstance
 const state = reactive({
   metadesc: '',
   pageTitle: '',
@@ -126,9 +126,6 @@ onMounted(async () => {
     state.pageTitle = textesGlobal.data.title;
     state.agence = textesGlobal.data;
     //selection span
-
-
-
     // Initialisation du swiper
     swiperInstance = new Swiper(swiperContainer.value, {
       direction: 'vertical',
@@ -146,7 +143,22 @@ onMounted(async () => {
         clickable: true,
       }
     });
-    //gestion des animations
+    // Initialisation du swiper horizontal
+    swiperHorizontalInstance = new Swiper('.swiper-horizontal', {
+      direction: 'horizontal',
+      slidesPerView: 'auto',
+      spaceBetween: 0,
+      mousewheel: true,
+      keyboard: true,
+      autoplay: {
+        delay: 5000, // delay between transitions in ms
+        disableOnInteraction: false, // enable/disable autoplay on user interaction
+      },
+      // pagination: {
+      //   el: '.swiper-pagination-2',
+      //   clickable: true,
+      // },
+    });
 
     //ajouter une classe animationslide1 une fois que swiperInstance a fini son initialisation
 
@@ -157,17 +169,7 @@ onMounted(async () => {
         document.querySelector('.slide1').classList.add('slide1-active');
 
       } else if (swiperInstance.activeIndex == 2) {
-        // const slide3Items = document.querySelectorAll('#slide3 .lemoukouagne');
-        // slide3Items.forEach((item, index) => {
-        //   anime({
-        //     targets: item,
-        //     translateX: ['0vw', '100vw'],
-        //     opacity: [0, 1],
-        //     duration: 1000,
-        //     delay: (slide3Items.length - index - 1) * 1000,
-        //     easing: 'easeOutCubic',
-        //   });
-        // });
+
 
       } else if (swiperInstance.activeIndex === 3) {
         const slide4Items = document.querySelectorAll('#slide4 li');
