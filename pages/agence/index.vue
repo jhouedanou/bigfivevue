@@ -43,13 +43,20 @@
             <div id="slide3"
               class="swiper-slide">
               <div id="die">
+                <div class="mongoue"
+                  v-html="state.agence?.introslide3 ?? ''"></div>
 
-                <p v-html="state.agence?.introslide3 ?? ''"></p>
+              </div>
+              <div id="moufmideh">
                 <div id="swide">
-                  <div v-for="item in state.agence?.slide3 ?? []"
+                  <div :id="`outerswide-${item.Id}`"
+                    class="lemoukouagne"
+                    v-for="item in state.agence?.slide3 ?? []"
                     :key="item.Id">
-                    <h3>{{ item.Id }}. {{ item.titre }}</h3>
-                    <h4>{{ item.nom }}</h4>
+                    <div :id="`swide-${item.Id}`">
+                      <h3>{{ item.Id }}. {{ item.titre }}</h3>
+                      <h4>{{ item.nom }}</h4>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -57,7 +64,6 @@
             <div id="slide4"
               class="swiper-slide">
               <ul class="slide4 full-height">
-
                 <li v-for="item in state.agence?.slide4.slice().reverse() ?? []"
                   :key="item.id">
                   {{ item.content }}
@@ -87,6 +93,8 @@ import { ref, reactive, onMounted, watchEffect } from 'vue';
 import axios from 'axios';
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
+import VueSsrCarousel from 'vue-ssr-carousel';
+
 import anime from 'animejs/lib/anime.es.js';
 
 const swiperContainer = ref(null);
@@ -238,15 +246,6 @@ watchEffect(() => {
   transform: rotate(357deg);
   right: 7px;
   top: 278px;
-}
-
-#die {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-
-  p {}
 }
 
 .main {

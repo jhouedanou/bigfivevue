@@ -708,3 +708,69 @@ textarea::placeholder {
 		-o-transform: none !important;
 	}
 }
+
+#die {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 5vh 39vw 0 12vw;
+	p {
+		font-size: 20px;
+		line-height: 29px;
+		margin-bottom: 2.5em;
+	}
+	.moungoue {
+	}
+}
+.lemoukouagne:first-of-type {
+	filter: alpha(opacity=100); /* internet explorer */
+	-khtml-opacity: 1; /* khtml, old safari */
+	-moz-opacity: 1; /* mozilla, netscape */
+	opacity: 1; /* fx, safari, opera */
+}
+.lemoukouagne {
+	filter: alpha(opacity=25);
+	/*internetexplorer*/
+	-khtml-opacity: 0.25;
+	/*khtml,oldsafari*/
+	-moz-opacity: 0.25;
+	/*mozilla,netscape*/
+	opacity: 0.25;
+	/*fx,safari,opera*/
+	-webkit-filter: alpha(opacity=25);
+}
+#swide {
+	display: flex;
+	align-items: flex-end;
+	height: inherit;
+	h3 {
+		text-transform: uppercase;
+		font-weight: bold;
+		white-space: nowrap;
+		word-break: unset;
+		font-size: 6em;
+	}
+	h4 {
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 2em;
+		word-break: unset;
+		white-space: nowrap;
+	}
+}
+.lemoukouagne {
+	padding: 0 0 0 1em;
+}
+div#moufmideh {
+	height: 334px;
+	padding: 0 15em 0 23em;
+	width: 100%;
+	display: block;
+}
+#slide3 {
+	display: flex;
+	align-items: center !important;
+	flex-direction: column;
+	justify-content: center !important;
+}
