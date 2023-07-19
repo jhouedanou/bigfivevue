@@ -99,6 +99,17 @@ const state = reactive({
   isSlide1Active: '',
 });
 
+onMounted(() => {
+  const slide1Element = document.getElementById('slide1');
+  if (slide1Element) {
+    setTimeout(() => {
+      slide1Element.classList.add('slide1-active');
+    }, 1000);
+  } else {
+    slide1Element.classList.remove('slide1-active');
+  }
+});
+
 onMounted(async () => {
   try {
     //recupération des textes de la page
@@ -106,6 +117,9 @@ onMounted(async () => {
     state.metadesc = textesGlobal.data.metadesc;
     state.pageTitle = textesGlobal.data.title;
     state.agence = textesGlobal.data;
+    //selection span
+
+
 
     // Initialisation du swiper
     swiperInstance = new Swiper(swiperContainer.value, {
@@ -115,19 +129,25 @@ onMounted(async () => {
       mousewheel: true,
       keyboard: true,
       parallax: true,
-      //observer: true,
-      //observeParents: true,
+      // autoplay: {
+      //   delay: 5000, // delay between transitions in ms
+      //   disableOnInteraction: false, // enable/disable autoplay on user interaction
+      // },
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
       }
     });
+    //gestion des animations
+
+    //ajouter une classe animationslide1 une fois que swiperInstance a fini son initialisation
 
     //gestion de la disposition de la sidebar 
     swiperInstance.on('slideChange', () => {
-      console.log(swiperInstance.activeIndex);
       if (swiperInstance.activeIndex == 0) {
         state.isSlide1Active = true;
+        document.querySelector('.slide1').classList.add('slide1-active');
+
       } else if (swiperInstance.activeIndex === 3) {
         const slide4Items = document.querySelectorAll('#slide4 li');
         /* slide4Items.forEach((item, index) => {
@@ -161,9 +181,12 @@ onMounted(async () => {
   } catch (error) {
     console.error(error);
   }
+
+
 });
 
 watchEffect(() => {
+
   useHead({
     title: state.pageTitle,
     meta: [
@@ -183,6 +206,8 @@ watchEffect(() => {
     ],
   });
 });
+
+
 </script>
 <style lang="scss" scoped>
 .slide5-background {
