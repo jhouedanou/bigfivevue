@@ -45,20 +45,19 @@
               <div id="die">
                 <div class="mongoue"
                   v-html="state.agence?.introslide3 ?? ''"></div>
-
               </div>
-              <div id="moufmideh">
-                <div id="swide">
-                  <div class="swiper-horizontal">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide"
-                        v-for="item in state.agence?.slide3 ?? []"
-                        :key="item.Id">
-                        <h3>{{ item.Id }}. {{ item.titre }}</h3>
-                        <h4>{{ item.nom }}</h4>
-                      </div>
-                    </div>
-                    <div class="swiper-pagination-2"></div>
+              <div id="moufmideh"
+                ref="swiperContainer2">
+                <div id="swide"
+                  class="swiper-wrapper">
+                  <div :index="item.Id"
+                    class="swiper-slide"
+                    v-for="item in state.agence?.slide3 ?? []"
+                    :key="item.Id"
+                    :peek-gutter=true
+                    :slides-per-page="1">
+                    <h3>{{ item.Id }}. {{ item.titre }}</h3>
+                    <h4>{{ item.nom }}</h4>
                   </div>
                 </div>
               </div>
@@ -90,15 +89,17 @@
     </div>
   </div>
 </template>
+
 <script setup>
 import { ref, reactive, onMounted, watchEffect } from 'vue';
 import axios from 'axios';
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
-const swiperContainer = ref(null);
-const slide3Content = ref([]);
+let swiperContainer = ref(null);
+let swiperContainer2 = ref(null);
+let slide3Content = ref([]);
 let swiperInstance;
-let swiperHorizontalInstance
+let swiperInstance2;
 const state = reactive({
   metadesc: '',
   pageTitle: '',
@@ -107,6 +108,8 @@ const state = reactive({
 });
 
 onMounted(() => {
+
+
   const slide1Element = document.getElementById('slide1');
   if (slide1Element) {
     setTimeout(() => {
@@ -116,7 +119,6 @@ onMounted(() => {
     slide1Element.classList.remove('slide1-active');
   }
 });
-
 onMounted(async () => {
   try {
     //recupération des textes de la page
@@ -125,40 +127,25 @@ onMounted(async () => {
     state.pageTitle = textesGlobal.data.title;
     state.agence = textesGlobal.data;
     //selection span
+
+
     // Initialisation du swiper
     swiperInstance = new Swiper(swiperContainer.value, {
       direction: 'vertical',
       slidesPerView: 1,
       spaceBetween: 0,
       mousewheel: true,
-      keyboard: true,
-      parallax: true,
-      // autoplay: {
-      //   delay: 5000, // delay between transitions in ms
-      //   disableOnInteraction: false, // enable/disable autoplay on user interaction
-      // },
+      // keyboard: true,
+      // parallax: true,
+      autoplay: {
+        delay: 5000, // delay between transitions in ms
+        disableOnInteraction: true // enable/disable autoplay on user interaction
+      },
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
       }
     });
-    // Initialisation du swiper horizontal
-    swiperHorizontalInstance = new Swiper('.swiper-horizontal', {
-      direction: 'horizontal',
-      slidesPerView: 'auto',
-      spaceBetween: 0,
-      mousewheel: true,
-      keyboard: true,
-      autoplay: {
-        delay: 5000, // delay between transitions in ms
-        disableOnInteraction: false, // enable/disable autoplay on user interaction
-      },
-      // pagination: {
-      //   el: '.swiper-pagination-2',
-      //   clickable: true,
-      // },
-    });
-
     //ajouter une classe animationslide1 une fois que swiperInstance a fini son initialisation
 
     //gestion de la disposition de la sidebar 
@@ -168,7 +155,24 @@ onMounted(async () => {
         document.querySelector('.slide1').classList.add('slide1-active');
 
       } else if (swiperInstance.activeIndex == 2) {
-
+        // carousel horizontal
+        swiperInstance2 = new Swiper(swiperContainer2.value, {
+          direction: 'horizontal',
+          slidesPerView: 1,
+          spaceBetween: 10,
+          //mousewheel: true,
+          rewind: true,
+          disabledOnInteraction: true,
+          initialSlide: 0,
+          speed: 2000,
+          draggable: true,
+          // keyboard: true,
+          // parallax: true,
+          autoplay: {
+            delay: 2000, // delay between transitions in ms
+            disableOnInteraction: true // enable/disable autoplay on user interaction
+          },
+        });
 
       } else if (swiperInstance.activeIndex === 3) {
         const slide4Items = document.querySelectorAll('#slide4 li');

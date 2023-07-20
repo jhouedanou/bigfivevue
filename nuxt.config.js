@@ -5,9 +5,10 @@ export default defineNuxtConfig({
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
-      /*       script: [
-  
-            ], */
+      script: [
+        { src: 'https://code.jquery.com/jquery-3.6.0.min.js', body: true },
+        { src: 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js', body: true },
+      ],
       link: [
         {
           rel: 'stylesheet',
@@ -39,9 +40,7 @@ export default defineNuxtConfig({
     '@/assets/css/styles.scss',
     'bootstrap/dist/css/bootstrap.min.css'
   ],
-  plugins: [
-
-  ],
+  plugins: [],
   components: true,
   buildModules: [
     '@nuxtjs/axios',

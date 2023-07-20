@@ -728,6 +728,27 @@ textarea::placeholder {
 	display: flex;
 	align-items: flex-end;
 	height: inherit;
+	&.swiper-wrapper {
+		background: none !important;
+	}
+	.swiper-slide {
+		&.swiper-slide-active {
+			filter: alpha(opacity=100); /* internet explorer */
+			-khtml-opacity: 1; /* khtml, old safari */
+			-moz-opacity: 1; /* mozilla, netscape */
+			opacity: 1; /* fx, safari, opera */
+			transition: all 0.4s ease-in-out 0.2s;
+		}
+
+		filter: alpha(opacity=50); /* internet explorer */
+		-khtml-opacity: 0.5; /* khtml, old safari */
+		-moz-opacity: 0.5; /* mozilla, netscape */
+		opacity: 0.5; /* fx, safari, opera */
+		transition: all 0.4s ease-in-out 0.2s;
+	}
+	.swiper-wrapper {
+		background: none !important;
+	}
 	h3 {
 		text-transform: uppercase;
 		font-weight: bold;
