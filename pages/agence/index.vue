@@ -2,6 +2,7 @@
 <template>
   <div id="lagence"
     class="container-fluid">
+    <PageLoader v-if="state.isLoading" />
     <div class="row">
       <div id="sidebar"
         class="sidebar"
@@ -57,7 +58,7 @@
                     :peek-gutter=true
                     :slides-per-page="1">
                     <h3>{{ item.Id }}. {{ item.titre }}</h3>
-                    <h4>{{ item.nom }}</h4>
+                    <h4 v-html="item.nom"></h4>
                   </div>
                 </div>
               </div>
@@ -65,7 +66,8 @@
             <div id="slide4"
               class="swiper-slide">
               <ul class="slide4 full-height">
-                <li v-for="item in state.agence?.slide4.slice().reverse() ?? []"
+                <li class="stack-up"
+                  v-for="item in state.agence?.slide4.slice().reverse() ?? []"
                   :key="item.id">
                   {{ item.content }}
                 </li>
@@ -95,6 +97,7 @@ import { ref, reactive, onMounted, watchEffect } from 'vue';
 import axios from 'axios';
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
+import PageLoader from '@/components/PageLoader.vue';
 let swiperContainer = ref(null);
 let swiperContainer2 = ref(null);
 let slide3Content = ref([]);
@@ -105,10 +108,9 @@ const state = reactive({
   pageTitle: '',
   agence: null,
   isSlide1Active: '',
+  isLoading: true
 });
-
 onMounted(() => {
-
 
   const slide1Element = document.getElementById('slide1');
   if (slide1Element) {
@@ -121,26 +123,25 @@ onMounted(() => {
 });
 onMounted(async () => {
   try {
+    // page loading
+    state.isLoading = true;
     //recupération des textes de la page
     const textesGlobal = await axios.get('/api/agence.json');
     state.metadesc = textesGlobal.data.metadesc;
     state.pageTitle = textesGlobal.data.title;
     state.agence = textesGlobal.data;
-    //selection span
-
-
     // Initialisation du swiper
     swiperInstance = new Swiper(swiperContainer.value, {
       direction: 'vertical',
       slidesPerView: 1,
       spaceBetween: 0,
       mousewheel: true,
-      // keyboard: true,
+      keyboard: true,
       // parallax: true,
-      autoplay: {
-        delay: 5000, // delay between transitions in ms
-        disableOnInteraction: true // enable/disable autoplay on user interaction
-      },
+      // autoplay: {
+      //   delay: 5000, // delay between transitions in ms
+      //   disableOnInteraction: true // enable/disable autoplay on user interaction
+      // },
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -169,7 +170,7 @@ onMounted(async () => {
           // keyboard: true,
           // parallax: true,
           autoplay: {
-            delay: 2000, // delay between transitions in ms
+            //delay: 2000,
             disableOnInteraction: true // enable/disable autoplay on user interaction
           },
         });
@@ -204,11 +205,12 @@ onMounted(async () => {
       // Set the new background position
       slide5Element.style.backgroundPosition = `${posX}% ${posY}%`;
     });
+    // Set isLoading to false when everything is loaded
+    state.isLoading = false;
   } catch (error) {
     console.error(error);
+    state.isLoading = false;
   }
-
-
 });
 
 watchEffect(() => {
