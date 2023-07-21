@@ -65,10 +65,16 @@
             </div>
             <div id="slide4"
               class="swiper-slide">
-              <ul class="slide4 full-height">
+              <ul id="tipster"
+                class="slide4 full-height">
                 <li class="stack-up"
+                  :id="`lestack${item.id - 1}`"
                   v-for="item in state.agence?.slide4.slice().reverse() ?? []"
                   :key="item.id">
+                  <!-- <li class="stack-up"
+                  v-for="item in state.agence?.slide4.slice(0, 3).reverse() ?? []"
+                  :id="`lestack${item.id}`"
+                  :key="item.id"> -->
                   {{ item.content }}
                 </li>
               </ul>
@@ -97,6 +103,8 @@ import { ref, reactive, onMounted, watchEffect } from 'vue';
 import axios from 'axios';
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
+import 'animate.css';
+
 import PageLoader from '@/components/PageLoader.vue';
 let swiperContainer = ref(null);
 let swiperContainer2 = ref(null);
@@ -139,8 +147,8 @@ onMounted(async () => {
       keyboard: true,
       // parallax: true,
       // autoplay: {
-      //   delay: 5000, // delay between transitions in ms
-      //   disableOnInteraction: true // enable/disable autoplay on user interaction
+      //    delay: 5000, // delay between transitions in ms
+      //    disableOnInteraction: true // enable/disable autoplay on user interaction
       // },
       pagination: {
         el: '.swiper-pagination',
@@ -156,6 +164,7 @@ onMounted(async () => {
         document.querySelector('.slide1').classList.add('slide1-active');
 
       } else if (swiperInstance.activeIndex == 2) {
+        state.isSlide1Active = false;
         // carousel horizontal
         swiperInstance2 = new Swiper(swiperContainer2.value, {
           direction: 'horizontal',
@@ -169,31 +178,51 @@ onMounted(async () => {
           draggable: true,
           // keyboard: true,
           // parallax: true,
-          autoplay: {
-            //delay: 2000,
-            disableOnInteraction: true // enable/disable autoplay on user interaction
-          },
+          // autoplay: {
+          // delay: 2000,
+          //   disableOnInteraction: true // enable/disable autoplay on user interaction
+          // },
         });
 
       } else if (swiperInstance.activeIndex === 3) {
-        const slide4Items = document.querySelectorAll('#slide4 li');
-        /* slide4Items.forEach((item, index) => {
-          anime({
-            targets: item,
-            translateY: ['0vh', '100vh'],
-            opacity: [0, 1],
-            duration: 1000,
-            delay: (slide4Items.length - index - 1) * 1000,
-            easing: 'easeOutCubic',
-          });
-        }); */
+
+        const tipster = document.querySelector('#tipster');
+        const liste = tipster.querySelectorAll('li');
+        const delai = 500;
+        const increment = 1;
+        const debutFadeOut = 19;
+        let i = liste.length - increment; // 34
+        let dernierElementdelaListe = liste.length - increment;
+        const lEcart = liste.length - debutFadeOut; //34-15=19
+        //pour les elements 34 à 15 de la liste, fadeInDownBig tous les 500ms
+        //pour le 14e element de la liste, fadeOut du dernier element de la liste, le 34 et FadeInDownBig du 16e element. Supprimer le dernier element de la liste , de façon à ce que le 16e element devienne le 15e element de la liste
+        //pour l'element 13 de la liste; fadeInDownBig et supprimer le dernier element de la liste. Supprimmer
+        const interval = setInterval(() => {
+          if (i >= debutFadeOut) {
+            console.log('fadeIn' + i);
+            liste[i].classList.add('animate__animated', 'animate__fadeInDownBig');
+            i--;
+          } else if (i < debutFadeOut && i >= 0) {
+            console.log('fadeOut' + i);
+            liste[i + lEcart].classList.remove('animate__fadeInDownBig');
+            liste[i + lEcart].classList.add('animate__fadeOutDownBig', 'close');
+            liste[i].classList.add('animate__animated', 'animate__fadeInDownBig');
+            i--;
+          } else if (i < 0) {
+            stop();
+          } else {
+            clearInterval(interval);
+          }
+        }, delai);
+
+        state.isSlide1Active = false;
+
       } else {
         state.isSlide1Active = false;
       }
     })
 
     //gestion de l'animation de la slide 5
-    // Get the slide 5 element
     const slide5Element = document.getElementById('slide5');
 
     // Add event listener for mouse movement

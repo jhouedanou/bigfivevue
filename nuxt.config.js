@@ -15,7 +15,11 @@ export default defineNuxtConfig({
         {
           rel: 'stylesheet',
           href: 'https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.css'
-        }
+        },
+        // {
+        //   rel: 'stylesheet',
+        //   href: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css'
+        // }
       ]
     }
   },
