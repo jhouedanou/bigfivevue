@@ -146,10 +146,10 @@ onMounted(async () => {
       mousewheel: true,
       keyboard: true,
       // parallax: true,
-      // autoplay: {
-      //    delay: 5000, // delay between transitions in ms
-      //    disableOnInteraction: true // enable/disable autoplay on user interaction
-      // },
+      autoplay: {
+        delay: 5000, // delay between transitions in ms
+        disableOnInteraction: true // enable/disable autoplay on user interaction
+      },
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -178,10 +178,10 @@ onMounted(async () => {
           draggable: true,
           // keyboard: true,
           // parallax: true,
-          // autoplay: {
-          // delay: 2000,
-          //   disableOnInteraction: true // enable/disable autoplay on user interaction
-          // },
+          autoplay: {
+            delay: 2000,
+            disableOnInteraction: true // enable/disable autoplay on user interaction
+          },
         });
 
       } else if (swiperInstance.activeIndex === 3) {
