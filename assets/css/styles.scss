@@ -1011,7 +1011,7 @@ div#pargrapheIntro {
 	max-width: 70vw;
 	margin: 0 auto;
 	align-items: center;
-
+margin:110px auto 0;
 	ul {
 		margin: 0;
 		padding: 0;
@@ -1157,6 +1157,51 @@ div#pargrapheIntro {
 			height: 780px;
 			width: 100%;
 			margin: 45px 0 0 0;
+		}
+	}
+}
+#div-stark {
+	max-width: 100vw;
+	width: 100vw;
+	div#pargrapheIntro {
+		max-width: 100%;
+		width: 100%;
+		iframe {
+			margin: 0 auto;
+			display: flex;
+			justify-content: center;
+			width: 100%;
+			height: 773px;
+			margin-top: 90px;
+		}
+	}
+	p {
+		&:nth-of-type(1) {
+		}
+		&:nth-of-type(2) {
+		}
+		&:nth-of-type(3) {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			margin-top: 77px;
+			max-width: 100vw;
+			width: 100vw;
+			margin-bottom: 55px;
+		}
+		&:nth-of-type(4) {
+			margin: 0 auto;
+			display: flex;
+			justify-content: center;
+		}
+		&:nth-of-type(5) {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			max-width: 100%;
+			padding: 81px 0 0 0;
 		}
 	}
 }
