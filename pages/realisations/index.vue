@@ -24,7 +24,7 @@
 	</ContenuAltLayout>
 </template>
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, reactive } from 'vue';
 import axios from 'axios';
 import ContenuAltLayout from '@/layouts/contenuAlt.vue';
 import Swiper from 'swiper/bundle';

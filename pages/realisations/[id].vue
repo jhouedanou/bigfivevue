@@ -4,7 +4,6 @@
 
 		<div :id="`banner`"
 			:class="{ 'fixed': scrollPosition > 200, 'visible': scrollPosition > 200 }">
-
 			<img :src="matchingRealisation.banniere"
 				alt="Image"
 				class="img-fluid" />
@@ -12,7 +11,6 @@
 		<div :id="`div-${matchingRealisation.lien}`"
 			v-if="matchingRealisation"
 			class="realisation-page">
-
 			<div id="pargrapheIntro"
 				v-if="matchingRealisation"
 				:key="matchingRealisation.lien">
@@ -27,7 +25,6 @@
 							:src="image"
 							alt="Image"
 							class="element grid-item popup" />
-
 					</div>
 				</div>
 			</div>
@@ -57,9 +54,8 @@
 	</ContenuAltLayout>
 </template>
 
-
 <script setup>
-import { ref, onMounted, computed } from 'vue';
+import { ref, onMounted, computed, reactive } from 'vue';
 import axios from 'axios';
 import { useRoute } from 'vue-router';
 import ContenuAltLayout from '@/layouts/contenuAlt.vue';
@@ -85,12 +81,9 @@ onMounted(async () => {
 			realisations.value = response.data;
 			const Masonry = await import('masonry-layout');
 			const imagesLoaded = await import('imagesloaded');
-
 			const masonry = new Masonry.default(grid.value, {
 				itemSelector: '.element',
-				layoutMode: 'packery',/* ,
-				columnWidth: '.grid-sizer', percentPosition: true
-				 */
+				layoutMode: 'packery'
 			});
 			imagesLoaded.default(grid.value).on('progress', () => {
 				masonry.layout();
@@ -100,15 +93,12 @@ onMounted(async () => {
 	} catch (error) {
 		console.error(error);
 		state.isLoading = false;
-
 	}
 });
 
 const matchingRealisation = computed(() => {
 	const filterValue = route.fullPath.substring('/realisations/'.length);
-	const index = realisations.value.findIndex(
-		(realisation) => realisation.lien === filterValue
-	);
+	const index = realisations.value.findIndex((realisation) => realisation.lien === filterValue);
 	const previousRealisation = realisations.value[index - 1];
 	const nextRealisation = realisations.value[index + 1];
 	return {
@@ -117,8 +107,6 @@ const matchingRealisation = computed(() => {
 		nextLink: nextRealisation ? nextRealisation.lien : null
 	};
 });
-
-
 </script>
 
 <style lang="scss" scoped>
@@ -137,7 +125,6 @@ const matchingRealisation = computed(() => {
 }
 
 #galerie {
-
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -145,63 +132,7 @@ const matchingRealisation = computed(() => {
 	flex-wrap: wrap;
 	max-width: 80vw;
 	margin: 0 auto;
-
 }
 
-#div-solibra {
-	#galerie {
-		img {
-			width: 50%;
-		}
-	}
-}
-
-
-#div-candia {
-	#galerie {
-		img {
-			&:nth-of-type(1) {
-				width: auto;
-				height: 452px
-			}
-
-			&:nth-of-type(2) {
-				width: auto;
-				height: 452px
-			}
-
-			&:nth-of-type(3) {}
-
-			&:nth-of-type(4) {}
-
-			&:nth-of-type(5) {}
-
-			&:nth-of-type(6) {}
-
-			&:nth-of-type(7) {}
-
-			&:nth-of-type(8) {}
-
-			&:nth-of-type(9) {}
-
-			&:nth-of-type(10) {}
-
-			&:nth-of-type(11) {}
-
-			&:nth-of-type(12) {}
-
-			&:nth-of-type(13) {}
-
-			&:nth-of-type(14) {}
-
-			&:nth-of-type(15) {}
-
-			&:nth-of-type(16) {}
-
-			&:nth-of-type(17) {}
-
-			&:nth-of-type(18) {}
-		}
-	}
-}
+/* Remove the invalid nested styles here */
 </style>
