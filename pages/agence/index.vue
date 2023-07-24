@@ -29,9 +29,11 @@
                   v-for="slide in state.agence?.slide2 ?? []"
                   :key="slide.id ?? ''">
                   <div class="inner">
-
+                    <nuxt-img :src="slide.img ?? ''"
+                      :lazy="true"
+                      quality="80" /><!-- 
                     <img :src="slide.img ?? ''"
-                      alt="">
+                      alt=""> -->
                     <h3>{{ slide.title ?? '' }}</h3>
                     <div class="sabine">
                       <p v-html="slide.content ?? ''"></p>
