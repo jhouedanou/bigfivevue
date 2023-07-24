@@ -1,10 +1,11 @@
 <template>
 	<ContenuAltLayout>
 		<div id="realisationList">
+			<PageLoader v-if="state.isLoading" />
 			<div class="swiper"
 				ref="swiperContainer">
 				<div class="swiper-wrapper">
-					<div v-for="realisation in realisations"
+					<div v-for="realisation in state.realisations"
 						:key="realisation.lien"
 						:id="`slide-${realisation.id}`"
 						class="swiper-slide"
@@ -28,31 +29,46 @@ import axios from 'axios';
 import ContenuAltLayout from '@/layouts/contenuAlt.vue';
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
-import anime from 'animejs/lib/anime.es.js';
+import PageLoader from '@/components/PageLoader.vue';
 const swiperContainer = ref(null);
-const slide3Content = ref([]);
 let swiperInstance;
-const realisations = ref([]);
+const state = reactive({
+	realisations: null,
+	isLoading: true
+});
 onMounted(async () => {
-	console.log('Before fetching data');
-	const response = await axios.get('/api/clients.json');
-	realisations.value = response.data;
-	console.log('Data fetched:', realisations.value);
-	// Initialisation du swiper
-	swiperInstance = new Swiper(swiperContainer.value, {
-		direction: 'vertical',
-		slidesPerView: 1,
-		spaceBetween: 0,
-		mousewheel: true,
-		keyboard: true,
-		parallax: true,
-		//observer: true,
-		//observeParents: true,
-		pagination: {
-			el: '.swiper-pagination',
-			clickable: true,
-		}
-	});
+	try {
+		state.isLoading = true;
+		//recuperer les realisations
+		const response = await axios.get('/api/clients.json');
+		state.realisations = response.data;
+		console.log('Data fetched:', state.realisations);
+		// Initialisation du swiper
+		swiperInstance = new Swiper(swiperContainer.value, {
+			direction: 'vertical',
+			slidesPerView: 1,
+			spaceBetween: 0,
+			mousewheel: true,
+			keyboard: true,
+			rewind: true,
+			observer: true,
+			observeParents: true,
+			autoplay: {
+				delay: 2000, // delay between transitions in ms
+				disableOnInteraction: true // enable/disable autoplay on user interaction
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			}
+		});
+		state.isLoading = false;
+	} catch (error) {
+		console.log(error);
+		state.isLoading = false;
+
+	}
+
 });
 </script>
 <style lang="scss" scoped>
@@ -183,7 +199,7 @@ li {
 	.cartouche {
 		width: 100vw !important;
 		padding: 0em !important;
-		max-width: 1480px;
+		max-width: 86vw;
 		margin: 0 auto;
 		display: flex;
 		justify-content: center;
@@ -208,6 +224,13 @@ body.slider__body {
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
+}
+
+.section {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 }
 
 .slider__container {

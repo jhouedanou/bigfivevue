@@ -2,6 +2,7 @@
 <template>
   <div id="lagence"
     class="container-fluid">
+    <PageLoader v-if="state.isLoading" />
     <div class="row">
       <div id="sidebar"
         class="sidebar"
@@ -43,23 +44,37 @@
             <div id="slide3"
               class="swiper-slide">
               <div id="die">
-
-                <p v-html="state.agence?.introslide3 ?? ''"></p>
-                <div id="swide">
-                  <div v-for="item in state.agence?.slide3 ?? []"
-                    :key="item.Id">
+                <div class="mongoue"
+                  v-html="state.agence?.introslide3 ?? ''"></div>
+              </div>
+              <div id="moufmideh"
+                ref="swiperContainer2">
+                <div id="swide"
+                  class="swiper-wrapper">
+                  <div :index="item.Id"
+                    class="swiper-slide"
+                    v-for="item in state.agence?.slide3 ?? []"
+                    :key="item.Id"
+                    :peek-gutter=true
+                    :slides-per-page="1">
                     <h3>{{ item.Id }}. {{ item.titre }}</h3>
-                    <h4>{{ item.nom }}</h4>
+                    <h4 v-html="item.nom"></h4>
                   </div>
                 </div>
               </div>
             </div>
             <div id="slide4"
               class="swiper-slide">
-              <ul class="slide4 full-height">
-
-                <li v-for="item in state.agence?.slide4.slice().reverse() ?? []"
+              <ul id="tipster"
+                class="slide4 full-height">
+                <li class="stack-up"
+                  :id="`lestack${item.id - 1}`"
+                  v-for="item in state.agence?.slide4.slice().reverse() ?? []"
                   :key="item.id">
+                  <!-- <li class="stack-up"
+                  v-for="item in state.agence?.slide4.slice(0, 3).reverse() ?? []"
+                  :id="`lestack${item.id}`"
+                  :key="item.id"> -->
                   {{ item.content }}
                 </li>
               </ul>
@@ -82,31 +97,47 @@
     </div>
   </div>
 </template>
+
 <script setup>
 import { ref, reactive, onMounted, watchEffect } from 'vue';
 import axios from 'axios';
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
-import anime from 'animejs/lib/anime.es.js';
+import 'animate.css';
 
-const swiperContainer = ref(null);
-const slide3Content = ref([]);
+import PageLoader from '@/components/PageLoader.vue';
+let swiperContainer = ref(null);
+let swiperContainer2 = ref(null);
+let slide3Content = ref([]);
 let swiperInstance;
+let swiperInstance2;
 const state = reactive({
   metadesc: '',
   pageTitle: '',
   agence: null,
   isSlide1Active: '',
+  isLoading: true
 });
+onMounted(() => {
 
+  const slide1Element = document.getElementById('slide1');
+  if (slide1Element) {
+    setTimeout(() => {
+      slide1Element.classList.add('slide1-active');
+    }, 1000);
+  } else {
+    slide1Element.classList.remove('slide1-active');
+  }
+});
 onMounted(async () => {
   try {
+    // page loading
+    state.isLoading = true;
     //recupération des textes de la page
     const textesGlobal = await axios.get('/api/agence.json');
     state.metadesc = textesGlobal.data.metadesc;
     state.pageTitle = textesGlobal.data.title;
     state.agence = textesGlobal.data;
-
     // Initialisation du swiper
     swiperInstance = new Swiper(swiperContainer.value, {
       direction: 'vertical',
@@ -114,39 +145,84 @@ onMounted(async () => {
       spaceBetween: 0,
       mousewheel: true,
       keyboard: true,
-      parallax: true,
-      //observer: true,
-      //observeParents: true,
+      // parallax: true,
+      autoplay: {
+        delay: 5000, // delay between transitions in ms
+        disableOnInteraction: true // enable/disable autoplay on user interaction
+      },
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
       }
     });
+    //ajouter une classe animationslide1 une fois que swiperInstance a fini son initialisation
 
     //gestion de la disposition de la sidebar 
     swiperInstance.on('slideChange', () => {
-      console.log(swiperInstance.activeIndex);
       if (swiperInstance.activeIndex == 0) {
         state.isSlide1Active = true;
+        document.querySelector('.slide1').classList.add('slide1-active');
+
+      } else if (swiperInstance.activeIndex == 2) {
+        state.isSlide1Active = false;
+        // carousel horizontal
+        swiperInstance2 = new Swiper(swiperContainer2.value, {
+          direction: 'horizontal',
+          slidesPerView: 1,
+          spaceBetween: 10,
+          //mousewheel: true,
+          rewind: true,
+          disabledOnInteraction: true,
+          initialSlide: 0,
+          speed: 2000,
+          draggable: true,
+          // keyboard: true,
+          // parallax: true,
+          autoplay: {
+            delay: 2000,
+            disableOnInteraction: true // enable/disable autoplay on user interaction
+          },
+        });
+
       } else if (swiperInstance.activeIndex === 3) {
-        const slide4Items = document.querySelectorAll('#slide4 li');
-        /* slide4Items.forEach((item, index) => {
-          anime({
-            targets: item,
-            translateY: ['0vh', '100vh'],
-            opacity: [0, 1],
-            duration: 1000,
-            delay: (slide4Items.length - index - 1) * 1000,
-            easing: 'easeOutCubic',
-          });
-        }); */
+
+        const tipster = document.querySelector('#tipster');
+        const liste = tipster.querySelectorAll('li');
+        const delai = 500;
+        const increment = 1;
+        const debutFadeOut = 19;
+        let i = liste.length - increment; // 34
+        let dernierElementdelaListe = liste.length - increment;
+        const lEcart = liste.length - debutFadeOut; //34-15=19
+        //pour les elements 34 à 15 de la liste, fadeInDownBig tous les 500ms
+        //pour le 14e element de la liste, fadeOut du dernier element de la liste, le 34 et FadeInDownBig du 16e element. Supprimer le dernier element de la liste , de façon à ce que le 16e element devienne le 15e element de la liste
+        //pour l'element 13 de la liste; fadeInDownBig et supprimer le dernier element de la liste. Supprimmer
+        const interval = setInterval(() => {
+          if (i >= debutFadeOut) {
+            console.log('fadeIn' + i);
+            liste[i].classList.add('animate__animated', 'animate__fadeInDownBig');
+            i--;
+          } else if (i < debutFadeOut && i >= 0) {
+            console.log('fadeOut' + i);
+            liste[i + lEcart].classList.remove('animate__fadeInDownBig');
+            liste[i + lEcart].classList.add('animate__fadeOutDownBig', 'close');
+            liste[i].classList.add('animate__animated', 'animate__fadeInDownBig');
+            i--;
+          } else if (i < 0) {
+            stop();
+          } else {
+            clearInterval(interval);
+          }
+        }, delai);
+
+        state.isSlide1Active = false;
+
       } else {
         state.isSlide1Active = false;
       }
     })
 
     //gestion de l'animation de la slide 5
-    // Get the slide 5 element
     const slide5Element = document.getElementById('slide5');
 
     // Add event listener for mouse movement
@@ -158,12 +234,16 @@ onMounted(async () => {
       // Set the new background position
       slide5Element.style.backgroundPosition = `${posX}% ${posY}%`;
     });
+    // Set isLoading to false when everything is loaded
+    state.isLoading = false;
   } catch (error) {
     console.error(error);
+    state.isLoading = false;
   }
 });
 
 watchEffect(() => {
+
   useHead({
     title: state.pageTitle,
     meta: [
@@ -183,6 +263,8 @@ watchEffect(() => {
     ],
   });
 });
+
+
 </script>
 <style lang="scss" scoped>
 .slide5-background {
@@ -213,15 +295,6 @@ watchEffect(() => {
   transform: rotate(357deg);
   right: 7px;
   top: 278px;
-}
-
-#die {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-
-  p {}
 }
 
 .main {

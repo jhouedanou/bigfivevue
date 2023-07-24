@@ -5,14 +5,21 @@ export default defineNuxtConfig({
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
-      /*       script: [
-  
-            ], */
+      script: [
+      ],
       link: [
         {
           rel: 'stylesheet',
           href: 'https://use.typekit.net/lpb4lmp.css'
-        }
+        },
+        {
+          rel: 'stylesheet',
+          href: 'https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.css'
+        },
+        // {
+        //   rel: 'stylesheet',
+        //   href: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css'
+        // }
       ]
     }
   },
@@ -35,9 +42,7 @@ export default defineNuxtConfig({
     '@/assets/css/styles.scss',
     'bootstrap/dist/css/bootstrap.min.css'
   ],
-  plugins: [
-
-  ],
+  plugins: [],
   components: true,
   buildModules: [
     '@nuxtjs/axios',
