@@ -8,7 +8,13 @@ import ContenuAltLayout from '@/layouts/contenuAlt.vue';
 const realisations = ref([]);
 const route = useRoute();
 const grid = ref(null);
-
+const scrollPosition = ref(0);
+const onScroll = () => {
+	scrollPosition.value = window.scrollY;
+};
+onMounted(() => {
+	window.addEventListener('scroll', onScroll);
+});
 onMounted(async () => {
 	try {
 		if (process.client && typeof window !== 'undefined') {
@@ -49,13 +55,17 @@ const matchingRealisation = computed(() => {
 </script>
 <template>
 	<ContenuAltLayout>
+		<div :id="`banner`"
+			:class="{ 'fixed': scrollPosition > 200, 'visible': scrollPosition > 200 }">
+
+			<img :src="matchingRealisation.banniere"
+				alt="Image"
+				class="img-fluid" />
+		</div>
 		<div :id="`div-${matchingRealisation.lien}`"
-			v-if="matchingRealisation">
-			<div id="banner">
-				<img :src="matchingRealisation.banniere"
-					alt="Image"
-					class="img-fluid" />
-			</div>
+			v-if="matchingRealisation"
+			class="realisation-page">
+
 			<div id="pargrapheIntro"
 				v-if="matchingRealisation"
 				:key="matchingRealisation.lien">
