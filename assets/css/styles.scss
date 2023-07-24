@@ -1011,7 +1011,7 @@ div#pargrapheIntro {
 	max-width: 70vw;
 	margin: 0 auto;
 	align-items: center;
-margin:110px auto 0;
+	margin: 110px auto 0;
 	ul {
 		margin: 0;
 		padding: 0;
@@ -1202,6 +1202,58 @@ margin:110px auto 0;
 			width: 100%;
 			max-width: 100%;
 			padding: 81px 0 0 0;
+		}
+	}
+}
+.cartouche {
+	a {
+		transition: all 0.4s ease-in-out 0.2s;
+
+		&:hover {
+			background: $primary;
+			transition: all 0.4s ease-in-out 0.2s;
+			border-color: $primary !important;
+		}
+	}
+}
+#moufff {
+	font-size: 20px;
+	line-height: 37px;
+	max-width: 57vw;
+	margin: 0 auto 45px auto;
+	display: flex;
+	justify-content: center;
+}
+#div-dinor {
+	#galerie {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		flex-wrap: wrap;
+		width: 100%;
+		max-width: 980px;
+		overflow: hidden;
+		.element {
+			margin: 10px;
+		}
+	}
+	#pargrapheIntro {
+	}
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		li {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+
+			margin-bottom: 45px;
+			font-size: 20px;
+			line-height: 37px;
+			max-width: 57vw;
+			margin: 0 auto 45px auto;
 		}
 	}
 }
