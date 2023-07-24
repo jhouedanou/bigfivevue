@@ -884,11 +884,10 @@ div#moufmideh {
 .realisation-page {
 	margin: 0 auto;
 	max-width: 70vw;
-	padding: 6em 0 0 0;
+	padding: 22em 0 0 0;
 }
 div#pargrapheIntro {
-	max-width: 57vw;
-	background: yellow;
+	max-width: 70vw;
 	margin: 0 auto;
 
 	h3 {
@@ -896,12 +895,15 @@ div#pargrapheIntro {
 		font-weight: 600;
 		font-size: 30px;
 		line-height: 41px;
-		margin-bottom: 45px;
+		max-width:57vw;
+		margin:0 auto 45px auto;
 	}
 	p {
 		margin-bottom: 45px;
 		font-size: 20px;
 		line-height: 37px;
+		max-width:57vw;
+		margin:0 auto 45px auto;
 	}
 }
 #banner {
@@ -915,4 +917,28 @@ div#pargrapheIntro {
 		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.699);
 		top: 0; /* Show the banner when the "visible" class is added */
 	}
+}
+#div-solibra{
+	.illu{
+	
+	width: 100%;
+	margin: 82px auto 0;
+	max-width: 1011px;
+	display: block;
+		
+	}
+	iframe{
+		margin:1em auto 0em;
+	}
+	#galerie{
+		padding-top:8em;
+	}
+}
+#div-1-solibra , #div-2-solibra ,#div-3-solibra,#div-5-solibra{
+	padding:0 0em 3em 1.5em;
+	
+}
+
+#div-0-solibra , #div-4-solibra ,#div-6-solibra{
+	padding:0 1.5em 3em 0em;
 }

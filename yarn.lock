@@ -1087,13 +1087,6 @@
   dependencies:
     "@types/node" "*"
 
-"@types/jquery@3.5.x - 3.x.x":
-  version "3.5.16"
-  resolved "https://registry.npmjs.org/@types/jquery/-/jquery-3.5.16.tgz"
-  integrity sha512-bsI7y4ZgeMkmpG9OM710RRzDFp+w4P1RGiIt30C1mSBT+ExCleeh4HObwgArnDFELmRrOpXgSYN9VF1hj+f1lw==
-  dependencies:
-    "@types/sizzle" "*"
-
 "@types/mdast@^3.0.0":
   version "3.0.11"
   resolved "https://registry.npmjs.org/@types/mdast/-/mdast-3.0.11.tgz"
@@ -1135,11 +1128,6 @@
   version "1.20.2"
   resolved "https://registry.npmjs.org/@types/resolve/-/resolve-1.20.2.tgz"
   integrity sha512-60BCwRFOZCQhDncwQdxxeOEEkbc5dIMccYLwbxsS4TUNeVECQ/pBJ0j09mrHOl/JJvpRPGwO9SvE4nR2Nb/a4Q==
-
-"@types/sizzle@*":
-  version "2.3.3"
-  resolved "https://registry.npmjs.org/@types/sizzle/-/sizzle-2.3.3.tgz"
-  integrity sha512-JYM8x9EGF163bEyhdJBpR2QX1R5naCJHC8ucJylJ3w9/CVBaskdQ8WqBf8MmQrd1kRvp/a4TS8HJ+bxzR7ZJYQ==
 
 "@types/svgo@^2.6.1", "@types/svgo@2":
   version "2.6.4"
@@ -9378,12 +9366,7 @@ vue-router@^4.1.0, vue-router@^4.2.2:
   dependencies:
     "@vue/devtools-api" "^6.5.0"
 
-vue-slick-ts@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.npmjs.org/vue-slick-ts/-/vue-slick-ts-1.1.0.tgz"
-  integrity sha512-CECuCJ6tJ7ZkuL60a6tW6tzeXfJQ+aJUPavcCMK2l2FTV1pwjCW100f95xbnh3YPYjpH+cRqnOhD0Hac02SCPw==
-
-vue@^2.5.18, "vue@^2.7.0 || ^3.2.25", vue@^3.0.0, "vue@^3.0.0-0 || ^2.6.0", vue@^3.0.11, vue@^3.2.0, vue@^3.2.25, vue@^3.3.4, "vue@>=2.7 || >=3", "vue@3.2.x - 3.x.x", vue@3.3.4, vue@3.x:
+vue@^2.5.18, "vue@^2.7.0 || ^3.2.25", vue@^3.0.0, "vue@^3.0.0-0 || ^2.6.0", vue@^3.0.11, vue@^3.2.0, vue@^3.2.25, vue@^3.3.4, "vue@>=2.7 || >=3", vue@3.3.4, vue@3.x:
   version "3.3.4"
   resolved "https://registry.npmjs.org/vue/-/vue-3.3.4.tgz"
   integrity sha512-VTyEYn3yvIeY1Py0WaYGZsXnz3y5UnGi62GjVEqvEGPl6nxbOrCXbVOTQWBEJUqAyTUk2uJ5JLVnYJ6ZzGbrSw==

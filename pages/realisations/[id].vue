@@ -4,7 +4,6 @@ import { ref, onMounted, computed } from 'vue';
 import axios from 'axios';
 import { useRoute } from 'vue-router';
 import ContenuAltLayout from '@/layouts/contenuAlt.vue';
-
 const realisations = ref([]);
 const route = useRoute();
 const grid = ref(null);
@@ -52,6 +51,7 @@ const matchingRealisation = computed(() => {
 	};
 });
 
+
 </script>
 <template>
 	<ContenuAltLayout>
@@ -79,7 +79,7 @@ const matchingRealisation = computed(() => {
 							:id="'div-' + index + '-' + matchingRealisation.lien"
 							:src="image"
 							alt="Image"
-							class="element grid-item mb-4 p-0 m-0" />
+							class="element grid-item popup" />
 
 					</div>
 				</div>
@@ -134,7 +134,6 @@ const matchingRealisation = computed(() => {
 	justify-content: center;
 	flex-direction: row;
 	flex-wrap: wrap;
-	background: red;
 	max-width: 80vw;
 	margin: 0 auto;
 
