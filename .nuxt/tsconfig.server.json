@@ -12,60 +12,60 @@
     "jsxFragmentFactory": "Fragment",
     "paths": {
       "#imports": [
-        "/Users/apple/Documents/bigfivevue/.nuxt/types/nitro-imports"
+        "C:/Users/ASUS ROG/Documents/bigfivevue/.nuxt/types/nitro-imports"
       ],
       "#paths": [
-        "/Users/apple/Documents/bigfivevue/node_modules/nuxt/dist/core/runtime/nitro/paths"
+        "C:/Users/ASUS ROG/Documents/bigfivevue/node_modules/nuxt/dist/core/runtime/nitro/paths"
       ],
       "~": [
-        "/Users/apple/Documents/bigfivevue"
+        "C:/Users/ASUS ROG/Documents/bigfivevue"
       ],
       "~/*": [
-        "/Users/apple/Documents/bigfivevue/*"
+        "C:/Users/ASUS ROG/Documents/bigfivevue/*"
       ],
       "@": [
-        "/Users/apple/Documents/bigfivevue"
+        "C:/Users/ASUS ROG/Documents/bigfivevue"
       ],
       "@/*": [
-        "/Users/apple/Documents/bigfivevue/*"
+        "C:/Users/ASUS ROG/Documents/bigfivevue/*"
       ],
       "~~": [
-        "/Users/apple/Documents/bigfivevue"
+        "C:/Users/ASUS ROG/Documents/bigfivevue"
       ],
       "~~/*": [
-        "/Users/apple/Documents/bigfivevue/*"
+        "C:/Users/ASUS ROG/Documents/bigfivevue/*"
       ],
       "@@": [
-        "/Users/apple/Documents/bigfivevue"
+        "C:/Users/ASUS ROG/Documents/bigfivevue"
       ],
       "@@/*": [
-        "/Users/apple/Documents/bigfivevue/*"
+        "C:/Users/ASUS ROG/Documents/bigfivevue/*"
       ],
       "assets": [
-        "/Users/apple/Documents/bigfivevue/assets"
+        "C:/Users/ASUS ROG/Documents/bigfivevue/assets"
       ],
       "assets/*": [
-        "/Users/apple/Documents/bigfivevue/assets/*"
+        "C:/Users/ASUS ROG/Documents/bigfivevue/assets/*"
       ],
       "public": [
-        "/Users/apple/Documents/bigfivevue/public"
+        "C:/Users/ASUS ROG/Documents/bigfivevue/public"
       ],
       "public/*": [
-        "/Users/apple/Documents/bigfivevue/public/*"
+        "C:/Users/ASUS ROG/Documents/bigfivevue/public/*"
       ],
       "#image": [
-        "/Users/apple/Documents/bigfivevue/node_modules/@nuxt/image/dist/runtime"
+        "C:/Users/ASUS ROG/Documents/bigfivevue/node_modules/@nuxt/image/dist/runtime"
       ],
       "#image/*": [
-        "/Users/apple/Documents/bigfivevue/node_modules/@nuxt/image/dist/runtime/*"
+        "C:/Users/ASUS ROG/Documents/bigfivevue/node_modules/@nuxt/image/dist/runtime/*"
       ],
       "#content/server": [
-        "/Users/apple/Documents/bigfivevue/node_modules/@nuxt/content/dist/runtime/server/index"
+        "C:/Users/ASUS ROG/Documents/bigfivevue/node_modules/@nuxt/content/dist/runtime/server/index"
       ]
     }
   },
   "include": [
-    "/Users/apple/Documents/bigfivevue/.nuxt/types/nitro-nuxt.d.ts",
+    "C:/Users/ASUS ROG/Documents/bigfivevue/.nuxt/types/nitro-nuxt.d.ts",
     "./types/nitro.d.ts",
     "../**/*",
     "../server/**/*"
