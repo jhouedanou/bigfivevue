@@ -1,60 +1,7 @@
-
-<script setup>
-import { ref, onMounted, computed } from 'vue';
-import axios from 'axios';
-import { useRoute } from 'vue-router';
-import ContenuAltLayout from '@/layouts/contenuAlt.vue';
-const realisations = ref([]);
-const route = useRoute();
-const grid = ref(null);
-const scrollPosition = ref(0);
-const onScroll = () => {
-	scrollPosition.value = window.scrollY;
-};
-onMounted(() => {
-	window.addEventListener('scroll', onScroll);
-});
-onMounted(async () => {
-	try {
-		if (process.client && typeof window !== 'undefined') {
-			const response = await axios.get('/api/clients.json');
-			realisations.value = response.data;
-			const Masonry = await import('masonry-layout');
-			const imagesLoaded = await import('imagesloaded');
-
-			const masonry = new Masonry.default(grid.value, {
-				itemSelector: '.element',
-				layoutMode: 'packery',/* ,
-				columnWidth: '.grid-sizer', percentPosition: true
-				 */
-			});
-			imagesLoaded.default(grid.value).on('progress', () => {
-				masonry.layout();
-			});
-		}
-	} catch (error) {
-		console.error(error);
-	}
-});
-
-const matchingRealisation = computed(() => {
-	const filterValue = route.fullPath.substring('/realisations/'.length);
-	const index = realisations.value.findIndex(
-		(realisation) => realisation.lien === filterValue
-	);
-	const previousRealisation = realisations.value[index - 1];
-	const nextRealisation = realisations.value[index + 1];
-	return {
-		...realisations.value[index],
-		previousLink: previousRealisation ? previousRealisation.lien : null,
-		nextLink: nextRealisation ? nextRealisation.lien : null
-	};
-});
-
-
-</script>
 <template>
 	<ContenuAltLayout>
+		<PageLoader v-if="state.isLoading" />
+
 		<div :id="`banner`"
 			:class="{ 'fixed': scrollPosition > 200, 'visible': scrollPosition > 200 }">
 
@@ -90,7 +37,7 @@ const matchingRealisation = computed(() => {
 				<li>
 					<nuxt-link v-if="matchingRealisation.previousLink"
 						:to="'/realisations/' + matchingRealisation.previousLink">
-						projet précédent
+						projet<br>précédent
 					</nuxt-link>
 				</li>
 				<li>
@@ -102,7 +49,7 @@ const matchingRealisation = computed(() => {
 				<li>
 					<nuxt-link v-if="matchingRealisation.nextLink"
 						:to="'/realisations/' + matchingRealisation.nextLink">
-						projet suivant
+						projet<br>suivant
 					</nuxt-link>
 				</li>
 			</ul>
@@ -111,6 +58,68 @@ const matchingRealisation = computed(() => {
 </template>
 
 
+<script setup>
+import { ref, onMounted, computed } from 'vue';
+import axios from 'axios';
+import { useRoute } from 'vue-router';
+import ContenuAltLayout from '@/layouts/contenuAlt.vue';
+import PageLoader from '@/components/PageLoader.vue';
+const realisations = ref([]);
+const route = useRoute();
+const grid = ref(null);
+const scrollPosition = ref(0);
+const state = reactive({
+	isLoading: true
+})
+const onScroll = () => {
+	scrollPosition.value = window.scrollY;
+};
+onMounted(() => {
+	window.addEventListener('scroll', onScroll);
+});
+onMounted(async () => {
+	try {
+		state.isLoading = true;
+		if (process.client && typeof window !== 'undefined') {
+			const response = await axios.get('/api/clients.json');
+			realisations.value = response.data;
+			const Masonry = await import('masonry-layout');
+			const imagesLoaded = await import('imagesloaded');
+
+			const masonry = new Masonry.default(grid.value, {
+				itemSelector: '.element',
+				layoutMode: 'packery',/* ,
+				columnWidth: '.grid-sizer', percentPosition: true
+				 */
+			});
+			imagesLoaded.default(grid.value).on('progress', () => {
+				masonry.layout();
+			});
+		}
+		state.isLoading = false;
+	} catch (error) {
+		console.error(error);
+		state.isLoading = false;
+
+	}
+});
+
+const matchingRealisation = computed(() => {
+	const filterValue = route.fullPath.substring('/realisations/'.length);
+	const index = realisations.value.findIndex(
+		(realisation) => realisation.lien === filterValue
+	);
+	const previousRealisation = realisations.value[index - 1];
+	const nextRealisation = realisations.value[index + 1];
+	return {
+		...realisations.value[index],
+		previousLink: previousRealisation ? previousRealisation.lien : null,
+		nextLink: nextRealisation ? nextRealisation.lien : null
+	};
+});
+
+
+</script>
 
 <style lang="scss" scoped>
 .button {
