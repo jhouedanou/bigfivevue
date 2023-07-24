@@ -107,7 +107,7 @@ onMounted(async () => {
 	padding: 1em;
 
 	span {
-		font-family: "New Order", sans-serif;
+		font-family: "new-order", sans-serif;
 		font-size: 50px;
 		line-height: 52px;
 		font-weight: 700;
@@ -116,7 +116,7 @@ onMounted(async () => {
 	}
 
 	h3 {
-		font-family: "New Order", sans-serif;
+		font-family: "new-order", sans-serif;
 		font-size: 112px;
 		line-height: 110px;
 		font-weight: 700;
@@ -130,7 +130,7 @@ onMounted(async () => {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		font-family: "New Order", sans-serif;
+		font-family: "new-order", sans-serif;
 		text-transform: uppercase;
 		text-decoration: none;
 		color: white;
