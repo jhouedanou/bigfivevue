@@ -12,10 +12,6 @@ export default defineNuxtConfig({
         {
           rel: 'stylesheet',
           href: 'https://use.typekit.net/lpb4lmp.css'
-        },
-        {
-          rel: 'stylesheet',
-          href: 'https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.css'
         }
       ]
     }
