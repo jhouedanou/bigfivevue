@@ -1,11 +1,13 @@
 #footercontactfrom {
 	background: rgb(81, 53, 139);
-	background: linear-gradient(180deg, rgba(81, 53, 139, 1) 0%, rgba(41, 27, 70, 1) 100%);
+	background: linear-gradient(180deg, rgb(81, 53, 139) 0%, rgb(41, 27, 70) 100%);
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
+	height: 625px;
 	h2 {
+		padding: 0;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -15,7 +17,6 @@
 		font-weight: 800;
 		margin: 0 auto;
 		font-size: 59px;
-		padding: 196px 0 0 0;
 	}
 	#untel {
 		form {
@@ -1384,4 +1385,122 @@ div#pargrapheIntro {
 #gridcontainer {
 	max-width: 100%;
 	overflow: hidden;
+}
+
+@mixin label() {
+	color: #ffffff !important;
+	font-size: 19px !important;
+	font-weight: normal !important;
+}
+#occident {
+	margin-top: 0em !important;
+	background: none !important;
+	color: white !important;
+
+	border: 2px white solid;
+	border-radius: 50px;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	-ms-border-radius: 50px;
+	-o-border-radius: 50px;
+}
+
+#shefg {
+	width: 100%;
+	max-width: 750px;
+
+	input {
+		@include label();
+
+		&::-webkit-input-placeholder {
+			@include label();
+		}
+
+		&::-moz-placeholder {
+			@include label();
+		}
+
+		&:-ms-input-placeholder {
+			@include label();
+		}
+
+		&::-ms-input-placeholder {
+			@include label();
+		}
+
+		&::placeholder {
+			@include label();
+		}
+	}
+
+	textarea {
+		@include label();
+
+		&::-webkit-input-placeholder {
+			@include label();
+		}
+
+		&::-moz-placeholder {
+			@include label();
+		}
+
+		&:-ms-input-placeholder {
+			@include label();
+		}
+
+		&::-ms-input-placeholder {
+			@include label();
+		}
+
+		&::placeholder {
+			@include label();
+		}
+	}
+}
+#meregbarai {
+	.row {
+		padding: 0 3em !important;
+	}
+}
+#pitchou {
+}
+#footer-footer {
+	background: black;
+	display: flex;
+	flex-direction: row;
+	width: 100vw;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+	#menuhomepage {
+		ul {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			list-style: none;
+			flex-direction: row;
+
+			li {
+				list-style: none;
+			}
+			a {
+				color: white;
+			}
+		}
+	}
+	.row {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		margin: 0 auto;
+	}
+	.logocontainer {
+		a {
+			display: block;
+			img {
+				height: 94px;
+				width: auto;
+			}
+		}
+	}
 }

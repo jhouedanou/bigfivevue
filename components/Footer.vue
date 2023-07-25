@@ -20,7 +20,6 @@
 								:placeholder="state?.labels?.mail"
 								required />
 						</div>
-
 						<div class="col-md-6 col-sm-12">
 							<input name="societe"
 								ref="societe"
@@ -38,7 +37,8 @@
 						</div>
 					</div>
 					<div>
-						<input type="submit"
+						<input id="occident"
+							type="submit"
 							value="Envoyer un message" />
 						<div style="text-indent:-99999px; white-space:nowrap; overflow:hiddendsqd; position:absolute;"
 							aria-hidden="true">
@@ -53,18 +53,17 @@
 
 		</div>
 	</div>
-	<div id="footer"
+	<div id="footer-footer"
 		class="container-fluid fixed">
-		<div class="innerzr">
-
-			<div class="row">
-				<div class="col-md-6 col-sm-12">
-					<Logo :id="2" />
-				</div>
-				<div class="col-md-6 col-sm-12 d-flex">
-					<Menu />
-					<SocialLinks></SocialLinks>
-				</div>
+		<div class="row">
+			<div id="meregbarai"
+				class="col-md-6 col-sm-12">
+				<Logo :id="3" />
+			</div>
+			<div id="pitchou"
+				class="col-md-6 col-sm-12 d-flex">
+				<Menu />
+				<SocialLinksAlt></SocialLinksAlt>
 			</div>
 		</div>
 	</div>
@@ -87,40 +86,4 @@ onMounted(async () => {
 	state.formFields = response.data.formFields;
 })
 </script>
-<style lang="scss" scoped>
-@mixin label() {
-
-	color: #ffffff !important;
-	font-size: 19px !important;
-	font-weight: normal !important;
-}
-
-#shefg {
-	background: red;
-	width: 100%;
-	max-width: 750px;
-
-	input[type=submit] {
-		margin-top: 0em
-	}
-
-	input {
-
-		@include label();
-
-		&::placeholder {
-			@include label();
-		}
-
-	}
-
-	textarea {
-
-		@include label();
-
-		&::placeholder {
-			@include label();
-		}
-	}
-}
-</style>
+<style></style>
