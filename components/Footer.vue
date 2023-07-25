@@ -3,30 +3,39 @@
 		<div id="contactsz"
 			class="container">
 			<div class="row">
-				<div class="vanhouan col-3"
-					v-for="texte in state.textespageContacts"
-					:key="state.textespageContacts.id">
-					<h2>{{ texte.titre }}</h2>
-					<h4>{{ texte.adresse }}</h4>
-				</div>
+				<h2 class="vanhouan">{{ state?.labels?.rencontronsnous }}</h2>
 			</div>
 			<div id="untel">
 				<form action="https://public.herotofu.com/v1/1c419dc0-1cd8-11ee-b0a7-9f000c4c1540"
 					method="post"
 					accept-charset="UTF-8">
-					<div>
-						<input email="email"
-							id="email"
-							type="text"
-							placeholder="E-mail"
-							required />
-					</div>
-					<div>
-						<textarea name="message"
-							id="message"
-							type="message"
-							placeholder="Message"
-							required></textarea>
+					<div id="shefg"
+						class="row">
+
+						<div class="col-md-6 col-sm-12">
+							<input name="email"
+								ref="email"
+								id="email"
+								type="text"
+								:placeholder="state?.labels?.mail"
+								required />
+						</div>
+
+						<div class="col-md-6 col-sm-12">
+							<input name="societe"
+								ref="societe"
+								id="societe"
+								type="text"
+								:placeholder="state?.labels?.societe"
+								required />
+						</div>
+						<div class="col-md-12 col-sm-12">
+							<textarea name="message"
+								id="message"
+								type="message"
+								placeholder="Message"
+								required></textarea>
+						</div>
 					</div>
 					<div>
 						<input type="submit"
@@ -61,20 +70,57 @@
 	</div>
 </template>
 <script setup>
-import { reactive, onMounted } from 'vue'
+import { onMounted } from 'vue'
 import axios from 'axios';
 
 const state = reactive({
 	textespageContact: null,
-	formFields: null
+	formFields: null,
+	labels: null,
 })
 const route = useRoute()
 
 onMounted(async () => {
 	const response = await axios.get('/api/contact.json');
+	state.labels = response.data;
 	state.textespageContacts = response.data.contactData;
 	state.formFields = response.data.formFields;
-	console.log(state.textespageContacts);
 })
 </script>
-<style scoped></style>
+<style lang="scss" scoped>
+@mixin label() {
+
+	color: #ffffff !important;
+	font-size: 19px !important;
+	font-weight: normal !important;
+}
+
+#shefg {
+	background: red;
+	width: 100%;
+	max-width: 750px;
+
+	input[type=submit] {
+		margin-top: 0em
+	}
+
+	input {
+
+		@include label();
+
+		&::placeholder {
+			@include label();
+		}
+
+	}
+
+	textarea {
+
+		@include label();
+
+		&::placeholder {
+			@include label();
+		}
+	}
+}
+</style>

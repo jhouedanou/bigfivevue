@@ -1,5 +1,5 @@
 <script setup>
-import { reactive, onMounted, watchEffect, reactive } from 'vue';
+import { onMounted, watchEffect, reactive } from 'vue';
 import axios from 'axios';
 import SocialLinks from '@/components/SocialLinks.vue';
 const state = reactive({

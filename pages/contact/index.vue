@@ -16,7 +16,7 @@
             method="post"
             accept-charset="UTF-8">
             <div>
-              <input email="email"
+              <input name="email"
                 id="email"
                 type="text"
                 placeholder="E-mail"
