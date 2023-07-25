@@ -54,7 +54,7 @@ onMounted(async () => {
 			observer: true,
 			observeParents: true,
 			autoplay: {
-				delay: 2000, // delay between transitions in ms
+				delay: 5000, // delay between transitions in ms
 				disableOnInteraction: true // enable/disable autoplay on user interaction
 			},
 			pagination: {

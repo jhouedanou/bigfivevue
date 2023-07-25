@@ -1,5 +1,5 @@
 <script setup>
-import { reactive, onMounted, watchEffect } from 'vue';
+import { reactive, onMounted, watchEffect, reactive } from 'vue';
 import axios from 'axios';
 import SocialLinks from '@/components/SocialLinks.vue';
 const state = reactive({
@@ -70,6 +70,7 @@ watchEffect(() => {
 				<SocialLinks />
 			</div>
 		</div>
-	</div></template>
+	</div>
+</template>
 
 <style lang="scss" scoped></style>

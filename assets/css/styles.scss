@@ -881,6 +881,9 @@ div#moufmideh {
 .stack-up {
 	transition: all 0.4s ease-in-out 0.2s;
 }
+#pagewrapper{
+	overflow-x:hidden;
+}
 .realisation-page {
 	margin: 0 auto;
 	max-width: 70vw;
@@ -1009,7 +1012,13 @@ div#pargrapheIntro {
 	display: flex;
 	justify-content: center;
 	max-width: 70vw;
-	margin: 0 auto;
+	position:fixed;
+	z-index:100;
+	background:white;
+	bottom:0;
+	width:100vw;
+	left:0;
+	right:0;
 	align-items: center;
 	margin: 110px auto 0;
 	ul {
@@ -1256,4 +1265,91 @@ div#pargrapheIntro {
 			margin: 0 auto 45px auto;
 		}
 	}
+}
+#div-craftbeer{
+			max-width:none !important;
+	#galerie{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+		position:relative;
+	width: 100%;
+	margin: 107px 0 0 0;
+	max-width: 100%;
+
+	}
+	#div-0-craftbeer{
+	left:0;
+		right:0;
+		
+		margin:0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	}
+		#div-1-craftbeer{
+	right: -30%;
+	margin: 55px auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	}
+		#div-2-craftbeer{
+			
+
+	width: 148vw !important;
+	left: -21% !important;
+	margin: 113px 0 0 0;
+	}
+	#div-3-craftbeer{
+		
+	left: 0 !important;
+	right: 0 !important;
+	margin: 0 auto;
+	display: flex;
+	margin-top: 162px;
+	justify-content: center;
+	align-items: center;
+	}
+		#div-4-craftbeer{
+				margin-top: 53px;
+
+		}
+	#div-5-craftbeer{
+			left: 0 !important;
+	right: 0 !important;
+	margin: 110px auto 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	}
+	div#pargrapheIntro{
+		
+			max-width:none !important;
+	}
+	.textwrapper{
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: row;
+	/* background: red; */
+	max-width: 56vw;
+	margin: 0 auto;
+		.one{
+			
+	padding: 0 100px 0 0em;
+		}
+		.twot{
+			img{top: -23px;
+	position: relative;
+	left: -15px;
+			}
+			
+		}
+	}
+	
+}
+#gridcontainer{
+	max-width:100%;
+	overflow:hidden;
 }
