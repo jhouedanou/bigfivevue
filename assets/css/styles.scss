@@ -1504,3 +1504,157 @@ div#pargrapheIntro {
 		}
 	}
 }
+#cantodelsol {
+	h4 {
+		max-width: 57vw;
+		margin: 67px auto 45px;
+		font-weight: 600;
+		font-size: 31px;
+	}
+	p {
+		max-width: 70vw;
+		margin: 0 auto;
+	}
+	img {
+		margin-top: 20px;
+	}
+}
+#div-socavins {
+	max-width: 100vw !important;
+	#whiskey {
+		.whiskyrapper {
+			display: flex;
+			flex-direction: column;
+			margin: -134px 0 0 0;
+			h4 {
+				line-height: 44px;
+				max-width: 57vw;
+				margin: 0 auto 45px;
+				width: 100%;
+				font-size: 31px;
+				text-transform: uppercase;
+				font-weight: 600;
+			}
+		}
+	}
+	#gins {
+		.whiskyrapper {
+			display: flex;
+			flex-direction: column;
+
+			h4 {
+				line-height: 44px;
+				max-width: 57vw;
+				margin: 0 auto 45px;
+				width: 100%;
+				font-size: 31px;
+				text-transform: uppercase;
+				font-weight: 600;
+			}
+		}
+	}
+	#suko {
+		.whiskyrapper {
+			display: flex;
+			flex-direction: column;
+
+			h4 {
+				line-height: 44px;
+				max-width: 57vw;
+				margin: 0 auto 45px;
+				width: 100%;
+				font-size: 31px;
+				text-transform: uppercase;
+				font-weight: 600;
+			}
+		}
+	}
+	#whiskey {
+		margin: 0 auto;
+		max-width: 70vw;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		img {
+			width: 70%;
+			margin: 241px auto 0;
+		}
+	}
+	#gins {
+		margin: 139px auto 0;
+		max-width: 70vw;
+		h4{
+			margin:1em auto !important;
+		}
+	}
+	#suko {
+		margin: 0 auto;
+		max-width: 70vw;
+	}
+	div#pargrapheIntro {
+		max-width: 100vw !important;
+	}
+	#leftright {
+		margin: 0 auto;
+	}
+	#galerie {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		flex-wrap: wrap;
+		width: 100%;
+		max-width: 980px;
+		overflow: hidden;
+		.element {
+			margin: 10px;
+		}
+	}
+	#pargrapheIntro {
+	}
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		li {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+
+			margin-bottom: 45px;
+			font-size: 20px;
+			line-height: 37px;
+			max-width: 57vw;
+			margin: 0 auto 45px auto;
+		}
+	}
+}
+#leftsoca {
+	margin-top: 70px;
+	p {
+		padding-right: 9em;
+		margin: 8px 0 0 0 !important;
+		line-height: 41px !important;
+	}
+	img {
+		margin-top: 100px;
+	}
+}
+#ralo {
+	max-width: 57vw;
+	margin: 0 auto 0 auto;
+	padding: 23px 0 0 0;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	h4 {
+		margin-bottom: 46px;
+		font-size: 31px;
+		font-weight: 600;
+	}
+}
+#rightsocz {
+	img {
+		padding-top: 115px;
+	}
+}
