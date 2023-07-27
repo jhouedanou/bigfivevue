@@ -10,7 +10,7 @@
 		</div>
 		<div :id="`div-${matchingRealisation.lien}`"
 			v-if="matchingRealisation"
-			class="realisation-page">
+			:class="`realisation-page realisation-${matchingRealisation.lien}`">
 			<div id="pargrapheIntro"
 				v-if="matchingRealisation"
 				:key="matchingRealisation.lien">
