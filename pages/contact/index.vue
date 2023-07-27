@@ -46,7 +46,8 @@
       </div>
 
 
-      <div id="footer">
+      <div id="footer"
+        class="kylie">
         ©BIGFIVE SOLUTIONS ALL RIGHTS RESERVED - COOKIES POLICY
       </div>
     </div>
