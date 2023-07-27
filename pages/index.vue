@@ -10,7 +10,6 @@ const state = reactive({
 	metadesc: ''
 });
 
-
 onMounted(async () => {
 	try {
 		const textesResponse = await axios.get('/api/textesHomepage.json');
@@ -22,11 +21,18 @@ onMounted(async () => {
 		state.sloganbigfive = textesGlobal.data.sloganbigfive;
 		state.metadesc = textesGlobal.data.hompage.metadesc;
 		state.homepageTitle = textesGlobal.data.hompage.title;
+
 	} catch (error) {
 		console.error(error);
 	}
+	//trigger a click on nuxt-link after 500ms
+	setTimeout(() => {
+		document.querySelector('#ontwo video').click();
+	}, 6000);
 });
 watchEffect(() => {
+
+
 	useHead({
 		title: state.homepageTitle, // Use new variable
 		meta: [
