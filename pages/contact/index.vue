@@ -69,7 +69,7 @@ onMounted(async () => {
   const response = await axios.get('/api/contact.json');
   state.textespageContacts = response.data.contactData;
   state.formFields = response.data.formFields;
-  console.log(state.textespageContacts);
+  
 })
 </script>
 

@@ -301,6 +301,13 @@ $viewport-width: 100%;
 
 	#lemain {
 		width: calc(#{$viewport-width} - #{$sidebar-width});
+		#lesrosz {
+			list-style: none;
+			li {
+				list-style: none;
+				padding: 0 1em !important;
+			}
+		}
 	}
 }
 #slide2 {
@@ -361,10 +368,10 @@ $viewport-width: 100%;
 			margin: 0;
 			padding: 0;
 			color: #6759b4;
-			font-size: 81px;
+			font-size: 4vw;
 			margin: 0 0 0 0;
 			padding: 0;
-			line-height: 61px;
+			line-height: 6.2vh;
 			font-weight: 800;
 			opacity: 0;
 			&:hover {
@@ -1737,19 +1744,24 @@ div#pargrapheIntro {
 	}
 }
 #div-0-nicolas {
-	margin: 7em 0 0 0;
+	margin: 14em 0 0 -64%;
+	width: 183vw;
 }
 
 #div-1-nicolas {
+	margin: 105px 0 0 66px;
 }
 
 #div-2-nicolas {
+	margin: 7px 0 0 431px;
 }
 
 #div-3-nicolas {
+	margin: 110px 0 0 -184px;
 }
 
 #div-4-nicolas {
+	margin: 221px 0 0 194px;
 }
 #div-1-candia {
 	position: absolute !important;
@@ -1842,4 +1854,15 @@ div#pargrapheIntro {
 	left: 0;
 	right: 0;
 	bottom: 0;
+}
+#zakaiya {
+	max-width: 72vw;
+	margin: 0 auto;
+	padding: 41.25% 0 0 0 !important;
+}
+.siam {
+	background: rgb(255, 255, 255);
+	height: 48px;
+	width: 82px;
+	display: block;
 }

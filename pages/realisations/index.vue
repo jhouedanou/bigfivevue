@@ -42,7 +42,7 @@ onMounted(async () => {
 		//recuperer les realisations
 		const response = await axios.get('/api/clients.json');
 		state.realisations = response.data;
-		console.log('Data fetched:', state.realisations);
+		
 		// Initialisation du swiper
 		swiperInstance = new Swiper(swiperContainer.value, {
 			direction: 'vertical',
@@ -64,7 +64,7 @@ onMounted(async () => {
 		});
 		state.isLoading = false;
 	} catch (error) {
-		console.log(error);
+		
 		state.isLoading = false;
 
 	}

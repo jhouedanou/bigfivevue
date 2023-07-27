@@ -36,6 +36,9 @@
 						:to="'/realisations/' + matchingRealisation.previousLink">
 						projet<br>précédent
 					</nuxt-link>
+					<span class="siam"
+						v-else></span>
+
 				</li>
 				<li>
 					<nuxt-link to="/realisations">
@@ -48,6 +51,9 @@
 						:to="'/realisations/' + matchingRealisation.nextLink">
 						projet<br>suivant
 					</nuxt-link>
+					<span class="siam"
+						v-else></span>
+
 				</li>
 			</ul>
 		</div>

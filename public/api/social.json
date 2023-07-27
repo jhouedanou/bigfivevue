@@ -9,7 +9,7 @@
 	{
 		"id": 2,
 		"platform": "LinkedIn",
-		"url": "https://ci.linkedin.com/in/bigfivesolutions",
+		"url": "https://www.linkedin.com/in/bigfivesolutions",
 		"icon": "/img/linkedIn.svg",
 		"iconAlt": "/img/alt/linkedIn.svg"
 	},
@@ -23,7 +23,7 @@
 	{
 		"id": 4,
 		"platform": "Email",
-		"url": "mailto:your-email@example.com",
+		"url": "/contact",
 		"icon": "/img/enveloppe.svg",
 		"iconAlt": "/img/alt/enveloppe.svg"
 	}

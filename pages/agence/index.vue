@@ -149,7 +149,7 @@ onMounted(async () => {
       keyboard: true,
       // parallax: true,
       autoplay: {
-        delay: 5000, // delay between transitions in ms
+        delay: 7000, // delay between transitions in ms
         disableOnInteraction: true // enable/disable autoplay on user interaction
       },
       pagination: {
@@ -201,11 +201,11 @@ onMounted(async () => {
         //pour l'element 13 de la liste; fadeInDownBig et supprimer le dernier element de la liste. Supprimmer
         const interval = setInterval(() => {
           if (i >= debutFadeOut) {
-            console.log('fadeIn' + i);
+
             liste[i].classList.add('animate__animated', 'animate__fadeInDownBig');
             i--;
           } else if (i < debutFadeOut && i >= 0) {
-            console.log('fadeOut' + i);
+
             liste[i + lEcart].classList.remove('animate__fadeInDownBig');
             liste[i + lEcart].classList.add('animate__fadeOutDownBig', 'close');
             liste[i].classList.add('animate__animated', 'animate__fadeInDownBig');

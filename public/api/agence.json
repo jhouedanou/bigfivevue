@@ -73,7 +73,7 @@
 		},
 		{
 			"id": 5,
-			"content": "PRINT   TVDE MARQUE\n            RADIO  PRESSE"
+			"content": "PRINT\nTVDE MARQUE\nRADIO PRESSE"
 		},
 		{
 			"id": 6,
@@ -117,7 +117,7 @@
 		},
 		{
 			"id": 16,
-			"content": "CHARTE   GRAPHIQUE"
+			"content": "CHARTE GRAPHIQUE"
 		},
 		{
 			"id": 17,
@@ -125,7 +125,7 @@
 		},
 		{
 			"id": 18,
-			"content": "ARCHITECTURE    DE MARQUE"
+			"content": "ARCHITECTURE DE MARQUE"
 		},
 		{
 			"id": 19,
@@ -137,7 +137,7 @@
 		},
 		{
 			"id": 21,
-			"content": "NAMING      DE MARQUE"
+			"content": "NAMING DE MARQUE"
 		},
 		{
 			"id": 22,
@@ -145,7 +145,7 @@
 		},
 		{
 			"id": 23,
-			"content": "DATA       RETAIL\n      COLLECTION"
+			"content": "DATA RETAIL\nCOLLECTION"
 		},
 		{
 			"id": 24,
@@ -153,7 +153,7 @@
 		},
 		{
 			"id": 25,
-			"content": "SEO/SEA      DE MARQUE"
+			"content": "SEO/SEA DE MARQUE"
 		},
 		{
 			"id": 26,
@@ -173,7 +173,7 @@
 		},
 		{
 			"id": 30,
-			"content": "LOGOTYPES    DIGITAUX"
+			"content": "LOGOTYPES DIGITAUX"
 		},
 		{
 			"id": 31,
@@ -181,11 +181,11 @@
 		},
 		{
 			"id": 32,
-			"content": "SITES VITRINE  DE FIDÉLISATION"
+			"content": "SITES VITRINE DE FIDÉLISATION"
 		},
 		{
 			"id": 33,
-			"content": "BRAND    CONTENT"
+			"content": "BRAND CONTENT"
 		},
 		{
 			"id": 34,
