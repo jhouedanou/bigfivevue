@@ -39,7 +39,7 @@
 					<div>
 						<input id="occident"
 							type="submit"
-							value="Envoyer un message" />
+							:value="state?.labels?.envoyer" />
 						<div style="text-indent:-99999px; white-space:nowrap; overflow:hiddendsqd; position:absolute;"
 							aria-hidden="true">
 							<input type="text"

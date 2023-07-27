@@ -15,7 +15,7 @@
 		text-transform: uppercase;
 		color: white;
 		font-weight: 800;
-		margin: 0 auto;
+		margin:79px auto 0;
 		font-size: 59px;
 	}
 	#untel {
@@ -1403,13 +1403,14 @@ div#pargrapheIntro {
 	margin-top: 0em !important;
 	background: none !important;
 	color: white !important;
-
+	font-weight:500 !important;
 	border: 2px white solid;
 	border-radius: 50px;
 	-webkit-border-radius: 50px;
 	-moz-border-radius: 50px;
 	-ms-border-radius: 50px;
 	-o-border-radius: 50px;
+	min-width: 190px;
 }
 
 #shefg {
@@ -1479,6 +1480,11 @@ div#pargrapheIntro {
 	align-items: center;
 	margin: 0;
 	padding: 0;
+	ul#lesrosz {
+		li {
+			padding: 0 30px !important;
+		}
+	}
 	.col-md-6 {
 		margin: 0;
 		padding: 0;
@@ -1711,25 +1717,24 @@ div#pargrapheIntro {
 		margin: 7em 0 0 0;
 	}
 }
-#pitchou{
-	display:flex;
-	justify-content:space-between;
-#menulinks{
-	li{
-		
-		margin:0 61px 0 0 !important;
-		padding:0 !important;
+#pitchou {
+	display: flex;
+	justify-content: flex-end;
+
+	#menulinks {
+		li {
+			margin: 0 61px 0 0 !important;
+			padding: 0 !important;
+		}
 	}
-}
-	a{
-		margin:0;
-		padding:0;
+	a {
+		margin: 0;
+		padding: 0;
 	}
-#menuhomepage{
-		li{
+	#menuhomepage {
+		li {
+		}
 	}
-}
-	
 }
 #div-0-nicolas {
 	margin: 7em 0 0 0;

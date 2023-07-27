@@ -3,6 +3,7 @@
 	"mail": "Mon mail",
 	"societe": "Ma société",
 	"message": "Mon message",
+	"envoyer": "Envoyer",
 	"contactData": [
 		{
 			"id": 1,
