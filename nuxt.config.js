@@ -8,9 +8,7 @@ export default defineNuxtConfig({
       script: [
       ],
       meta: [
-        //a meta tag with name="viewport" is required for a responsive website
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        //a meta for the page title 
         { name: 'title', content: 'Agence de communication digitale à Paris , Abidjan et Capetown | Big Five' },
         { name: 'msapplication-TileColor', content: '#82368c' },
         { name: 'theme-color', content: '#ffffff' },
@@ -26,8 +24,11 @@ export default defineNuxtConfig({
         {
           property: 'og:description',
           content: 'Agence de communication digitale à Paris , Abidjan et Capetown | Notre agence',
-        }
-
+        },
+        {
+          property: 'og:image',
+          content: 'https://bigfivevue.vercel.app/img/logo.jpg',
+        },
       ],
       link: [
         {
@@ -68,7 +69,8 @@ export default defineNuxtConfig({
   components: true,
   buildModules: [
     '@nuxtjs/axios',
-    '@nuxtjs/composition-api/module'
+    '@nuxtjs/composition-api/module',
+    '@nuxtjs/pwa'
   ],
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
@@ -96,4 +98,28 @@ export default defineNuxtConfig({
       },
     ],
   },
+  pwa: {
+    manifest: {
+      name: 'Big Five Abidjan',
+      short_name: 'Big Five Abidjan',
+      lang: 'fr',
+      display: 'standalone'
+    },
+    icons: [
+      {
+        src: '/img/android-chrome-192x192.png',
+        sizes: '192x192',
+        type: 'image/png'
+      },
+      {
+        src: '/img/android-chrome-256x256.png',
+        sizes: '256x256',
+        type: 'image/png'
+      }
+    ]
+  },
+  workbox: {
+    // Workbox options
+  }
+
 })
