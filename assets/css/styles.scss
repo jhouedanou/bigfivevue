@@ -1866,3 +1866,39 @@ div#pargrapheIntro {
 	width: 82px;
 	display: block;
 }
+/* media queries for screen between 1440 and 1024 */
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+	.swiper-slide {
+		overflow: hidden !important;
+	}
+	/* Your CSS code for screens between 1024px and 1440px */
+	#slide2 {
+		.sabine {
+			padding: 0 1em;
+			p {
+				font-size: 14px;
+			}
+		}
+	}
+	#slide1 {
+		p,
+		span {
+			font-size: 44px !important;
+			br {
+			}
+		}
+	}
+	#mouf {
+		font-size: 63px !important;
+		right: -28px !important;
+	}
+}
+@media screen and (max-width: 1024px) {
+	#slide2 {
+		.sabine {
+			p {
+			}
+		}
+	}
+}
