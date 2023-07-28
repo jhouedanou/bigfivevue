@@ -1958,6 +1958,96 @@ div#pargrapheIntro {
 	}
 }
 @media screen and (max-width: 1024px) {
+	#footercontactfrom {
+		height: auto !important;
+		padding: 1em 0 !important;
+	}
+	#div-stave iframe {
+		height: auto !important;
+	}
+	#div-stave #galerie {
+		margin-top: 0px !important;
+	}
+	#durago {
+		.col-sm-12 {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+		}
+		img {
+			margin: 0 auto;
+			width: 50% !important;
+		}
+	}
+	#rightsocz {
+		display: none !important;
+	}
+	#div-socavins #whiskey .whiskyrapper,
+	#div-socavins #suko .whiskyrapper,
+	#div-craftbeer #galerie {
+		margin-top: 0px !important;
+	}
+	#naafa,
+	#naafa2,
+	#naafa3 {
+		display: flex !important	;
+		flex-direction: column !important;
+		list-style: none;
+		max-width: 1336px;
+		margin: 13px auto 13px auto;
+		padding: 0;
+	}
+	.realisation-page {
+		padding: 1em 0 0 0 !important;
+		max-width: 90vw !important;
+		padding: 1em !important;
+		* {
+			padding: 0em !important;
+			max-width: none !important;
+			font-size: 14px !important;
+			line-height: 25px !important;
+			img {
+				width: 100% !important;
+				position: relative;
+				left: 0;
+				right: 0;
+				margin: 0 auto;
+			}
+			#zakaiya {
+				width: 100% !important;
+				position: relative;
+				left: 0;
+				right: 0;
+				margin: 1em auto !important;
+				padding: 0em !important;
+				min-height: 250px !important;
+			}
+			video,
+			iframe {
+				width: 100% !important;
+				position: relative;
+				left: 0;
+				right: 0;
+				margin: 1em auto !important;
+			}
+			#galerie {
+				img {
+					min-width: 100% !important;
+					position: relative;
+					left: 0;
+					right: 0;
+					margin: 1em auto !important;
+				}
+			}
+		}
+		div#pargrapheIntro {
+			padding: 0em !important;
+			max-width: none !important;
+			h3 {
+			}
+		}
+	}
 	#contactpage h3 {
 		font-size: 24px !important;
 		height: auto !important;
@@ -2192,7 +2282,7 @@ div#pargrapheIntro {
 }
 
 @media (min-width: 1024px) {
-	#sidebar {
+	.rakim {
 		display: none !important;
 	}
 	#menutrigger {
@@ -2215,4 +2305,9 @@ div#pargrapheIntro {
 }
 .dana {
 	color: $primary !important;
+}
+#contactsz {
+	h2 {
+		font-size: 12px;
+	}
 }

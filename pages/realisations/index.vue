@@ -15,7 +15,7 @@
 				</button>
 			</div>
 			<div id="sidebar"
-				class="sidebar"
+				class="sidebar rakim"
 				:class="{ flipit: state.isSlide1Active, open: isSidebarOpen }">
 				<Logo :id="2" />
 				<Menu :page="'/agence'" />

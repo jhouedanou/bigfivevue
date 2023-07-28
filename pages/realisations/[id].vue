@@ -1,7 +1,24 @@
 <template>
 	<ContenuAltLayout>
 		<PageLoader v-if="state.isLoading" />
-
+		<div id="menumobile">
+			<Logo :id="3"
+				v-if="!isSidebarOpen" />
+			<button id="menutrigger"
+				@click="isSidebarOpen = !isSidebarOpen; isMainFull = !isMainFull; toClose = !toClose"
+				:class="{ dana: closeBlack }">
+				<span v-if="!toClose"
+					class="material-symbols-rounded">menu</span>
+				<span v-if="toClose"
+					class="dana material-symbols-rounded">close</span>
+			</button>
+		</div>
+		<div id="sidebar"
+			class="sidebar rakim"
+			:class="{ flipit: state.isSlide1Active, open: isSidebarOpen }">
+			<Logo :id="2" />
+			<Menu :page="'/agence'" />
+		</div>
 		<div :id="`banner`"
 			:class="{ 'fixed': scrollPosition > 200, 'visible': scrollPosition > 200 }">
 			<img :src="matchingRealisation.banniere"
@@ -70,6 +87,10 @@ const realisations = ref([]);
 const route = useRoute();
 const grid = ref(null);
 const scrollPosition = ref(0);
+
+let isSidebarOpen = ref(false);
+let toClose = ref(false);
+let closeBlack = ref(false);
 const state = reactive({
 	isLoading: true
 })
