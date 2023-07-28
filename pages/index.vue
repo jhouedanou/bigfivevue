@@ -28,7 +28,7 @@ onMounted(async () => {
 	//trigger a click on nuxt-link after 500ms
 	setTimeout(() => {
 		document.querySelector('#ontwo video').click();
-	}, 6000);
+	}, 20000);
 });
 watchEffect(() => {
 
