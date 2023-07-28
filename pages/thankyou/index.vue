@@ -1,10 +1,29 @@
 <template>
 	<ContenuLayout>
 		<div id="contactpage">
+			<PageLoader v-if="state.isLoading" />
+			<div id="menumobile">
+				<Logo :id="3"
+					v-if="!isSidebarOpen" />
+				<button id="menutrigger"
+					@click="isSidebarOpen = !isSidebarOpen; isMainFull = !isMainFull; toClose = !toClose"
+					:class="{ dana: closeBlack }">
+					<span v-if="!toClose"
+						class="material-symbols-rounded">menu</span>
+					<span v-if="toClose"
+						class="dana material-symbols-rounded">close</span>
+				</button>
+			</div>
+			<div id="sidebar"
+				class="sidebar"
+				:class="{ flipit: state.isSlide1Active, open: isSidebarOpen }">
+				<Logo :id="2" />
+				<Menu :page="'/agence'" />
+			</div>
 			<div id="contacts"
 				class="container">
 				<div class="row">
-					<div class="vanhouan col-3"
+					<div class="vanhouan col-md-3 col-sm-12"
 						v-for="texte in state.textespageContacts"
 						:key="state.textespageContacts.id">
 						<h2>{{ texte.titre }}</h2>
@@ -32,16 +51,25 @@ import ContenuLayout from '@/layouts/ContactLayout.vue';
 
 const state = reactive({
 	textespageContact: null,
-	formFields: null
+	formFields: null,
+	isLoading: true
+
 })
 const route = useRoute()
-
 onMounted(async () => {
-	const response = await axios.get('/api/contact.json');
-	state.textespageContacts = response.data.contactData;
-	state.formFields = response.data.formFields;
-	console.log(state.textespageContacts);
+
+	try {
+		const response = await axios.get('/api/contact.json');
+		state.textespageContacts = response.data.contactData;
+		state.formFields = response.data.formFields;
+		console.log(state.textespageContacts);
+		state.isLoading = false;
+	} catch (error) {
+		state.isLoading = false;
+
+	}
 })
+
 </script>
 
 <style scoped></style>

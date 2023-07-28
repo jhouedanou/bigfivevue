@@ -3,15 +3,28 @@
   <div id="lagence"
     class="container-fluid">
     <PageLoader v-if="state.isLoading" />
+    <div id="menumobile">
+      <Logo :id="3"
+        v-if="!isSidebarOpen" />
+      <button id="menutrigger"
+        @click="isSidebarOpen = !isSidebarOpen; isMainFull = !isMainFull; toClose = !toClose"
+        :class="{ dana: closeBlack }">
+        <span v-if="!toClose"
+          class="material-symbols-rounded">menu</span>
+        <span v-if="toClose"
+          class="dana material-symbols-rounded">close</span>
+      </button>
+    </div>
     <div class="row">
       <div id="sidebar"
         class="sidebar"
-        :class="{ flipit: state.isSlide1Active }">
+        :class="{ flipit: state.isSlide1Active, open: isSidebarOpen }">
         <Logo :id="2" />
         <Menu :page="'/agence'" />
       </div>
       <div id="lemain"
-        class="main primary-bg vh-100">
+        class="main primary-bg vh-100"
+        :class="{ full: isMainFull }">
         <div class="swiper"
           ref="swiperContainer">
           <div class="swiper-wrapper">
@@ -26,7 +39,7 @@
               class="swiper-slide">
               <div class="row slide-inner">
                 <div class="col-md-4 col-sm-12"
-                  v-for="slide in state.agence?.slide2 ?? []"
+                  v-for=" slide  in  state.agence?.slide2 ?? [] "
                   :key="slide.id ?? ''">
                   <div class="inner">
                     <nuxt-img :src="slide.img ?? ''"
@@ -55,7 +68,7 @@
                   class="swiper-wrapper">
                   <div :index="item.Id"
                     class="swiper-slide"
-                    v-for="item in state.agence?.slide3 ?? []"
+                    v-for=" item  in  state.agence?.slide3 ?? [] "
                     :key="item.Id"
                     :peek-gutter=true
                     :slides-per-page="1">
@@ -71,7 +84,7 @@
                 class="slide4 full-height">
                 <li class="stack-up"
                   :id="`lestack${item.id - 1}`"
-                  v-for="item in state.agence?.slide4.slice().reverse() ?? []"
+                  v-for=" item  in  state.agence?.slide4.slice().reverse() ?? [] "
                   :key="item.id">
                   <!-- <li class="stack-up"
                   v-for="item in state.agence?.slide4.slice(0, 3).reverse() ?? []"
@@ -113,6 +126,11 @@ let swiperContainer2 = ref(null);
 let slide3Content = ref([]);
 let swiperInstance;
 let swiperInstance2;
+let isMainFull = ref(true);
+let isSidebarOpen = ref(false);
+let toClose = ref(false);
+let closeBlack = ref(false);
+
 const state = reactive({
   metadesc: '',
   pageTitle: '',
@@ -140,6 +158,12 @@ onMounted(async () => {
     state.metadesc = textesGlobal.data.metadesc;
     state.pageTitle = textesGlobal.data.title;
     state.agence = textesGlobal.data;
+    //obtenir la largeur de la fenetre
+    const windowWidth = window.innerWidth;
+    // initialisation du swiper si la largeur de la fenêtre est supérieure à 1024px
+    if (windowWidth > 1024) {
+      //initSwiper();
+    }
     // Initialisation du swiper
     swiperInstance = new Swiper(swiperContainer.value, {
       direction: 'vertical',

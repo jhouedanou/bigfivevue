@@ -2,6 +2,24 @@
 	<ContenuAltLayout>
 		<div id="realisationList">
 			<PageLoader v-if="state.isLoading" />
+			<div id="menumobile">
+				<Logo :id="3"
+					v-if="!isSidebarOpen" />
+				<button id="menutrigger"
+					@click="isSidebarOpen = !isSidebarOpen; isMainFull = !isMainFull; toClose = !toClose"
+					:class="{ dana: closeBlack }">
+					<span v-if="!toClose"
+						class="material-symbols-rounded">menu</span>
+					<span v-if="toClose"
+						class="dana material-symbols-rounded">close</span>
+				</button>
+			</div>
+			<div id="sidebar"
+				class="sidebar"
+				:class="{ flipit: state.isSlide1Active, open: isSidebarOpen }">
+				<Logo :id="2" />
+				<Menu :page="'/agence'" />
+			</div>
 			<div class="swiper"
 				ref="swiperContainer">
 				<div class="swiper-wrapper">
@@ -26,12 +44,16 @@
 <script setup>
 import { ref, onMounted, reactive } from 'vue';
 import axios from 'axios';
-import ContenuAltLayout from '@/layouts/contenuAlt.vue';
+import ContenuAltLayout from '@/layouts/ContenuRealisations.vue';
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 import PageLoader from '@/components/PageLoader.vue';
 const swiperContainer = ref(null);
 let swiperInstance;
+let isSidebarOpen = ref(false);
+let toClose = ref(false);
+let closeBlack = ref(false);
+
 const state = reactive({
 	realisations: null,
 	isLoading: true
@@ -42,7 +64,7 @@ onMounted(async () => {
 		//recuperer les realisations
 		const response = await axios.get('/api/clients.json');
 		state.realisations = response.data;
-		
+
 		// Initialisation du swiper
 		swiperInstance = new Swiper(swiperContainer.value, {
 			direction: 'vertical',
@@ -64,7 +86,7 @@ onMounted(async () => {
 		});
 		state.isLoading = false;
 	} catch (error) {
-		
+
 		state.isLoading = false;
 
 	}

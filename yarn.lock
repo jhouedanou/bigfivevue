@@ -9359,6 +9359,11 @@ vue-functional-data-merge@^3.1.0:
   resolved "https://registry.npmjs.org/vue-functional-data-merge/-/vue-functional-data-merge-3.1.0.tgz"
   integrity sha512-leT4kdJVQyeZNY1kmnS1xiUlQ9z1B/kdBFCILIjYYQDqZgLqCLa0UhjSSeRX6c3mUe6U5qYeM8LrEqkHJ1B4LA==
 
+vue-ico@^1.0.15:
+  version "1.0.15"
+  resolved "https://registry.npmjs.org/vue-ico/-/vue-ico-1.0.15.tgz"
+  integrity sha512-Qfbp2HcFt+bXM7Euq3b55jqQosRcxVFo7kDcrFc4bhiGaMXjemx+TXt0UOTjHXbsxAaBAkCLD2atdDqOIP8wmQ==
+
 vue-router@^4.1.0, vue-router@^4.2.2:
   version "4.2.2"
   resolved "https://registry.npmjs.org/vue-router/-/vue-router-4.2.2.tgz"
