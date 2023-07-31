@@ -29,6 +29,11 @@ onMounted(async () => {
 	setTimeout(() => {
 		document.querySelector('#ontwo video').click();
 	}, 20000);
+	//autoplay the video
+	const video = document.querySelector('#ontwo video');
+	video.addEventListener('click', function () {
+		video.play();
+	});
 });
 watchEffect(() => {
 
@@ -62,7 +67,8 @@ watchEffect(() => {
 			<div id="main"
 				class="col-12 d-flex flex-column justify-content-center align-items-center">
 				<nuxt-link to="/agence">
-					<video autoplay
+					<video id="nassir"
+						autoplay
 						loop
 						muted
 						class="img-fluid">

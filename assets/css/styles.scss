@@ -1967,6 +1967,9 @@ div#pargrapheIntro {
 	}
 }
 @media screen and (max-width: 1024px) {
+	#lagence .sidebar.flipit {
+		justify-content: center !important;
+	}
 	#slide2 {
 		justify-content: flex-start !important;
 		margin-top: 2em !important;
@@ -2314,7 +2317,7 @@ div#pargrapheIntro {
 		padding: 1em;
 		display: flex;
 		flex-direction: column;
-		justify-content: flex-start;
+		justify-content: center;
 		align-items: center;
 		.logocontainer {
 			display: flex !important;
