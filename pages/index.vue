@@ -28,7 +28,7 @@ onMounted(async () => {
 	//trigger a click on nuxt-link after 5000ms
 	setTimeout(() => {
 		document.querySelector('#ontwo video').click();
-	}, 5000);
+	}, 10000);
 	//autoplay the video
 	const video = document.querySelector('#ontwo video');
 	video.addEventListener('click', function () {
