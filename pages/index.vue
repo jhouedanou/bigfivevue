@@ -66,8 +66,6 @@ watchEffect(() => {
 						loop
 						muted
 						class="img-fluid">
-						<source src="/video/01.webm"
-							type="video/webm">
 						<source src="/video/01.mp4"
 							type="video/mp4">
 						Your browser does not support the video tag.
