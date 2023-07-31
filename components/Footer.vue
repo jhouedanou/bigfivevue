@@ -57,11 +57,11 @@
 		class="container-fluid fixed">
 		<div class="row">
 			<div id="meregbarai"
-				class="col-md-6 col-sm-12">
+				class="col-md-6 col-sm-6">
 				<Logo :id="3" />
 			</div>
 			<div id="pitchou"
-				class="col-md-6 col-sm-12 d-flex">
+				class="col-md-6 col-sm-6 d-flex">
 				<Menu />
 				<SocialLinksAlt></SocialLinksAlt>
 			</div>
