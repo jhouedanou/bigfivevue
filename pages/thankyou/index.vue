@@ -8,14 +8,16 @@
 				<button id="menutrigger"
 					@click="isSidebarOpen = !isSidebarOpen; isMainFull = !isMainFull; toClose = !toClose"
 					:class="{ dana: closeBlack }">
-					<span v-if="!toClose"
-						class="material-symbols-rounded">menu</span>
-					<span v-if="toClose"
-						class="dana material-symbols-rounded">close</span>
+					<img v-if="toClose"
+						src="/img/btn-close.svg"
+						alt="">
+					<img v-if="!toClose"
+						src="/img/btn-menu.svg"
+						alt="">
 				</button>
 			</div>
 			<div id="sidebar"
-				class="sidebar"
+				class="sidebar rakim"
 				:class="{ flipit: state.isSlide1Active, open: isSidebarOpen }">
 				<Logo :id="2" />
 				<Menu :page="'/agence'" />

@@ -1,7 +1,16 @@
 body {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased !important;
+	-moz-osx-font-smoothing: grayscale !important;
+	-webkit-font-smoothing: antialiased !important;
+	-moz-osx-font-smoothing: grayscale !important;
+	text-rendering: optimizeLegibility !important;
+}
+* {
+	-webkit-font-smoothing: antialiased !important;
+	-moz-osx-font-smoothing: grayscale !important;
+	-webkit-font-smoothing: antialiased !important;
+	-moz-osx-font-smoothing: grayscale !important;
+	text-rendering: optimizeLegibility !important;
 }
 #footercontactfrom {
 	background: rgb(81, 53, 139);
@@ -2153,7 +2162,7 @@ div#pargrapheIntro {
 
 			z-index: 10000;
 			img {
-				width: 52px !important;
+				width: 40px !important;
 			}
 		}
 	}

@@ -1,28 +1,28 @@
 <template>
 	<ContenuAltLayout>
-		<div id="menumobile">
-			<Logo :id="3"
-				v-if="!isSidebarOpen" />
-			<button id="menutrigger"
-				@click="isSidebarOpen = !isSidebarOpen; isMainFull = !isMainFull; toClose = !toClose"
-				:class="{ dana: closeBlack }">
-				<img v-if="toClose"
-					src="/img/btn-close.svg"
-					alt="">
-				<img v-if="!toClose"
-					src="/img/btn-menu.svg"
-					alt="">
-			</button>
-		</div>
-		<div id="sidebar"
-			class="sidebar rakim"
-			:class="{ flipit: state.isSlide1Active, open: isSidebarOpen }">
-			<Logo :id="2" />
-			<Menu :page="'/agence'" />
-		</div>
+
 		<div id="realisationList">
 			<PageLoader v-if="state.isLoading" />
-
+			<div id="menumobile">
+				<Logo :id="3"
+					v-if="!isSidebarOpen" />
+				<button id="menutrigger"
+					@click="isSidebarOpen = !isSidebarOpen; isMainFull = !isMainFull; toClose = !toClose"
+					:class="{ dana: closeBlack }">
+					<img v-if="toClose"
+						src="/img/btn-close.svg"
+						alt="">
+					<img v-if="!toClose"
+						src="/img/btn-menu.svg"
+						alt="">
+				</button>
+			</div>
+			<div id="sidebar"
+				class="sidebar rakim"
+				:class="{ flipit: state.isSlide1Active, open: isSidebarOpen }">
+				<Logo :id="2" />
+				<Menu :page="'/agence'" />
+			</div>
 			<div class="swiper"
 				ref="swiperContainer">
 				<div class="swiper-wrapper">
