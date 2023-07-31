@@ -2243,8 +2243,9 @@ div#pargrapheIntro {
 		box-shadow: 0 0 4px rgba(0, 0, 0, 0.699) !important;
 	}
 	.swiper-slide {
-		background-position: center center !important;
-		background-size: cover !important;
+		/* 		background-position: center center !important;
+ */
+		background-size: auto !important;
 	}
 	#header-alt,
 	#header {
