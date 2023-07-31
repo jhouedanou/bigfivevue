@@ -1967,6 +1967,10 @@ div#pargrapheIntro {
 	}
 }
 @media screen and (max-width: 1024px) {
+	#slide2 {
+		justify-content: flex-start !important;
+		margin-top: 2em !important;
+	}
 	#div-stave div#pargrapheIntro {
 		max-width: 100% !important;
 	}
@@ -1988,7 +1992,7 @@ div#pargrapheIntro {
 	}
 	#lefeu .isn iframe,
 	#div-stark div#pargrapheIntro iframe {
-		height: 100% !important;
+		height: 219px !important;
 	}
 	#div-stark p:nth-of-type(3) {
 		margin-top: 0px !important;
