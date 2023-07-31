@@ -1,25 +1,28 @@
 <template>
 	<ContenuAltLayout>
+		<div id="menumobile">
+			<Logo :id="3"
+				v-if="!isSidebarOpen" />
+			<button id="menutrigger"
+				@click="isSidebarOpen = !isSidebarOpen; isMainFull = !isMainFull; toClose = !toClose"
+				:class="{ dana: closeBlack }">
+				<img v-if="toClose"
+					src="/img/btn-close.svg"
+					alt="">
+				<img v-if="!toClose"
+					src="/img/btn-menu.svg"
+					alt="">
+			</button>
+		</div>
+		<div id="sidebar"
+			class="sidebar rakim"
+			:class="{ flipit: state.isSlide1Active, open: isSidebarOpen }">
+			<Logo :id="2" />
+			<Menu :page="'/agence'" />
+		</div>
 		<div id="realisationList">
 			<PageLoader v-if="state.isLoading" />
-			<div id="menumobile">
-				<Logo :id="3"
-					v-if="!isSidebarOpen" />
-				<button id="menutrigger"
-					@click="isSidebarOpen = !isSidebarOpen; isMainFull = !isMainFull; toClose = !toClose"
-					:class="{ dana: closeBlack }">
-					<span v-if="!toClose"
-						class="material-symbols-rounded">menu</span>
-					<span v-if="toClose"
-						class="dana material-symbols-rounded">close</span>
-				</button>
-			</div>
-			<div id="sidebar"
-				class="sidebar rakim"
-				:class="{ flipit: state.isSlide1Active, open: isSidebarOpen }">
-				<Logo :id="2" />
-				<Menu :page="'/agence'" />
-			</div>
+
 			<div class="swiper"
 				ref="swiperContainer">
 				<div class="swiper-wrapper">
@@ -27,7 +30,7 @@
 						:key="realisation.lien"
 						:id="`slide-${realisation.id}`"
 						class="swiper-slide"
-						:style="{ backgroundImage: `url(${realisation.image})`, height: '110vh !important', minHeight: '100vh !important' }">
+						:style="{ backgroundImage: `url(${realisation.image})` }">
 						<div class="cartouche">
 							<span>{{ realisation.client }}</span>
 							<h3 v-html="realisation.titre"></h3>
