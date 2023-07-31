@@ -1967,6 +1967,13 @@ div#pargrapheIntro {
 	}
 }
 @media screen and (max-width: 1024px) {
+	#div-4-nicolas {
+		.swiper-slide {
+			background-size: cover !important;
+			background-position: center center !important;
+		}
+	}
+
 	#lagence .sidebar.flipit {
 		justify-content: center !important;
 	}
@@ -2374,7 +2381,7 @@ div#pargrapheIntro {
 			max-width: auto;
 			opacity: 0;
 			visibility: hidden;
-			justify-content:center !important;
+			justify-content: center !important;
 			padding-top: 0em !important;
 
 			justify-content: center !important;
