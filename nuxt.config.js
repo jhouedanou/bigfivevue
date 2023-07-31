@@ -35,10 +35,6 @@ export default defineNuxtConfig({
           rel: 'stylesheet',
           href: 'https://use.typekit.net/lpb4lmp.css'
         },
-        {
-          rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200'
-        },
         { rel: 'icon', type: 'image/x-icon', href: '/img/favicon.ico' },
         { rel: 'apple-touch-icon', sizes: '180x180', href: '/img/apple-touch-icon.png' },
         { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/img/favicon-32x32.png' },
