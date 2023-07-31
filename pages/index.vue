@@ -25,10 +25,10 @@ onMounted(async () => {
 	} catch (error) {
 		console.error(error);
 	}
-	//trigger a click on nuxt-link after 500ms
+	//trigger a click on nuxt-link after 5000ms
 	setTimeout(() => {
 		document.querySelector('#ontwo video').click();
-	}, 20000);
+	}, 5000);
 	//autoplay the video
 	const video = document.querySelector('#ontwo video');
 	video.addEventListener('click', function () {
@@ -69,9 +69,14 @@ watchEffect(() => {
 				<nuxt-link to="/agence">
 					<video id="nassir"
 						autoplay
-						loop
+						playsInline
+						autoPlay
 						muted
-						class="img-fluid">
+						loop
+						playsinline
+						class="img-fluid"
+						controlsList="nodownload"
+						preload="auto">
 						<source src="/video/01.mp4"
 							type="video/mp4">
 						Your browser does not support the video tag.
