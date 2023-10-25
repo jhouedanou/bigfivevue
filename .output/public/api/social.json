@@ -1,0 +1,26 @@
+[
+	{
+		"id": 1,
+		"platform": "Facebook",
+		"url": "https://www.facebook.com/your-page",
+		"icon": "/img/facebook.svg"
+	},
+	{
+		"id": 2,
+		"platform": "LinkedIn",
+		"url": "https://ci.linkedin.com/in/bigfivesolutions",
+		"icon": "/img/linkedIn.svg"
+	},
+	{
+		"id": 3,
+		"platform": "Instagram",
+		"url": "https://www.instagram.com/bigfivesolutions/?hl=fr",
+		"icon": "/img/instagram.svg"
+	},
+	{
+		"id": 4,
+		"platform": "Email",
+		"url": "mailto:your-email@example.com",
+		"icon": "/img/enveloppe.svg"
+	}
+]
