@@ -24,7 +24,12 @@ onMounted(async () => {
 <template>
 	<div id="menureso">
 		<ul id="lesros"
-			class="d-flex flex-row justify-content-end">
+			class="d-flex flex-row justify-content-end soc">
+			<li><a href="https://selectivecity.co.za/selective-live/"
+					target="_blank" class="selectivebn">
+					<img src="/img/selectivelivebn.svg" alt="" >
+				</a>
+			</li>
 			<li v-for="link in state.socialLinks"
 				:key="link.id">
 				<a :href="link.url"

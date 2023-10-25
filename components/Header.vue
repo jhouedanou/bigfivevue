@@ -11,7 +11,7 @@
 				<div class="col-md-6 col-sm-12">
 					<Logo :id="2" />
 				</div>
-				<div class="col-md-6 col-sm-12 d-flex">
+				<div class="col-md-6 col-sm-12 d-flex right-menu">
 					<Menu />
 					<SocialLinks></SocialLinks>
 				</div>

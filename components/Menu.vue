@@ -11,9 +11,11 @@ const props = defineProps({
 	}
 });
 onMounted(async () => {
+	
 	try {
 		const menuLinks = await axios.get('/api/menu.json');
 		state.menuLinks = menuLinks.data;
+		
 	} catch (error) {
 		console.log(error);
 	}

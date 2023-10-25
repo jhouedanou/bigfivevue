@@ -1,4 +1,5 @@
 <template>
+  
   <ContenuLayout>
     <div id="contactpage">
       <PageLoader v-if="state.isLoading" />
@@ -41,12 +42,15 @@
                 placeholder="E-mail"
                 required />
             </div>
-            <div>
+            <div class="form-group">
+              <label class="placeholder-text" v-if="!inputValue">Message</label>
               <textarea name="message"
                 id="message"
                 type="message"
-                placeholder="Message"
-                required></textarea>
+                v-model="inputValue" 
+                @input="handleInput"
+
+                required ></textarea>
             </div>
             <div>
               <input type="submit"
@@ -102,6 +106,23 @@ onMounted(async () => {
 
   }
 })
+</script>
+<script>
+export default {
+  data() {
+    return {
+      inputValue: "",
+    };
+  },
+  methods: {
+    handleInput() {
+      // Handle input value changes here
+      console.log("input");
+    },
+   
+  },
+
+};
 </script>
 
 <style scoped></style>
