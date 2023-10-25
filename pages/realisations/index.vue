@@ -38,10 +38,54 @@
 								class="btn">Voir plus</NuxtLink>
 						</div>
 					</div>
+
+					<div class="swiper-slide" id="rencontres">
+						<h3>RENCONTRONS-NOUS</h3>
+						<div id="untel">
+							<form action="https://public.herotofu.com/v1/1c419dc0-1cd8-11ee-b0a7-9f000c4c1540"
+								method="post"
+								accept-charset="UTF-8">
+							
+								<div class="form-group " id="form-element">
+                                   <div>
+										<input name="email"
+										id="email"
+										type="email"
+										placeholder="E-mail"
+										required />
+
+								   </div>
+                                   <div>
+										<input name="societe"
+										id="societe"
+										type="text"
+										placeholder="Ma société"
+										required />
+								   </div>
+
+								</div>
+								<div>
+								<input type="submit"
+									value="Envoyer" />
+								<div style="text-indent:-99999px; white-space:nowrap; overflow:hiddendsqd; position:absolute;"
+									aria-hidden="true">
+									<input type="text"
+									name="_gotcha"
+									tabindex="-1"
+									autocomplete="off" />
+								</div>
+								</div>
+							</form>
+						</div>
+					</div>
+
 				</div>
 				<div class="swiper-pagination"></div>
 			</div>
+			
 		</div>
+
+		
 	</ContenuAltLayout>
 </template>
 <script setup>
@@ -97,6 +141,8 @@ onMounted(async () => {
 });
 </script>
 <style lang="scss" scoped>
+
+
 .swiper-wrapper {
 	background: linear-gradient(to bottom, #80368c, #2c348b);
 	height: auto;
@@ -135,7 +181,7 @@ onMounted(async () => {
 		font-family: "new-order", sans-serif;
 		font-size: 50px;
 		line-height: 52px;
-		font-weight: 700;
+		font-weight: 600;
 		color: white;
 		text-transform: uppercase;
 	}
@@ -162,6 +208,7 @@ onMounted(async () => {
 		font-weight: 600;
 		border: 2px solid white;
 		border-radius: 20px;
+		top: 30px;
 	}
 }
 

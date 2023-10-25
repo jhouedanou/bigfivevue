@@ -40,7 +40,7 @@
             <div id="slide2"
               class="swiper-slide">
               <div class="row slide-inner">
-                <div class="col-md-4 col-sm-12"
+                <div class="col-md-4 col-sm-12 slide2-p"
                   v-for=" slide  in  state.agence?.slide2 ?? [] "
                   :key="slide.id ?? ''">
                   <div class="inner">
@@ -74,8 +74,13 @@
                     :key="item.Id"
                     :peek-gutter=true
                     :slides-per-page="1">
-                    <h3>{{ item.Id }}. {{ item.titre }}</h3>
-                    <h4 v-html="item.nom"></h4>
+                    <div class="num">
+                       <h3>{{ item.Id }}.&nbsp;</h3> 
+                    </div>
+                    <div class="cont-slide">
+                      <h3>{{ item.titre }}</h3>
+                      <h4 v-html="item.nom"></h4>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -173,9 +178,9 @@ onMounted(async () => {
       spaceBetween: 0,
       mousewheel: true,
       keyboard: true,
-      // parallax: true,
+      parallax: true,
       autoplay: {
-        delay: 7000, // delay between transitions in ms
+        delay: 5000, // delay between transitions in ms
         disableOnInteraction: true // enable/disable autoplay on user interaction
       },
       pagination: {
@@ -205,7 +210,7 @@ onMounted(async () => {
           speed: 2000,
           draggable: true,
           // keyboard: true,
-          // parallax: true,
+           parallax: true,
           autoplay: {
             delay: 2000,
             disableOnInteraction: true // enable/disable autoplay on user interaction
@@ -216,7 +221,7 @@ onMounted(async () => {
 
         const tipster = document.querySelector('#tipster');
         const liste = tipster.querySelectorAll('li');
-        const delai = 500;
+        const delai = 300;
         const increment = 1;
         const debutFadeOut = 19;
         let i = liste.length - increment; // 34
@@ -315,14 +320,14 @@ watchEffect(() => {
 #mouf {
 
   background: linear-gradient(to bottom, #80368c, #2c348b);
-  font-size: 78px;
+  font-size: 70px;
   font-weight: bold;
-  line-height: 78px;
+  line-height: 70px;
   position: absolute;
-  padding: 1em;
+  padding: 0.75em 1em;
   transform: rotate(357deg);
-  right: 7px;
-  top: 278px;
+  right: -14px;
+  top: 260px;
 }
 
 .main {
