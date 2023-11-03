@@ -9,7 +9,7 @@
     "skipLibCheck": true,
     "strict": true,
     "allowJs": true,
-    "baseUrl": "/Users/apple/Documents/bigfivevue",
+    "baseUrl": "/Applications/MAMP/htdocs/bigfivevue",
     "noEmit": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
@@ -18,70 +18,70 @@
     ],
     "paths": {
       "~": [
-        "/Users/apple/Documents/bigfivevue"
+        "/Applications/MAMP/htdocs/bigfivevue"
       ],
       "~/*": [
-        "/Users/apple/Documents/bigfivevue/*"
+        "/Applications/MAMP/htdocs/bigfivevue/*"
       ],
       "@": [
-        "/Users/apple/Documents/bigfivevue"
+        "/Applications/MAMP/htdocs/bigfivevue"
       ],
       "@/*": [
-        "/Users/apple/Documents/bigfivevue/*"
+        "/Applications/MAMP/htdocs/bigfivevue/*"
       ],
       "~~": [
-        "/Users/apple/Documents/bigfivevue"
+        "/Applications/MAMP/htdocs/bigfivevue"
       ],
       "~~/*": [
-        "/Users/apple/Documents/bigfivevue/*"
+        "/Applications/MAMP/htdocs/bigfivevue/*"
       ],
       "@@": [
-        "/Users/apple/Documents/bigfivevue"
+        "/Applications/MAMP/htdocs/bigfivevue"
       ],
       "@@/*": [
-        "/Users/apple/Documents/bigfivevue/*"
+        "/Applications/MAMP/htdocs/bigfivevue/*"
       ],
       "assets": [
-        "/Users/apple/Documents/bigfivevue/assets"
+        "/Applications/MAMP/htdocs/bigfivevue/assets"
       ],
       "assets/*": [
-        "/Users/apple/Documents/bigfivevue/assets/*"
+        "/Applications/MAMP/htdocs/bigfivevue/assets/*"
       ],
       "public": [
-        "/Users/apple/Documents/bigfivevue/public"
+        "/Applications/MAMP/htdocs/bigfivevue/public"
       ],
       "public/*": [
-        "/Users/apple/Documents/bigfivevue/public/*"
+        "/Applications/MAMP/htdocs/bigfivevue/public/*"
       ],
       "#app": [
-        "/Users/apple/Documents/bigfivevue/node_modules/nuxt/dist/app"
+        "/Applications/MAMP/htdocs/bigfivevue/node_modules/nuxt/dist/app"
       ],
       "#app/*": [
-        "/Users/apple/Documents/bigfivevue/node_modules/nuxt/dist/app/*"
+        "/Applications/MAMP/htdocs/bigfivevue/node_modules/nuxt/dist/app/*"
       ],
       "vue-demi": [
-        "/Users/apple/Documents/bigfivevue/node_modules/nuxt/dist/app/compat/vue-demi"
+        "/Applications/MAMP/htdocs/bigfivevue/node_modules/nuxt/dist/app/compat/vue-demi"
       ],
       "#image": [
-        "/Users/apple/Documents/bigfivevue/node_modules/@nuxt/image/dist/runtime"
+        "/Applications/MAMP/htdocs/bigfivevue/node_modules/@nuxt/image/dist/runtime"
       ],
       "#image/*": [
-        "/Users/apple/Documents/bigfivevue/node_modules/@nuxt/image/dist/runtime/*"
+        "/Applications/MAMP/htdocs/bigfivevue/node_modules/@nuxt/image/dist/runtime/*"
       ],
       "#vue-router": [
-        "/Users/apple/Documents/bigfivevue/.nuxt/vue-router"
+        "/Applications/MAMP/htdocs/bigfivevue/.nuxt/vue-router"
       ],
       "#imports": [
-        "/Users/apple/Documents/bigfivevue/.nuxt/imports"
+        "/Applications/MAMP/htdocs/bigfivevue/.nuxt/imports"
       ],
       "#build": [
-        "/Users/apple/Documents/bigfivevue/.nuxt"
+        "/Applications/MAMP/htdocs/bigfivevue/.nuxt"
       ],
       "#build/*": [
-        "/Users/apple/Documents/bigfivevue/.nuxt/*"
+        "/Applications/MAMP/htdocs/bigfivevue/.nuxt/*"
       ],
       "#components": [
-        "/Users/apple/Documents/bigfivevue/.nuxt/components"
+        "/Applications/MAMP/htdocs/bigfivevue/.nuxt/components"
       ]
     }
   },
