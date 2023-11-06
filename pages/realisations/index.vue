@@ -23,6 +23,9 @@
 				<Logo :id="2" />
 				<Menu :page="'/agence'" />
 			</div>
+			<div id="lemain"
+        class="main primary-bg vh-100"
+        :class="{ full: isMainFull }">
 			<div class="swiper"
 				ref="swiperContainer">
 				<div class="swiper-wrapper">
@@ -82,6 +85,7 @@
 				</div>
 				<div class="swiper-pagination"></div>
 			</div>
+			</div>
 			
 		</div>
 
@@ -97,6 +101,7 @@ import 'swiper/css/bundle';
 import PageLoader from '@/components/PageLoader.vue';
 const swiperContainer = ref(null);
 let swiperInstance;
+let isMainFull = ref(true);
 let isSidebarOpen = ref(false);
 let toClose = ref(false);
 let closeBlack = ref(false);
@@ -106,6 +111,7 @@ const state = reactive({
 	isLoading: true
 });
 onMounted(async () => {
+	
 	try {
 		state.isLoading = true;
 		//recuperer les realisations
@@ -132,6 +138,7 @@ onMounted(async () => {
 			}
 		});
 		state.isLoading = false;
+		
 	} catch (error) {
 
 		state.isLoading = false;
@@ -139,6 +146,7 @@ onMounted(async () => {
 	}
 
 });
+
 </script>
 <style lang="scss" scoped>
 
