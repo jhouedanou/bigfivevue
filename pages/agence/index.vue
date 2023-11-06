@@ -112,7 +112,7 @@
           <div class="swiper-pagination"></div>
         </div>
         <div id="kpaflotage"
-          class="menuflottant">
+          class="menuflottant" :class="{ flipit: state.isSlide1Active, open: isSidebarOpen }">
           <SocialLinksAlt />
         </div>
       </div>
@@ -172,7 +172,7 @@ onMounted(async () => {
       //initSwiper();
     }
     // Initialisation du swiper
-    swiperInstance = new Swiper(swiperContainer.value, {
+/*     swiperInstance = new Swiper(swiperContainer.value, {
       direction: 'vertical',
       slidesPerView: 1,
       spaceBetween: 0,
@@ -187,7 +187,29 @@ onMounted(async () => {
         el: '.swiper-pagination',
         clickable: true,
       }
+    }); */
+
+    swiperInstance = new Swiper(swiperContainer.value, {
+      direction: 'vertical',
+      slidesPerView: 1,
+      spaceBetween: 0,
+      mousewheel: true,
+      keyboard: true,
+      parallax: true,
+      effect: 'fade', // Set the fade effect
+      fadeEffect: {
+        crossFade: true // Enable cross-fade between slides
+      },
+      autoplay: {
+        delay: 4000, // delay between transitions in ms
+        disableOnInteraction: true // enable/disable autoplay on user interaction
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      }
     });
+
     //ajouter une classe animationslide1 une fois que swiperInstance a fini son initialisation
 
     //gestion de la disposition de la sidebar 
