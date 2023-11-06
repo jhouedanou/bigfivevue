@@ -12,60 +12,60 @@
     "jsxFragmentFactory": "Fragment",
     "paths": {
       "#imports": [
-        "/Users/apple/Documents/bigfivevue/.nuxt/types/nitro-imports"
+        "/Applications/MAMP/htdocs/bigfive/.nuxt/types/nitro-imports"
       ],
       "#paths": [
-        "/Users/apple/Documents/bigfivevue/node_modules/nuxt/dist/core/runtime/nitro/paths"
+        "/Applications/MAMP/htdocs/bigfive/node_modules/nuxt/dist/core/runtime/nitro/paths"
       ],
       "~": [
-        "/Users/apple/Documents/bigfivevue"
+        "/Applications/MAMP/htdocs/bigfive"
       ],
       "~/*": [
-        "/Users/apple/Documents/bigfivevue/*"
+        "/Applications/MAMP/htdocs/bigfive/*"
       ],
       "@": [
-        "/Users/apple/Documents/bigfivevue"
+        "/Applications/MAMP/htdocs/bigfive"
       ],
       "@/*": [
-        "/Users/apple/Documents/bigfivevue/*"
+        "/Applications/MAMP/htdocs/bigfive/*"
       ],
       "~~": [
-        "/Users/apple/Documents/bigfivevue"
+        "/Applications/MAMP/htdocs/bigfive"
       ],
       "~~/*": [
-        "/Users/apple/Documents/bigfivevue/*"
+        "/Applications/MAMP/htdocs/bigfive/*"
       ],
       "@@": [
-        "/Users/apple/Documents/bigfivevue"
+        "/Applications/MAMP/htdocs/bigfive"
       ],
       "@@/*": [
-        "/Users/apple/Documents/bigfivevue/*"
+        "/Applications/MAMP/htdocs/bigfive/*"
       ],
       "assets": [
-        "/Users/apple/Documents/bigfivevue/assets"
+        "/Applications/MAMP/htdocs/bigfive/assets"
       ],
       "assets/*": [
-        "/Users/apple/Documents/bigfivevue/assets/*"
+        "/Applications/MAMP/htdocs/bigfive/assets/*"
       ],
       "public": [
-        "/Users/apple/Documents/bigfivevue/public"
+        "/Applications/MAMP/htdocs/bigfive/public"
       ],
       "public/*": [
-        "/Users/apple/Documents/bigfivevue/public/*"
+        "/Applications/MAMP/htdocs/bigfive/public/*"
       ],
       "#image": [
-        "/Users/apple/Documents/bigfivevue/node_modules/@nuxt/image/dist/runtime"
+        "/Applications/MAMP/htdocs/bigfive/node_modules/@nuxt/image/dist/runtime"
       ],
       "#image/*": [
-        "/Users/apple/Documents/bigfivevue/node_modules/@nuxt/image/dist/runtime/*"
+        "/Applications/MAMP/htdocs/bigfive/node_modules/@nuxt/image/dist/runtime/*"
       ],
       "#content/server": [
-        "/Users/apple/Documents/bigfivevue/node_modules/@nuxt/content/dist/runtime/server/index"
+        "/Applications/MAMP/htdocs/bigfive/node_modules/@nuxt/content/dist/runtime/server/index"
       ]
     }
   },
   "include": [
-    "/Users/apple/Documents/bigfivevue/.nuxt/types/nitro-nuxt.d.ts",
+    "/Applications/MAMP/htdocs/bigfive/.nuxt/types/nitro-nuxt.d.ts",
     "./types/nitro.d.ts",
     "../**/*",
     "../server/**/*"
