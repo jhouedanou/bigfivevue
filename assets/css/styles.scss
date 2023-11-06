@@ -483,6 +483,7 @@ $viewport-width: 100%;
 		ul {
 			padding: 0;
 			list-style: none;
+			justify-content: flex-start !important;
 			li {
 				padding: 0px 14px 0 28px;
 				list-style: none;

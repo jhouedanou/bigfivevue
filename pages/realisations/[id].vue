@@ -162,6 +162,8 @@ const matchingRealisation = computed(() => {
 	max-width: 80vw;
 	margin: 0 auto;
 }
-
+.img-fluid, .img-thumbnail {
+    width: 100%;
+}
 /* Remove the invalid nested styles here */
 </style>
