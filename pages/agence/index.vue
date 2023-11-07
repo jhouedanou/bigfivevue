@@ -25,7 +25,7 @@
         <Menu :page="'/agence'" />
       </div>
       <div id="lemain"
-        class="main primary-bg vh-100"
+        class="main vh-100"
         :class="{ full: isMainFull }">
         <div class="swiper"
           ref="swiperContainer">
@@ -201,7 +201,7 @@ onMounted(async () => {
         crossFade: true // Enable cross-fade between slides
       },
       autoplay: {
-        delay: 4000, // delay between transitions in ms
+        delay: 30000, // delay between transitions in ms
         disableOnInteraction: true // enable/disable autoplay on user interaction
       },
       pagination: {
@@ -358,7 +358,9 @@ watchEffect(() => {
 }
 
 .swiper-wrapper {
-  background: linear-gradient(to bottom, #80368c, #2c348b);
+  /* background: linear-gradient(to bottom, #80368c, #2c348b); */
+  background: linear-gradient(to bottom, #82368C 0%, #27348B 100%);
+ /*  overflow: hidden; */
   height: auto;
 }
 
