@@ -608,7 +608,8 @@ $viewport-width: 100%;
 	position: relative;
 	height: 100vh;
 	background: rgb(2, 0, 36);
-	background: linear-gradient(349deg, rgba(2, 0, 36, 1) 0%, rgba(130, 54, 140, 1) 100%);
+	/* background: linear-gradient(349deg, rgba(2, 0, 36, 1) 0%, rgba(130, 54, 140, 1) 100%); */
+	background: linear-gradient(to bottom, #80368c, #2c348b);
 	h3 {
 		text-transform: uppercase;
 		font-weight: 700;
