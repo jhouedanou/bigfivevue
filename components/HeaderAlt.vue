@@ -12,8 +12,8 @@
 				</div>
 				<div class="col-md-8 col-sm-12 right-menu">
 					<div class="row g-0">
-						<div class="col-md-8"><MenuAlt /></div>
-						<div class="col-md-4"><SocialLinksAltIn></SocialLinksAltIn></div>
+						<div class="col-md-7"><MenuAlt /></div>
+						<div class="col-md-5"><SocialLinksAltIn></SocialLinksAltIn></div>
 					</div>
 					
 					

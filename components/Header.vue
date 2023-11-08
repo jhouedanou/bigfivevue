@@ -13,8 +13,8 @@
 				</div>
 				<div class="col-md-8 col-sm-12 right-menu">
 					<div class="row g-0">
-						<div class="col-md-8"><Menu /></div>
-						<div class="col-md-4"><SocialLinks></SocialLinks></div>
+						<div class="col-md-7"><Menu /></div>
+						<div class="col-md-5"><SocialLinks></SocialLinks></div>
 					</div>
 				</div>
 			</div>

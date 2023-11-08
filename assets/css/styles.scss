@@ -386,7 +386,7 @@ $viewport-width: 100%;
 	padding: 0;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content:flex-end;
 	overflow: hidden;
 	align-items: flex-start;
 	height: 100vh !important;
@@ -402,7 +402,7 @@ $viewport-width: 100%;
     padding: 0;
     color: #6759B4;
     font-size: 6vw;
-    margin: 0 0 0 0;
+    margin: 3px 0 3px 0;
     padding: 0;
     line-height:9vh;
     font-weight: 800;
@@ -2572,15 +2572,21 @@ div#pargrapheIntro {
   .form-group{
 	position: relative;
   }
-
+  @media (min-width: 1200px){
+		#rencontres .h3,  #rencontres h3 {
+		font-size: 90px !important;
+	}
+  }
+ 
   #rencontres {
+	padding-top: 100px;
 	background: linear-gradient(to bottom, #80368c, #2c348b);
 	height: auto;
 	display: flex;
-    flex-wrap: wrap;
     align-content: space-around;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
 
 	#untel{
 		padding-bottom: 60px;

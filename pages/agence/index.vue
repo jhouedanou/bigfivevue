@@ -190,25 +190,23 @@ onMounted(async () => {
     }); */
 
     swiperInstance = new Swiper(swiperContainer.value, {
-      direction: 'vertical',
-      slidesPerView: 1,
-      spaceBetween: 0,
-      mousewheel: true,
-      keyboard: true,
-      parallax: true,
-      effect: 'fade', // Set the fade effect
-      fadeEffect: {
-        crossFade: true // Enable cross-fade between slides
-      },
-      autoplay: {
-        delay: 30000, // delay between transitions in ms
-        disableOnInteraction: true // enable/disable autoplay on user interaction
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      }
-    });
+  direction: 'vertical', // Set the direction to vertical
+  slidesPerView: 1,
+  spaceBetween: 0,
+  mousewheel: true,
+  keyboard: true,
+  effect: 'slide', // Set the slide effect
+  autoplay: {
+    delay: 3000, // Delay between transitions in ms
+    disableOnInteraction: true // Enable/disable autoplay on user interaction
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  }
+});
+
+
 
     //ajouter une classe animationslide1 une fois que swiperInstance a fini son initialisation
 
