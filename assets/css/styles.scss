@@ -1,4 +1,5 @@
 body {
+	overflow: hidden;
 	-webkit-font-smoothing: antialiased !important;
 	-moz-osx-font-smoothing: grayscale !important;
 	-webkit-font-smoothing: antialiased !important;
@@ -188,7 +189,7 @@ $secondary: #29348b;
 }
 #menuhomepage {
 	#menulinks {
-		margin: 0;
+		
 		padding: 3em 1em 1em 1em;
 		list-style: none;
 		display: flex;
@@ -503,8 +504,9 @@ $viewport-width: 100%;
 		flex-direction: row;
 
 		li {
-			padding: 0 27px;
+			padding: 0;
 			list-style: none;
+			margin: 0 1em 0 2em;
 			a {
 				padding: 0;
 				margin: 0;
@@ -522,7 +524,7 @@ $viewport-width: 100%;
 }
 
 #header {
-	width: 98vw;
+	
 	padding: 0;
 	margin: 0;
 	background: white;
@@ -569,7 +571,7 @@ $viewport-width: 100%;
 		}
 	}
 	#menulinks {
-		padding: 0;
+		padding: 7px 0 0 117px;
 		list-style: none;
 		display: flex;
 		align-items: center;

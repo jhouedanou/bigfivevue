@@ -197,7 +197,7 @@ onMounted(async () => {
   keyboard: true,
   effect: 'slide', // Set the slide effect
   autoplay: {
-    delay: 3000, // Delay between transitions in ms
+    delay: 30000, // Delay between transitions in ms
     disableOnInteraction: true // Enable/disable autoplay on user interaction
   },
   pagination: {
@@ -262,8 +262,10 @@ onMounted(async () => {
             liste[i].classList.add('animate__animated', 'animate__fadeInDownBig');
             i--;
           } else if (i < 0) {
+          
             stop();
           } else {
+            
             clearInterval(interval);
           }
         }, delai);
