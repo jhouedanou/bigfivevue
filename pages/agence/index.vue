@@ -250,13 +250,15 @@ onMounted(async () => {
         //pour les elements 34 à 15 de la liste, fadeInDownBig tous les 500ms
         //pour le 14e element de la liste, fadeOut du dernier element de la liste, le 34 et FadeInDownBig du 16e element. Supprimer le dernier element de la liste , de façon à ce que le 16e element devienne le 15e element de la liste
         //pour l'element 13 de la liste; fadeInDownBig et supprimer le dernier element de la liste. Supprimmer
+        
         const interval = setInterval(() => {
           if (i >= debutFadeOut) {
 
             liste[i].classList.add('animate__animated', 'animate__fadeInDownBig');
             i--;
+            
           } else if (i < debutFadeOut && i >= 0) {
-
+           
             liste[i + lEcart].classList.remove('animate__fadeInDownBig');
             liste[i + lEcart].classList.add('animate__fadeOutDownBig', 'close');
             liste[i].classList.add('animate__animated', 'animate__fadeInDownBig');
@@ -323,7 +325,7 @@ watchEffect(() => {
 </script>
 <style lang="scss" scoped>
 .slide5-background {
-  background: url('/img/visages.jpg');
+  background: url('/img/visages.png');
   background-position: 50% 50%;
   transition: background-position 0.3s ease-in-out;
 }
