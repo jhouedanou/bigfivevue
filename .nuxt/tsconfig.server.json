@@ -12,60 +12,60 @@
     "jsxFragmentFactory": "Fragment",
     "paths": {
       "#imports": [
-        "/Applications/MAMP/htdocs/bigfive/.nuxt/types/nitro-imports"
+        "C:/Users/ASUS ROG/Documents/bigfive/.nuxt/types/nitro-imports"
       ],
       "#paths": [
-        "/Applications/MAMP/htdocs/bigfive/node_modules/nuxt/dist/core/runtime/nitro/paths"
+        "C:/Users/ASUS ROG/Documents/bigfive/node_modules/nuxt/dist/core/runtime/nitro/paths"
       ],
       "~": [
-        "/Applications/MAMP/htdocs/bigfive"
+        "C:/Users/ASUS ROG/Documents/bigfive"
       ],
       "~/*": [
-        "/Applications/MAMP/htdocs/bigfive/*"
+        "C:/Users/ASUS ROG/Documents/bigfive/*"
       ],
       "@": [
-        "/Applications/MAMP/htdocs/bigfive"
+        "C:/Users/ASUS ROG/Documents/bigfive"
       ],
       "@/*": [
-        "/Applications/MAMP/htdocs/bigfive/*"
+        "C:/Users/ASUS ROG/Documents/bigfive/*"
       ],
       "~~": [
-        "/Applications/MAMP/htdocs/bigfive"
+        "C:/Users/ASUS ROG/Documents/bigfive"
       ],
       "~~/*": [
-        "/Applications/MAMP/htdocs/bigfive/*"
+        "C:/Users/ASUS ROG/Documents/bigfive/*"
       ],
       "@@": [
-        "/Applications/MAMP/htdocs/bigfive"
+        "C:/Users/ASUS ROG/Documents/bigfive"
       ],
       "@@/*": [
-        "/Applications/MAMP/htdocs/bigfive/*"
+        "C:/Users/ASUS ROG/Documents/bigfive/*"
       ],
       "assets": [
-        "/Applications/MAMP/htdocs/bigfive/assets"
+        "C:/Users/ASUS ROG/Documents/bigfive/assets"
       ],
       "assets/*": [
-        "/Applications/MAMP/htdocs/bigfive/assets/*"
+        "C:/Users/ASUS ROG/Documents/bigfive/assets/*"
       ],
       "public": [
-        "/Applications/MAMP/htdocs/bigfive/public"
+        "C:/Users/ASUS ROG/Documents/bigfive/public"
       ],
       "public/*": [
-        "/Applications/MAMP/htdocs/bigfive/public/*"
+        "C:/Users/ASUS ROG/Documents/bigfive/public/*"
       ],
       "#image": [
-        "/Applications/MAMP/htdocs/bigfive/node_modules/@nuxt/image/dist/runtime"
+        "C:/Users/ASUS ROG/Documents/bigfive/node_modules/@nuxt/image/dist/runtime"
       ],
       "#image/*": [
-        "/Applications/MAMP/htdocs/bigfive/node_modules/@nuxt/image/dist/runtime/*"
+        "C:/Users/ASUS ROG/Documents/bigfive/node_modules/@nuxt/image/dist/runtime/*"
       ],
       "#content/server": [
-        "/Applications/MAMP/htdocs/bigfive/node_modules/@nuxt/content/dist/runtime/server/index"
+        "C:/Users/ASUS ROG/Documents/bigfive/node_modules/@nuxt/content/dist/runtime/server/index"
       ]
     }
   },
   "include": [
-    "/Applications/MAMP/htdocs/bigfive/.nuxt/types/nitro-nuxt.d.ts",
+    "C:/Users/ASUS ROG/Documents/bigfive/.nuxt/types/nitro-nuxt.d.ts",
     "./types/nitro.d.ts",
     "../**/*",
     "../server/**/*"

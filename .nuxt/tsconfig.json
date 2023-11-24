@@ -9,7 +9,7 @@
     "skipLibCheck": true,
     "strict": true,
     "allowJs": true,
-    "baseUrl": "/Applications/MAMP/htdocs/bigfive",
+    "baseUrl": "C:/Users/ASUS ROG/Documents/bigfive",
     "noEmit": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
@@ -18,70 +18,70 @@
     ],
     "paths": {
       "~": [
-        "/Applications/MAMP/htdocs/bigfive"
+        "C:/Users/ASUS ROG/Documents/bigfive"
       ],
       "~/*": [
-        "/Applications/MAMP/htdocs/bigfive/*"
+        "C:/Users/ASUS ROG/Documents/bigfive/*"
       ],
       "@": [
-        "/Applications/MAMP/htdocs/bigfive"
+        "C:/Users/ASUS ROG/Documents/bigfive"
       ],
       "@/*": [
-        "/Applications/MAMP/htdocs/bigfive/*"
+        "C:/Users/ASUS ROG/Documents/bigfive/*"
       ],
       "~~": [
-        "/Applications/MAMP/htdocs/bigfive"
+        "C:/Users/ASUS ROG/Documents/bigfive"
       ],
       "~~/*": [
-        "/Applications/MAMP/htdocs/bigfive/*"
+        "C:/Users/ASUS ROG/Documents/bigfive/*"
       ],
       "@@": [
-        "/Applications/MAMP/htdocs/bigfive"
+        "C:/Users/ASUS ROG/Documents/bigfive"
       ],
       "@@/*": [
-        "/Applications/MAMP/htdocs/bigfive/*"
+        "C:/Users/ASUS ROG/Documents/bigfive/*"
       ],
       "assets": [
-        "/Applications/MAMP/htdocs/bigfive/assets"
+        "C:/Users/ASUS ROG/Documents/bigfive/assets"
       ],
       "assets/*": [
-        "/Applications/MAMP/htdocs/bigfive/assets/*"
+        "C:/Users/ASUS ROG/Documents/bigfive/assets/*"
       ],
       "public": [
-        "/Applications/MAMP/htdocs/bigfive/public"
+        "C:/Users/ASUS ROG/Documents/bigfive/public"
       ],
       "public/*": [
-        "/Applications/MAMP/htdocs/bigfive/public/*"
+        "C:/Users/ASUS ROG/Documents/bigfive/public/*"
       ],
       "#app": [
-        "/Applications/MAMP/htdocs/bigfive/node_modules/nuxt/dist/app"
+        "C:/Users/ASUS ROG/Documents/bigfive/node_modules/nuxt/dist/app"
       ],
       "#app/*": [
-        "/Applications/MAMP/htdocs/bigfive/node_modules/nuxt/dist/app/*"
+        "C:/Users/ASUS ROG/Documents/bigfive/node_modules/nuxt/dist/app/*"
       ],
       "vue-demi": [
-        "/Applications/MAMP/htdocs/bigfive/node_modules/nuxt/dist/app/compat/vue-demi"
+        "C:/Users/ASUS ROG/Documents/bigfive/node_modules/nuxt/dist/app/compat/vue-demi"
       ],
       "#image": [
-        "/Applications/MAMP/htdocs/bigfive/node_modules/@nuxt/image/dist/runtime"
+        "C:/Users/ASUS ROG/Documents/bigfive/node_modules/@nuxt/image/dist/runtime"
       ],
       "#image/*": [
-        "/Applications/MAMP/htdocs/bigfive/node_modules/@nuxt/image/dist/runtime/*"
+        "C:/Users/ASUS ROG/Documents/bigfive/node_modules/@nuxt/image/dist/runtime/*"
       ],
       "#vue-router": [
-        "/Applications/MAMP/htdocs/bigfive/.nuxt/vue-router"
+        "C:/Users/ASUS ROG/Documents/bigfive/.nuxt/vue-router"
       ],
       "#imports": [
-        "/Applications/MAMP/htdocs/bigfive/.nuxt/imports"
+        "C:/Users/ASUS ROG/Documents/bigfive/.nuxt/imports"
       ],
       "#build": [
-        "/Applications/MAMP/htdocs/bigfive/.nuxt"
+        "C:/Users/ASUS ROG/Documents/bigfive/.nuxt"
       ],
       "#build/*": [
-        "/Applications/MAMP/htdocs/bigfive/.nuxt/*"
+        "C:/Users/ASUS ROG/Documents/bigfive/.nuxt/*"
       ],
       "#components": [
-        "/Applications/MAMP/htdocs/bigfive/.nuxt/components"
+        "C:/Users/ASUS ROG/Documents/bigfive/.nuxt/components"
       ]
     }
   },

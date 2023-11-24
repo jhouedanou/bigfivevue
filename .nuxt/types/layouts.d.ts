@@ -1,6 +1,6 @@
 import { ComputedRef, Ref } from 'vue'
 export type LayoutKey = "contact-layout" | "contenu-realisations" | "contenu" | "contenu-alt"
-declare module "/Applications/MAMP/htdocs/bigfive/node_modules/nuxt/dist/pages/runtime/composables" {
+declare module "C:/Users/ASUS ROG/Documents/bigfive/node_modules/nuxt/dist/pages/runtime/composables" {
   interface PageMeta {
     layout?: false | LayoutKey | Ref<LayoutKey> | ComputedRef<LayoutKey>
   }

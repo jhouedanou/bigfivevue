@@ -2,25 +2,29 @@
 	{
 		"id": 1,
 		"platform": "Facebook",
-		"url": "https://www.facebook.com/your-page",
-		"icon": "/img/facebook.svg"
+		"url": "https://www.facebook.com/BigFiveSolutions2018",
+		"icon": "/img/facebook.svg",
+		"iconAlt": "/img/alt/facebook.svg"
 	},
 	{
 		"id": 2,
 		"platform": "LinkedIn",
-		"url": "https://ci.linkedin.com/in/bigfivesolutions",
-		"icon": "/img/linkedIn.svg"
+		"url": "https://www.linkedin.com/in/bigfivesolutions",
+		"icon": "/img/linkedIn.svg",
+		"iconAlt": "/img/alt/linkedIn.svg"
 	},
 	{
 		"id": 3,
 		"platform": "Instagram",
 		"url": "https://www.instagram.com/bigfivesolutions/?hl=fr",
-		"icon": "/img/instagram.svg"
+		"icon": "/img/instagram.svg",
+		"iconAlt": "/img/alt/instagram.svg"
 	},
 	{
 		"id": 4,
 		"platform": "Email",
-		"url": "mailto:your-email@example.com",
-		"icon": "/img/enveloppe.svg"
+		"url": "/contact",
+		"icon": "/img/enveloppe.svg",
+		"iconAlt": "/img/alt/enveloppe.svg"
 	}
 ]

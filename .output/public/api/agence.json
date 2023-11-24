@@ -1,27 +1,27 @@
 {
-	"title": "Big Five - Agence de communication digitale à Paris , Abidjan et Capetown | Notre agence",
+	"title": "Big Five - Agence de communication digitale à Paris , Abidjan et Capetown | Notre agence digitale et web",
 	"metadesc": "À la recherche d'une agence de communication digitale de premier plan ? Notre agence offre des solutions innovantes pour propulser votre présence en ligne. De la conception de sites web modernes à la gestion efficace des médias sociaux, nous sommes les experts de confiance qui vous aideront à atteindre vos objectifs numériques. Contactez-nous dès aujourd'hui pour des stratégies personnalisées, une créativité exceptionnelle et des résultats tangibles. Faites confiance à notre agence de communication digitale pour vous positionner en tête des SERP de Google et stimuler votre succès en ligne.",
 	"slide1": {
 		"title": "Nous sommes Big Five",
-		"soustitre": "Nous sommes une agence <span>360</span> qui accompagne les entreprises dans leur transition digitale.",
-		"contenu": "Notre mission est de leur permettre de marquer leur industrie de manière créative et durable."
+		"soustitre": "Nous sommes une agence <span>360°</span><br>qui accompagne les<br>entreprises dans leur<br> transition digitale.",
+		"contenu": "Notre mission est de leur permettre de marquer leur industrie<br>de manière créative et durable."
 	},
 	"slide2": [
 		{
 			"id": 1,
-			"img": "img/coeur.svg",
+			"img": "img/coeurviolet.gif",
 			"title": "Marketing",
-			"content": "pour la marque de créer l&rsquo;interactivité avec le consommateur, de savoir l&rsquo;écouter, le comprendre, l&rsquo;analyser pour pouvoir le surprendre et le fidéliser. BIG FIVE aide ses clients à devenir leur propre média pour mieux parler au plus grand nombre et toujours recruter plus d’audience"
+			"content": "Aujourd’hui, il est impératif pour la marque de créer l’interactivité avec le consommateur, de savoir l’écouter, le comprendre, l’analyser pour pouvoir le surprendre et le fidéliser. <br>BIG FIVE aide ses clients à devenir leur propre média pour mieux parler au plus grand nombre et toujours recruter plus d’audience."
 		},
 		{
 			"id": 2,
-			"img": "img/digital.svg",
+			"img": "img/digitalviolet.gif",
 			"title": "Digital",
 			"content": "La visibilité, la Data collection et l’expression de marque sont des enjeux stratégiques pour les marques. Chacun des outils digitaux que nous concevons pour y répondre bénéficie d’une veille technologique récurrente garantissant les meilleures fonctionnalités. Un écosystème bien pensé et une communication maîtrisée permettent d’asseoir sa réputation et de laisser une empreinte durable."
 		},
 		{
 			"id": 3,
-			"img": "img/communication.svg",
+			"img": "img/communicationviolet.gif",
 			"title": "Communication",
 			"content": "L'image de la marque, ses signes de reconnaissance,ses prises de paroles sont autant de points qui construisent sa réputation et sa visibilité dans un environnement de plus en plus concurrentiel. BIG FIVE assure le lien entre ses clients et leurs publics en imaginant des stratégies de communication créatives et ciblées."
 		}
@@ -45,7 +45,7 @@
 		{
 			"Id": 4,
 			"titre": "ACCOMPAGNEMENT",
-			"nom": "De la mise en place opérationnelle au contrôle des résultats"
+			"nom": "De la mise en place opérationnelle<br>au contrôle des résultats"
 		},
 		{
 			"Id": 5,
@@ -65,15 +65,15 @@
 		},
 		{
 			"id": 3,
-			"content": "CAMPAGNE SOCIA MEDIA"
+			"content": "CAMPAGNE SOCIAL MEDIA"
 		},
 		{
 			"id": 4,
-			"content": "IDENTITÉ"
+			"content": "IDENTITÉ DE MARQUE"
 		},
 		{
 			"id": 5,
-			"content": "PRINT   TVDE MARQUE\n            RADIO  PRESSE"
+			"content": "PRINT TV RADIO PRESSE"
 		},
 		{
 			"id": 6,
@@ -81,11 +81,11 @@
 		},
 		{
 			"id": 7,
-			"content": "ÉDITION"
+			"content": "ÉDITION AFFICHAGE"
 		},
 		{
 			"id": 8,
-			"content": "PACKAGING AFFICHAGE"
+			"content": "PACKAGING"
 		},
 		{
 			"id": 9,
@@ -117,7 +117,7 @@
 		},
 		{
 			"id": 16,
-			"content": "CHARTE   GRAPHIQUE"
+			"content": "CHARTE GRAPHIQUE"
 		},
 		{
 			"id": 17,
@@ -125,7 +125,7 @@
 		},
 		{
 			"id": 18,
-			"content": "ARCHITECTURE    DE MARQUE"
+			"content": "ARCHITECTURE DE MARQUE"
 		},
 		{
 			"id": 19,
@@ -133,27 +133,27 @@
 		},
 		{
 			"id": 20,
-			"content": "STRATÉGIE"
+			"content": "STRATÉGIE DE MARQUE"
 		},
 		{
 			"id": 21,
-			"content": "NAMING      DE MARQUE"
+			"content": "NAMING"
 		},
 		{
 			"id": 22,
-			"content": "CONCEPT"
+			"content": "CONCEPT RETAIL"
 		},
 		{
 			"id": 23,
-			"content": "DATA       RETAIL\n      COLLECTION"
+			"content": "DATA COLLECTION"
 		},
 		{
 			"id": 24,
-			"content": "LANCEMENT"
+			"content": "LANCEMENT DE MARQUE"
 		},
 		{
 			"id": 25,
-			"content": "SEO/SEA      DE MARQUE"
+			"content": "SEO/SEA"
 		},
 		{
 			"id": 26,
@@ -169,23 +169,23 @@
 		},
 		{
 			"id": 29,
-			"content": "SOLUTIONS"
+			"content": "SOLUTIONS DIGITALES"
 		},
 		{
 			"id": 30,
-			"content": "LOGOTYPES    DIGITALES"
+			"content": "LOGOTYPES"
 		},
 		{
 			"id": 31,
-			"content": "PROGRAMME"
+			"content": "PROGRAMME DE FIDÉLISATION"
 		},
 		{
 			"id": 32,
-			"content": "SITES VITRINE  DE FIDÉLISATION"
+			"content": "SITES VITRINE"
 		},
 		{
 			"id": 33,
-			"content": "BRAND    CONTENT"
+			"content": "BRAND CONTENT"
 		},
 		{
 			"id": 34,

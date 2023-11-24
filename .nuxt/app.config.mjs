@@ -1,5 +1,5 @@
 
-import { defuFn } from '/Applications/MAMP/htdocs/bigfive/node_modules/defu/dist/defu.mjs'
+import { defuFn } from 'C:/Users/ASUS ROG/Documents/bigfive/node_modules/defu/dist/defu.mjs'
 
 const inlineConfig = {}
 
