@@ -13,6 +13,12 @@ body {
 	-moz-osx-font-smoothing: grayscale !important;
 	text-rendering: optimizeLegibility !important;
 }
+#__nuxt{
+	
+	height: 100vh;
+	overflow-y: scroll;
+
+}
 #footercontactfrom {
 	background: rgb(81, 53, 139);
 	background: linear-gradient(180deg, rgb(81, 53, 139) 0%, rgb(41, 27, 70) 100%);
@@ -2204,6 +2210,8 @@ div#pargrapheIntro {
 		padding: 1em 0 0 0 !important;
 		max-width: 90vw !important;
 		padding: 5em 1em 1em 1em !important;
+		position: relative;
+		z-index:10;
 		* {
 			padding: 0em !important;
 			max-width: none !important;
@@ -2285,14 +2293,13 @@ div#pargrapheIntro {
 		justify-content: center;
 		flex-direction: column;
 	}
-	@mixin open() {
-		z-index: 10 !important;
+	@mixin open() {  z-index: 10000 !important;
 		height: 100vh !important;
 		width: 100% !important;
 		opacity: 100 !important;
 		transition: all 0.4s ease-in-out 0.2s;
 		visibility: visible;
-		position: fixed !important;
+		position: absolute !important;
 		background: white !important;
 		box-shadow: 0 0 4px rgba(0, 0, 0, 0.699) !important;
 	}
