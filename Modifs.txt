@@ -1,0 +1,87 @@
+Intro
+- mettre les pictos du bas au même niveau que dans le reste du site
+- Rajouter picto SELECTIVE LIVE
+- OK pour la transition par délai mais peut-on avoir le logo en animation qui va se placer. L’idée était de faire un site un peu dynamique.
+
+
+
+
+
+
+Agence
+- Remonter le logo et les pictos réseaux sociaux pour les faire respirer. Là ils sont trop collés au bord
+- Augmenter le timing de transition d'un slide à l’autre. Passer au moins à 15 scdes 
+- ajouter les animations entre chaque slide (voir prototype)
+- mettre les pictos réseaux sociaux en haut de page dans les 4 Slides après « NOUS SOMMES UNE AGENCE…… »
+
+
+	Slide 1
+	- Enlever « Africaines »
+	- Peut-on éviter la pixelization du « 360° » lorsqu’il est zoomé ? 
+GraphiqueCollé-1.tiff
+
+
+
+	Slide 2
+	- respecter l’animation des paragraphes et titres de manière à avoir un site un peu dynamique
+	- mettre les 3 pictos par les gifs animés violet que je t’envoie ci-joint
+	- espacer les 3 paragraphes 
+	- Mettre « BIG" à la ligne
+GraphiqueCollé-2.tiff
+
+
+
+Slide 3
+	- Bien aligner les titres AUDIT et EVALUATION, CONSULTING et REFLEXION… et les 3 autres 
+GraphiqueCollé-3.tiff
+
+
+
+
+
+Slide 4
+	- faire « tomber » les mots plus vite et une fois qu’ils sont tous tombés, les faire défiler (assez vite, si possible) en boucle. 
+	Là, ils défilent mais à chaque fois il y a un mot qui continue de tomber…
+
+
+
+Slide 5
+	- faire aller à la coupe à droite le cartouche 
+
+
+
+
+
+
+
+PAGE CONTACT
+- Passer en minuscules jobs@bigfivesolutions.com et contact@bigfivesolutions.com
+- Petit problème sur le champs « Message » qui est trop haut par rapport à la ligne horizontale.
+- remonter le ©BIGFIVESOLUTIONS ALL RIGHTS RESERVED - COOKIES… de manière à ce qu’il n’y ait pas de scroll possible sur la page
+
+
+
+
+
+
+
+
+PAGE REALISATIONS
+- augmenter le temps de défilement entre chaque case Studie
+- Diminuer d’une graisse le nom du client à chaque case studie 
+- baisser le bouton VOIR PLUS à chaque Case studie
+- rajouter le rooter RENCONTRONS-NOUS
+- Homogénéiser la position des pictos réseaux sociaux avec les autres pages CONTACT et AGENCE. 
+
+GraphiqueCollé-4.tiff
+
+
+
+
+
+
+
+PAGE CASE STUDIES
+- Enlever la fonction STICKY du leader (menu + image)
+
+
