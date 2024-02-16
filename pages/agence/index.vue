@@ -25,7 +25,7 @@
         <Menu :page="'/agence'" />
       </div>
       <div id="lemain"
-        class="main primary-bg vh-100"
+        class="main vh-100"
         :class="{ full: isMainFull }">
         <div class="swiper"
           ref="swiperContainer">
@@ -44,11 +44,11 @@
                   v-for=" slide  in  state.agence?.slide2 ?? [] "
                   :key="slide.id ?? ''">
                   <div class="inner">
-                    <nuxt-img :src="slide.img ?? ''"
+                    <!-- <nuxt-img :src="slide.img ?? ''"
                       :lazy="true"
-                      quality="80" /><!-- 
+                      quality="80" /> -->
                     <img :src="slide.img ?? ''"
-                      alt=""> -->
+                      alt=""> 
                     <h3>{{ slide.title ?? '' }}</h3>
                     <div class="sabine">
                       <p v-html="slide.content ?? ''"></p>
@@ -112,7 +112,7 @@
           <div class="swiper-pagination"></div>
         </div>
         <div id="kpaflotage"
-          class="menuflottant">
+          class="menuflottant" :class="{ flipit: state.isSlide1Active, open: isSidebarOpen }">
           <SocialLinksAlt />
         </div>
       </div>
@@ -172,7 +172,7 @@ onMounted(async () => {
       //initSwiper();
     }
     // Initialisation du swiper
-    swiperInstance = new Swiper(swiperContainer.value, {
+/*     swiperInstance = new Swiper(swiperContainer.value, {
       direction: 'vertical',
       slidesPerView: 1,
       spaceBetween: 0,
@@ -187,7 +187,27 @@ onMounted(async () => {
         el: '.swiper-pagination',
         clickable: true,
       }
-    });
+    }); */
+
+    swiperInstance = new Swiper(swiperContainer.value, {
+  direction: 'vertical', // Set the direction to vertical
+  slidesPerView: 1,
+  spaceBetween: 0,
+  mousewheel: true,
+  keyboard: true,
+  effect: 'slide', // Set the slide effect
+  autoplay: {
+    delay: 30000, // Delay between transitions in ms
+    disableOnInteraction: true // Enable/disable autoplay on user interaction
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  }
+});
+
+
+
     //ajouter une classe animationslide1 une fois que swiperInstance a fini son initialisation
 
     //gestion de la disposition de la sidebar 
@@ -230,20 +250,24 @@ onMounted(async () => {
         //pour les elements 34 à 15 de la liste, fadeInDownBig tous les 500ms
         //pour le 14e element de la liste, fadeOut du dernier element de la liste, le 34 et FadeInDownBig du 16e element. Supprimer le dernier element de la liste , de façon à ce que le 16e element devienne le 15e element de la liste
         //pour l'element 13 de la liste; fadeInDownBig et supprimer le dernier element de la liste. Supprimmer
+        
         const interval = setInterval(() => {
           if (i >= debutFadeOut) {
 
             liste[i].classList.add('animate__animated', 'animate__fadeInDownBig');
             i--;
+            
           } else if (i < debutFadeOut && i >= 0) {
-
+           
             liste[i + lEcart].classList.remove('animate__fadeInDownBig');
             liste[i + lEcart].classList.add('animate__fadeOutDownBig', 'close');
             liste[i].classList.add('animate__animated', 'animate__fadeInDownBig');
             i--;
           } else if (i < 0) {
+          
             stop();
           } else {
+            
             clearInterval(interval);
           }
         }, delai);
@@ -301,7 +325,7 @@ watchEffect(() => {
 </script>
 <style lang="scss" scoped>
 .slide5-background {
-  background: url('/img/visages.jpg');
+  background: url('/img/visages.png');
   background-position: 50% 50%;
   transition: background-position 0.3s ease-in-out;
 }
@@ -336,7 +360,9 @@ watchEffect(() => {
 }
 
 .swiper-wrapper {
-  background: linear-gradient(to bottom, #80368c, #2c348b);
+  /* background: linear-gradient(to bottom, #80368c, #2c348b); */
+  background: linear-gradient(to bottom, #82368C 0%, #27348B 100%);
+ /*  overflow: hidden; */
   height: auto;
 }
 

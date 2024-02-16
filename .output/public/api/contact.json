@@ -1,14 +1,19 @@
 {
+	"rencontronsnous": "Rencontrons-nous",
+	"mail": "Mon mail",
+	"societe": "Ma société",
+	"message": "Mon message",
+	"envoyer": "Envoyer",
 	"contactData": [
 		{
 			"id": 1,
 			"titre": "Talents",
-			"adresse": "jobs@bigfive.com"
+			"adresse": "jobs@bigfivesolutions.com"
 		},
 		{
 			"id": 2,
 			"titre": "Clients & partenaires",
-			"adresse": "contact@bigfive.com"
+			"adresse": "contact@bigfivesolutions.com"
 		},
 		{
 			"id": 3,
