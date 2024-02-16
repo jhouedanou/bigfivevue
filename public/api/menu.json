@@ -10,6 +10,11 @@
 		"url": "/realisations"
 	},
 	{
+		"id":3,
+		"nom":"Solutions",
+		"url":"/solutions"
+	},
+	{
 		"id": 3,
 		"nom": "Contact",
 		"url": "/contact"

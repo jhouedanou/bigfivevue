@@ -6,7 +6,8 @@
 	"menu": {
 		"agence": "Agence",
 		"realisations": "Réalisations",
-		"contact": "Contact"
+		"contact": "Contact",
+		"solutions":"Solutions"
 	},
 	"sloganbigfive": "Laissez votre empreinte"
 }

@@ -1,8 +1,8 @@
 <template>
-	<div id="pagewrapper">
-		<Header />
-		<main>
-			<slot />
-		</main>
-	</div>
+  <div id="pagewrapper">
+    <Header />
+    <main>
+      <slot />
+    </main>
+  </div>
 </template>

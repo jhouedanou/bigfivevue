@@ -1,0 +1,21 @@
+<svg id="Logo_BIG_Formations_blc" data-name="Logo BIG Formations blc" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="235.4" height="235.4" viewBox="0 0 235.4 235.4">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_90" data-name="Rectangle 90" width="136.432" height="125.057" transform="translate(0 0)" fill="#56358b"/>
+    </clipPath>
+  </defs>
+  <circle id="Ellipse_46" data-name="Ellipse 46" cx="117.7" cy="117.7" r="117.7" fill="#fff"/>
+  <g id="Groupe_464" data-name="Groupe 464" transform="translate(49.484 55.172)">
+    <g id="Groupe_466" data-name="Groupe 466">
+      <g id="Groupe_465" data-name="Groupe 465" clip-path="url(#clip-path)">
+        <text id="BIG" transform="translate(0 62.574)" fill="#56358b" font-size="75.119" font-family="ProximaNova-Black, Proxima Nova" font-weight="800"><tspan x="0" y="0">BIG</tspan></text>
+      </g>
+    </g>
+    <text id="FORMA" transform="translate(2.049 86.62)" fill="#56358b" font-size="36.677" font-family="ProximaNova-Black, Proxima Nova" font-weight="800"><tspan x="0" y="0">FORMA</tspan></text>
+    <g id="Groupe_468" data-name="Groupe 468">
+      <g id="Groupe_467" data-name="Groupe 467" clip-path="url(#clip-path)">
+        <text id="TIONS" transform="translate(2.049 110.459)" fill="#56358b" font-size="36.677" font-family="ProximaNova-Black, Proxima Nova" font-weight="800"><tspan x="0" y="0">TIONS</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>
