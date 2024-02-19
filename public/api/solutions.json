@@ -4,6 +4,7 @@
     "slug": "bigcity",
     "nomsolution": "Big city",
     "logo": "img/solutions/bigcity.svg",
+    "banniere": "img/solutions/bigcity/banner.jpg",
     "homepageVisuel": "img/solutions/bigcity/home.jpg"
   },
   {
@@ -11,6 +12,7 @@
     "slug": "bigcrm",
     "nomsolution": "Big CRM",
     "logo": "img/solutions/bigcrm.svg",
+    "banniere": "img/solutions/bigcrm/banner.jpg",
     "homepageVisuel": "img/solutions/bigcrm/home.jpg"
   },
   {
@@ -18,6 +20,7 @@
     "slug": "bigformations",
     "nomsolution": "Big Formations",
     "logo": "img/solutions/bigformations.svg",
+    "banniere": "img/solutions/bigformations/banner.jpg",
     "homepageVisuel": "img/solutions/bigformations/home.jpg"
   },
   {
@@ -25,6 +28,7 @@
     "slug": "bigdashboard",
     "nomsolution": "Big Dashboard",
     "logo": "img/solutions/bigdashboard.svg",
+    "banniere": "img/solutions/bigdashboard/banner.jpg",
     "homepageVisuel": "img/solutions/bigdashboard/home.jpg"
   },
   {
@@ -32,6 +36,7 @@
     "slug": "bigactivations",
     "nomsolution": "Big Activations",
     "logo": "img/solutions/bigactivations.svg",
+    "banniere": "img/solutions/bigactivations/banner.jpg",
     "homepageVisuel": "img/solutions/bigactivations/home.jpg"
   }
 ]
