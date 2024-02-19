@@ -6,9 +6,10 @@
       <div class="row">
         <div class="col-md-8 col-sm-12 right-menu">
           <div class="row g-0">
-            <div class="col-md-5"><SocialLinks></SocialLinks></div>
+            <div class="col-md-4"><SocialLinks></SocialLinks></div>
             <div
-              class="col-md-7 d-flex align-content-star justify-content-start"
+              id="dahico"
+              class="col-md-8 d-flex align-content-start align-items-start justify-content-start"
             >
               <Menu />
             </div>
@@ -24,4 +25,12 @@
   </div>
 </template>
 
-<style scoped></style>
+<style lang="scss" scoped>
+#dahico {
+  #menuhomepage {
+    #menulinks {
+      padding-left: 0px !important;
+    }
+  }
+}
+</style>

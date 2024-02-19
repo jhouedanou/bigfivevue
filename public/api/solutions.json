@@ -3,35 +3,35 @@
     "id": 1,
     "slug": "bigcity",
     "nomsolution": "Big city",
-    "logo": "img/solutions/bigcity/logo.svg",
+    "logo": "img/solutions/bigcity.svg",
     "homepageVisuel": "img/solutions/bigcity/home.jpg"
   },
   {
     "id": 2,
     "slug": "bigcrm",
     "nomsolution": "Big CRM",
-    "logo": "img/solutions/bigcrm/logo.svg",
+    "logo": "img/solutions/bigcrm.svg",
     "homepageVisuel": "img/solutions/bigcrm/home.jpg"
   },
   {
     "id": 3,
     "slug": "bigformations",
     "nomsolution": "Big Formations",
-    "logo": "img/solutions/bigformations/logo.svg",
+    "logo": "img/solutions/bigformations.svg",
     "homepageVisuel": "img/solutions/bigformations/home.jpg"
   },
   {
     "id": 4,
     "slug": "bigdashboard",
     "nomsolution": "Big Dashboard",
-    "logo": "img/solutions/bigdashboard/logo.svg",
+    "logo": "img/solutions/bigdashboard.svg",
     "homepageVisuel": "img/solutions/bigdashboard/home.jpg"
   },
   {
     "id": 5,
     "slug": "bigactivations",
     "nomsolution": "Big Activations",
-    "logo": "img/solutions/bigactivations/logo.svg",
+    "logo": "img/solutions/bigactivations.svg",
     "homepageVisuel": "img/solutions/bigactivations/home.jpg"
   }
 ]

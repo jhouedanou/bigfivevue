@@ -11,6 +11,8 @@ onMounted(async () => {
       id: solution.id,
       homepageVisuel: solution.homepageVisuel,
       nomsolution: solution.nomsolution,
+      logo: solution.logo,
+      slug: solution.slug,
     }));
   } catch (error) {
     console.log("Pas de solutions Big Five à afficher");
@@ -22,9 +24,17 @@ onMounted(async () => {
   <SolutionsLayout>
     <div id="listedessolutions">
       <ul class="d-flex flex-row">
-        <li v-for="solution in solutions" :key="solution.id">
-          <img :src="solution.homepageVisuel" alt="logo" />
-          <p class="lecercell">{{ solution.nomsolution }}</p>
+        <li
+          :style="{ backgroundImage: 'url(' + solution.homepageVisuel + ')' }"
+          v-for="solution in solutions"
+          :key="solution.id"
+        >
+          <NuxtLink :to="`/solutions/${solution.slug}`">
+            <i
+              :style="{ backgroundImage: 'url(' + solution.logo + ')' }"
+              alt="logo"
+            ></i
+          ></NuxtLink>
         </li>
       </ul>
     </div>
@@ -45,6 +55,41 @@ onMounted(async () => {
       list-style-type: none;
       margin: 0;
       padding: 0;
+      overflow: hidden;
+      height: 80vh;
+      width: 20vw;
+      background-position: 50% 50%;
+      background-size: cover;
+      transition: background-size 0.5s ease-in-out; /* durée augmentée à 0.5s */
+      background-repeat: no-repeat;
+      a {
+        display: block !important;
+        height: 100%;
+        width: 100%;
+      }
+      i {
+        width: 235px;
+        height: 235px;
+        transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+        background-position: 0 0;
+        position: absolute;
+        top: 0;
+        margin: auto;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+      &:hover {
+        background-size: 125%;
+        transition: background-size 0.5s ease-in-out; /* durée augmentée à 0.5s */
+        i {
+          background-position: 0 235px;
+        }
+        .img {
+          transform: scale(1.1);
+          transition: transform 0.3s ease-in-out;
+        }
+      }
       img {
         object-fit: contain;
       }
@@ -52,7 +97,6 @@ onMounted(async () => {
   }
 }
 .lecercell {
-  background: red;
   display: flex;
   width: 254px;
   height: 254px;
