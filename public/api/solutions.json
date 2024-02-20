@@ -5,6 +5,7 @@
     "nomsolution": "Big city",
     "logo": "img/solutions/bigcity.svg",
     "homepageVisuel": "img/solutions/bigcity/home.jpg",
+    "slogan": "Fédérez votre audience et faites<br>rayonner votre marque",
     "banniere": "/img/solutions/bigcity/banner.jpg"
   },
   {
@@ -13,6 +14,7 @@
     "nomsolution": "Big CRM",
     "logo": "img/solutions/bigcrm.svg",
     "homepageVisuel": "img/solutions/bigcrm/home.jpg",
+    "slogan": "Optimisez le développement<br>commercial de votre entreprise",
     "banniere": "/img/solutions/bigcrm/banner.jpg"
   },
   {
@@ -21,6 +23,8 @@
     "nomsolution": "Big Formations",
     "logo": "img/solutions/bigformations.svg",
     "homepageVisuel": "img/solutions/bigformations/home.jpg",
+    "slogan": "Formations digitales pour rester<br>connecté avec notre époque",
+
     "banniere": "/img/solutions/bigformations/banner.jpg"
   },
   {
@@ -29,6 +33,7 @@
     "nomsolution": "Big Dashboard",
     "logo": "img/solutions/bigdashboard.svg",
     "homepageVisuel": "img/solutions/bigdashboard/home.jpg",
+    "slogan": "Mesurez la performance de<br>vos initiatives digitales",
     "banniere": "/img/solutions/bigdashboard/banner.jpg"
   },
   {
@@ -37,6 +42,7 @@
     "nomsolution": "Big Activations",
     "logo": "img/solutions/bigactivations.svg",
     "homepageVisuel": "img/solutions/bigactivations/home.jpg",
+    "slogan": "Activations en ligne<br>Pour générer des fans",
     "banniere": "/img/solutions/bigactivations/banner.jpg"
   }
 ]

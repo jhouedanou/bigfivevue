@@ -26,8 +26,16 @@
     </div>
     <div id="solutionBanner">
       <img :src="matchingSolution.banniere" alt="Image" class="img-fluid" />
-      <div class="cartouche"></div>
+      <div class="cartouchez">
+        <i
+          class="solutionlogo"
+          :style="{ backgroundImage: `url(/${matchingSolution.logo})` }"
+        ></i>
+        <h4 v-html="matchingSolution.slogan"></h4>
+        <a id="btnDiscova" @click="scrollToElement">Découvrir</a>
+      </div>
     </div>
+    <div id="restedelapage"></div>
   </ContenuAltLayout>
 </template>
 
@@ -44,6 +52,11 @@ const scrollPosition = ref(0);
 let isSidebarOpen = ref(false);
 let toClose = ref(false);
 let closeBlack = ref(false);
+
+const scrollToElement = () => {
+  const element = document.getElementById("restedelapage");
+  element.scrollIntoView({ behavior: "smooth" });
+};
 const state = reactive({
   isLoading: true,
 });
@@ -77,6 +90,73 @@ console.log(matchingSolution);
 </script>
 
 <style lang="scss" scoped>
+#solutionBanner {
+  position: relative;
+  .img-fluid {
+    width: 100%;
+  }
+  #btnDiscova {
+    margin: auto;
+    border: 3px solid white;
+    color: white;
+    top: 588px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 200px;
+    height: 40px;
+    font-size: 19px;
+    text-decoration: none;
+    border-radius: 75px;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    line-height: 0;
+    &:hover {
+      background-color: white;
+      color: black;
+    }
+  }
+}
+.cartouchez {
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  top: 0;
+  padding: 1rem;
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .solutionlogo {
+    width: 235px;
+    height: 235px;
+    border-radius: 50%;
+    display: block;
+  }
+  h4 {
+    white-space: wrap;
+    font-weight: bold;
+    letter-spacing: 4px;
+    padding: 0 0 0 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -31px;
+    top: 280px;
+    margin: auto;
+    height: 29px;
+  }
+}
 .button {
   background-color: #4caf50;
   border: none;

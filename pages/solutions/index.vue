@@ -93,7 +93,7 @@ onMounted(async () => {
       height: 80vh;
       width: 20vw;
       background-position: 50% 50%;
-      background-size: cover;
+      background-size: 20vw;
       transition: background-size 0.5s ease-in-out; /* durée augmentée à 0.5s */
       background-repeat: no-repeat;
       a {
@@ -114,7 +114,7 @@ onMounted(async () => {
         left: 0;
       }
       &:hover {
-        background-size: 125%;
+        background-size: 22vw;
         transition: background-size 0.5s ease-in-out; /* durée augmentée à 0.5s */
         i {
           background-position: 0 235px;
