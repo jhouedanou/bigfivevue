@@ -1,17 +1,17 @@
 [
-	{
-		"id": 1,
-		"nom": "Agence",
-		"url": "/agence"
-	},
-	{
-		"id": 2,
-		"nom": "Réalisations",
-		"url": "/realisations"
-	},
-	{
-		"id": 3,
-		"nom": "Contact",
-		"url": "/contact"
-	}
+  {
+    "id": 1,
+    "nom": "Agence",
+    "url": "/agence"
+  },
+  {
+    "id": 2,
+    "nom": "Réalisations",
+    "url": "/realisations"
+  },
+  {
+    "id": 3,
+    "nom": "Contact",
+    "url": "/contact"
+  }
 ]

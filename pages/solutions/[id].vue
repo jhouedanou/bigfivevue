@@ -1,33 +1,3 @@
-<script setup>
-import { ref, onMounted, reactive } from "vue";
-import axios from "axios";
-import PageLoader from "@/components/PageLoader.vue";
-let isSidebarOpen = ref(false);
-let toClose = ref(false);
-let closeBlack = ref(false);
-const solutions = ref([]);
-const state = reactive({
-  isLoading: true,
-});
-onMounted(async () => {
-  try {
-    state.isLoading = true;
-    //recupere la liste des solutions
-    const listeDesSolutions = await axios.get("api/solutions.json");
-    const data = listeDesSolutions.data;
-    solutions.value = data.map((solution) => ({
-      id: solution.id,
-      homepageVisuel: solution.homepageVisuel,
-      nomsolution: solution.nomsolution,
-      logo: solution.logo,
-      slug: solution.slug,
-    }));
-    state.isLoading = false;
-  } catch (error) {
-    console.log("Pas de solutions Big Five à afficher");
-  }
-});
-</script>
 <template>
   <ContenuAltLayout>
     <PageLoader v-if="state.isLoading" />
@@ -54,12 +24,85 @@ onMounted(async () => {
       <Logo :id="2" />
       <Menu :page="'/agence'" />
     </div>
-    <div
-      :id="`banner`"
-      :class="{ fixed: scrollPosition > 200, visible: scrollPosition > 200 }"
-    >
-      <img :src="matchingRealisation.banniere" alt="Image" class="img-fluid" />
+    <div id="solutionBanner">
+      <img :src="matchingSolution.banniere" alt="Image" class="img-fluid" />
+      <div class="cartouche"></div>
     </div>
-    <div id="singlesolutionwrapper"></div>
   </ContenuAltLayout>
 </template>
+
+<script setup>
+import { ref, onMounted, computed, reactive } from "vue";
+import axios from "axios";
+import { useRoute } from "vue-router";
+import ContenuAltLayout from "@/layouts/contenuAlt.vue";
+import PageLoader from "@/components/PageLoader.vue";
+const solutions = ref([]);
+const route = useRoute();
+const scrollPosition = ref(0);
+
+let isSidebarOpen = ref(false);
+let toClose = ref(false);
+let closeBlack = ref(false);
+const state = reactive({
+  isLoading: true,
+});
+const onScroll = () => {
+  scrollPosition.value = window.scrollY;
+};
+onMounted(() => {
+  window.addEventListener("scroll", onScroll);
+});
+onMounted(async () => {
+  try {
+    state.isLoading = true;
+    const response = await axios.get("/api/solutions.json");
+    solutions.value = response.data;
+    state.isLoading = false;
+  } catch (error) {
+    console.error(error);
+    state.isLoading = false;
+  }
+});
+const matchingSolution = computed(() => {
+  const filterValue = route.fullPath.substring("/solutions/".length);
+  const index = solutions.value.findIndex(
+    (solution) => solution.lien === filterValue
+  );
+  return {
+    ...solutions.value[index],
+  };
+});
+console.log(matchingSolution);
+</script>
+
+<style lang="scss" scoped>
+.button {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+#galerie {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 80vw;
+  margin: 0 auto;
+}
+.img-fluid,
+.img-thumbnail {
+  width: 100%;
+}
+/* Remove the invalid nested styles here */
+</style>

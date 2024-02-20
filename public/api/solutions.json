@@ -1,42 +1,42 @@
 [
   {
     "id": 1,
-    "slug": "bigcity",
+    "lien": "bigcity",
     "nomsolution": "Big city",
     "logo": "img/solutions/bigcity.svg",
-    "banniere": "img/solutions/bigcity/banner.jpg",
-    "homepageVisuel": "img/solutions/bigcity/home.jpg"
+    "homepageVisuel": "img/solutions/bigcity/home.jpg",
+    "banniere": "/img/solutions/bigcity/banner.jpg"
   },
   {
     "id": 2,
-    "slug": "bigcrm",
+    "lien": "bigcrm",
     "nomsolution": "Big CRM",
     "logo": "img/solutions/bigcrm.svg",
-    "banniere": "img/solutions/bigcrm/banner.jpg",
-    "homepageVisuel": "img/solutions/bigcrm/home.jpg"
+    "homepageVisuel": "img/solutions/bigcrm/home.jpg",
+    "banniere": "/img/solutions/bigcrm/banner.jpg"
   },
   {
     "id": 3,
-    "slug": "bigformations",
+    "lien": "bigformations",
     "nomsolution": "Big Formations",
     "logo": "img/solutions/bigformations.svg",
-    "banniere": "img/solutions/bigformations/banner.jpg",
-    "homepageVisuel": "img/solutions/bigformations/home.jpg"
+    "homepageVisuel": "img/solutions/bigformations/home.jpg",
+    "banniere": "/img/solutions/bigformations/banner.jpg"
   },
   {
     "id": 4,
-    "slug": "bigdashboard",
+    "lien": "bigdashboard",
     "nomsolution": "Big Dashboard",
     "logo": "img/solutions/bigdashboard.svg",
-    "banniere": "img/solutions/bigdashboard/banner.jpg",
-    "homepageVisuel": "img/solutions/bigdashboard/home.jpg"
+    "homepageVisuel": "img/solutions/bigdashboard/home.jpg",
+    "banniere": "/img/solutions/bigdashboard/banner.jpg"
   },
   {
     "id": 5,
-    "slug": "bigactivations",
+    "lien": "bigactivations",
     "nomsolution": "Big Activations",
     "logo": "img/solutions/bigactivations.svg",
-    "banniere": "img/solutions/bigactivations/banner.jpg",
-    "homepageVisuel": "img/solutions/bigactivations/home.jpg"
+    "homepageVisuel": "img/solutions/bigactivations/home.jpg",
+    "banniere": "/img/solutions/bigactivations/banner.jpg"
   }
 ]

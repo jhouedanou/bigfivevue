@@ -21,7 +21,7 @@ onMounted(async () => {
       homepageVisuel: solution.homepageVisuel,
       nomsolution: solution.nomsolution,
       logo: solution.logo,
-      slug: solution.slug,
+      lien: solution.lien,
     }));
     state.isLoading = false;
   } catch (error) {
@@ -63,7 +63,7 @@ onMounted(async () => {
           v-for="solution in solutions"
           :key="solution.id"
         >
-          <NuxtLink :to="`/solutions/${solution.slug}`">
+          <NuxtLink :to="`/solutions/${solution.lien}`">
             <i
               :style="{ backgroundImage: 'url(' + solution.logo + ')' }"
               alt="logo"
