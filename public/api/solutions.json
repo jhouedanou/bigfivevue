@@ -6,7 +6,8 @@
     "logo": "img/solutions/bigcity.svg",
     "homepageVisuel": "img/solutions/bigcity/home.jpg",
     "slogan": "Fédérez votre audience et faites<br>rayonner votre marque",
-    "banniere": "/img/solutions/bigcity/banner.jpg"
+    "banniere": "/img/solutions/bigcity/banner.jpg",
+    "introduction": "<p><strong>BIG CITY</strong> est un CMS d’application No Code qui permet de créer des applications<br>de Brand Content personnalisées et bien plus encore pour les <span>marques, réseaux<br>franchisés, institutions, collectivités, fédérations, associations…</span>.</p><p>Bien exploité, ce média permet à la marque de fédérer sa communauté de professionnels<br>au bénéfice de sa communauté de consommateurs en centralisant toute l’actualité<br>événementielle de son territoire et en la transformant en levier d’opportunités.</p>"
   },
   {
     "id": 2,
@@ -15,7 +16,8 @@
     "logo": "img/solutions/bigcrm.svg",
     "homepageVisuel": "img/solutions/bigcrm/home.jpg",
     "slogan": "Optimisez le développement<br>commercial de votre entreprise",
-    "banniere": "/img/solutions/bigcrm/banner.jpg"
+    "banniere": "/img/solutions/bigcrm/banner.jpg",
+    "introduction": "<p>Directement installé sur le smartphone des commerciaux, <strong>BIG CRM</strong> automatise<br>la démarche commerciale de la prise de commande à la livraison et au paiement, <br>de la prise d’informations d’un prospect à la veille concurrentielle.</p><p>BIG CRM est une application qui permet <span>d’organiser et d'automatiser les échanges<br>entre les clients, l’équipe commerciale et les managers.</span> Véritable boîte à outils d’aide à la vente interactive et connectée, BIG CRM est un booster d’opportunités commerciales.<br><br>La remontée d’informations est qualifiée et organisée pour rendre les statistiques<br>de vente efficaces et constructives. De plus, BIG CRM offre une multitude<br>de combinaisons pour tout type de collecte et de gestion d’informations.</p>"
   },
   {
     "id": 3,
@@ -24,8 +26,8 @@
     "logo": "img/solutions/bigformations.svg",
     "homepageVisuel": "img/solutions/bigformations/home.jpg",
     "slogan": "Formations digitales pour rester<br>connecté avec notre époque",
-
-    "banniere": "/img/solutions/bigformations/banner.jpg"
+    "banniere": "/img/solutions/bigformations/banner.jpg",
+    "introduction": "<p>Avec <strong>BIG FORMATIONS</strong> connaître les consommateurs de ses produits,<br>booster sa marque sur les réseaux sociaux, dynamiser ses activités trade<br>avec le web, connaître le ROI de ses actions marketing..</p><p>Pour être en capacité d’évoluer et de réussir dans ce nouveau contexte qui<br>nécessite la transformation digitale d’une entreprise, nous en formons tous les<br>acteurs, des équipes opérationnelles aux dirigeants afin que toutes les forces<br>en action de votre entreprise puissent susciter l’adhésion, travailler en bonne<br>intelligence et impulser une stratégie commune.</p>"
   },
   {
     "id": 4,
@@ -34,7 +36,8 @@
     "logo": "img/solutions/bigdashboard.svg",
     "homepageVisuel": "img/solutions/bigdashboard/home.jpg",
     "slogan": "Mesurez la performance de<br>vos initiatives digitales",
-    "banniere": "/img/solutions/bigdashboard/banner.jpg"
+    "banniere": "/img/solutions/bigdashboard/banner.jpg",
+    "introduction": "<p><strong>BIG DASHBOARD</strong> est une solution de social media analytics qui rassemble dans des<br>synthèses visuelles <span>l’ensemble des indicateurs de performance de toutes vos initiatives<br>digitales,</span> vous permettant ainsi d'en mesurer l'efficacité en un seul coup d’œil.</p><p>Dans des enjeux d’Inbound Marketing, la mesure de chacune de vos communications digitales<br>est une étape fondamentale, celles-ci étant en concurrence avec les publications du monde entier.<br><br>Analyser vos performances sur les réseaux sociaux peut s’avérer être un processus extrêmement <br>chronophage, fastidieux et délicat. <strong>BIG DASHBOARD</strong> automatise ces processus pour accorder plus de temps à l’analyse et à la prise de décision, et supprimer au maximum les risques<br>d’interventions manuelles dans le traitement des données.</p>"
   },
   {
     "id": 5,
@@ -43,6 +46,7 @@
     "logo": "img/solutions/bigactivations.svg",
     "homepageVisuel": "img/solutions/bigactivations/home.jpg",
     "slogan": "Activations en ligne<br>Pour générer des fans",
-    "banniere": "/img/solutions/bigactivations/banner.jpg"
+    "banniere": "/img/solutions/bigactivations/banner.jpg",
+    "introduction": "<p><strong>BIG ACTIVATIONS</strong> est la plate-forme des concours funs et viraux. Créez de<br>l’engagement et de la fidélisation sur les réseaux sociaux grâce à des concours de<br>photos, vidéos, quiz, tests de personnalité, tests de culture générale, etc.</p><p>Indispensables dans votre stratégie webmarketing, les activations digitales sont<br>des outils polyvalents, ludiques et originaux qui permettent d’atteindre différents objectifs,<br>tels que la <span>promotion, l’engagement des clients, la génération de leads,<br>la formation et la communication.</span></p>"
   }
 ]

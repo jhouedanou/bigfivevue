@@ -35,7 +35,11 @@
         <a id="btnDiscova" @click="scrollToElement">Découvrir</a>
       </div>
     </div>
-    <div id="restedelapage"></div>
+    <div id="restedelapage">
+      <div id="pargrapheIntros" v-if="matchingSolution">
+        <div id="introforeal" v-html="matchingSolution.introduction"></div>
+      </div>
+    </div>
   </ContenuAltLayout>
 </template>
 
@@ -45,6 +49,7 @@ import axios from "axios";
 import { useRoute } from "vue-router";
 import ContenuAltLayout from "@/layouts/contenuAlt.vue";
 import PageLoader from "@/components/PageLoader.vue";
+
 const solutions = ref([]);
 const route = useRoute();
 const scrollPosition = ref(0);
@@ -52,6 +57,7 @@ const scrollPosition = ref(0);
 let isSidebarOpen = ref(false);
 let toClose = ref(false);
 let closeBlack = ref(false);
+//ajouter un code pour ajouter une classe shadowy sur #headeramt lorsque le scroll est à 100px
 
 const scrollToElement = () => {
   const element = document.getElementById("restedelapage");
@@ -90,6 +96,9 @@ console.log(matchingSolution);
 </script>
 
 <style lang="scss" scoped>
+.shadowy {
+  box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.1);
+}
 #solutionBanner {
   position: relative;
   .img-fluid {
@@ -151,10 +160,18 @@ console.log(matchingSolution);
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -31px;
+    bottom: -87px;
     top: 280px;
     margin: auto;
     height: 29px;
+    font-size: 30px;
+  }
+}
+#restedelapage {
+  padding: 0;
+  p {
+    font-size: 1.5rem;
+    line-height: 1.5;
   }
 }
 .button {
