@@ -2756,59 +2756,49 @@ textarea {
 }
 
 #sectionunbigcrm.container {
-	#intro.row {
-		h3 {
-			br {
+	.row {
+		.col-md-3 {
+			.service-item {
 			}
-		}
-	}
-}
-.row {
-	.col-md-4 {
-		.service-item {
 			.service-icon {
+				img {
+				}
 			}
 			p {
+				br {
+				}
+			}
+		}
+		#intro.col-md-12.obam {
+			h3 {
 			}
 		}
 	}
 }
 #sectiontwobigcrm.container {
 	.row {
-		#pimptro.col-md-12.obam {
+		.col-md-6 {
 			h3 {
 			}
 		}
-		.row {
-			.col-md-6 {
-			}
+		#pimptro.col-md-12.obam {
 			h3 {
-				br {
-				}
-			}
-			ul {
-				li {
-				}
 			}
 		}
 	}
 }
 #sectionthreebigcrm.container {
-	.col-md-3 {
-		img {
-		}
-		p {
-			br {
+	.row {
+		.col-md-3 {
+			img {
 			}
 		}
 	}
 }
 #sectionfourbigcrm.container {
 	.row {
-		img {
-		}
-		p {
-			br {
+		.col-md-12 {
+			img {
 			}
 		}
 	}
