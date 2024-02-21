@@ -1,6 +1,5 @@
-<script setup></script>
 <template>
-  <div id="header-alt" class="container-fluid fixed">
+  <div id="header-alt" ref="headerAlt" class="container-fluid fixed">
     <div class="innerzr">
       <div class="row">
         <div class="col-md-4 col-sm-12">
@@ -16,4 +15,14 @@
     </div>
   </div>
 </template>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.shadowy {
+  box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.1);
+}
+.sticky-menu {
+  position: sticky;
+  top: 0;
+  background-color: #41b883;
+  padding: 1rem;
+}
+</style>

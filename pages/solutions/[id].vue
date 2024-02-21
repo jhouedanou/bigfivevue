@@ -38,6 +38,7 @@
     <div id="restedelapage">
       <div id="pargrapheIntros" v-if="matchingSolution">
         <div id="introforeal" v-html="matchingSolution.introduction"></div>
+        <div id="contenudelapage" v-html="matchingSolution.contenu"></div>
       </div>
     </div>
   </ContenuAltLayout>
@@ -92,7 +93,6 @@ const matchingSolution = computed(() => {
     ...solutions.value[index],
   };
 });
-console.log(matchingSolution);
 </script>
 
 <style lang="scss" scoped>
