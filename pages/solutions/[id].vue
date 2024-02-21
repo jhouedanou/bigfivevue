@@ -39,6 +39,16 @@
       <div id="pargrapheIntros" v-if="matchingSolution">
         <div id="introforeal" v-html="matchingSolution.introduction"></div>
         <div id="contenudelapage" v-html="matchingSolution.contenu"></div>
+        <div id="nosautresolutons">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <h2>Découvrez nos autres solutions</h2>
+              </div>
+              <p>Inserez le menu</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </ContenuAltLayout>
