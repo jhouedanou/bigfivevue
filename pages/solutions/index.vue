@@ -76,6 +76,17 @@ onMounted(async () => {
 </template>
 
 <style lang="scss" scoped>
+//rule for screens under 1680px, to have the background of #listedesolutios li being background cover
+@media (max-width: 1680px) {
+  #listedessolutions {
+    ul {
+      li {
+        background-size: cover !important;
+      }
+    }
+  }
+}
+
 #listedessolutions {
   ul {
     position: relative;
