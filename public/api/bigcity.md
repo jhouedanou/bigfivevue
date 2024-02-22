@@ -28,11 +28,6 @@
 <div id='sectionthreebigcity' class='container'>
     <div class='row'>
         <div class='col-md-4' class='letexte'>
-            <img src='/img/solutions/bigcity/logopetit.svg' alt>
-            <h3></h3>
-            <p></p>
-            <p></p>
-            <p></p>
 
         </div>
         <div class='col-md-8'>
