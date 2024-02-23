@@ -3055,17 +3055,27 @@ $violetsolutios: #4e4091;
 	}
 }
 #sectionthreebigcrm.container {
-	.row {
-		.col-md-3 {
-			img {
-			}
-		}
-	}
+	margin: 0 auto;
+	padding: 0;
 }
 #sectionfourbigcrm.container {
-	.row {
-		.col-md-12 {
-			img {
+	margin: 0 auto;
+	padding: 0;
+	.col-md-12 {
+		position: relative;
+		height: 560px;
+		padding-top: 100px;
+
+		img {
+			position: absolute;
+			&:nth-of-type(1) {
+				top: 37px;
+				right: 3%;
+				z-index: 10;
+			}
+			&:nth-of-type(2) {
+				bottom: -42px;
+				left: 0;
 			}
 		}
 	}
