@@ -13,6 +13,32 @@ body {
 	-moz-osx-font-smoothing: grayscale !important;
 	text-rendering: optimizeLegibility !important;
 }
+.chyna {
+	max-width: 213px;
+	max-height: 213px;
+	display: block;
+	i {
+		width: 213px;
+		height: 213px;
+		display: block;
+		border-radius: 50%;
+		box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 16px;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		-ms-border-radius: 50%;
+		-o-border-radius: 50%;
+		background-size: 213px;
+		&:hover {
+			background-position: 0 -213px;
+		}
+	}
+}
+.austin {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+}
 #__nuxt {
 	height: 100vh;
 	overflow-y: scroll;

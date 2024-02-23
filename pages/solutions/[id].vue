@@ -1,3 +1,59 @@
+<script setup>
+import { ref, onMounted, computed, reactive } from "vue";
+import axios from "axios";
+import { useRoute } from "vue-router";
+import ContenuAltLayout from "@/layouts/contenuAlt.vue";
+import PageLoader from "@/components/PageLoader.vue";
+const solutions = ref([]);
+const menusolutions = ref([]);
+const route = useRoute();
+const scrollPosition = ref(0);
+let isSidebarOpen = ref(false);
+let toClose = ref(false);
+let closeBlack = ref(false);
+const filterValue = route.fullPath.substring("/solutions/".length);
+
+const scrollToElement = () => {
+  const element = document.getElementById("restedelapage");
+  element.scrollIntoView({ behavior: "smooth" });
+};
+const state = reactive({
+  isLoading: true,
+});
+const onScroll = () => {
+  scrollPosition.value = window.scrollY;
+};
+onMounted(() => {
+  window.addEventListener("scroll", onScroll);
+});
+onMounted(async () => {
+  //connexion à l'api et récupération des données sur les solutions
+  try {
+    state.isLoading = true;
+    const response = await axios.get("/api/solutions.json");
+    solutions.value = response.data;
+    menusolutions.value = response.data.map((solution) => ({
+      id: solution.id,
+      logo: solution.logo,
+      lien: solution.lien,
+    }));
+    state.isLoading = false;
+  } catch (error) {
+    console.error(error);
+    state.isLoading = false;
+  }
+});
+const matchingSolution = computed(() => {
+  const filterValue = route.fullPath.substring("/solutions/".length);
+  const index = solutions.value.findIndex(
+    (solution) => solution.lien === filterValue
+  );
+  return {
+    ...solutions.value[index],
+  };
+});
+</script>
+
 <template>
   <ContenuAltLayout>
     <PageLoader v-if="state.isLoading" />
@@ -47,7 +103,19 @@
               <div class="col-md-12">
                 <h2>Découvrez nos autres solutions</h2>
               </div>
-              <p>Inserez le menu</p>
+              <div class="dflex austin">
+                <NuxtLink
+                  :to="`/solutions/${item.lien}`"
+                  class="chyna"
+                  v-for="item in menusolutions"
+                  :key="item.id"
+                >
+                  <i
+                    :style="{ backgroundImage: 'url(/' + item.logo + ')' }"
+                    alt="logo"
+                  ></i
+                ></NuxtLink>
+              </div>
             </div>
           </div>
         </div>
@@ -55,56 +123,5 @@
     </div>
   </ContenuAltLayout>
 </template>
-
-<script setup>
-import { ref, onMounted, computed, reactive } from "vue";
-import axios from "axios";
-import { useRoute } from "vue-router";
-import ContenuAltLayout from "@/layouts/contenuAlt.vue";
-import PageLoader from "@/components/PageLoader.vue";
-
-const solutions = ref([]);
-const route = useRoute();
-const scrollPosition = ref(0);
-
-let isSidebarOpen = ref(false);
-let toClose = ref(false);
-let closeBlack = ref(false);
-//ajouter un code pour ajouter une classe shadowy sur #headeramt lorsque le scroll est à 100px
-
-const scrollToElement = () => {
-  const element = document.getElementById("restedelapage");
-  element.scrollIntoView({ behavior: "smooth" });
-};
-const state = reactive({
-  isLoading: true,
-});
-const onScroll = () => {
-  scrollPosition.value = window.scrollY;
-};
-onMounted(() => {
-  window.addEventListener("scroll", onScroll);
-});
-onMounted(async () => {
-  try {
-    state.isLoading = true;
-    const response = await axios.get("/api/solutions.json");
-    solutions.value = response.data;
-    state.isLoading = false;
-  } catch (error) {
-    console.error(error);
-    state.isLoading = false;
-  }
-});
-const matchingSolution = computed(() => {
-  const filterValue = route.fullPath.substring("/solutions/".length);
-  const index = solutions.value.findIndex(
-    (solution) => solution.lien === filterValue
-  );
-  return {
-    ...solutions.value[index],
-  };
-});
-</script>
 
 <style lang="scss" scoped></style>
