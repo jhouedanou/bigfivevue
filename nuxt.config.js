@@ -101,7 +101,12 @@ export default defineNuxtConfig({
     maxRedirects: 3,
     abortOnRedirect: true,
   },
-  modules: ["@bootstrap-vue-next/nuxt", "@nuxt/content", "@nuxt/image"],
+  modules: ["@bootstrap-vue-next/nuxt", "@nuxt/content", "@nuxt/image",'@nuxtjs/google-fonts'],
+  googleFonts: {
+    families: {
+      'Source+Sans+Pro': [400, 700, 800]
+    }
+  },
   image: {
     format: ["webp"],
     quality: 80,

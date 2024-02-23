@@ -2915,6 +2915,17 @@ textarea {
 	}
 }
 $violetsolutios: #4e4091;
+@mixin entete() {
+	display: block;
+	text-align: center;
+	padding-top: 64px;
+	font-size: 48px;
+	font-weight: 400;
+	span {
+		font-weight: 900;
+		color: $violetsolutios;
+	}
+}
 #restedelapage {
 	padding: 0;
 	#introforeal {
@@ -2961,28 +2972,59 @@ $violetsolutios: #4e4091;
 }
 /* Remove the invalid nested styles here */
 
-#sectionunbigcrm.container {
+#sectionunbigcrm {
+	background: #edeff6;
+	padding-bottom: 5em;
 	.row {
+		max-width: 1070px;
+		margin: 0 auto;
+		&:nth-of-type(2) {
+			margin-top: 4.8em;
+		}
+		h3 {
+			@include entete();
+		}
 		.col-md-3 {
 			.service-item {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
 			}
 			.service-icon {
 				img {
+					width: 100%;
+					height: auto;
 				}
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
 			}
 			p {
-				br {
-				}
-			}
-		}
-		#intro.col-md-12.obam {
-			h3 {
+				font-size: 17px;
+				font-weight: 900;
+				font-stretch: normal;
+				font-style: normal;
+				line-height: 1.18;
+				letter-spacing: normal;
+				text-align: center;
+				color: #482080;
+				font-family: "Source Sans Pro", sans-serif;
+				margin-top: 1.5em;
 			}
 		}
 	}
 }
 #sectiontwobigcrm.container {
 	.row {
+		&:nth-of-type(1) {
+			padding-top: 3em;
+			padding-bottom: 6em;
+			h3 {
+				@include entete();
+			}
+		}
 		.col-md-6 {
 			h3 {
 			}
