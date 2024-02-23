@@ -57,8 +57,9 @@ onMounted(async () => {
         <Logo :id="2" />
         <Menu :page="'/agence'" />
       </div>
-      <ul class="d-flex flex-row">
+      <ul class="row">
         <li
+          class="col"
           :style="{ backgroundImage: 'url(' + solution.homepageVisuel + ')' }"
           v-for="solution in solutions"
           :key="solution.id"
@@ -75,84 +76,4 @@ onMounted(async () => {
   </SolutionsLayout>
 </template>
 
-<style lang="scss" scoped>
-//rule for screens under 1680px, to have the background of #listedesolutios li being background cover
-@media (max-width: 1680px) {
-  #listedessolutions {
-    ul {
-      li {
-        background-size: cover !important;
-      }
-    }
-  }
-}
-
-#listedessolutions {
-  ul {
-    position: relative;
-    list-style: none;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    li {
-      position: relative;
-      list-style: none;
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      height: 80vh;
-      width: 20vw;
-      background-position: 50% 50%;
-      background-size: 20vw;
-      transition: background-size 0.5s ease-in-out; /* durée augmentée à 0.5s */
-      background-repeat: no-repeat;
-      a {
-        display: block !important;
-        height: 100%;
-        width: 100%;
-      }
-      i {
-        width: 235px;
-        height: 235px;
-        transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
-        background-position: 0 0;
-        position: absolute;
-        top: 0;
-        margin: auto;
-        right: 0;
-        bottom: 0;
-        left: 0;
-      }
-      &:hover {
-        background-size: 22vw;
-        transition: background-size 0.5s ease-in-out; /* durée augmentée à 0.5s */
-        i {
-          background-position: 0 235px;
-        }
-        .img {
-          transform: scale(1.1);
-          transition: transform 0.3s ease-in-out;
-        }
-      }
-      img {
-        object-fit: contain;
-      }
-    }
-  }
-}
-.lecercell {
-  display: flex;
-  width: 254px;
-  height: 254px;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  border-radius: 100%;
-}
-</style>
+<style lang="scss" scoped></style>

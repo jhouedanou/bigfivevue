@@ -2740,7 +2740,7 @@ textarea {
 		color: #000;
 		max-width: 1316px;
 		&:nth-of-type(1) {
-			margin-bottom: 211px;
+			margin-bottom: 5.5em;
 		}
 		&:nth-of-type(2) {
 			margin-bottom: 211px;
@@ -2754,6 +2754,212 @@ textarea {
 		}
 	}
 }
+
+//rule for screens under 1680px, to have the background of #listedesolutios li being background cover
+@media (max-width: 1680px) {
+	#listedessolutions {
+		ul {
+			li {
+				background-size: cover !important;
+			}
+		}
+	}
+}
+
+#listedessolutions {
+	ul {
+		position: relative;
+		list-style: none;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		li {
+			position: relative;
+			list-style: none;
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			height: 80vh;
+			width: 20vw;
+			background-position: 50% 50%;
+			background-size: 20vw;
+			transition: background-size 0.5s ease-in-out; /* durée augmentée à 0.5s */
+			background-repeat: no-repeat;
+			a {
+				display: block !important;
+				height: 100%;
+				width: 100%;
+			}
+			i {
+				width: 235px;
+				height: 235px;
+				transition:
+					width 0.5s ease-in-out,
+					height 0.5s ease-in-out;
+				background-position: 0 0;
+				position: absolute;
+				top: 0;
+				margin: auto;
+				right: 0;
+				bottom: 0;
+				left: 0;
+			}
+			&:hover {
+				background-size: 22vw;
+				transition: background-size 0.5s ease-in-out; /* durée augmentée à 0.5s */
+				i {
+					background-position: 0 235px;
+				}
+				.img {
+					transform: scale(1.1);
+					transition: transform 0.3s ease-in-out;
+				}
+			}
+			img {
+				object-fit: contain;
+			}
+		}
+	}
+}
+.lecercell {
+	display: flex;
+	width: 254px;
+	height: 254px;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	border-radius: 100%;
+}
+.shadowy {
+	box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.1);
+}
+#solutionBanner {
+	position: relative;
+	height: 88vh;
+	background: no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+	.img-fluid {
+		width: 100%;
+	}
+	#btnDiscova {
+		margin: auto;
+		border: 3px solid white;
+		color: white;
+		top: 66vh;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		width: 200px;
+		height: 40px;
+		font-size: 19px;
+		text-decoration: none;
+		border-radius: 75px;
+		text-transform: uppercase;
+		font-weight: 500;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0;
+		line-height: 0;
+		&:hover {
+			background-color: white;
+			color: black;
+		}
+	}
+}
+.cartouchez {
+	z-index: 1;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	top: 0;
+	padding: 1rem;
+	color: white;
+	font-size: 1.5rem;
+	text-align: center;
+	display: flex !important;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	.solutionlogo {
+		width: 235px;
+		height: 235px;
+		border-radius: 50%;
+		display: block;
+	}
+	h4 {
+		white-space: wrap;
+		font-weight: bold;
+		letter-spacing: 4px;
+		padding: 0 0 0 0;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: 40vh;
+		margin: auto;
+		height: 29px;
+		font-size: 30px;
+	}
+}
+$violetsolutios: #4e4091;
+#restedelapage {
+	padding: 0;
+	#introforeal {
+		p {
+			font-size: 30px;
+			font-weight: normal;
+			font-stretch: normal;
+			font-style: normal;
+			line-height: 1.33;
+			letter-spacing: normal;
+			text-align: center;
+			color: #000;
+			strong {
+			}
+		}
+	}
+}
+.button {
+	background-color: #4caf50;
+	border: none;
+	color: white;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	border-radius: 8px;
+}
+
+#galerie {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	max-width: 80vw;
+	margin: 0 auto;
+}
+.img-fluid,
+.img-thumbnail {
+	width: 100%;
+}
+/* Remove the invalid nested styles here */
 
 #sectionunbigcrm.container {
 	.row {
