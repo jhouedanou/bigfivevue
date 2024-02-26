@@ -11,6 +11,7 @@ const scrollPosition = ref(0);
 let isSidebarOpen = ref(false);
 let toClose = ref(false);
 let closeBlack = ref(false);
+const filterValue = route.fullPath.substring("/solutions/".length);
 
 const scrollToElement = () => {
   const element = document.getElementById("restedelapage");
@@ -25,6 +26,7 @@ const onScroll = () => {
 };
 onMounted(() => {
   window.addEventListener("scroll", onScroll);
+  document.body.id = filterValue;
 });
 onMounted(async () => {
   try {
@@ -43,7 +45,6 @@ onMounted(async () => {
   }
 });
 const matchingSolution = computed(() => {
-  const filterValue = route.fullPath.substring("/solutions/".length);
   const index = solutions.value.findIndex(
     (solution) => solution.lien === filterValue
   );
