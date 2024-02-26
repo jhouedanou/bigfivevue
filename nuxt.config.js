@@ -87,7 +87,7 @@ export default defineNuxtConfig({
     },
   ],
   css: ["@/assets/css/styles.scss", "bootstrap/dist/css/bootstrap.min.css"],
-  plugins: [],
+  plugins: ["~/plugins/scroll.client.ts"],
   components: true,
   buildModules: [
     "@nuxtjs/axios",
@@ -101,11 +101,16 @@ export default defineNuxtConfig({
     maxRedirects: 3,
     abortOnRedirect: true,
   },
-  modules: ["@bootstrap-vue-next/nuxt", "@nuxt/content", "@nuxt/image",'@nuxtjs/google-fonts'],
+  modules: [
+    "@bootstrap-vue-next/nuxt",
+    "@nuxt/content",
+    "@nuxt/image",
+    "@nuxtjs/google-fonts",
+  ],
   googleFonts: {
     families: {
-      'Source+Sans+Pro': [400, 700, 800]
-    }
+      "Source+Sans+Pro": [400, 700, 800],
+    },
   },
   image: {
     format: ["webp"],

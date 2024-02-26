@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <div id="header" class="container-fluid fixed">
+  <div id="header" class="container-fluid">
     <div class="innerzr">
       <div class="row">
         <div class="col-md-8 col-sm-12 right-menu">

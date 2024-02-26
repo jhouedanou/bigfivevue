@@ -11,12 +11,12 @@ const scrollPosition = ref(0);
 let isSidebarOpen = ref(false);
 let toClose = ref(false);
 let closeBlack = ref(false);
-const filterValue = route.fullPath.substring("/solutions/".length);
 
 const scrollToElement = () => {
   const element = document.getElementById("restedelapage");
   element.scrollIntoView({ behavior: "smooth" });
 };
+
 const state = reactive({
   isLoading: true,
 });
@@ -27,7 +27,6 @@ onMounted(() => {
   window.addEventListener("scroll", onScroll);
 });
 onMounted(async () => {
-  //connexion à l'api et récupération des données sur les solutions
   try {
     state.isLoading = true;
     const response = await axios.get("/api/solutions.json");
@@ -78,7 +77,7 @@ const matchingSolution = computed(() => {
       :class="{ flipit: state.isSlide1Active, open: isSidebarOpen }"
     >
       <Logo :id="2" />
-      <Menu :page="'/agence'" />
+      <Menu :page="'/solutions'" />
     </div>
     <div
       id="solutionBanner"
@@ -104,17 +103,17 @@ const matchingSolution = computed(() => {
                 <h2>Découvrez nos autres solutions</h2>
               </div>
               <div class="dflex austin">
-                <NuxtLink
-                  :to="`/solutions/${item.lien}`"
-                  class="chyna"
-                  v-for="item in menusolutions"
-                  :key="item.id"
-                >
-                  <i
-                    :style="{ backgroundImage: 'url(/' + item.logo + ')' }"
-                    alt="logo"
-                  ></i
-                ></NuxtLink>
+                <div class="chyna" v-for="item in menusolutions" :key="item.id">
+                  <a
+                    v-if="item.lien !== matchingSolution.lien"
+                    :href="`/solutions/${item.lien}`"
+                  >
+                    <i
+                      :style="{ backgroundImage: 'url(/' + item.logo + ')' }"
+                      alt="logo"
+                    ></i>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -124,4 +123,8 @@ const matchingSolution = computed(() => {
   </ContenuAltLayout>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+#header-alt {
+  position: relative !important;
+}
+</style>
