@@ -100,7 +100,7 @@ const matchingSolution = computed(() => {
           <div class="container">
             <div class="row">
               <div class="col-md-12">
-                <h2>Découvrez nos autres solutions</h2>
+                <h3>Découvrez nos autres solutions</h3>
               </div>
               <div class="dflex austin">
                 <div class="chyna" v-for="item in menusolutions" :key="item.id">

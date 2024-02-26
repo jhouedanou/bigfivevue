@@ -61,7 +61,7 @@ body {
 		color: white;
 		font-weight: 800;
 		margin: 79px auto 0;
-		font-size: 59px;
+		font-size: 59px !important;
 	}
 	#untel {
 		form {
@@ -3105,4 +3105,12 @@ $violetsolutios: #4e4091;
 			}
 		}
 	}
+}
+#nosautresolutons {
+	padding-top: 0em;
+	h3 {
+		@include entete();
+		padding-bottom: 0.75em;
+	}
+	padding-bottom: 15em;
 }
