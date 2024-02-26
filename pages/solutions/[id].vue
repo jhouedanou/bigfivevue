@@ -27,6 +27,7 @@ const onScroll = () => {
 onMounted(() => {
   window.addEventListener("scroll", onScroll);
   document.body.id = filterValue;
+  document.body.classList.add("solutions");
 });
 onMounted(async () => {
   try {

@@ -3174,3 +3174,128 @@ body {
 		}
 	}
 }
+#sectiontwobigactivations {
+	margin: 0 auto 11em;
+	padding: 0;
+	h3 {
+		@include entete(120px); // Remplacez 10px par la nouvelle valeur de padding-top souhaitée
+	}
+}
+#sectionthreebigactivations {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	.col-md-4 {
+		padding-bottom: 4.25em;
+	}
+	h3 {
+		color: $violetsolutios;
+		font-weight: 900;
+		font-size: 30px;
+		margin-bottom: 1rem;
+
+		font-family: "Effra", sans-serif;
+	}
+	p {
+		font-family: "Source Sans Pro", sans-serif;
+		font-size: 20px;
+		font-weight: normal;
+		font-stretch: normal;
+		font-style: normal;
+		line-height: 1.35;
+		letter-spacing: normal;
+		text-align: left;
+		color: #000;
+	}
+}
+div#sectionfourbigactivations {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	position: relative;
+}
+#andre {
+	h3 {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		border-radius: 100%;
+		position: absolute;
+		top: 0;
+		margin: auto;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 10;
+		width: 212.7px;
+		height: 212.7px;
+		box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.16);
+		background-color: #fff;
+		font-family: "Effra";
+		font-size: 30px;
+		font-weight: 900;
+		font-stretch: normal;
+		font-style: normal;
+		line-height: 0.9;
+		letter-spacing: normal;
+		text-align: center;
+		color: #4b2986;
+		-webkit-border-radius: 100%;
+		-moz-border-radius: 100%;
+		-ms-border-radius: 100%;
+		-o-border-radius: 100%;
+	}
+}
+#sectionfiveactivations {
+	padding-bottom: 5em;
+
+	#pimptro {
+		padding-top: 8em;
+		padding-bottom: 4.2em;
+		h3 {
+			@include entete(0px);
+		}
+	}
+}
+.kpassagnon {
+	max-width: 1210px !important;
+	margin: 0 auto !important;
+	h3 {
+		font-family: "new order", sans-serif;
+		font-size: 20px;
+		font-weight: bold;
+		font-stretch: normal;
+		font-style: normal;
+		line-height: 1.35;
+		letter-spacing: normal;
+		text-align: left;
+		color: #000;
+	}
+	p {
+		font-family: "new order", sans-serif;
+		font-size: 20px;
+		font-weight: normal;
+		font-stretch: normal;
+		font-style: normal;
+		line-height: 1.35;
+		letter-spacing: normal;
+		text-align: left;
+		color: #000;
+	}
+}
+body {
+	&.solutions {
+		#header-alt {
+			//background gradient black to transparent
+			background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+			//make it cross browser compatible
+			-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#CC000000, endColorstr=#00000000)";
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#CC000000, endColorstr=#00000000);
+		}
+	}
+}
