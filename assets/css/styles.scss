@@ -3644,6 +3644,7 @@ body {
 		li {
 			font-weight: 900 !important;
 			color: white !important;
+			line-height: 30px !important;
 		}
 	}
 }
@@ -3678,5 +3679,8 @@ body {
 			text-align: left;
 			color: #000;
 		}
+	}
+	&:nth-of-type(2) {
+		margin-top: 195px;
 	}
 }
