@@ -2941,7 +2941,7 @@ textarea {
 		font-size: 30px;
 	}
 }
-$violetsolutios: #4e4091;
+$violetsolutios: #482080;
 @mixin entete($padding: 64px) {
 	display: block;
 	text-align: center;
@@ -3060,7 +3060,7 @@ $violetsolutios: #4e4091;
 				h3 {
 					font-size: 30px;
 					font-weight: bold;
-					color: #4b2986;
+					color: #482080;
 				}
 				img {
 					width: 100%;
@@ -3149,7 +3149,7 @@ body {
 							font-size: 18px;
 							text-align: center;
 							font-weight: bold;
-							color: #4b2986;
+							color: #482080;
 							margin: 24px 0 0 0;
 							line-height: 23px;
 						}
@@ -3244,7 +3244,7 @@ div#sectionfourbigactivations {
 		line-height: 0.9;
 		letter-spacing: normal;
 		text-align: center;
-		color: #4b2986;
+		color: #482080;
 		-webkit-border-radius: 100%;
 		-moz-border-radius: 100%;
 		-ms-border-radius: 100%;
@@ -3322,7 +3322,7 @@ body {
 					font-size: 18px;
 					text-align: center;
 					font-weight: bold;
-					color: #4b2986;
+					color: #482080;
 					margin: 24px 0 0 0;
 					line-height: 23px;
 				}
@@ -3461,6 +3461,26 @@ body {
 	}
 }
 
+@mixin formationtitre($margintop) {
+	margin-top: $margintop;
+	font-weight: bold;
+	font-size: 39px;
+	line-height: 1;
+	text-transform: uppercase;
+	color: $violetsolutios;
+}
+@mixin texteformation($margintop) {
+	margin-top: $margintop;
+	font-family: "new order", sans-serif;
+	font-size: 25px;
+	font-weight: normal;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.23;
+	letter-spacing: normal;
+	text-align: left;
+	color: #000;
+}
 #sectionthreebigformations {
 	display: flex;
 	align-items: center;
@@ -3473,6 +3493,11 @@ body {
 	.row {
 		max-width: 1190px;
 	}
+
+	.col-md-4 {
+		padding-bottom: 4.25em;
+	}
+
 	.niveau1logo {
 		display: flex;
 		flex-direction: row;
@@ -3489,11 +3514,7 @@ body {
 			padding-left: 15px;
 			padding-top: 18px;
 			h2 {
-				font-weight: bold;
-				font-size: 39px;
-				line-height: 1;
-				text-transform: uppercase;
-				color: $violetsolutios;
+				@include formationtitre(0px);
 			}
 			h4 {
 				font-weight: 400;
@@ -3508,26 +3529,154 @@ body {
 			}
 		}
 	}
+	.niveau2logo {
+		h2 {
+			@include formationtitre(79px);
+		}
+	}
+	.niveau3logo {
+		h2 {
+			@include formationtitre(70px);
+		}
+		p {
+			@include texteformation(20px);
+		}
+	}
+	.niveau4logo {
+		h2 {
+			@include formationtitre(50px);
+		}
+		p {
+			@include texteformation(20px);
+		}
+	}
+}
+#sectionfourbigformations {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	position: relative;
+	margin-top: 12em;
+	background-color: #edeff6;
+	padding-top: 9em;
+	.row {
+		max-width: 1190px;
+	}
+
 	.col-md-4 {
 		padding-bottom: 4.25em;
 	}
+
+	.niveau1logo {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		img {
+			width: auto;
+			height: 131px;
+		}
+		.dre {
+			display: flex;
+			align-items: flex-start;
+			justify-content: center;
+			flex-direction: column;
+			padding-left: 15px;
+			padding-top: 18px;
+			h2 {
+				@include formationtitre(0px);
+			}
+			h4 {
+				font-weight: 400;
+				font-size: 50px;
+				line-height: 1;
+				margin-top: 10px;
+				text-transform: uppercase;
+				color: $violetsolutios;
+			}
+			span {
+				font-weight: bold;
+			}
+		}
+	}
+	.niveau2logo {
+		h2 {
+			@include formationtitre(79px);
+		}
+	}
+	.niveau3logo {
+		h2 {
+			@include formationtitre(70px);
+		}
+		p {
+			@include texteformation(20px);
+		}
+	}
+	.niveau4logo {
+		h2 {
+			@include formationtitre(50px);
+		}
+		p {
+			@include texteformation(20px);
+		}
+	}
+}
+.benefits {
+	margin-top: 3.65em;
+	background: #482080;
+	padding: 42px 33px;
+	color: white;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
 	h3 {
+		color: white !important;
+		text-transform: uppercase;
+		font-family: "new order", sans-serif;
 		color: $violetsolutios;
 		font-weight: 900;
-		font-size: 30px;
+		font-size: 40px;
 		margin-bottom: 1rem;
-
-		font-family: "Effra", sans-serif;
 	}
+	ul {
+		li {
+			font-weight: 900 !important;
+			color: white !important;
+		}
+	}
+}
+
+.formation {
 	p {
-		font-family: "Source Sans Pro", sans-serif;
-		font-size: 20px;
-		font-weight: normal;
-		font-stretch: normal;
-		font-style: normal;
-		line-height: 1.35;
-		letter-spacing: normal;
-		text-align: left;
-		color: #000;
+		&:nth-of-type(1) {
+			margin-top: 0px;
+			font-family: "new order", sans-serif;
+			font-size: 29px;
+			font-weight: normal;
+			font-stretch: normal;
+			font-style: normal;
+			line-height: 35px;
+			letter-spacing: normal;
+			text-align: left;
+			color: #000;
+			margin-top: 27px;
+		}
+	}
+	ul {
+		margin-left: -13px;
+		li {
+			margin-top: 17px;
+			font-family: "new order", sans-serif;
+			font-size: 24px;
+			font-weight: normal;
+			font-stretch: normal;
+			font-style: normal;
+			line-height: 21px;
+			letter-spacing: normal;
+			text-align: left;
+			color: #000;
+		}
 	}
 }
