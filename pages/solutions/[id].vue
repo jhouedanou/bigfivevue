@@ -4,6 +4,12 @@ import axios from "axios";
 import { useRoute } from "vue-router";
 import ContenuAltLayout from "@/layouts/contenuAlt.vue";
 import PageLoader from "@/components/PageLoader.vue";
+import Swiper from "swiper/bundle";
+import "swiper/css/bundle";
+import $ from "jquery";
+
+const swiperContainer = ref(null);
+let swiperInstance;
 const solutions = ref([]);
 const menusolutions = ref([]);
 const route = useRoute();
@@ -12,7 +18,6 @@ let isSidebarOpen = ref(false);
 let toClose = ref(false);
 let closeBlack = ref(false);
 const filterValue = route.fullPath.substring("/solutions/".length);
-
 const scrollToElement = () => {
   const element = document.getElementById("restedelapage");
   element.scrollIntoView({ behavior: "smooth" });
@@ -52,6 +57,12 @@ const matchingSolution = computed(() => {
   return {
     ...solutions.value[index],
   };
+});
+
+onMounted(async () => {
+  //check with jquery if the body has an "bigcity" id
+  if ($("#bigcity").length) {
+  }
 });
 </script>
 

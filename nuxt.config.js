@@ -131,6 +131,10 @@ export default defineNuxtConfig({
         path: "/solutions/:id",
         component: "~/pages/solutions.vue",
       },
+      {
+        path: "/solutions/bigcity",
+        redirect: "~/pages/solutions/bigcity.vue",
+      },
     ],
   },
   pwa: {

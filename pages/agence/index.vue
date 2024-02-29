@@ -1,81 +1,78 @@
-
 <template>
-  <div id="lagence"
-    class="container-fluid">
+  <div id="lagence" class="container-fluid">
     <PageLoader v-if="state.isLoading" />
     <div id="menumobile">
-      <Logo :id="3"
-        v-if="!isSidebarOpen" />
-      <button id="menutrigger"
-        @click="isSidebarOpen = !isSidebarOpen; isMainFull = !isMainFull; toClose = !toClose"
-        :class="{ dana: closeBlack }">
-        <img v-if="toClose"
-          src="/img/btn-close.svg"
-          alt="">
-        <img v-if="!toClose"
-          src="/img/btn-menu.svg"
-          alt="">
+      <Logo :id="3" v-if="!isSidebarOpen" />
+      <button
+        id="menutrigger"
+        @click="
+          isSidebarOpen = !isSidebarOpen;
+          isMainFull = !isMainFull;
+          toClose = !toClose;
+        "
+        :class="{ dana: closeBlack }"
+      >
+        <img v-if="toClose" src="/img/btn-close.svg" alt="" />
+        <img v-if="!toClose" src="/img/btn-menu.svg" alt="" />
       </button>
     </div>
     <div class="row">
-      <div id="sidebar"
+      <div
+        id="sidebar"
         class="sidebar"
-        :class="{ flipit: state.isSlide1Active, open: isSidebarOpen }">
+        :class="{ flipit: state.isSlide1Active, open: isSidebarOpen }"
+      >
         <Logo :id="2" />
         <Menu :page="'/agence'" />
       </div>
-      <div id="lemain"
-        class="main vh-100"
-        :class="{ full: isMainFull }">
-        <div class="swiper"
-          ref="swiperContainer">
+      <div id="lemain" class="main vh-100" :class="{ full: isMainFull }">
+        <div class="swiper" ref="swiperContainer">
           <div class="swiper-wrapper">
-            <div id="slide1"
-              class="swiper-slide">
+            <div id="slide1" class="swiper-slide">
               <!-- presentation de l'agence -->
-              <h3>{{ state.agence?.slide1?.title ?? '' }}</h3>
+              <h3>{{ state.agence?.slide1?.title ?? "" }}</h3>
               <p v-html="state.agence?.slide1?.soustitre ?? ''"></p>
               <h3 v-html="state.agence?.slide1?.contenu ?? ''"></h3>
             </div>
-            <div id="slide2"
-              class="swiper-slide">
+            <div id="slide2" class="swiper-slide">
               <div class="row slide-inner">
-                <div class="col-md-4 col-sm-12 slide2-p"
-                  v-for=" slide  in  state.agence?.slide2 ?? [] "
-                  :key="slide.id ?? ''">
+                <div
+                  class="col-md-4 col-sm-12 slide2-p"
+                  v-for="slide in state.agence?.slide2 ?? []"
+                  :key="slide.id ?? ''"
+                >
                   <div class="inner">
                     <!-- <nuxt-img :src="slide.img ?? ''"
                       :lazy="true"
                       quality="80" /> -->
-                    <img :src="slide.img ?? ''"
-                      alt=""> 
-                    <h3>{{ slide.title ?? '' }}</h3>
+                    <img :src="slide.img ?? ''" alt="" />
+                    <h3>{{ slide.title ?? "" }}</h3>
                     <div class="sabine">
                       <p v-html="slide.content ?? ''"></p>
                     </div>
-
                   </div>
                 </div>
               </div>
             </div>
-            <div id="slide3"
-              class="swiper-slide">
+            <div id="slide3" class="swiper-slide">
               <div id="die">
-                <div class="mongoue"
-                  v-html="state.agence?.introslide3 ?? ''"></div>
+                <div
+                  class="mongoue"
+                  v-html="state.agence?.introslide3 ?? ''"
+                ></div>
               </div>
-              <div id="moufmideh"
-                ref="swiperContainer2">
-                <div id="swide"
-                  class="swiper-wrapper">
-                  <div :index="item.Id"
+              <div id="moufmideh" ref="swiperContainer2">
+                <div id="swide" class="swiper-wrapper">
+                  <div
+                    :index="item.Id"
                     class="swiper-slide"
-                    v-for=" item  in  state.agence?.slide3 ?? [] "
+                    v-for="item in state.agence?.slide3 ?? []"
                     :key="item.Id"
-                    :peek-gutter=true
-                    :slides-per-page="1">
+                    :peek-gutter="true"
+                    :slides-per-page="1"
+                  >
                     <div class="num">
-                       <h3>{{ item.Id }}.&nbsp;</h3> 
+                      <h3>{{ item.Id }}.&nbsp;</h3>
                     </div>
                     <div class="cont-slide">
                       <h3>{{ item.titre }}</h3>
@@ -85,14 +82,14 @@
                 </div>
               </div>
             </div>
-            <div id="slide4"
-              class="swiper-slide">
-              <ul id="tipster"
-                class="slide4 full-height">
-                <li class="stack-up"
+            <div id="slide4" class="swiper-slide">
+              <ul id="tipster" class="slide4 full-height">
+                <li
+                  class="stack-up"
                   :id="`lestack${item.id - 1}`"
-                  v-for=" item  in  state.agence?.slide4.slice().reverse() ?? [] "
-                  :key="item.id">
+                  v-for="item in state.agence?.slide4.slice().reverse() ?? []"
+                  :key="item.id"
+                >
                   <!-- <li class="stack-up"
                   v-for="item in state.agence?.slide4.slice(0, 3).reverse() ?? []"
                   :id="`lestack${item.id}`"
@@ -102,17 +99,17 @@
               </ul>
             </div>
 
-            <div id="slide5"
-              class="swiper-slide slide5-background">
-              <div id="mouf"
-                v-html="state.agence?.slide5 ?? ''"></div>
+            <div id="slide5" class="swiper-slide slide5-background">
+              <div id="mouf" v-html="state.agence?.slide5 ?? ''"></div>
             </div>
-
           </div>
           <div class="swiper-pagination"></div>
         </div>
-        <div id="kpaflotage"
-          class="menuflottant" :class="{ flipit: state.isSlide1Active, open: isSidebarOpen }">
+        <div
+          id="kpaflotage"
+          class="menuflottant"
+          :class="{ flipit: state.isSlide1Active, open: isSidebarOpen }"
+        >
           <SocialLinksAlt />
         </div>
       </div>
@@ -121,13 +118,13 @@
 </template>
 
 <script setup>
-import { ref, reactive, onMounted, watchEffect } from 'vue';
-import axios from 'axios';
-import Swiper from 'swiper/bundle';
-import 'swiper/css/bundle';
-import 'animate.css';
+import { ref, reactive, onMounted, watchEffect } from "vue";
+import axios from "axios";
+import Swiper from "swiper/bundle";
+import "swiper/css/bundle";
+import "animate.css";
 
-import PageLoader from '@/components/PageLoader.vue';
+import PageLoader from "@/components/PageLoader.vue";
 let swiperContainer = ref(null);
 let swiperContainer2 = ref(null);
 let slide3Content = ref([]);
@@ -139,21 +136,20 @@ let toClose = ref(false);
 let closeBlack = ref(false);
 
 const state = reactive({
-  metadesc: '',
-  pageTitle: '',
+  metadesc: "",
+  pageTitle: "",
   agence: null,
-  isSlide1Active: '',
-  isLoading: true
+  isSlide1Active: "",
+  isLoading: true,
 });
 onMounted(() => {
-
-  const slide1Element = document.getElementById('slide1');
+  const slide1Element = document.getElementById("slide1");
   if (slide1Element) {
     setTimeout(() => {
-      slide1Element.classList.add('slide1-active');
+      slide1Element.classList.add("slide1-active");
     }, 1000);
   } else {
-    slide1Element.classList.remove('slide1-active');
+    slide1Element.classList.remove("slide1-active");
   }
 });
 onMounted(async () => {
@@ -161,7 +157,7 @@ onMounted(async () => {
     // page loading
     state.isLoading = true;
     //recupération des textes de la page
-    const textesGlobal = await axios.get('/api/agence.json');
+    const textesGlobal = await axios.get("/api/agence.json");
     state.metadesc = textesGlobal.data.metadesc;
     state.pageTitle = textesGlobal.data.title;
     state.agence = textesGlobal.data;
@@ -172,7 +168,7 @@ onMounted(async () => {
       //initSwiper();
     }
     // Initialisation du swiper
-/*     swiperInstance = new Swiper(swiperContainer.value, {
+    /*     swiperInstance = new Swiper(swiperContainer.value, {
       direction: 'vertical',
       slidesPerView: 1,
       spaceBetween: 0,
@@ -190,37 +186,34 @@ onMounted(async () => {
     }); */
 
     swiperInstance = new Swiper(swiperContainer.value, {
-  direction: 'vertical', // Set the direction to vertical
-  slidesPerView: 1,
-  spaceBetween: 0,
-  mousewheel: true,
-  keyboard: true,
-  effect: 'slide', // Set the slide effect
-  autoplay: {
-    delay: 30000, // Delay between transitions in ms
-    disableOnInteraction: true // Enable/disable autoplay on user interaction
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  }
-});
-
-
+      direction: "vertical", // Set the direction to vertical
+      slidesPerView: 1,
+      spaceBetween: 0,
+      mousewheel: true,
+      keyboard: true,
+      effect: "slide", // Set the slide effect
+      autoplay: {
+        delay: 30000, // Delay between transitions in ms
+        disableOnInteraction: true, // Enable/disable autoplay on user interaction
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
 
     //ajouter une classe animationslide1 une fois que swiperInstance a fini son initialisation
 
-    //gestion de la disposition de la sidebar 
-    swiperInstance.on('slideChange', () => {
+    //gestion de la disposition de la sidebar
+    swiperInstance.on("slideChange", () => {
       if (swiperInstance.activeIndex == 0) {
         state.isSlide1Active = true;
-        document.querySelector('.slide1').classList.add('slide1-active');
-
+        document.querySelector(".slide1").classList.add("slide1-active");
       } else if (swiperInstance.activeIndex == 2) {
         state.isSlide1Active = false;
         // carousel horizontal
         swiperInstance2 = new Swiper(swiperContainer2.value, {
-          direction: 'horizontal',
+          direction: "horizontal",
           slidesPerView: 1,
           spaceBetween: 10,
           //mousewheel: true,
@@ -230,17 +223,15 @@ onMounted(async () => {
           speed: 2000,
           draggable: true,
           // keyboard: true,
-           parallax: true,
+          parallax: true,
           autoplay: {
             delay: 2000,
-            disableOnInteraction: true // enable/disable autoplay on user interaction
+            disableOnInteraction: true, // enable/disable autoplay on user interaction
           },
         });
-
       } else if (swiperInstance.activeIndex === 3) {
-
-        const tipster = document.querySelector('#tipster');
-        const liste = tipster.querySelectorAll('li');
+        const tipster = document.querySelector("#tipster");
+        const liste = tipster.querySelectorAll("li");
         const delai = 300;
         const increment = 1;
         const debutFadeOut = 19;
@@ -250,43 +241,43 @@ onMounted(async () => {
         //pour les elements 34 à 15 de la liste, fadeInDownBig tous les 500ms
         //pour le 14e element de la liste, fadeOut du dernier element de la liste, le 34 et FadeInDownBig du 16e element. Supprimer le dernier element de la liste , de façon à ce que le 16e element devienne le 15e element de la liste
         //pour l'element 13 de la liste; fadeInDownBig et supprimer le dernier element de la liste. Supprimmer
-        
+
         const interval = setInterval(() => {
           if (i >= debutFadeOut) {
-
-            liste[i].classList.add('animate__animated', 'animate__fadeInDownBig');
+            liste[i].classList.add(
+              "animate__animated",
+              "animate__fadeInDownBig"
+            );
             i--;
-            
           } else if (i < debutFadeOut && i >= 0) {
-           
-            liste[i + lEcart].classList.remove('animate__fadeInDownBig');
-            liste[i + lEcart].classList.add('animate__fadeOutDownBig', 'close');
-            liste[i].classList.add('animate__animated', 'animate__fadeInDownBig');
+            liste[i + lEcart].classList.remove("animate__fadeInDownBig");
+            liste[i + lEcart].classList.add("animate__fadeOutDownBig", "close");
+            liste[i].classList.add(
+              "animate__animated",
+              "animate__fadeInDownBig"
+            );
             i--;
           } else if (i < 0) {
-          
             stop();
           } else {
-            
             clearInterval(interval);
           }
         }, delai);
 
         state.isSlide1Active = false;
-
       } else {
         state.isSlide1Active = false;
       }
-    })
+    });
 
     //gestion de l'animation de la slide 5
-    const slide5Element = document.getElementById('slide5');
+    const slide5Element = document.getElementById("slide5");
 
     // Add event listener for mouse movement
-    slide5Element.addEventListener('mousemove', (event) => {
+    slide5Element.addEventListener("mousemove", (event) => {
       // Calculate the new background position based on the mouse coordinates
-      const posX = event.clientX / slide5Element.offsetWidth * 200;
-      const posY = event.clientY / slide5Element.offsetHeight * 200;
+      const posX = (event.clientX / slide5Element.offsetWidth) * 200;
+      const posY = (event.clientY / slide5Element.offsetHeight) * 200;
 
       // Set the new background position
       slide5Element.style.backgroundPosition = `${posX}% ${posY}%`;
@@ -300,32 +291,29 @@ onMounted(async () => {
 });
 
 watchEffect(() => {
-
   useHead({
     title: state.pageTitle,
     meta: [
       {
-        hid: 'description',
-        name: 'description',
+        hid: "description",
+        name: "description",
         content: state.metadesc,
       },
       {
-        property: 'og:title',
+        property: "og:title",
         content: state.pageTitle,
       },
       {
-        property: 'og:description',
+        property: "og:description",
         content: state.metadesc,
       },
     ],
   });
 });
-
-
 </script>
 <style lang="scss" scoped>
 .slide5-background {
-  background: url('/img/visages.png');
+  background: url("/img/visages.png");
   background-position: 50% 50%;
   transition: background-position 0.3s ease-in-out;
 }
@@ -337,12 +325,12 @@ watchEffect(() => {
 
 #lagence {
   .sidebar {
-    &.flipit {}
+    &.flipit {
+    }
   }
 }
 
 #mouf {
-
   background: linear-gradient(to bottom, #80368c, #2c348b);
   font-size: 70px;
   font-weight: bold;
@@ -361,8 +349,8 @@ watchEffect(() => {
 
 .swiper-wrapper {
   /* background: linear-gradient(to bottom, #80368c, #2c348b); */
-  background: linear-gradient(to bottom, #82368C 0%, #27348B 100%);
- /*  overflow: hidden; */
+  background: linear-gradient(to bottom, #82368c 0%, #27348b 100%);
+  /*  overflow: hidden; */
   height: auto;
 }
 
