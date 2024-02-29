@@ -3424,9 +3424,15 @@ body {
 	background-color: #edeff6;
 }
 body {
-	&.bigformations {
+	&#bigformations {
 		#introforeal {
 			padding-bottom: 3em;
+		}
+		#contenudelapage {
+			padding-bottom: 11em;
+		}
+		#nosautresolutons {
+			padding-top: 5em !important;
 		}
 	}
 }
@@ -3490,6 +3496,7 @@ body {
 	margin-top: 12em;
 	background-color: #edeff6;
 	padding-top: 9em;
+	padding-bottom: 12em;
 	.row {
 		max-width: 1190px;
 	}
@@ -3502,6 +3509,7 @@ body {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: nowrap;
+		align-items: center;
 		img {
 			width: auto;
 			height: 131px;
@@ -3557,9 +3565,82 @@ body {
 	justify-content: center;
 	flex-direction: column;
 	position: relative;
-	margin-top: 12em;
+	margin-top: 10em;
+	max-width: 1400px;
+	/* margin-top: 12em;
 	background-color: #edeff6;
 	padding-top: 9em;
+ */
+	h4 {
+		font-family: "new order", sans-serif;
+		font-size: 48px;
+		font-weight: bold;
+		color: #482080;
+		margin-bottom: 0;
+		line-height: 48px;
+	}
+	h6 {
+		font-family: "new order", sans-serif;
+		font-size: 50px;
+		font-weight: normal;
+		font-stretch: normal;
+		font-style: normal;
+		letter-spacing: normal;
+		text-align: center;
+		color: #000;
+		margin-bottom: 0;
+	}
+	.rowas {
+		display: grid;
+		width: 100%;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(2, auto);
+		grid-gap: 0px;
+		justify-items: center;
+		align-items: center;
+		margin-top: 11em;
+	}
+	img {
+		&:nth-of-type(1) {
+			width: 144px;
+			height: 144px;
+		}
+		&:nth-of-type(2) {
+			width: 223px;
+			height: 123px;
+			margin-top: 10px;
+			margin-left: -75px;
+		}
+		&:nth-of-type(3) {
+			width: 279px;
+			height: 180px;
+		}
+		&:nth-of-type(4) {
+			width: 178px;
+			height: 121px;
+		}
+		&:nth-of-type(5) {
+			width: 187px;
+			height: 106px;
+			margin-top: 3.25em;
+			margin-left: 1.85em;
+		}
+		&:nth-of-type(6) {
+			width: 218px;
+			height: 114px;
+			margin-top: 2.7em;
+		}
+		&:nth-of-type(7) {
+			width: 270px;
+			height: 143px;
+			margin-top: 2.7em;
+		}
+		&:nth-of-type(8) {
+			width: 184px;
+			height: 103px;
+			margin-top: 2.7em;
+		}
+	}
 	.row {
 		max-width: 1190px;
 	}
@@ -3644,7 +3725,7 @@ body {
 		li {
 			font-weight: 900 !important;
 			color: white !important;
-			line-height: 30px !important;
+			line-height: 25px !important;
 		}
 	}
 }
@@ -3658,7 +3739,7 @@ body {
 			font-weight: normal;
 			font-stretch: normal;
 			font-style: normal;
-			line-height: 35px;
+			line-height: 36px;
 			letter-spacing: normal;
 			text-align: left;
 			color: #000;
@@ -3674,13 +3755,33 @@ body {
 			font-weight: normal;
 			font-stretch: normal;
 			font-style: normal;
-			line-height: 21px;
+			line-height: 29px;
 			letter-spacing: normal;
 			text-align: left;
 			color: #000;
+			margin-bottom: 0;
 		}
 	}
 	&:nth-of-type(2) {
 		margin-top: 195px;
+	}
+}
+#formationdigitalmanager {
+	padding-top: 16em;
+	.niveau3logo {
+		h2 {
+			margin-top: 1em;
+			margin-bottom: 0em;
+		}
+	}
+}
+
+#formatiowebanalytics {
+	padding-top: 16.8em;
+	.niveau3logo {
+		h2 {
+			margin-top: 1em;
+			margin-bottom: 0em;
+		}
 	}
 }
