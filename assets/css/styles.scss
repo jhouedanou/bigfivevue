@@ -3419,3 +3419,115 @@ body {
 		}
 	}
 }
+#sectionunbigformations {
+	height: 521px;
+	background-color: #edeff6;
+}
+body {
+	&.bigformations {
+		#introforeal {
+			padding-bottom: 3em;
+		}
+	}
+}
+#sectionunbigformations {
+	h3 {
+		@include entete(100px);
+	}
+	.row {
+		&:nth-of-type(2) {
+			margin: 0 auto;
+			max-width: 1280px;
+			.col-md-3 {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+			}
+		}
+	}
+}
+#sectiontwobigformations {
+	padding-top: 8em;
+	p {
+		display: block;
+		text-align: center;
+		padding-top: 0px;
+		font-size: 29px;
+		font-weight: 400;
+		span {
+			font-weight: bold;
+		}
+	}
+}
+
+#sectionthreebigformations {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	position: relative;
+	margin-top: 12em;
+	background-color: #edeff6;
+	padding-top: 9em;
+	.row {
+		max-width: 1190px;
+	}
+	.niveau1logo {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		img {
+			width: auto;
+			height: 131px;
+		}
+		.dre {
+			display: flex;
+			align-items: flex-start;
+			justify-content: center;
+			flex-direction: column;
+			padding-left: 15px;
+			padding-top: 18px;
+			h2 {
+				font-weight: bold;
+				font-size: 39px;
+				line-height: 1;
+				text-transform: uppercase;
+				color: $violetsolutios;
+			}
+			h4 {
+				font-weight: 400;
+				font-size: 50px;
+				line-height: 1;
+				margin-top: 10px;
+				text-transform: uppercase;
+				color: $violetsolutios;
+			}
+			span {
+				font-weight: bold;
+			}
+		}
+	}
+	.col-md-4 {
+		padding-bottom: 4.25em;
+	}
+	h3 {
+		color: $violetsolutios;
+		font-weight: 900;
+		font-size: 30px;
+		margin-bottom: 1rem;
+
+		font-family: "Effra", sans-serif;
+	}
+	p {
+		font-family: "Source Sans Pro", sans-serif;
+		font-size: 20px;
+		font-weight: normal;
+		font-stretch: normal;
+		font-style: normal;
+		line-height: 1.35;
+		letter-spacing: normal;
+		text-align: left;
+		color: #000;
+	}
+}
