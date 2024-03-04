@@ -198,7 +198,7 @@ onMounted(async () => {
           </div>
         </div>
         <div class="swiper-slide">
-          <div id="sectionthreebigcity" class="container">
+          <div id="sectionthreebigcity" class="container-fluid">
             <div class="row">
               <div class="col-md-4 col-offset-1 letexte">
                 <img src="/img/solutions/bigcity/logopetit.svg" alt />
@@ -220,22 +220,31 @@ onMounted(async () => {
                   facilement à votre application vos nouveaux établissement
                 </p>
               </div>
-              <div class="col-md-7 d-flex align-items-center">
-                <img
-                  class="img-fluid"
-                  src="/img/solutions/bigcity/Groupe 572.svg"
-                  alt
-                />
-                <img
-                  class="img-fluid"
-                  src="/img/solutions/bigcity/Groupe 573.svg"
-                  alt
-                />
-                <img
-                  class="img-fluid"
-                  src="/img/solutions/bigcity/Groupe 574.svg"
-                  alt
-                />
+              <div class="col-md-7 d-flex align-items-center fusbal">
+                <div class="mobile">
+                  <img
+                    class="img-fluid"
+                    src="/img/solutions/bigcity/Groupe 572.svg"
+                    alt
+                  />
+                  <img
+                    class="img-fluid"
+                    src="/img/solutions/bigcity/Groupe 573.svg"
+                    alt
+                  />
+                  <img
+                    class="img-fluid"
+                    src="/img/solutions/bigcity/Groupe 574.svg"
+                    alt
+                  />
+                </div>
+                <div class="desktop">
+                  <img
+                    src="/img/solutions/bigcity/section3.svg"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -246,7 +255,7 @@ onMounted(async () => {
               <div class="col-md-4"></div>
               <div class="col-md-8">
                 <div class="row">
-                  <div class="col-md-4">
+                  <div class="col-md-4 fusbal">
                     <img src="/img/solutions/bigcity/Groupe 537.png" alt />
                   </div>
                   <div class="col-md-8 letexte">
@@ -282,7 +291,7 @@ onMounted(async () => {
                 </p>
               </div>
               <div class="col-md-8">
-                <div class="row d-flex">
+                <div class="row d-flex fusbal">
                   <img src="/img/solutions/bigcity/Groupe 549.png" alt />
                   <img src="/img/solutions/bigcity/Groupe 571.png" alt />
                 </div>
@@ -294,7 +303,7 @@ onMounted(async () => {
           <div id="sectionsixbigcity" class="container-fluid">
             <div class="row">
               <div class="col-md-8">
-                <div class="row">
+                <div class="row fusbal">
                   <img src="/img/solutions/bigcity/Groupe 545.png" alt />
                   <img
                     class="col-md-4"
@@ -336,7 +345,7 @@ onMounted(async () => {
                 </p>
               </div>
               <div class="col-md-6">
-                <div class="row">
+                <div class="row fusbal">
                   <img src="/img/solutions/bigcity/Groupe 548a.png" alt /><img
                     src="/img/solutions/bigcity/Groupe 549a.png"
                     alt
@@ -350,7 +359,7 @@ onMounted(async () => {
           <div id="sectioneightbigcity" class="container-fluid">
             <div class="row">
               <div class="col-md-8">
-                <div class="row">
+                <div class="row fusbal">
                   <img src="/img/solutions/bigcity/Groupe 550.png" alt /><img
                     class="col-md-4"
                     src="/img/solutions/bigcity/Groupe 551.png"

@@ -3292,11 +3292,12 @@ div#sectionfourbigactivations {
 body {
 	&.solutions {
 		#header-alt {
-			//background gradient black to transparent
+			/* 			//background gradient black to transparent
 			background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
 			//make it cross browser compatible
 			-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#CC000000, endColorstr=#00000000)";
 			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#CC000000, endColorstr=#00000000);
+ */
 		}
 	}
 }
@@ -3859,10 +3860,11 @@ body {
 }
 #sectionthreebigcity {
 }
-#rakimz {
+.fusbal {
 	img {
-		max-height: 650px;
 		width: auto;
+		height: auto;
+		max-height: 650px;
 	}
 }
 #rakimz {
@@ -3976,5 +3978,23 @@ body {
 		.swiper-slide {
 			background: none !important;
 		}
+	}
+}
+//media query to show .desktop when screen width is 768px or more and hide .mobile
+@media (min-width: 1024px) {
+	.desktop {
+		display: block;
+	}
+	.mobile {
+		display: none;
+	}
+}
+//media query to show .mobile when screen width is 767px or less and hide .desktop
+@media (max-width: 1023px) {
+	.desktop {
+		display: none;
+	}
+	.mobile {
+		display: block;
 	}
 }
