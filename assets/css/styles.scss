@@ -3867,11 +3867,57 @@ body {
 }
 #rakimz {
 	.swiper-slide {
-		//repeat the nth-of-type for each slide
+		/* 	i {
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: 0 100%;
+		} */
 		h3 {
 			color: #482080;
 		}
+		.letexte {
+			h3 {
+				font-family: "new-order", sans-serif;
+				font-size: 40px;
+				font-weight: bold;
+				font-stretch: normal;
+				font-style: normal;
+				line-height: 1.25;
+				letter-spacing: normal;
+				text-align: left;
+				color: #482080;
+				margin-top: 1em;
+				padding-bottom: 1em;
+			}
+			p {
+				font-family: "new-order", sans-serif;
+				font-size: 20px;
+				font-weight: normal;
+				font-stretch: normal;
+				font-style: normal;
+				line-height: 1.35;
+				letter-spacing: normal;
+				text-align: left;
+				color: #000;
+				margin-bottom: 1em;
+			}
+		}
+		&:nth-of-type(1) {
+			//height: 812px !important;
+		}
+		&:nth-of-type(2) {
+			//height: 510px !important;
+		}
 		&:nth-of-type(4) {
+			.slidewrapper {
+				justify-content: center;
+				align-items: center;
+				margin: 0 auto;
+			}
+			.row {
+				max-width: 90vw;
+				margin: 0 auto;
+			}
 			background: url("/img/solutions/bigcity/background1.png") no-repeat center center fixed;
 			-webkit-background-size: cover;
 			-moz-background-size: cover;

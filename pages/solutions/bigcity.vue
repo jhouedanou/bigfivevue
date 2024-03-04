@@ -65,11 +65,11 @@ onMounted(async () => {
     slidesPerView: 1,
     spaceBetween: 0,
     mousewheel: true,
-    keyboard: true,
+    //keyboard: true,
     rewind: true,
     parallax: true,
     draggable: true,
-
+    autoHeight: true,
     lazy: true,
     observer: true,
     observeParents: true,
@@ -198,32 +198,44 @@ onMounted(async () => {
           </div>
         </div>
         <div class="swiper-slide">
-          <div id="sectionthreebigcity" class="container-fluid">
+          <div id="sectionthreebigcity" class="container">
             <div class="row">
-              <div class="col-md-5 letexte">
+              <div class="col-md-4 col-offset-1 letexte">
                 <img src="/img/solutions/bigcity/logopetit.svg" alt />
-                <h3>C’est un annuaire<br />géolocalisé</h3>
+                <h3>C’est un annuaire géolocalisé</h3>
                 <p>
-                  Vous avez désormais le moyen de valoriser l’expertise de
-                  vos<br />revendeurs, maillons essentiels pour transformer
-                  l’acte<br />d’engagement quel qu’il soit : achat, conversion
-                  ou<br />fidélisation
+                  Vous avez désormais le moyen de valoriser l’expertise de vos
+                  revendeurs, maillons essentiels pour transformer l’acte
+                  d’engagement quel qu’il soit : achat, conversion ou
+                  fidélisation
                 </p>
                 <p>
-                  Le CMS BIG CITY a été conçu comme un guide Événementiel<br />interactif
-                  permettant de donner de la visibilité aux points de<br />vente
-                  qui y sont inscrits, à leurs événements ainsi que ceux que<br />la
-                  marque exploitante sponsorise
+                  Le CMS BIG CITY a été conçu comme un guide Événementiel
+                  interactif permettant de donner de la visibilité aux points de
+                  vente qui y sont inscrits, à leurs événements ainsi que ceux
+                  que la marque exploitante sponsorise
                 </p>
                 <p>
                   Au fur et à mesure que votre réseau grandit, ajoutez
-                  facilement<br />à votre application vo nouveaux établissement
+                  facilement à votre application vos nouveaux établissement
                 </p>
               </div>
-              <div class="col-md-7 d-flex">
-                <img src="/img/solutions/bigcity/Groupe 572.svg" alt />
-                <img src="/img/solutions/bigcity/Groupe 573.svg" alt />
-                <img src="/img/solutions/bigcity/Groupe 574.svg" alt />
+              <div class="col-md-7 d-flex align-items-center">
+                <img
+                  class="img-fluid"
+                  src="/img/solutions/bigcity/Groupe 572.svg"
+                  alt
+                />
+                <img
+                  class="img-fluid"
+                  src="/img/solutions/bigcity/Groupe 573.svg"
+                  alt
+                />
+                <img
+                  class="img-fluid"
+                  src="/img/solutions/bigcity/Groupe 574.svg"
+                  alt
+                />
               </div>
             </div>
           </div>
@@ -239,16 +251,16 @@ onMounted(async () => {
                   </div>
                   <div class="col-md-8 letexte">
                     <img src="/img/solutions/bigcity/logopetit.svg" alt />
-                    <h3>C’est un outil<br />de fidélisation</h3>
+                    <h3>C’est un outil de fidélisation</h3>
                     <p>
-                      BIG CITY permet la mise en place de programmes de
-                      fidélité<br />pour les consommateurs et de motivation pour
-                      les points de<br />vente prescripteurs de la marque.
+                      BIG CITY permet la mise en place de programmes de fidélité
+                      pour les consommateurs et de motivation pour les points de
+                      vente prescripteurs de la marque.
                     </p>
                     <p>
                       Entièrement personnalisables, ce sont les outils idéaux
-                      pour<br />lancer un produit ou dynamiser des ventes et
-                      récompenser les<br />PDV en suivant en temps réel leurs
+                      pour lancer un produit ou dynamiser des ventes et
+                      récompenser les PDV en suivant en temps réel leurs
                       performances.
                     </p>
                   </div>
@@ -262,12 +274,11 @@ onMounted(async () => {
             <div class="row">
               <div class="col-md-4 letexte">
                 <img src="/img/solutions/bigcity/logopetit.svg" alt />
-                <h3>C’est un Générateur<br />de contenu…</h3>
+                <h3>C’est un Générateur de contenu…</h3>
                 <p>
-                  … pour la marque, ses produits et ses<br />événements, mais
-                  également pour les Points<br />de vente : bons plans,
-                  promotions, lancement<br />de produits, événements,
-                  actualités…
+                  … pour la marque, ses produits et ses événements, mais
+                  également pour les Points de vente : bons plans, promotions,
+                  lancement de produits, événements, actualités…
                 </p>
               </div>
               <div class="col-md-8">
@@ -299,14 +310,14 @@ onMounted(async () => {
               </div>
               <div class="col-md-4 letexte">
                 <img src="/img/solutions/bigcity/logopetit.svg" alt />
-                <h3>C’est un gestionnaire<br />d’activité pour les pros</h3>
+                <h3>C’est un gestionnaire d’activité pour les pros</h3>
                 <p>
-                  Les propriétaires des PDV peuvent créer et<br />piloter leur
-                  page PDV depuis leur compte PRO.<br />En un clic, ils ont
-                  accès à leur dashboard business (revenus, points obtenus dans
-                  le programme de motivation,<br />les raccourcis vers des
-                  cadeaux, la possibilité d’ajouter rapidement des événements ou
-                  d’envoyer<br />notifications…).
+                  Les propriétaires des PDV peuvent créer et piloter leur page
+                  PDV depuis leur compte PRO. En un clic, ils ont accès à leur
+                  dashboard business (revenus, points obtenus dans le programme
+                  de motivation, les raccourcis vers des cadeaux, la possibilité
+                  d’ajouter rapidement des événements ou d’envoyer
+                  notifications…).
                 </p>
               </div>
             </div>
@@ -315,13 +326,13 @@ onMounted(async () => {
         <div class="swiper-slide">
           <div id="sectionsevenbigcity" class="container-fluid">
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-6 letexte">
                 <img src="/img/solutions/bigcity/logopetit.svg" alt />
-                <h3>C’est une alternative<br />aux réseaux sociaux</h3>
+                <h3>C’est une alternative aux réseaux sociaux</h3>
                 <p>
-                  La marque crée son propre réseau social.<br /><br />La marque
-                  devient un média qui fédère<br />sa propre communauté pour
-                  produire<br />de la valeur et de l’engagement.
+                  La marque crée son propre réseau social. La marque devient un
+                  média qui fédère sa propre communauté pour produire de la
+                  valeur et de l’engagement.
                 </p>
               </div>
               <div class="col-md-6">
@@ -349,15 +360,14 @@ onMounted(async () => {
               </div>
               <div class="col-md-4 letexte">
                 <img src="/img/solutions/bigcity/logopetit.svg" alt />
-                <h3>C’est un créateur<br />d’activations</h3>
+                <h3>C’est un créateur d’activations</h3>
                 <p>
-                  BIG CITY permet la mise en place d’activations<br />digitales
-                  (jeux, concours, loteries, cartes à gratter…)<br />qui
-                  renforcent le lien entre la marque et le<br />consommateur.<br />Le
-                  module PRONOSTICS permet une animation<br />originale en ligne
-                  et dans les points de vente autour<br />de grands événements
-                  sportifs (ponctuels ou tout<br />au long de l’année)
-                  fédérateurs.
+                  BIG CITY permet la mise en place d’activations digitales
+                  (jeux, concours, loteries, cartes à gratter…) qui renforcent
+                  le lien entre la marque et le consommateur. Le module
+                  PRONOSTICS permet une animation originale en ligne et dans les
+                  points de vente autour de grands événements sportifs
+                  (ponctuels ou tout au long de l’année) fédérateurs.
                 </p>
               </div>
             </div>
@@ -368,25 +378,24 @@ onMounted(async () => {
             <div class="row">
               <div class="col-md-4 letexte">
                 <img src="/img/solutions/bigcity/logopetit.svg" alt />
-                <h3>C’est une boutique<br />intégrée</h3>
+                <h3>C’est une boutique intégrée</h3>
                 <p>
-                  L’application dispose d’un module e-commerce<br />intégré
+                  L’application dispose d’un module e-commerce intégré
                   permettant les paiements digitaux.
                 </p>
                 <p>
-                  Il permet aux établissements de vendre leurs<br />produits de
-                  façon digitale, prise de commande<br />par le personnel ou
-                  commande directe par les<br />clients, sur place, à emporter
-                  ou à se faire livrer.<br />Le système permet la vente par
-                  mobile money,<br />carte de crédit ou cash et est fourni avec
-                  un<br />dashboard analytics pour suivre ses ventes.
+                  Il permet aux établissements de vendre leurs produits de façon
+                  digitale, prise de commande par le personnel ou commande
+                  directe par les clients, sur place, à emporter ou à se faire
+                  livrer. Le système permet la vente par mobile money, carte de
+                  crédit ou cash et est fourni avec un dashboard analytics pour
+                  suivre ses ventes.
                 </p>
                 <p>
-                  Les établissements sélectionnent eux-mêmes<br />leurs livreurs
-                  et organisent les tarifs comme ils le<br />souhaitent en
-                  fonction de la distance, ce qui<br />leur donne une plus
-                  grande flexibilité que ce<br />qu’offrent les autres
-                  plateformes de livraison.
+                  Les établissements sélectionnent eux-mêmes leurs livreurs et
+                  organisent les tarifs comme ils le souhaitent en fonction de
+                  la distance, ce qui leur donne une plus grande flexibilité que
+                  ce qu’offrent les autres plateformes de livraison.
                 </p>
               </div>
               <div class="col-md-8">
@@ -450,12 +459,10 @@ onMounted(async () => {
               </div>
               <div class="col-md-4 letexte">
                 <img src="/img/solutions/bigcity/logopetit.svg" alt />
-                <h3>
-                  C’est un guide<br />et une billetterie<br />événementielle
-                </h3>
+                <h3>C’est un guide et une billetterie événementielle</h3>
                 <p>
-                  Les utilisateurs peuvent acheter des<br />billets de concert,
-                  festival ou tout type<br />d’événement depuis l’application !
+                  Les utilisateurs peuvent acheter des billets de concert,
+                  festival ou tout type d’événement depuis l’application !
                 </p>
               </div>
             </div>
@@ -466,13 +473,12 @@ onMounted(async () => {
             <div class="row">
               <div class="col-md-6 letexte">
                 <img src="/img/solutions/bigcity/logopetit.svg" alt />
-                <h3>C’est un aspirateur<br />de datas</h3>
+                <h3>C’est un aspirateur de datas</h3>
                 <p>
-                  Depuis le dashboard de l’application,<br />directement depuis
-                  votre smartphone<br />la marque prend le contrôle du
-                  contenu,<br />attribue les rôles de ses administrés<br />et
-                  suit les analytics de son écosystème pour<br />mieux anticiper
-                  les prochaines actions.
+                  Depuis le dashboard de l’application, directement depuis votre
+                  smartphone la marque prend le contrôle du contenu, attribue
+                  les rôles de ses administrés et suit les analytics de son
+                  écosystème pour mieux anticiper les prochaines actions.
                 </p>
               </div>
               <div class="col-md-6">
@@ -490,15 +496,15 @@ onMounted(async () => {
                 <h3>Formule 1</h3>
                 <p>
                   <strong
-                    >Logiciel seul + hébergement + maintenance<br />+
+                    >Logiciel seul + hébergement + maintenance +
                     formation</strong
                   >Vous n’avez plus qu’à vous occuper de votre contenu
                 </p>
                 <h3>Formule 2</h3>
                 <p>
                   <strong
-                    >Logiciel seul + hébergement + maintenance<br />+ formation
-                    + Accompagnement</strong
+                    >Logiciel seul + hébergement + maintenance + formation +
+                    Accompagnement</strong
                   >On s’occupe de tout, y compris de votre contenu/p>
                 </p>
               </div>
