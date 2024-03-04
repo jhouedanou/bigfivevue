@@ -351,103 +351,114 @@ onMounted(async () => {
           </div>
         </div>
         <div class="swiper-slide">
-            <div id='sectionninebigcity' class='container-fluid'>
-    <div class='row'>
-        <div class='col-md-4 letexte'><img src='/img/solutions/bigcity/logopetit.svg' alt>
-            <h3>C’est
-                une boutique<br>intégrée</h3>
-            <p>L’application dispose
-                d’un module e-commerce<br>intégré permettant les
-                paiements digitaux.</p>
-            <p>Il permet aux établissements
-                de vendre leurs<br>produits de façon digitale, prise de
-                commande<br>par le personnel ou commande directe par
-                les<br>clients, sur place, à emporter ou à se faire
-                livrer.<br>Le système permet la vente par mobile
-                money,<br>carte de crédit ou cash et est fourni avec
-                un<br>dashboard analytics pour suivre ses
-                ventes.</p>
-            <p>Les établissements sélectionnent
-                eux-mêmes<br>leurs livreurs et organisent les tarifs
-                comme ils le<br>souhaitent en fonction de la distance,
-                ce qui<br>leur donne une plus grande flexibilité que
-                ce<br>qu’offrent les autres plateformes de
-                livraison.</p>
-        </div>   </div>
-        <div class='col-md-8'>
-            <div id='galerieimg'><img src='/img/solutions/bigcity/Groupe 442.png' alt>
-                <img src='/img/solutions/bigcity/Groupe 443.png' alt>
-                <img src='/img/solutions/bigcity/Groupe 444.png' alt>
-                <img src='/img/solutions/bigcity/Groupe 445.png' alt>
-                <img src='/img/solutions/bigcity/Groupe 446.png' alt>
-                <img src='/img/solutions/bigcity/Groupe 447.png' alt>
-                <img src='/img/solutions/bigcity/Groupe 448.png' alt>
-                <img src='/img/solutions/bigcity/Groupe 449.png' alt>
+          <div id="sectionninebigcity" class="container-fluid">
+            <div class="row">
+              <div class="col-md-4 letexte">
+                <img src="/img/solutions/bigcity/logopetit.svg" alt />
+                <h3>C’est une boutique<br />intégrée</h3>
+                <p>
+                  L’application dispose d’un module e-commerce<br />intégré
+                  permettant les paiements digitaux.
+                </p>
+                <p>
+                  Il permet aux établissements de vendre leurs<br />produits de
+                  façon digitale, prise de commande<br />par le personnel ou
+                  commande directe par les<br />clients, sur place, à emporter
+                  ou à se faire livrer.<br />Le système permet la vente par
+                  mobile money,<br />carte de crédit ou cash et est fourni avec
+                  un<br />dashboard analytics pour suivre ses ventes.
+                </p>
+                <p>
+                  Les établissements sélectionnent eux-mêmes<br />leurs livreurs
+                  et organisent les tarifs comme ils le<br />souhaitent en
+                  fonction de la distance, ce qui<br />leur donne une plus
+                  grande flexibilité que ce<br />qu’offrent les autres
+                  plateformes de livraison.
+                </p>
+              </div>
             </div>
+            <div class="col-md-8">
+              <div id="galerieimg">
+                <img src="/img/solutions/bigcity/Groupe 442.png" alt />
+                <img src="/img/solutions/bigcity/Groupe 443.png" alt />
+                <img src="/img/solutions/bigcity/Groupe 444.png" alt />
+                <img src="/img/solutions/bigcity/Groupe 445.png" alt />
+                <img src="/img/solutions/bigcity/Groupe 446.png" alt />
+                <img src="/img/solutions/bigcity/Groupe 447.png" alt />
+                <img src="/img/solutions/bigcity/Groupe 448.png" alt />
+                <img src="/img/solutions/bigcity/Groupe 449.png" alt />
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-</div>
-        </div>
-        <div class="swiper-slide">
-            <div id='sectiontenbigcity' class='container-fluid'>
-    <div class='row'>
-        <div class='col-md-8'><img src='img/solutions/bigcity/Groupe 553.png'><img
-                src='img/solutions/bigcity/Groupe 554.png'><img src='img/solutions/bigcity/Groupe 555.png'>
-        </div>
-        <div class='col-md-4 letexte'><img src='/img/solutions/bigcity/logopetit.svg' alt>
-            <h3>C’est
-                un guide<br>et une
-                billetterie<br>événementielle</h3>
-            <p>Les utilisateurs
-                peuvent acheter des<br>billets de concert, festival ou
-                tout type<br>d’événement depuis l’application
-                !</p>
-        </div>
-    </div>
-</div>
-        </div>
-        <div class="swiper-slide">
-            <div id='sectionelevenbigcity' class='container-fluid'>
-    <div class='row'>
-        <div class='col-md-6 letexte'><img src='/img/solutions/bigcity/logopetit.svg' alt>
-            <h3>C’est
-                un aspirateur<br>de datas</h3>
-            <p>Depuis le dashboard de
-                l’application,<br>directement depuis votre
-                smartphone<br>la marque prend le contrôle du
-                contenu,<br>attribue les rôles de ses administrés<br>et
-                suit les analytics de son écosystème pour<br>mieux
-                anticiper les prochaines actions.</p>
-        </div>
-        <div class='col-md-6'><img src='/img/solutions/bigcity/Groupe 576.png' alt></div>
-    </div>
-</div>
-        </div>
-        <div class="swiper-slide">
-            <div id='sectiontwelvebigcity' class='container-fluid'>
-    <div class='row'>
-        <div class='col-md-6'></div>
-        <div class='col-md-6 letexte'><img src='/img/solutions/bigcity/logopetit.svg' alt>
-            <h3>Formule 1</h3>
-            <p><strong>Logiciel seul +
-                    hébergement + maintenance<br>+
-                    formation</strong>Vous n’avez plus qu’à vous occuper
-                de votre contenu</p>
-            <h3>Formule
-                2</h3>
-            <p><strong>Logiciel seul + hébergement +
-                    maintenance<br>+ formation +
-                    Accompagnement</strong>On s’occupe de tout, y
-                compris de votre
-                contenu/p></p>
-        </div>
-    </div>
-</div>
-        </div>
-        <div class="swiper-slide"></div>
       </div>
-      <div class="swiper-pagination"></div>
+      <div class="swiper-slide">
+        <div id="sectiontenbigcity" class="container-fluid">
+          <div class="row">
+            <div class="col-md-8">
+              <img src="img/solutions/bigcity/Groupe 553.png" /><img
+                src="img/solutions/bigcity/Groupe 554.png"
+              /><img src="img/solutions/bigcity/Groupe 555.png" />
+            </div>
+            <div class="col-md-4 letexte">
+              <img src="/img/solutions/bigcity/logopetit.svg" alt />
+              <h3>
+                C’est un guide<br />et une billetterie<br />événementielle
+              </h3>
+              <p>
+                Les utilisateurs peuvent acheter des<br />billets de concert,
+                festival ou tout type<br />d’événement depuis l’application !
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div id="sectionelevenbigcity" class="container-fluid">
+          <div class="row">
+            <div class="col-md-6 letexte">
+              <img src="/img/solutions/bigcity/logopetit.svg" alt />
+              <h3>C’est un aspirateur<br />de datas</h3>
+              <p>
+                Depuis le dashboard de l’application,<br />directement depuis
+                votre smartphone<br />la marque prend le contrôle du contenu,<br />attribue
+                les rôles de ses administrés<br />et suit les analytics de son
+                écosystème pour<br />mieux anticiper les prochaines actions.
+              </p>
+            </div>
+            <div class="col-md-6">
+              <img src="/img/solutions/bigcity/Groupe 576.png" alt />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div id="sectiontwelvebigcity" class="container-fluid">
+          <div class="row">
+            <div class="col-md-6"></div>
+            <div class="col-md-6 letexte">
+              <img src="/img/solutions/bigcity/logopetit.svg" alt />
+              <h3>Formule 1</h3>
+              <p>
+                <strong
+                  >Logiciel seul + hébergement + maintenance<br />+
+                  formation</strong
+                >Vous n’avez plus qu’à vous occuper de votre contenu
+              </p>
+              <h3>Formule 2</h3>
+              <p>
+                <strong
+                  >Logiciel seul + hébergement + maintenance<br />+ formation +
+                  Accompagnement</strong
+                >On s’occupe de tout, y compris de votre contenu/p>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide"></div>
     </div>
+    <div class="swiper-pagination"></div>
 
     <div id="nosautresolutons">
       <div class="container">
