@@ -545,9 +545,6 @@ onMounted(async () => {
 }
 
 .swiper-wrapper {
-  /* background: linear-gradient(to bottom, #80368c, #2c348b); */
-  /*   background: linear-gradient(to bottom, #82368c 0%, #27348b 100%);
- */ /*  overflow: hidden; */
   height: 100vh;
 }
 
