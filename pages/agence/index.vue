@@ -167,23 +167,6 @@ onMounted(async () => {
     if (windowWidth > 1024) {
       //initSwiper();
     }
-    // Initialisation du swiper
-    /*     swiperInstance = new Swiper(swiperContainer.value, {
-      direction: 'vertical',
-      slidesPerView: 1,
-      spaceBetween: 0,
-      mousewheel: true,
-      keyboard: true,
-      parallax: true,
-      autoplay: {
-        delay: 5000, // delay between transitions in ms
-        disableOnInteraction: true // enable/disable autoplay on user interaction
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      }
-    }); */
 
     swiperInstance = new Swiper(swiperContainer.value, {
       direction: "vertical", // Set the direction to vertical

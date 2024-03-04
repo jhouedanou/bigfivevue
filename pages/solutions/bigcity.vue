@@ -6,7 +6,8 @@ import ContenuAltLayout from "@/layouts/contenuAlt.vue";
 import PageLoader from "@/components/PageLoader.vue";
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
-const swiperContainer = ref(null);
+let swiperContainer = ref(null);
+let swiperContainer2 = ref(null);
 let swiperInstance;
 const solutions = ref([]);
 const menusolutions = ref([]);
@@ -58,7 +59,7 @@ const matchingSolution = computed(() => {
 });
 
 onMounted(async () => {
-  // Initialisation du swiper
+  // Initialisation du swiper sur la page
   swiperInstance = new Swiper(swiperContainer.value, {
     direction: "vertical",
     slidesPerView: 1,
@@ -66,6 +67,10 @@ onMounted(async () => {
     mousewheel: true,
     keyboard: true,
     rewind: true,
+    parallax: true,
+    draggable: true,
+
+    lazy: true,
     observer: true,
     observeParents: true,
     /*  autoplay: {
@@ -76,6 +81,23 @@ onMounted(async () => {
       el: ".swiper-pagination",
       clickable: true,
     },
+  });
+  //slider sur les images de la boutique
+  swiperInstance2 = new Swiper(swiperContainer2.value, {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    direction: "horizontal",
+    draggable: true,
+    loop: true,
+    // mousewheel: true,
+    keyboard: true,
+    rewind: true,
+    observer: true,
+    observeParents: true,
+    /*  autoplay: {
+      delay: 2000,
+      disableOnInteraction: true, // enable/disable autoplay on user interaction
+    }, */
   });
 });
 </script>
@@ -107,7 +129,7 @@ onMounted(async () => {
       <Menu :page="'/solutions'" />
     </div>
 
-    <div class="swiper" ref="swiperContainer">
+    <div id="rakimz" class="swiper" ref="swiperContainer">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <!-- solutionsBanner -->
@@ -248,14 +270,10 @@ onMounted(async () => {
                   actualités…
                 </p>
               </div>
-              <div class="col-md-8 d-flex">
-                <div class="row">
+              <div class="col-md-8">
+                <div class="row d-flex">
                   <img src="/img/solutions/bigcity/Groupe 549.png" alt />
-                  <img
-                    class="col-md-4"
-                    src="/img/solutions/bigcity/Groupe 571.png"
-                    alt
-                  />
+                  <img src="/img/solutions/bigcity/Groupe 571.png" alt />
                 </div>
               </div>
             </div>
@@ -308,12 +326,7 @@ onMounted(async () => {
               </div>
               <div class="col-md-6">
                 <div class="row">
-                  <img
-                    class="col-md-6"
-                    src="/img/solutions/bigcity/Groupe 548a.png"
-                    alt
-                  /><img
-                    class="col-md-6"
+                  <img src="/img/solutions/bigcity/Groupe 548a.png" alt /><img
                     src="/img/solutions/bigcity/Groupe 549a.png"
                     alt
                   />
@@ -376,111 +389,152 @@ onMounted(async () => {
                   plateformes de livraison.
                 </p>
               </div>
+              <div class="col-md-8">
+                <div id="galerieimg">
+                  <div id="imagshop" ref="swiperContainer2">
+                    <div id="swidel" class="swiper-wrapper">
+                      <img
+                        class="swiper-slide"
+                        src="/img/solutions/bigcity/Groupe 444.svg"
+                        alt
+                      />
+                      <img
+                        class="swiper-slide"
+                        src="/img/solutions/bigcity/Groupe 447.svg"
+                        alt
+                      />
+                      <img
+                        class="swiper-slide"
+                        src="/img/solutions/bigcity/Groupe 448.svg"
+                        alt
+                      />
+                      <img
+                        class="swiper-slide"
+                        src="/img/solutions/bigcity/Groupe 449.svg"
+                        alt
+                      />
+                      <img
+                        class="swiper-slide"
+                        src="/img/solutions/bigcity/Groupe 578.svg"
+                        alt
+                      />
+                      <img
+                        class="swiper-slide"
+                        src="/img/solutions/bigcity/Groupe 579.svg"
+                        alt
+                      />
+                      <img
+                        class="swiper-slide"
+                        src="/img/solutions/bigcity/Groupe 443.svg"
+                        alt
+                      />
+                      <img
+                        class="swiper-slide"
+                        src="/img/solutions/bigcity/Groupe 442.svg"
+                        alt
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="col-md-8">
-              <div id="galerieimg">
-                <img src="/img/solutions/bigcity/Groupe 442.png" alt />
-                <img src="/img/solutions/bigcity/Groupe 443.png" alt />
-                <img src="/img/solutions/bigcity/Groupe 444.png" alt />
-                <img src="/img/solutions/bigcity/Groupe 445.png" alt />
-                <img src="/img/solutions/bigcity/Groupe 446.png" alt />
-                <img src="/img/solutions/bigcity/Groupe 447.png" alt />
-                <img src="/img/solutions/bigcity/Groupe 448.png" alt />
-                <img src="/img/solutions/bigcity/Groupe 449.png" alt />
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div id="sectiontenbigcity" class="container-fluid">
+            <div class="row">
+              <div class="col-md-8">
+                <img src="/img/solutions/bigcity/Groupe 553.svg" />
+                <img src="/img/solutions/bigcity/Groupe 554.svg" />
+                <img src="/img/solutions/bigcity/Groupe 555.svg" />
+              </div>
+              <div class="col-md-4 letexte">
+                <img src="/img/solutions/bigcity/logopetit.svg" alt />
+                <h3>
+                  C’est un guide<br />et une billetterie<br />événementielle
+                </h3>
+                <p>
+                  Les utilisateurs peuvent acheter des<br />billets de concert,
+                  festival ou tout type<br />d’événement depuis l’application !
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div id="sectionelevenbigcity" class="container-fluid">
+            <div class="row">
+              <div class="col-md-6 letexte">
+                <img src="/img/solutions/bigcity/logopetit.svg" alt />
+                <h3>C’est un aspirateur<br />de datas</h3>
+                <p>
+                  Depuis le dashboard de l’application,<br />directement depuis
+                  votre smartphone<br />la marque prend le contrôle du
+                  contenu,<br />attribue les rôles de ses administrés<br />et
+                  suit les analytics de son écosystème pour<br />mieux anticiper
+                  les prochaines actions.
+                </p>
+              </div>
+              <div class="col-md-6">
+                <img src="/img/solutions/bigcity/Groupe 576.png" alt />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div id="sectiontwelvebigcity" class="container-fluid">
+            <div class="row">
+              <div class="col-md-6"></div>
+              <div class="col-md-6 letexte">
+                <img src="/img/solutions/bigcity/logopetit.svg" alt />
+                <h3>Formule 1</h3>
+                <p>
+                  <strong
+                    >Logiciel seul + hébergement + maintenance<br />+
+                    formation</strong
+                  >Vous n’avez plus qu’à vous occuper de votre contenu
+                </p>
+                <h3>Formule 2</h3>
+                <p>
+                  <strong
+                    >Logiciel seul + hébergement + maintenance<br />+ formation
+                    + Accompagnement</strong
+                  >On s’occupe de tout, y compris de votre contenu/p>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div id="nosautresolutons">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <h3>Découvrez nos autres solutions</h3>
+                </div>
+                <div class="dflex austin">
+                  <div
+                    class="chyna"
+                    v-for="item in menusolutions"
+                    :key="item.id"
+                  >
+                    <a
+                      v-if="item.lien !== matchingSolution.lien"
+                      :href="`/solutions/${item.lien}`"
+                    >
+                      <i
+                        :style="{ backgroundImage: 'url(/' + item.logo + ')' }"
+                        alt="logo"
+                      ></i>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="swiper-slide">
-        <div id="sectiontenbigcity" class="container-fluid">
-          <div class="row">
-            <div class="col-md-8">
-              <img src="img/solutions/bigcity/Groupe 553.png" /><img
-                src="img/solutions/bigcity/Groupe 554.png"
-              /><img src="img/solutions/bigcity/Groupe 555.png" />
-            </div>
-            <div class="col-md-4 letexte">
-              <img src="/img/solutions/bigcity/logopetit.svg" alt />
-              <h3>
-                C’est un guide<br />et une billetterie<br />événementielle
-              </h3>
-              <p>
-                Les utilisateurs peuvent acheter des<br />billets de concert,
-                festival ou tout type<br />d’événement depuis l’application !
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div id="sectionelevenbigcity" class="container-fluid">
-          <div class="row">
-            <div class="col-md-6 letexte">
-              <img src="/img/solutions/bigcity/logopetit.svg" alt />
-              <h3>C’est un aspirateur<br />de datas</h3>
-              <p>
-                Depuis le dashboard de l’application,<br />directement depuis
-                votre smartphone<br />la marque prend le contrôle du contenu,<br />attribue
-                les rôles de ses administrés<br />et suit les analytics de son
-                écosystème pour<br />mieux anticiper les prochaines actions.
-              </p>
-            </div>
-            <div class="col-md-6">
-              <img src="/img/solutions/bigcity/Groupe 576.png" alt />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div id="sectiontwelvebigcity" class="container-fluid">
-          <div class="row">
-            <div class="col-md-6"></div>
-            <div class="col-md-6 letexte">
-              <img src="/img/solutions/bigcity/logopetit.svg" alt />
-              <h3>Formule 1</h3>
-              <p>
-                <strong
-                  >Logiciel seul + hébergement + maintenance<br />+
-                  formation</strong
-                >Vous n’avez plus qu’à vous occuper de votre contenu
-              </p>
-              <h3>Formule 2</h3>
-              <p>
-                <strong
-                  >Logiciel seul + hébergement + maintenance<br />+ formation +
-                  Accompagnement</strong
-                >On s’occupe de tout, y compris de votre contenu/p>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="swiper-slide"></div>
-    </div>
-    <div class="swiper-pagination"></div>
-
-    <div id="nosautresolutons">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h3>Découvrez nos autres solutions</h3>
-          </div>
-          <div class="dflex austin">
-            <div class="chyna" v-for="item in menusolutions" :key="item.id">
-              <a
-                v-if="item.lien !== matchingSolution.lien"
-                :href="`/solutions/${item.lien}`"
-              >
-                <i
-                  :style="{ backgroundImage: 'url(/' + item.logo + ')' }"
-                  alt="logo"
-                ></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="swiper-pagination"></div>
     </div>
   </ContenuAltLayout>
 </template>

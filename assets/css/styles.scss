@@ -3858,11 +3858,77 @@ body {
 	}
 }
 #sectionthreebigcity {
-	background: url("/img/solutions/bigcity/background1.png") no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	.row {
+}
+#rakimz {
+	img {
+		max-height: 650px;
+		width: auto;
+	}
+}
+#rakimz {
+	.swiper-slide {
+		//repeat the nth-of-type for each slide
+		h3 {
+			color: #482080;
+		}
+		&:nth-of-type(4) {
+			background: url("/img/solutions/bigcity/background1.png") no-repeat center center fixed;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+		}
+		&:nth-of-type(5) {
+			background: url("/img/solutions/bigcity/background2.png") no-repeat center center fixed;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+		}
+		&:nth-of-type(6) {
+			background: url("/img/solutions/bigcity/background3.png") no-repeat center center fixed;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+		}
+		&:nth-of-type(8) {
+			background: url("/img/solutions/bigcity/background4.png") no-repeat center center fixed;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+		}
+		&:nth-of-type(11) {
+			background: url("/img/solutions/bigcity/background5.png") no-repeat center center fixed;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+		}
+		&:nth-of-type(9) {
+			background: url("/img/solutions/bigcity/background6.png") no-repeat center center fixed;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+		}
+	}
+}
+#sectiontwelvebigcity {
+	background: #edeff6;
+}
+#swidel {
+	.swiper-slide {
+		max-width: 402px;
+		max-height: 650px;
+	}
+}
+#sectionninebigcity {
+	.col-md-8 {
+		overflow: hidden;
+		.swiper-slide {
+			background: none !important;
+		}
 	}
 }
