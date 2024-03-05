@@ -605,7 +605,7 @@ onMounted(async () => {
                 </p>
               </div>
               <div class="col-md-6">
-                <img src="/img/solutions/bigcity/Groupe 576.png" alt />
+                <img src="/img/solutions/bigcity/Groupe576.png" alt />
               </div>
             </div>
           </div>
