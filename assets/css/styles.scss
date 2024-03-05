@@ -3289,7 +3289,7 @@ div#sectionfourbigactivations {
 	max-width: 1210px !important;
 	margin: 0 auto !important;
 	h3 {
-		font-family: "new order", sans-serif;
+		font-family: "new-order", sans-serif;
 		font-size: 20px;
 		font-weight: bold;
 		font-stretch: normal;
@@ -3300,7 +3300,7 @@ div#sectionfourbigactivations {
 		color: #000;
 	}
 	p {
-		font-family: "new order", sans-serif;
+		font-family: "new-order", sans-serif;
 		font-size: 20px;
 		font-weight: normal;
 		font-stretch: normal;
@@ -3415,7 +3415,7 @@ body {
 		margin-bottom: 80px;
 	}
 	.col-md-3 {
-		font-family: "new order", sans-serif;
+		font-family: "new-order", sans-serif;
 		font-size: 21px;
 		line-height: 1.19;
 		font-weight: normal;
@@ -3425,13 +3425,13 @@ body {
 		text-align: left;
 		color: #000;
 		h4 {
-			font-family: "new order", sans-serif;
+			font-family: "new-order", sans-serif;
 			font-weight: bold;
 			font-size: 21px;
 			line-height: 1.19;
 		}
 		p {
-			font-family: "new order", sans-serif;
+			font-family: "new-order", sans-serif;
 			font-size: 21px;
 			line-height: 1.19;
 			font-weight: normal;
@@ -3501,7 +3501,7 @@ body {
 }
 @mixin texteformation($margintop) {
 	margin-top: $margintop;
-	font-family: "new order", sans-serif;
+	font-family: "new-order", sans-serif;
 	font-size: 25px;
 	font-weight: normal;
 	font-stretch: normal;
@@ -3596,7 +3596,7 @@ body {
 	padding-top: 9em;
  */
 	h4 {
-		font-family: "new order", sans-serif;
+		font-family: "new-order", sans-serif;
 		font-size: 48px;
 		font-weight: bold;
 		color: #482080;
@@ -3604,7 +3604,7 @@ body {
 		line-height: 48px;
 	}
 	h6 {
-		font-family: "new order", sans-serif;
+		font-family: "new-order", sans-serif;
 		font-size: 50px;
 		font-weight: normal;
 		font-stretch: normal;
@@ -3739,7 +3739,7 @@ body {
 	h3 {
 		color: white !important;
 		text-transform: uppercase;
-		font-family: "new order", sans-serif;
+		font-family: "new-order", sans-serif;
 		color: $violetsolutios;
 		font-weight: 900;
 		font-size: 40px;
@@ -3758,7 +3758,7 @@ body {
 	p {
 		&:nth-of-type(1) {
 			margin-top: 0px;
-			font-family: "new order", sans-serif;
+			font-family: "new-order", sans-serif;
 			font-size: 29px;
 			font-weight: normal;
 			font-stretch: normal;
@@ -3774,7 +3774,7 @@ body {
 		margin-left: -13px;
 		li {
 			margin-top: 17px;
-			font-family: "new order", sans-serif;
+			font-family: "new-order", sans-serif;
 			font-size: 24px;
 			font-weight: normal;
 			font-stretch: normal;
@@ -3857,7 +3857,7 @@ body {
 		line-height: 1.5;
 		letter-spacing: normal;
 		text-align: center;
-		font-family: "new order", sans-serif;
+		font-family: "new-order", sans-serif;
 	}
 }
 #sectiontwobigcity {
@@ -3877,7 +3877,7 @@ body {
 				padding-left: 128px;
 				li {
 					list-style-type: none;
-					font-family: "new order", sans-serif;
+					font-family: "new-order", sans-serif;
 					font-size: 30px;
 					font-weight: 600;
 					font-stretch: normal;
@@ -4236,6 +4236,23 @@ div#imagshop {
 		.swiper-slide {
 			background: none !important;
 		}
+	}
+}
+#sectionelevenbigcity {
+	.col-md-5 {
+		.letexte {
+			text-align: left;
+			h3 {
+				max-width: 400px;
+				padding: 0;
+			}
+			p {
+				max-width: 400px;
+			}
+		}
+	}
+	.paddingzone {
+		padding-left: 7em;
 	}
 }
 //media query to show .desktop when screen width is 768px or more and hide .mobile

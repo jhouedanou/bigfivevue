@@ -78,7 +78,7 @@ onMounted(async () => {
     observeParents: true,
     parallax: true,
     autoplay: {
-      delay: 5000, // delay between transitions in ms
+      delay: 10000, // delay between transitions in ms
       disableOnInteraction: true, // enable/disable autoplay on user interaction
     },
     pagination: {
@@ -621,15 +621,18 @@ onMounted(async () => {
         <div class="swiper-slide">
           <div id="sectionelevenbigcity" class="container-fluid">
             <div class="row no-gutters">
-              <div class="col-md-6 letexte">
-                <img src="/img/solutions/bigcity/logopetit.svg" alt />
-                <h3>C’est un aspirateur de datas</h3>
-                <p>
-                  Depuis le dashboard de l’application, directement depuis votre
-                  smartphone la marque prend le contrôle du contenu, attribue
-                  les rôles de ses administrés et suit les analytics de son
-                  écosystème pour mieux anticiper les prochaines actions.
-                </p>
+              <div class="col-md-5 offset-md-1 letexte">
+                <div class="paddingzone">
+                  <img src="/img/solutions/bigcity/logopetit.svg" alt />
+                  <h3>C’est un aspirateur de datas</h3>
+                  <p>
+                    Depuis le dashboard de l’application, directement depuis
+                    votre smartphone la marque prend le contrôle du contenu,
+                    attribue les rôles de ses administrés et suit les analytics
+                    de son écosystème pour mieux anticiper les prochaines
+                    actions.
+                  </p>
+                </div>
               </div>
               <div class="col-md-6">
                 <img src="/img/solutions/bigcity/Groupe576.png" alt />
