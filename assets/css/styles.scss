@@ -4151,9 +4151,20 @@ div#imagshop {
 }
 #sectionninebigcity {
 	background: #edeff6;
-
+	.col-md-4 {
+		.paddingzone {
+			padding-left: 7em;
+		}
+	}
 	.letexte {
-		background: #edeff6;
+		text-align: left;
+		h3 {
+			max-width: 420px;
+			padding: 0;
+		}
+		p {
+			max-width: 420px;
+		}
 	}
 	.col-md-7 {
 		overflow: hidden;
