@@ -261,33 +261,34 @@ onMounted(async () => {
         <div class="swiper-slide">
           <div id="sectionfourbigcity" class="container-fluid">
             <div class="row no-gutters">
-              <div class="col-md-4"></div>
-              <div class="col-md-8">
-                <div class="row no-gutters">
-                  <div class="col-md-4 fusbal">
+              <div class="row no-gutters">
+                <div
+                  class="col-md-7 fusbal d-flex align-items-end justify-content-center flex-column"
+                >
+                  <div class="paddingzone">
                     <img
                       src="/img/solutions/bigcity/Groupe de masques 18.png"
                       alt
                     />
+
                     <p class="legende">
                       Homepage utilisateur<br />Programme de fidélité
                     </p>
                   </div>
-                  <div class="col-md-8 letexte">
-                    <img src="/img/solutions/bigcity/logopetit.svg" alt />
-                    <h3>C’est un outil de fidélisation</h3>
-                    <p>
-                      BIG CITY permet la mise en place de programmes de fidélité
-                      pour les consommateurs et de motivation pour les points de
-                      vente prescripteurs de la marque.
-                    </p>
-                    <p>
-                      Entièrement personnalisables, ce sont les outils idéaux
-                      pour lancer un produit ou dynamiser des ventes et
-                      récompenser les PDV en suivant en temps réel leurs
-                      performances.
-                    </p>
-                  </div>
+                </div>
+                <div class="col-md-5 letexte">
+                  <img src="/img/solutions/bigcity/logopetit.svg" alt />
+                  <h3>C’est un outil de fidélisation</h3>
+                  <p>
+                    BIG CITY permet la mise en place de programmes de fidélité
+                    pour les consommateurs et de motivation pour les points de
+                    vente prescripteurs de la marque.
+                  </p>
+                  <p>
+                    Entièrement personnalisables, ce sont les outils idéaux pour
+                    lancer un produit ou dynamiser des ventes et récompenser les
+                    PDV en suivant en temps réel leurs performances.
+                  </p>
                 </div>
               </div>
             </div>
@@ -296,19 +297,35 @@ onMounted(async () => {
         <div class="swiper-slide">
           <div id="sectionfivebigcity" class="container-fluid">
             <div class="row no-gutters">
-              <div class="col-md-4 letexte">
-                <img src="/img/solutions/bigcity/logopetit.svg" alt />
-                <h3>C’est un Générateur de contenu…</h3>
-                <p>
-                  … pour la marque, ses produits et ses événements, mais
-                  également pour les Points de vente : bons plans, promotions,
-                  lancement de produits, événements, actualités…
-                </p>
+              <div class="col-md-4 offset-md-1 letexte">
+                <div class="paddingzone">
+                  <img src="/img/solutions/bigcity/logopetit.svg" alt />
+                  <h3>C’est un Générateur de contenu…</h3>
+                  <p>
+                    … pour la marque, ses produits et ses événements, mais
+                    également pour les Points de vente : bons plans, promotions,
+                    lancement de produits, événements, actualités…
+                  </p>
+                </div>
               </div>
-              <div class="col-md-8">
+              <div class="col-md-7 d-flex">
                 <div class="row d-flex fusbal">
-                  <img src="/img/solutions/bigcity/Groupe 549.png" alt />
-                  <img src="/img/solutions/bigcity/Groupe 571.png" alt />
+                  <div class="col-md-6">
+                    <img
+                      src="/img/solutions/bigcity//Groupe de masques 19.png"
+                      alt
+                    />
+                    <p class="legende">
+                      Homepage utilisateur<br />Catégorie Bons plans
+                    </p>
+                  </div>
+                  <div class="col-md-6">
+                    <img
+                      src="/img/solutions/bigcity/Groupe de masques 20.png"
+                      alt
+                    />
+                    <p class="legende">Catégorie Actualités</p>
+                  </div>
                 </div>
               </div>
             </div>

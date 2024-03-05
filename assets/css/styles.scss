@@ -33,6 +33,7 @@ body {
 	letter-spacing: normal;
 	text-align: center;
 	color: #000 !important;
+	height: 35px;
 }
 .chyna {
 	max-width: 213px;
@@ -3818,6 +3819,15 @@ body {
 			}
 		}
 	}
+	.swiper-pagination-bullet-active {
+		color: $violetsolutios !important;
+		background: $violetsolutios !important;
+	}
+	.swiper-slide {
+		.row {
+			height: 100vh;
+		}
+	}
 }
 #sectionunbigcity {
 	display: flex;
@@ -3879,22 +3889,44 @@ body {
 		}
 	}
 }
-#sectionthreebigcity {
+#sectionfourbigcity {
+	height: 100vh;
+	.row {
+		height: 100vh;
+	}
+	.col-md-7 {
+		.paddingzone {
+			position: relative;
+			text-align: center;
+		}
+		img {
+			margin-top: 12em;
+			height: 667px;
+		}
+	}
+	.letexte {
+		margin-top: 109px;
+		position: relative;
+		img {
+			top: 0;
+			margin-bottom: 20px;
+		}
+		h3 {
+			max-width: 290px;
+		}
+		p {
+			max-width: 400px;
+		}
+	}
 }
 .fusbal {
 	img {
 		width: auto;
 		height: auto;
-		max-height: 650px;
 	}
 }
 #rakimz {
 	.swiper-slide {
-		/* 	i {
-			background-size: contain;
-			background-repeat: no-repeat;
-			background-position: 0 100%;
-		} */
 		h3 {
 			color: #482080;
 		}
@@ -3909,7 +3941,7 @@ body {
 				letter-spacing: normal;
 				text-align: left;
 				color: #482080;
-				margin-top: 1em;
+				padding: 1em 0 1.25em;
 			}
 			p {
 				font-family: "new-order", sans-serif;
@@ -3955,6 +3987,18 @@ body {
 			-moz-background-size: cover;
 			-o-background-size: cover;
 			background-size: cover;
+			.paddingzone {
+				padding: 0em;
+			}
+			.letexte {
+				padding-left: 7em;
+				display: flex;
+				align-content: flex-start;
+				align-items: flex-start;
+				flex-wrap: wrap;
+				flex-direction: column;
+				justify-content: center;
+			}
 		}
 		&:nth-of-type(6) {
 			background: url("/img/solutions/bigcity/background3.png") no-repeat center center fixed;
@@ -3983,6 +4027,39 @@ body {
 			-moz-background-size: cover;
 			-o-background-size: cover;
 			background-size: cover;
+		}
+	}
+}
+#sectionfivebigcity {
+	.letexte {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		flex-direction: column;
+		.paddingzone {
+			padding: 0 0em 0 9em;
+		}
+		img {
+			top: 0;
+			margin-bottom: 20px;
+		}
+		h3 {
+			max-width: 380px;
+			padding: 0;
+		}
+		p {
+			max-width: 400px;
+		}
+	}
+
+	.fusbal {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		img {
+			max-height: 663px;
+			width: auto;
 		}
 	}
 }
