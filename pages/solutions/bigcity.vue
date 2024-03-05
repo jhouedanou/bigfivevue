@@ -170,9 +170,7 @@ onMounted(async () => {
             <div id="sectionunbigcity" class="container">
               <div class="row no-gutters">
                 <div id="intro" class="col-md-12 obam">
-                  <h3>
-                    <span>Avec BIG City, vous pouvez rapidement créer…</span>
-                  </h3>
+                  <h4>Avec BIG City, vous pouvez rapidement créer…</h4>
                 </div>
               </div>
             </div>
@@ -236,7 +234,7 @@ onMounted(async () => {
                   <div class="imgwrapper col-md-4 col-sm-12 p-0 conundrum">
                     <img
                       class="img-fluid"
-                      src="/img/solutions/bigcity/Groupe de masques 17.png"
+                      src="/img/solutions/bigcity/17.png"
                       alt
                     />
                     <p class="legende">Géolocalisation des établissements</p>
@@ -245,7 +243,7 @@ onMounted(async () => {
                   <div class="imgwrapper col-md-4 col-sm-12 p-0 conundrum">
                     <img
                       class="img-fluid"
-                      src="/img/solutions/bigcity/Groupe de masques 15.png"
+                      src="/img/solutions/bigcity/15.png"
                       alt
                     />
                     <p class="legende">Page établissement</p>
@@ -253,7 +251,7 @@ onMounted(async () => {
                   <div class="imgwrapper col-md-4 col-sm-12 p-0 conundrum">
                     <img
                       class="img-fluid"
-                      src="/img/solutions/bigcity/Groupe de masques 16.png"
+                      src="/img/solutions/bigcity/16.png"
                       alt
                     />
                     <p class="legende">Vue des établissements par liste</p>
@@ -273,7 +271,7 @@ onMounted(async () => {
                   <div class="paddingzone imgwrapper">
                     <img
                       class="img-fluid"
-                      src="/img/solutions/bigcity/Groupe de masques 18.png"
+                      src="/img/solutions/bigcity/18.png"
                       alt
                     />
 
@@ -319,7 +317,7 @@ onMounted(async () => {
                   <div class="col-md-6 imgwrapper">
                     <img
                       class="img-fluid"
-                      src="/img/solutions/bigcity//Groupe de masques 19.png"
+                      src="/img/solutions/bigcity//19.png"
                       alt
                     />
                     <p class="legende">
@@ -329,7 +327,7 @@ onMounted(async () => {
                   <div class="col-md-6 imgwrapper">
                     <img
                       class="img-fluid"
-                      src="/img/solutions/bigcity/Groupe de masques 20.png"
+                      src="/img/solutions/bigcity/20.png"
                       alt
                     />
                     <p class="legende">Catégorie Actualités</p>
@@ -347,7 +345,7 @@ onMounted(async () => {
                   <div class="col-md-4 imgwrapper">
                     <img
                       class="img-fluid"
-                      src="/img/solutions/bigcity/Groupe de masques 21.png"
+                      src="/img/solutions/bigcity/21.png"
                       alt
                     />
                     <p class="legende">
@@ -357,7 +355,7 @@ onMounted(async () => {
                   <div class="col-md-4 imgwrapper">
                     <img
                       class="img-fluid"
-                      src="/img/solutions/bigcity/Groupe de masques 22.png"
+                      src="/img/solutions/bigcity/22.png"
                       alt
                     />
                     <p class="legende">Homepage Pros<br />Rapports</p>
@@ -365,7 +363,7 @@ onMounted(async () => {
                   <div class="col-md-4 imgwrapper">
                     <img
                       class="img-fluid"
-                      src="/img/solutions/bigcity/Groupe de masques 23.png"
+                      src="/img/solutions/bigcity/23.png"
                       alt
                     />
                     <p class="legende">ajout d'un nouvel<br />établissement</p>
@@ -406,7 +404,7 @@ onMounted(async () => {
                   <div class="col-md-6 imgwrapper">
                     <img
                       class="img-fluid"
-                      src="/img/solutions/bigcity/Groupe de masques 24.png"
+                      src="/img/solutions/bigcity/24.png"
                       alt
                     />
                     <p class="legende">
@@ -416,7 +414,7 @@ onMounted(async () => {
                   <div class="col-md-6 imgwrapper">
                     <img
                       class="img-fluid"
-                      src="/img/solutions/bigcity/Groupe de masques 24a.png"
+                      src="/img/solutions/bigcity/24a.png"
                       alt
                     />
                     <p class="legende">Notifications de bons plans</p>
@@ -434,7 +432,7 @@ onMounted(async () => {
                   <div class="col-md-4 imgwrapper">
                     <img
                       class="img-fluid"
-                      src="/img/solutions/bigcity/Groupe de masques 26.png"
+                      src="/img/solutions/bigcity/26.png"
                       alt
                     />
                     <p class="legende">
@@ -444,7 +442,7 @@ onMounted(async () => {
                   <div class="col-md-4 imgwrapper">
                     <img
                       class="img-fluid"
-                      src="/img/solutions/bigcity/Groupe de masques 27.png"
+                      src="/img/solutions/bigcity/27.png"
                       alt
                     />
                     <p class="legende">Module Pronostiques</p>
@@ -452,7 +450,7 @@ onMounted(async () => {
                   <div class="col-md-4 imgwrapper">
                     <img
                       class="img-fluid"
-                      src="/img/solutions/bigcity/Groupe de masques 26a.png"
+                      src="/img/solutions/bigcity/26a.png"
                       alt
                     />
                     <p class="legende">Module Pronostiques<br />Classement</p>
