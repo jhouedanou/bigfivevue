@@ -426,7 +426,7 @@ onMounted(async () => {
         <div class="swiper-slide">
           <div id="sectioneightbigcity" class="container-fluid">
             <div class="row no-gutters">
-              <div class="col-md-8 conundru">
+              <div class="col-md-8 conundrum">
                 <div class="row fusbal">
                   <div class="col-md-4 imgwrapper">
                     <img
@@ -575,18 +575,43 @@ onMounted(async () => {
         <div class="swiper-slide">
           <div id="sectiontenbigcity" class="container-fluid">
             <div class="row no-gutters">
-              <div class="col-md-8">
-                <img src="/img/solutions/bigcity/30.png" />
-                <img src="/img/solutions/bigcity/31.png" />
-                <img src="/img/solutions/bigcity/32.png" />
+              <div class="col-md-8 conundrum">
+                <div class="row fusbal">
+                  <div class="col-md-4 imgwrapper">
+                    <img
+                      class="img-fluid"
+                      src="/img/solutions/bigcity/32.png"
+                      alt
+                    />
+                    <p class="legende">Page événement</p>
+                  </div>
+                  <div class="col-md-4 imgwrapper">
+                    <img
+                      class="img-fluid"
+                      src="/img/solutions/bigcity/31.png"
+                      alt
+                    />
+                    <p class="legende">Billetterie événementielle</p>
+                  </div>
+                  <div class="col-md-4 imgwrapper">
+                    <img
+                      class="img-fluid"
+                      src="/img/solutions/bigcity/30.png"
+                      alt
+                    />
+                    <p class="legende">Billet événement</p>
+                  </div>
+                </div>
               </div>
               <div class="col-md-4 letexte">
-                <img src="/img/solutions/bigcity/logopetit.svg" alt />
-                <h3>C’est un guide et une billetterie événementielle</h3>
-                <p>
-                  Les utilisateurs peuvent acheter des billets de concert,
-                  festival ou tout type d’événement depuis l’application !
-                </p>
+                <div class="paddingzone">
+                  <img src="/img/solutions/bigcity/logopetit.svg" alt />
+                  <h3>C’est un guide et une billetterie événementielle</h3>
+                  <p>
+                    Les utilisateurs peuvent acheter des billets de concert,
+                    festival ou tout type d’événement depuis l’application !
+                  </p>
+                </div>
               </div>
             </div>
           </div>
