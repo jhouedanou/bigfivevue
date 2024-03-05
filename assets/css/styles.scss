@@ -13,6 +13,27 @@ body {
 	-moz-osx-font-smoothing: grayscale !important;
 	text-rendering: optimizeLegibility !important;
 }
+.no-gutters {
+	margin-right: 0;
+	margin-left: 0;
+
+	> .col,
+	> [class*="col-"] {
+		padding-right: 0;
+		padding-left: 0;
+	}
+}
+.legende {
+	font-family: "new-order", sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.5;
+	letter-spacing: normal;
+	text-align: center;
+	color: #000 !important;
+}
 .chyna {
 	max-width: 213px;
 	max-height: 213px;
@@ -3889,7 +3910,6 @@ body {
 				text-align: left;
 				color: #482080;
 				margin-top: 1em;
-				padding-bottom: 1em;
 			}
 			p {
 				font-family: "new-order", sans-serif;
@@ -3901,7 +3921,7 @@ body {
 				letter-spacing: normal;
 				text-align: left;
 				color: #000;
-				margin-bottom: 1em;
+				margin-bottom: 1.35em;
 			}
 		}
 		&:nth-of-type(1) {
@@ -3925,6 +3945,9 @@ body {
 			-moz-background-size: cover;
 			-o-background-size: cover;
 			background-size: cover;
+			.paddingzone {
+				padding: 1em 6em 1em 3em;
+			}
 		}
 		&:nth-of-type(5) {
 			background: url("/img/solutions/bigcity/background2.png") no-repeat center center fixed;

@@ -167,7 +167,7 @@ onMounted(async () => {
             class="divwrapper dflex justify-content-center align-items-center"
           >
             <div id="sectionunbigcity" class="container">
-              <div class="row">
+              <div class="row no-gutters">
                 <div id="intro" class="col-md-12 obam">
                   <h3>
                     <span>Avec BIG City, vous pouvez rapidement créer…</span>
@@ -176,7 +176,7 @@ onMounted(async () => {
               </div>
             </div>
             <div id="sectiontwobigcity" class="container">
-              <div class="row">
+              <div class="row no-gutters">
                 <div class="col-md-6">
                   <img src="/img/solutions/bigcity/igcityanim_2.png" alt />
                 </div>
@@ -199,51 +199,60 @@ onMounted(async () => {
         </div>
         <div class="swiper-slide">
           <div id="sectionthreebigcity" class="container-fluid">
-            <div class="row">
-              <div class="col-md-4 col-offset-1 letexte">
-                <img src="/img/solutions/bigcity/logopetit.svg" alt />
-                <h3>C’est un annuaire géolocalisé</h3>
-                <p>
-                  Vous avez désormais le moyen de valoriser l’expertise de vos
-                  revendeurs, maillons essentiels pour transformer l’acte
-                  d’engagement quel qu’il soit : achat, conversion ou
-                  fidélisation
-                </p>
-                <p>
-                  Le CMS BIG CITY a été conçu comme un guide Événementiel
-                  interactif permettant de donner de la visibilité aux points de
-                  vente qui y sont inscrits, à leurs événements ainsi que ceux
-                  que la marque exploitante sponsorise
-                </p>
-                <p>
-                  Au fur et à mesure que votre réseau grandit, ajoutez
-                  facilement à votre application vos nouveaux établissement
-                </p>
-              </div>
-              <div class="col-md-7 d-flex align-items-center fusbal">
-                <div class="mobile">
-                  <img
-                    class="img-fluid"
-                    src="/img/solutions/bigcity/Groupe 572.svg"
-                    alt
-                  />
-                  <img
-                    class="img-fluid"
-                    src="/img/solutions/bigcity/Groupe 573.svg"
-                    alt
-                  />
-                  <img
-                    class="img-fluid"
-                    src="/img/solutions/bigcity/Groupe 574.svg"
-                    alt
-                  />
+            <div class="row no-gutters">
+              <div class="col-md-4 offset-md-1 letexte">
+                <div class="paddingzone">
+                  <img src="/img/solutions/bigcity/logopetit.svg" alt />
+                  <h3>C’est un annuaire géolocalisé</h3>
+                  <p>
+                    Vous avez désormais le moyen de valoriser l’expertise de vos
+                    revendeurs, maillons essentiels pour transformer l’acte
+                    d’engagement quel qu’il soit : achat, conversion ou
+                    fidélisation
+                  </p>
+                  <p>
+                    Le CMS BIG CITY a été conçu comme un guide Événementiel
+                    interactif permettant de donner de la visibilité aux points
+                    de vente qui y sont inscrits, à leurs événements ainsi que
+                    ceux que la marque exploitante sponsorise
+                  </p>
+                  <p>
+                    Au fur et à mesure que votre réseau grandit, ajoutez
+                    facilement à votre application vos nouveaux établissement
+                  </p>
                 </div>
-                <div class="desktop">
-                  <img
-                    src="/img/solutions/bigcity/section3.svg"
-                    class="img-fluid"
-                    alt=""
-                  />
+              </div>
+              <div
+                class="col-md-7 d-flex align-items-center justify-content-center"
+              >
+                <div
+                  class="row d-flex align-items-center justify-content-center"
+                >
+                  <div class="col-md-4 col-sm-12 m-0 p-0">
+                    <img
+                      class="img-fluid"
+                      src="/img/solutions/bigcity/Groupe de masques 17.png"
+                      alt
+                    />
+                    <p class="legende">Géolocalisation des établissements</p>
+                  </div>
+
+                  <div class="col-md-4 col-sm-12 m-0 p-0">
+                    <img
+                      class="img-fluid"
+                      src="/img/solutions/bigcity/Groupe de masques 15.png"
+                      alt
+                    />
+                    <p class="legende">Page établissement</p>
+                  </div>
+                  <div class="col-md-4 col-sm-12 m-0 p-0">
+                    <img
+                      class="img-fluid"
+                      src="/img/solutions/bigcity/Groupe de masques 16.png"
+                      alt
+                    />
+                    <p class="legende">Vue des établissements par liste</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -251,12 +260,18 @@ onMounted(async () => {
         </div>
         <div class="swiper-slide">
           <div id="sectionfourbigcity" class="container-fluid">
-            <div class="row">
+            <div class="row no-gutters">
               <div class="col-md-4"></div>
               <div class="col-md-8">
-                <div class="row">
+                <div class="row no-gutters">
                   <div class="col-md-4 fusbal">
-                    <img src="/img/solutions/bigcity/Groupe 537.png" alt />
+                    <img
+                      src="/img/solutions/bigcity/Groupe de masques 18.png"
+                      alt
+                    />
+                    <p class="legende">
+                      Homepage utilisateur<br />Programme de fidélité
+                    </p>
                   </div>
                   <div class="col-md-8 letexte">
                     <img src="/img/solutions/bigcity/logopetit.svg" alt />
@@ -280,7 +295,7 @@ onMounted(async () => {
         </div>
         <div class="swiper-slide">
           <div id="sectionfivebigcity" class="container-fluid">
-            <div class="row">
+            <div class="row no-gutters">
               <div class="col-md-4 letexte">
                 <img src="/img/solutions/bigcity/logopetit.svg" alt />
                 <h3>C’est un Générateur de contenu…</h3>
@@ -301,7 +316,7 @@ onMounted(async () => {
         </div>
         <div class="swiper-slide">
           <div id="sectionsixbigcity" class="container-fluid">
-            <div class="row">
+            <div class="row no-gutters">
               <div class="col-md-8">
                 <div class="row fusbal">
                   <img src="/img/solutions/bigcity/Groupe 545.png" alt />
@@ -334,7 +349,7 @@ onMounted(async () => {
         </div>
         <div class="swiper-slide">
           <div id="sectionsevenbigcity" class="container-fluid">
-            <div class="row">
+            <div class="row no-gutters">
               <div class="col-md-6 letexte">
                 <img src="/img/solutions/bigcity/logopetit.svg" alt />
                 <h3>C’est une alternative aux réseaux sociaux</h3>
@@ -357,7 +372,7 @@ onMounted(async () => {
         </div>
         <div class="swiper-slide">
           <div id="sectioneightbigcity" class="container-fluid">
-            <div class="row">
+            <div class="row no-gutters">
               <div class="col-md-8">
                 <div class="row fusbal">
                   <img src="/img/solutions/bigcity/Groupe 550.png" alt /><img
@@ -384,7 +399,7 @@ onMounted(async () => {
         </div>
         <div class="swiper-slide">
           <div id="sectionninebigcity" class="container-fluid">
-            <div class="row">
+            <div class="row no-gutters">
               <div class="col-md-4 letexte">
                 <img src="/img/solutions/bigcity/logopetit.svg" alt />
                 <h3>C’est une boutique intégrée</h3>
@@ -460,7 +475,7 @@ onMounted(async () => {
         </div>
         <div class="swiper-slide">
           <div id="sectiontenbigcity" class="container-fluid">
-            <div class="row">
+            <div class="row no-gutters">
               <div class="col-md-8">
                 <img src="/img/solutions/bigcity/Groupe 553.svg" />
                 <img src="/img/solutions/bigcity/Groupe 554.svg" />
@@ -479,7 +494,7 @@ onMounted(async () => {
         </div>
         <div class="swiper-slide">
           <div id="sectionelevenbigcity" class="container-fluid">
-            <div class="row">
+            <div class="row no-gutters">
               <div class="col-md-6 letexte">
                 <img src="/img/solutions/bigcity/logopetit.svg" alt />
                 <h3>C’est un aspirateur de datas</h3>
@@ -498,7 +513,7 @@ onMounted(async () => {
         </div>
         <div class="swiper-slide">
           <div id="sectiontwelvebigcity" class="container-fluid">
-            <div class="row">
+            <div class="row no-gutters">
               <div class="col-md-6"></div>
               <div class="col-md-6 letexte">
                 <img src="/img/solutions/bigcity/logopetit.svg" alt />
@@ -523,7 +538,7 @@ onMounted(async () => {
         <div class="swiper-slide">
           <div id="nosautresolutons">
             <div class="container">
-              <div class="row">
+              <div class="row no-gutters">
                 <div class="col-md-12">
                   <h3>Découvrez nos autres solutions</h3>
                 </div>
