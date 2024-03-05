@@ -168,14 +168,12 @@ onMounted(async () => {
             class="divwrapper dflex justify-content-center align-items-center"
           >
             <div id="sectionunbigcity" class="container">
-              <div class="row no-gutters">
-                <div id="intro" class="col-md-12 obam">
-                  <h4>Avec BIG City, vous pouvez rapidement créer…</h4>
-                </div>
+              <div id="intro" class="obam">
+                <h4>Avec BIG City, vous pouvez rapidement créer…</h4>
               </div>
             </div>
             <div id="sectiontwobigcity" class="container">
-              <div class="row no-gutters">
+              <div class="row no-gutters noh">
                 <div class="col-md-6">
                   <img
                     class="img-fluid"
