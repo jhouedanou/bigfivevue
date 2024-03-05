@@ -1,3 +1,4 @@
+div
 <script setup>
 import { ref, onMounted, computed, reactive } from "vue";
 import axios from "axios";
@@ -83,9 +84,9 @@ onMounted(async () => {
       clickable: true,
     },
   });
-  //slider sur les images de la boutique
+  //slider sur les images de la boutique en ligne
   swiperInstance2 = new Swiper(swiperContainer2.value, {
-    slidesPerView: 1,
+    slidesPerView: 3,
     spaceBetween: 0,
     direction: "horizontal",
     draggable: true,
@@ -95,10 +96,10 @@ onMounted(async () => {
     rewind: true,
     observer: true,
     observeParents: true,
-    /*  autoplay: {
+    autoplay: {
       delay: 2000,
       disableOnInteraction: true, // enable/disable autoplay on user interaction
-    }, */
+    },
   });
 });
 </script>
@@ -425,7 +426,7 @@ onMounted(async () => {
         <div class="swiper-slide">
           <div id="sectioneightbigcity" class="container-fluid">
             <div class="row no-gutters">
-              <div class="col-md-8">
+              <div class="col-md-8 conundru">
                 <div class="row fusbal">
                   <div class="col-md-4 imgwrapper">
                     <img
@@ -473,72 +474,97 @@ onMounted(async () => {
         <div class="swiper-slide">
           <div id="sectionninebigcity" class="container-fluid">
             <div class="row no-gutters">
-              <div class="col-md-4 letexte">
-                <img src="/img/solutions/bigcity/logopetit.svg" alt />
-                <h3>C’est une boutique intégrée</h3>
-                <p>
-                  L’application dispose d’un module e-commerce intégré
-                  permettant les paiements digitaux.
-                </p>
-                <p>
-                  Il permet aux établissements de vendre leurs produits de façon
-                  digitale, prise de commande par le personnel ou commande
-                  directe par les clients, sur place, à emporter ou à se faire
-                  livrer. Le système permet la vente par mobile money, carte de
-                  crédit ou cash et est fourni avec un dashboard analytics pour
-                  suivre ses ventes.
-                </p>
-                <p>
-                  Les établissements sélectionnent eux-mêmes leurs livreurs et
-                  organisent les tarifs comme ils le souhaitent en fonction de
-                  la distance, ce qui leur donne une plus grande flexibilité que
-                  ce qu’offrent les autres plateformes de livraison.
-                </p>
+              <div class="col-md-4 offset-md-1 letexte">
+                <div class="paddingzone">
+                  <img src="/img/solutions/bigcity/logopetit.svg" alt />
+                  <h3>C’est une boutique intégrée</h3>
+                  <p>
+                    L’application dispose d’un module e-commerce intégré
+                    permettant les paiements digitaux.
+                  </p>
+                  <p>
+                    Il permet aux établissements de vendre leurs produits de
+                    façon digitale, prise de commande par le personnel ou
+                    commande directe par les clients, sur place, à emporter ou à
+                    se faire livrer. Le système permet la vente par mobile
+                    money, carte de crédit ou cash et est fourni avec un
+                    dashboard analytics pour suivre ses ventes.
+                  </p>
+                  <p>
+                    Les établissements sélectionnent eux-mêmes leurs livreurs et
+                    organisent les tarifs comme ils le souhaitent en fonction de
+                    la distance, ce qui leur donne une plus grande flexibilité
+                    que ce qu’offrent les autres plateformes de livraison.
+                  </p>
+                </div>
               </div>
-              <div class="col-md-8">
+              <div class="col-md-7 conundrum">
                 <div id="galerieimg">
                   <div id="imagshop" ref="swiperContainer2">
                     <div id="swidel" class="swiper-wrapper">
-                      <img
-                        class="swiper-slide"
-                        src="/img/solutions/bigcity/Groupe 444.svg"
-                        alt
-                      />
-                      <img
-                        class="swiper-slide"
-                        src="/img/solutions/bigcity/Groupe 447.svg"
-                        alt
-                      />
-                      <img
-                        class="swiper-slide"
-                        src="/img/solutions/bigcity/Groupe 448.svg"
-                        alt
-                      />
-                      <img
-                        class="swiper-slide"
-                        src="/img/solutions/bigcity/Groupe 449.svg"
-                        alt
-                      />
-                      <img
-                        class="swiper-slide"
-                        src="/img/solutions/bigcity/Groupe 578.svg"
-                        alt
-                      />
-                      <img
-                        class="swiper-slide"
-                        src="/img/solutions/bigcity/Groupe 579.svg"
-                        alt
-                      />
-                      <img
-                        class="swiper-slide"
-                        src="/img/solutions/bigcity/Groupe 443.svg"
-                        alt
-                      />
-                      <img
-                        class="swiper-slide"
-                        src="/img/solutions/bigcity/Groupe 442.svg"
-                        alt
-                      />
+                      <div class="imgwrapper swiper-slide">
+                        <img
+                          class="img-fluid"
+                          src="/img/solutions/bigcity/ndole1.png"
+                        />
+
+                        <p class="legende">Vue par liste</p>
+                      </div>
+                      <div class="imgwrapper swiper-slide">
+                        <img
+                          class="img-fluid"
+                          src="/img/solutions/bigcity/ndole2.png"
+                        />
+                        <p class="legende">Commande</p>
+                      </div>
+                      <div class="imgwrapper swiper-slide">
+                        <img
+                          class="img-fluid"
+                          src="/img/solutions/bigcity/ndole3.png"
+                        />
+                        <p class="legende">
+                          Prise recommande sur place<br />ou en ligne
+                        </p>
+                      </div>
+                      <div class="imgwrapper swiper-slide">
+                        <img
+                          class="img-fluid"
+                          src="/img/solutions/bigcity/ndole4.png"
+                        />
+                        <p class="legende">Suivi de commande en temps direct</p>
+                      </div>
+                      <div class="imgwrapper swiper-slide">
+                        <img
+                          class="img-fluid"
+                          src="/img/solutions/bigcity/ndole5.png"
+                        />
+                        <p class="legende">Solution de Paiement digital</p>
+                      </div>
+                      <div class="imgwrapper swiper-slide">
+                        <img
+                          class="img-fluid"
+                          src="/img/solutions/bigcity/ndole6.png"
+                        />
+                        <p class="legende">Visualisation des commandes</p>
+                      </div>
+
+                      <div class="imgwrapper swiper-slide">
+                        <img
+                          class="img-fluid"
+                          src="/img/solutions/bigcity/ndole7.png"
+                        />
+                        <p class="legende">
+                          Visualisation en temps réel <br />de la livraison
+                        </p>
+                      </div>
+
+                      <div class="imgwrapper swiper-slide">
+                        <img
+                          class="img-fluid"
+                          src="/img/solutions/bigcity/ndole8.png"
+                        />
+                        <p class="legende">Notification de livraison</p>
+                      </div>
                     </div>
                   </div>
                 </div>
