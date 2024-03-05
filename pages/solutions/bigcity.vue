@@ -608,6 +608,7 @@ onMounted(async () => {
               <div class="col-md-4 letexte">
                 <div class="paddingzone">
                   <img src="/img/solutions/bigcity/logopetit.svg" alt />
+
                   <h3>C’est un guide et une billetterie événementielle</h3>
                   <p>
                     Les utilisateurs peuvent acheter des billets de concert,
@@ -635,7 +636,8 @@ onMounted(async () => {
                 </div>
               </div>
               <div class="col-md-6">
-                <img src="/img/solutions/bigcity/Groupe576.png" alt />
+                <img src="/img/solutions/bigcity/Dashboard.png" alt />
+                <p class="legende">Homepage Dashboard</p>
               </div>
             </div>
           </div>
@@ -643,36 +645,39 @@ onMounted(async () => {
         <div class="swiper-slide">
           <div id="sectiontwelvebigcity" class="container-fluid">
             <div class="row no-gutters">
-              <div class="col-md-6"></div>
-              <div class="col-md-6 letexte">
-                <img src="/img/solutions/bigcity/logopetit.svg" alt />
-                <h3>Formule 1</h3>
-                <p>
-                  <strong
-                    >Logiciel seul + hébergement + maintenance +
-                    formation</strong
-                  >Vous n’avez plus qu’à vous occuper de votre contenu
-                </p>
-                <h3>Formule 2</h3>
-                <p>
-                  <strong
-                    >Logiciel seul + hébergement + maintenance + formation +
-                    Accompagnement</strong
-                  >
-                  On s’occupe de tout, y compris de votre contenu
-                </p>
+              <div class="col-md-7"></div>
+              <div class="col-md-5 letexte">
+                <div class="paddingzone">
+                  <img src="/img/solutions/bigcity/logopetit.svg" alt />
+                  <h3>Formule 1</h3>
+                  <p>
+                    <strong
+                      >Logiciel seul + hébergement + maintenance +
+                      formation</strong
+                    ><br />Vous n’avez plus qu’à vous occuper de votre contenu
+                  </p>
+                  <h3>Formule 2</h3>
+                  <p>
+                    <strong
+                      >Logiciel seul + hébergement + maintenance + formation +
+                      Accompagnement</strong
+                    ><br />
+                    On s’occupe de tout, y compris de votre contenu
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
         <div class="swiper-slide">
-          <div id="findu">
-            <div id="nosautresolutons">
+          <div id="sectionthirteenbigcity" class="container-fluid">
+            <div
+              id="nosautresolutons"
+              class="dflex align-content-center align-items-center justify-content-center"
+            >
               <div class="container">
                 <div class="row no-gutters">
-                  <div class="col-md-12">
-                    <h3>Découvrez nos autres solutions</h3>
-                  </div>
+                  <h3>Découvrez nos autres solutions</h3>
                   <div class="dflex austin">
                     <div
                       class="chyna"
@@ -695,7 +700,6 @@ onMounted(async () => {
                 </div>
               </div>
             </div>
-            <Footer />
           </div>
         </div>
       </div>
