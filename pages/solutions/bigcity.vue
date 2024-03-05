@@ -2,7 +2,8 @@
 import { ref, onMounted, computed, reactive } from "vue";
 import axios from "axios";
 import { useRoute } from "vue-router";
-import ContenuAltLayout from "@/layouts/contenuAlt.vue";
+import ContenuAltLayout from "@/layouts/contenuBigCity.vue";
+import Footer from "@/components/Footer.vue";
 import PageLoader from "@/components/PageLoader.vue";
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
@@ -178,7 +179,11 @@ onMounted(async () => {
             <div id="sectiontwobigcity" class="container">
               <div class="row no-gutters">
                 <div class="col-md-6">
-                  <img src="/img/solutions/bigcity/igcityanim_2.png" alt />
+                  <img
+                    class="img-fluid"
+                    src="/img/solutions/bigcity/igcityanim_2.png"
+                    alt
+                  />
                 </div>
                 <div class="col-md-6">
                   <ul>
@@ -228,7 +233,7 @@ onMounted(async () => {
                 <div
                   class="row d-flex align-items-center justify-content-center"
                 >
-                  <div class="col-md-4 col-sm-12 m-0 p-0">
+                  <div class="imgwrapper col-md-4 col-sm-12 p-0 conundrum">
                     <img
                       class="img-fluid"
                       src="/img/solutions/bigcity/Groupe de masques 17.png"
@@ -237,7 +242,7 @@ onMounted(async () => {
                     <p class="legende">Géolocalisation des établissements</p>
                   </div>
 
-                  <div class="col-md-4 col-sm-12 m-0 p-0">
+                  <div class="imgwrapper col-md-4 col-sm-12 p-0 conundrum">
                     <img
                       class="img-fluid"
                       src="/img/solutions/bigcity/Groupe de masques 15.png"
@@ -245,7 +250,7 @@ onMounted(async () => {
                     />
                     <p class="legende">Page établissement</p>
                   </div>
-                  <div class="col-md-4 col-sm-12 m-0 p-0">
+                  <div class="imgwrapper col-md-4 col-sm-12 p-0 conundrum">
                     <img
                       class="img-fluid"
                       src="/img/solutions/bigcity/Groupe de masques 16.png"
@@ -265,8 +270,9 @@ onMounted(async () => {
                 <div
                   class="col-md-7 fusbal d-flex align-items-end justify-content-center flex-column"
                 >
-                  <div class="paddingzone">
+                  <div class="paddingzone imgwrapper">
                     <img
+                      class="img-fluid"
                       src="/img/solutions/bigcity/Groupe de masques 18.png"
                       alt
                     />
@@ -308,10 +314,11 @@ onMounted(async () => {
                   </p>
                 </div>
               </div>
-              <div class="col-md-7 d-flex">
+              <div class="col-md-7 d-flex conundrum">
                 <div class="row d-flex fusbal">
-                  <div class="col-md-6">
+                  <div class="col-md-6 imgwrapper">
                     <img
+                      class="img-fluid"
                       src="/img/solutions/bigcity//Groupe de masques 19.png"
                       alt
                     />
@@ -319,8 +326,9 @@ onMounted(async () => {
                       Homepage utilisateur<br />Catégorie Bons plans
                     </p>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-6 imgwrapper">
                     <img
+                      class="img-fluid"
                       src="/img/solutions/bigcity/Groupe de masques 20.png"
                       alt
                     />
@@ -334,19 +342,34 @@ onMounted(async () => {
         <div class="swiper-slide">
           <div id="sectionsixbigcity" class="container-fluid">
             <div class="row no-gutters">
-              <div class="col-md-8">
+              <div class="col-md-8 conundrum">
                 <div class="row fusbal">
-                  <img src="/img/solutions/bigcity/Groupe 545.png" alt />
-                  <img
-                    class="col-md-4"
-                    src="/img/solutions/bigcity/Groupe 546.png"
-                    alt
-                  />
-                  <img
-                    class="col-md-4"
-                    src="/img/solutions/bigcity/Groupe 547.png"
-                    alt
-                  />
+                  <div class="col-md-4 imgwrapper">
+                    <img
+                      class="img-fluid"
+                      src="/img/solutions/bigcity/Groupe de masques 21.png"
+                      alt
+                    />
+                    <p class="legende">
+                      Homepage Pros<br />Programme de motivation
+                    </p>
+                  </div>
+                  <div class="col-md-4 imgwrapper">
+                    <img
+                      class="img-fluid"
+                      src="/img/solutions/bigcity/Groupe de masques 22.png"
+                      alt
+                    />
+                    <p class="legende">Homepage Pros<br />Rapports</p>
+                  </div>
+                  <div class="col-md-4 imgwrapper">
+                    <img
+                      class="img-fluid"
+                      src="/img/solutions/bigcity/Groupe de masques 23.png"
+                      alt
+                    />
+                    <p class="legende">ajout d'un nouvel<br />établissement</p>
+                  </div>
                 </div>
               </div>
               <div class="col-md-4 letexte">
@@ -367,21 +390,37 @@ onMounted(async () => {
         <div class="swiper-slide">
           <div id="sectionsevenbigcity" class="container-fluid">
             <div class="row no-gutters">
-              <div class="col-md-6 letexte">
-                <img src="/img/solutions/bigcity/logopetit.svg" alt />
-                <h3>C’est une alternative aux réseaux sociaux</h3>
-                <p>
-                  La marque crée son propre réseau social. La marque devient un
-                  média qui fédère sa propre communauté pour produire de la
-                  valeur et de l’engagement.
-                </p>
+              <div class="col-md-4 offset-md-1 letexte">
+                <div class="paddingzone">
+                  <img src="/img/solutions/bigcity/logopetit.svg" alt />
+                  <h3>C’est une alternative aux réseaux sociaux</h3>
+                  <p>
+                    La marque crée son propre réseau social. La marque devient
+                    un média qui fédère sa propre communauté pour produire de la
+                    valeur et de l’engagement.
+                  </p>
+                </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-7 conundrum">
                 <div class="row fusbal">
-                  <img src="/img/solutions/bigcity/Groupe 548a.png" alt /><img
-                    src="/img/solutions/bigcity/Groupe 549a.png"
-                    alt
-                  />
+                  <div class="col-md-6 imgwrapper">
+                    <img
+                      class="img-fluid"
+                      src="/img/solutions/bigcity/Groupe de masques 24.png"
+                      alt
+                    />
+                    <p class="legende">
+                      Catégorie Fanwall<br />d’un établissement
+                    </p>
+                  </div>
+                  <div class="col-md-6 imgwrapper">
+                    <img
+                      class="img-fluid"
+                      src="/img/solutions/bigcity/Groupe de masques 24a.png"
+                      alt
+                    />
+                    <p class="legende">Notifications de bons plans</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -392,11 +431,32 @@ onMounted(async () => {
             <div class="row no-gutters">
               <div class="col-md-8">
                 <div class="row fusbal">
-                  <img src="/img/solutions/bigcity/Groupe 550.png" alt /><img
-                    class="col-md-4"
-                    src="/img/solutions/bigcity/Groupe 551.png"
-                    alt
-                  /><img src="/img/solutions/bigcity/Groupe 552.png" alt />
+                  <div class="col-md-4 imgwrapper">
+                    <img
+                      class="img-fluid"
+                      src="/img/solutions/bigcity/Groupe de masques 26.png"
+                      alt
+                    />
+                    <p class="legende">
+                      Homepage utilisateur<br />Jeu concours
+                    </p>
+                  </div>
+                  <div class="col-md-4 imgwrapper">
+                    <img
+                      class="img-fluid"
+                      src="/img/solutions/bigcity/Groupe de masques 27.png"
+                      alt
+                    />
+                    <p class="legende">Module Pronostiques</p>
+                  </div>
+                  <div class="col-md-4 imgwrapper">
+                    <img
+                      class="img-fluid"
+                      src="/img/solutions/bigcity/Groupe de masques 26a.png"
+                      alt
+                    />
+                    <p class="legende">Module Pronostiques<br />Classement</p>
+                  </div>
                 </div>
               </div>
               <div class="col-md-4 letexte">
@@ -546,38 +606,44 @@ onMounted(async () => {
                   <strong
                     >Logiciel seul + hébergement + maintenance + formation +
                     Accompagnement</strong
-                  >On s’occupe de tout, y compris de votre contenu/p>
+                  >
+                  On s’occupe de tout, y compris de votre contenu
                 </p>
               </div>
             </div>
           </div>
         </div>
         <div class="swiper-slide">
-          <div id="nosautresolutons">
-            <div class="container">
-              <div class="row no-gutters">
-                <div class="col-md-12">
-                  <h3>Découvrez nos autres solutions</h3>
-                </div>
-                <div class="dflex austin">
-                  <div
-                    class="chyna"
-                    v-for="item in menusolutions"
-                    :key="item.id"
-                  >
-                    <a
-                      v-if="item.lien !== matchingSolution.lien"
-                      :href="`/solutions/${item.lien}`"
+          <div id="findu">
+            <div id="nosautresolutons">
+              <div class="container">
+                <div class="row no-gutters">
+                  <div class="col-md-12">
+                    <h3>Découvrez nos autres solutions</h3>
+                  </div>
+                  <div class="dflex austin">
+                    <div
+                      class="chyna"
+                      v-for="item in menusolutions"
+                      :key="item.id"
                     >
-                      <i
-                        :style="{ backgroundImage: 'url(/' + item.logo + ')' }"
-                        alt="logo"
-                      ></i>
-                    </a>
+                      <a
+                        v-if="item.lien !== matchingSolution.lien"
+                        :href="`/solutions/${item.lien}`"
+                      >
+                        <i
+                          :style="{
+                            backgroundImage: 'url(/' + item.logo + ')',
+                          }"
+                          alt="logo"
+                        ></i>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+            <Footer />
           </div>
         </div>
       </div>

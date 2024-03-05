@@ -3931,6 +3931,10 @@ body {
 			color: #482080;
 		}
 		.letexte {
+			display: flex;
+			align-items: flex-start;
+			justify-content: center;
+			flex-direction: column;
 			h3 {
 				font-family: "new-order", sans-serif;
 				font-size: 40px;
@@ -3941,7 +3945,8 @@ body {
 				letter-spacing: normal;
 				text-align: left;
 				color: #482080;
-				padding: 1em 0 1.25em;
+				padding: 1rem 0 1rem;
+				margin-bottom: 0;
 			}
 			p {
 				font-family: "new-order", sans-serif;
@@ -4021,13 +4026,6 @@ body {
 			-o-background-size: cover;
 			background-size: cover;
 		}
-		&:nth-of-type(9) {
-			background: url("/img/solutions/bigcity/background6.png") no-repeat center center fixed;
-			-webkit-background-size: cover;
-			-moz-background-size: cover;
-			-o-background-size: cover;
-			background-size: cover;
-		}
 	}
 }
 #sectionfivebigcity {
@@ -4060,6 +4058,62 @@ body {
 		img {
 			max-height: 663px;
 			width: auto;
+		}
+	}
+}
+#sectionsixbigcity {
+	.row {
+		margin: 0 auto;
+		display: flex;
+		max-width: 90vw;
+		align-items: center;
+	}
+	.letexte {
+		text-align: left;
+		h3 {
+			max-width: 420px;
+			padding: 0;
+		}
+		p {
+			max-width: 400px;
+		}
+	}
+}
+
+#sectionsevenbigcity {
+	.row {
+		margin: 0 auto;
+		display: flex;
+
+		max-width: 84vw;
+		align-items: center;
+	}
+	.letexte {
+		text-align: left;
+		h3 {
+			max-width: 420px;
+			padding: 0;
+		}
+		p {
+			max-width: 400px;
+		}
+	}
+	.imgwrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+	.fusbal {
+		max-width: 780px;
+		.imgwrapper {
+			&:nth-of-type(1) {
+				justify-content: center;
+				margin: 0;
+				padding: 0;
+			}
+			&:nth-of-type(12) {
+			}
 		}
 	}
 }
@@ -4097,4 +4151,16 @@ body {
 	.mobile {
 		display: block;
 	}
+}
+
+#findu {
+}
+.conundrum {
+	margin-top: 60px !important;
+}
+.imgwrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 }
