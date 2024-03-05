@@ -576,9 +576,9 @@ onMounted(async () => {
           <div id="sectiontenbigcity" class="container-fluid">
             <div class="row no-gutters">
               <div class="col-md-8">
-                <img src="/img/solutions/bigcity/Groupe 553.svg" />
-                <img src="/img/solutions/bigcity/Groupe 554.svg" />
-                <img src="/img/solutions/bigcity/Groupe 555.svg" />
+                <img src="/img/solutions/bigcity/30.png" />
+                <img src="/img/solutions/bigcity/31.png" />
+                <img src="/img/solutions/bigcity/32.png" />
               </div>
               <div class="col-md-4 letexte">
                 <img src="/img/solutions/bigcity/logopetit.svg" alt />
