@@ -11,6 +11,7 @@ import "swiper/css/bundle";
 let swiperContainer = ref(null);
 let swiperContainer2 = ref(null);
 let swiperInstance;
+let swiperInstance2;
 const solutions = ref([]);
 const menusolutions = ref([]);
 const route = useRoute();
@@ -67,7 +68,7 @@ onMounted(async () => {
     slidesPerView: 1,
     spaceBetween: 0,
     mousewheel: true,
-    //keyboard: true,
+    keyboard: true,
     rewind: true,
     parallax: true,
     draggable: true,
@@ -75,10 +76,11 @@ onMounted(async () => {
     lazy: true,
     observer: true,
     observeParents: true,
-    /*  autoplay: {
+    parallax: true,
+    autoplay: {
       delay: 5000, // delay between transitions in ms
       disableOnInteraction: true, // enable/disable autoplay on user interaction
-    }, */
+    },
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
