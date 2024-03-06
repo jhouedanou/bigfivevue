@@ -702,7 +702,13 @@ onMounted(async () => {
             </div>
           </div>
         </div>
+        <!--     <div class="swiper-slide">
+          <div class="d-flex align-items-center justify-content-center">
+          </div>
+        </div> -->
       </div>
+      <Footer />
+
       <div class="swiper-pagination"></div>
     </div>
   </ContenuAltLayout>
