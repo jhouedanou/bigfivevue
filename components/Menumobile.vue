@@ -1,7 +1,3 @@
-<script setup>
-let toClose = ref(false);
-</script>
-
 <template>
   <div id="menumobile">
     <Logo :id="3" v-if="!isSidebarOpen" />
@@ -20,4 +16,19 @@ let toClose = ref(false);
   </div>
 </template>
 
-<style scoped></style>
+<script>
+export default {
+  data() {
+    return {
+      isSidebarOpen: false,
+      isMainFull: false,
+      toClose: false,
+      closeBlack: false,
+    };
+  },
+};
+</script>
+
+<style scoped>
+/* Add your component-specific styles here */
+</style>

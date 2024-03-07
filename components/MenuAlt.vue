@@ -28,6 +28,15 @@ onMounted(async () => {
         :class="{ active: link.url === props.page }"
       >
         <nuxt-link :to="link.url">{{ link.nom }}</nuxt-link>
+        <ul v-if="link.subElements">
+          <li
+            v-for="subLink in link.subElements"
+            :key="subLink.id"
+            :class="{ active: subLink.url === props.page }"
+          >
+            <nuxt-link :to="subLink.url">{{ subLink.nom }}</nuxt-link>
+          </li>
+        </ul>
       </li>
     </ul>
   </div>

@@ -55,23 +55,29 @@ onMounted(async () => {
         :class="{ flipit: state.isSlide1Active, open: isSidebarOpen }"
       >
         <Logo :id="2" />
-        <Menu :page="'/agence'" />
+        <Menu :page="'/solutions'" />
       </div>
-      <ul class="row">
-        <li
-          class="col"
-          :style="{ backgroundImage: 'url(' + solution.homepageVisuel + ')' }"
-          v-for="solution in solutions"
-          :key="solution.id"
-        >
-          <NuxtLink :to="`/solutions/${solution.lien}`">
-            <i
-              :style="{ backgroundImage: 'url(' + solution.logo + ')' }"
-              alt="logo"
-            ></i
-          ></NuxtLink>
-        </li>
-      </ul>
+      <div
+        id="main"
+        class="main"
+        :class="{ full: isMainFull, open: isSidebarOpen }"
+      >
+        <ul class="row">
+          <li
+            class="col"
+            :style="{ backgroundImage: 'url(' + solution.homepageVisuel + ')' }"
+            v-for="solution in solutions"
+            :key="solution.id"
+          >
+            <NuxtLink :to="`/solutions/${solution.lien}`">
+              <i
+                :style="{ backgroundImage: 'url(' + solution.logo + ')' }"
+                alt="logo"
+              ></i
+            ></NuxtLink>
+          </li>
+        </ul>
+      </div>
     </div>
   </SolutionsLayout>
 </template>

@@ -12,7 +12,34 @@
   {
     "id": 3,
     "nom": "Solutions",
-    "url": "/solutions"
+    "url": "/solutions",
+    "subElements": [
+      {
+        "id": "big-city",
+        "nom": "Big City",
+        "url": "/solutions/big-city"
+      },
+      {
+        "id": "big-crm",
+        "nom": "Big CRM",
+        "url": "/solutions/big-crm"
+      },
+      {
+        "id": "big-dashboard",
+        "nom": "Big Dashboard",
+        "url": "/solutions/big-dashboard"
+      },
+      {
+        "id": "big-activations",
+        "nom": "Big Activations",
+        "url": "/solutions/big-activations"
+      },
+      {
+        "id": "big-formations",
+        "nom": "Big Formations",
+        "url": "/solutions/big-formations"
+      }
+    ]
   },
   {
     "id": 4,
