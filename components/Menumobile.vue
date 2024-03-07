@@ -1,33 +1,19 @@
+<script setup>
+import SocialLinks from "./SocialLinks.vue";
+</script>
 <template>
-  <div id="menumobile">
-    <Logo :id="3" v-if="!isSidebarOpen" />
-    <button
-      id="menutrigger"
-      @click="
-        isSidebarOpen = !isSidebarOpen;
-        isMainFull = !isMainFull;
-        toClose = !toClose;
-      "
-      :class="{ dana: closeBlack }"
+  <div id="leblablamarketing" class="mobile">
+    <h4>Parlez nous de votre projet<br />nous allons le rendre réel</h4>
+    <NuxtLink class="michou" id="michou" :to="`/contact`"
+      >Contactez-nous</NuxtLink
     >
-      <img v-if="toClose" src="/img/btn-close.svg" alt="" />
-      <img v-if="!toClose" src="/img/btn-menu.svg" alt="" />
-    </button>
+    <SocialLinks />
+    <div id="muthaf">
+      <a href="#">Mentions légales</a>
+      <a href="#">Gestion des cookies</a>
+    </div>
   </div>
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      isSidebarOpen: false,
-      isMainFull: false,
-      toClose: false,
-      closeBlack: false,
-    };
-  },
-};
-</script>
 
 <style scoped>
 /* Add your component-specific styles here */

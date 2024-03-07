@@ -1,129 +1,10 @@
-<template>
-  <div id="lagence" class="container-fluid">
-    <PageLoader v-if="state.isLoading" />
-    <div id="menumobile">
-      <Logo :id="3" v-if="!isSidebarOpen" />
-      <button
-        id="menutrigger"
-        @click="
-          isSidebarOpen = !isSidebarOpen;
-          isMainFull = !isMainFull;
-          toClose = !toClose;
-        "
-        :class="{ dana: closeBlack }"
-      >
-        <img v-if="toClose" src="/img/btn-close.svg" alt="" />
-        <img v-if="!toClose" src="/img/btn-menu.svg" alt="" />
-      </button>
-    </div>
-    <div class="row">
-      <div
-        id="sidebar"
-        class="sidebar"
-        :class="{ flipit: state.isSlide1Active, open: isSidebarOpen }"
-      >
-        <Logo :id="2" />
-        <Menu :page="'/agence'" />
-      </div>
-      <div id="lemain" class="main vh-100" :class="{ full: isMainFull }">
-        <div class="swiper" ref="swiperContainer">
-          <div class="swiper-wrapper">
-            <div id="slide1" class="swiper-slide">
-              <!-- presentation de l'agence -->
-              <h3>{{ state.agence?.slide1?.title ?? "" }}</h3>
-              <p v-html="state.agence?.slide1?.soustitre ?? ''"></p>
-              <h3 v-html="state.agence?.slide1?.contenu ?? ''"></h3>
-            </div>
-            <div id="slide2" class="swiper-slide">
-              <div class="row slide-inner">
-                <div
-                  class="col-md-4 col-sm-12 slide2-p"
-                  v-for="slide in state.agence?.slide2 ?? []"
-                  :key="slide.id ?? ''"
-                >
-                  <div class="inner">
-                    <!-- <nuxt-img :src="slide.img ?? ''"
-                      :lazy="true"
-                      quality="80" /> -->
-                    <img :src="slide.img ?? ''" alt="" />
-                    <h3>{{ slide.title ?? "" }}</h3>
-                    <div class="sabine">
-                      <p v-html="slide.content ?? ''"></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div id="slide3" class="swiper-slide">
-              <div id="die">
-                <div
-                  class="mongoue"
-                  v-html="state.agence?.introslide3 ?? ''"
-                ></div>
-              </div>
-              <div id="moufmideh" ref="swiperContainer2">
-                <div id="swide" class="swiper-wrapper">
-                  <div
-                    :index="item.Id"
-                    class="swiper-slide"
-                    v-for="item in state.agence?.slide3 ?? []"
-                    :key="item.Id"
-                    :peek-gutter="true"
-                    :slides-per-page="1"
-                  >
-                    <div class="num">
-                      <h3>{{ item.Id }}.&nbsp;</h3>
-                    </div>
-                    <div class="cont-slide">
-                      <h3>{{ item.titre }}</h3>
-                      <h4 v-html="item.nom"></h4>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div id="slide4" class="swiper-slide">
-              <ul id="tipster" class="slide4 full-height">
-                <li
-                  class="stack-up"
-                  :id="`lestack${item.id - 1}`"
-                  v-for="item in state.agence?.slide4.slice().reverse() ?? []"
-                  :key="item.id"
-                >
-                  <!-- <li class="stack-up"
-                  v-for="item in state.agence?.slide4.slice(0, 3).reverse() ?? []"
-                  :id="`lestack${item.id}`"
-                  :key="item.id"> -->
-                  {{ item.content }}
-                </li>
-              </ul>
-            </div>
-
-            <div id="slide5" class="swiper-slide slide5-background">
-              <div id="mouf" v-html="state.agence?.slide5 ?? ''"></div>
-            </div>
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-        <div
-          id="kpaflotage"
-          class="menuflottant"
-          :class="{ flipit: state.isSlide1Active, open: isSidebarOpen }"
-        >
-          <SocialLinksAlt />
-        </div>
-      </div>
-    </div>
-  </div>
-</template>
-
 <script setup>
 import { ref, reactive, onMounted, watchEffect } from "vue";
 import axios from "axios";
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
 import "animate.css";
-
+import Menumobile from "@/components/Menumobile.vue";
 import PageLoader from "@/components/PageLoader.vue";
 let swiperContainer = ref(null);
 let swiperContainer2 = ref(null);
@@ -294,6 +175,126 @@ watchEffect(() => {
   });
 });
 </script>
+<template>
+  <div id="lagence" class="container-fluid">
+    <PageLoader v-if="state.isLoading" />
+    <div id="menumobile">
+      <Logo :id="3" v-if="!isSidebarOpen" />
+      <button
+        id="menutrigger"
+        @click="
+          isSidebarOpen = !isSidebarOpen;
+          isMainFull = !isMainFull;
+          toClose = !toClose;
+        "
+        :class="{ dana: closeBlack }"
+      >
+        <img v-if="toClose" src="/img/btn-close.svg" alt="" />
+        <img v-if="!toClose" src="/img/btn-menu.svg" alt="" />
+      </button>
+    </div>
+    <div class="row">
+      <div
+        id="sidebar"
+        class="sidebar"
+        :class="{ flipit: state.isSlide1Active, open: isSidebarOpen }"
+      >
+        <Logo :id="2" />
+        <Menu :page="'/agence'" />
+        <Menumobile />
+      </div>
+      <div id="lemain" class="main vh-100" :class="{ full: isMainFull }">
+        <div class="swiper" ref="swiperContainer">
+          <div class="swiper-wrapper">
+            <div id="slide1" class="swiper-slide">
+              <!-- presentation de l'agence -->
+              <h3>{{ state.agence?.slide1?.title ?? "" }}</h3>
+              <p v-html="state.agence?.slide1?.soustitre ?? ''"></p>
+              <h3 v-html="state.agence?.slide1?.contenu ?? ''"></h3>
+            </div>
+            <div id="slide2" class="swiper-slide">
+              <div class="row slide-inner">
+                <div
+                  class="col-md-4 col-sm-12 slide2-p"
+                  v-for="slide in state.agence?.slide2 ?? []"
+                  :key="slide.id ?? ''"
+                >
+                  <div class="inner">
+                    <!-- <nuxt-img :src="slide.img ?? ''"
+                      :lazy="true"
+                      quality="80" /> -->
+                    <img :src="slide.img ?? ''" alt="" />
+                    <h3>{{ slide.title ?? "" }}</h3>
+                    <div class="sabine">
+                      <p v-html="slide.content ?? ''"></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="slide3" class="swiper-slide">
+              <div id="die">
+                <div
+                  class="mongoue"
+                  v-html="state.agence?.introslide3 ?? ''"
+                ></div>
+              </div>
+              <div id="moufmideh" ref="swiperContainer2">
+                <div id="swide" class="swiper-wrapper">
+                  <div
+                    :index="item.Id"
+                    class="swiper-slide"
+                    v-for="item in state.agence?.slide3 ?? []"
+                    :key="item.Id"
+                    :peek-gutter="true"
+                    :slides-per-page="1"
+                  >
+                    <div class="num">
+                      <h3>{{ item.Id }}.&nbsp;</h3>
+                    </div>
+                    <div class="cont-slide">
+                      <h3>{{ item.titre }}</h3>
+                      <h4 v-html="item.nom"></h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="slide4" class="swiper-slide">
+              <ul id="tipster" class="slide4 full-height">
+                <li
+                  class="stack-up"
+                  :id="`lestack${item.id - 1}`"
+                  v-for="item in state.agence?.slide4.slice().reverse() ?? []"
+                  :key="item.id"
+                >
+                  <!-- <li class="stack-up"
+                  v-for="item in state.agence?.slide4.slice(0, 3).reverse() ?? []"
+                  :id="`lestack${item.id}`"
+                  :key="item.id"> -->
+                  {{ item.content }}
+                </li>
+              </ul>
+            </div>
+
+            <div id="slide5" class="swiper-slide slide5-background">
+              <div id="mouf" v-html="state.agence?.slide5 ?? ''"></div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <div
+          id="kpaflotage"
+          class="menuflottant"
+          :class="{ flipit: state.isSlide1Active, open: isSidebarOpen }"
+        >
+          <SocialLinksAlt />
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
 <style lang="scss" scoped>
 .slide5-background {
   background: url("/img/visages.png");

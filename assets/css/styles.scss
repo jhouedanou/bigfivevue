@@ -2123,7 +2123,7 @@ div#pargrapheIntro {
 		padding: 1em;
 	}
 	#lagence .sidebar.flipit {
-		justify-content: center !important;
+		justify-content: flex-start !important;
 	}
 	#slide2 {
 		justify-content: flex-start !important;
@@ -4324,6 +4324,77 @@ div#imagshop {
 	background: url("/img/solutions/bigcity/background2.png") no-repeat center center fixed;
 	background-size: cover;
 	background-position: center;
+}
+
+#leblablamarketing {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 31vh;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	#menureso {
+		ul {
+			margin: 0 !important;
+			padding: 0 !important;
+			li {
+				margin: 0 !important;
+				padding: 0 !important;
+				img {
+					margin: 0 !important;
+					color: $primary;
+					height: 13px !important;
+				}
+			}
+		}
+	}
+	#muthaf {
+		display: flex;
+		flex-direction: column;
+		a {
+			color: $primary;
+			text-decoration: none;
+		}
+	}
+	h4 {
+		font-weight: bold;
+		color: $primary;
+		font-size: 17px;
+		text-align: center;
+	}
+	.michou {
+		color: white;
+		background: #82368c;
+		font-size: 13px;
+		text-decoration: none;
+		border-radius: 40px;
+		display: flex;
+		height: 27px;
+		width: 117px;
+		font-weight: bold;
+		align-items: center;
+		justify-content: center;
+		margin: 10px 0 0 0;
+
+		-webkit-transition: all 0.4s ease-in-out 0.2s;
+		-moz-transition: all 0.4s ease-in-out 0.2s;
+		-o-transition: all 0.4s ease-in-out 0.2s;
+		-ms-transition: all 0.4s ease-in-out 0.2s;
+		transition: all 0.4s ease-in-out 0.2s;
+
+		&:hover {
+			background: $secondary;
+
+			-webkit-transition: all 0.4s ease-in-out 0.2s;
+			-moz-transition: all 0.4s ease-in-out 0.2s;
+			-o-transition: all 0.4s ease-in-out 0.2s;
+			-ms-transition: all 0.4s ease-in-out 0.2s;
+			transition: all 0.4s ease-in-out 0.2s;
+		}
+	}
 }
 
 #menulinks {

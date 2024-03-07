@@ -15,29 +15,29 @@
     "url": "/solutions",
     "subElements": [
       {
-        "id": "big-city",
+        "id": "bigcity",
         "nom": "Big City",
-        "url": "/solutions/big-city"
+        "url": "/solutions/bigcity"
       },
       {
-        "id": "big-crm",
+        "id": "bigcrm",
         "nom": "Big CRM",
-        "url": "/solutions/big-crm"
+        "url": "/solutions/bigcrm"
       },
       {
-        "id": "big-dashboard",
+        "id": "bigdashboard",
         "nom": "Big Dashboard",
-        "url": "/solutions/big-dashboard"
+        "url": "/solutions/bigdashboard"
       },
       {
-        "id": "big-activations",
+        "id": "bigactivations",
         "nom": "Big Activations",
-        "url": "/solutions/big-activations"
+        "url": "/solutions/bigactivations"
       },
       {
-        "id": "big-formations",
+        "id": "bigformations",
         "nom": "Big Formations",
-        "url": "/solutions/big-formations"
+        "url": "/solutions/bigformations"
       }
     ]
   },
