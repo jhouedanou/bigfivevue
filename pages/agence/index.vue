@@ -179,7 +179,8 @@ watchEffect(() => {
   <div id="lagence" class="container-fluid">
     <PageLoader v-if="state.isLoading" />
     <div id="menumobile">
-      <Logo :id="3" v-if="!isSidebarOpen" />
+      <Logo :id="3" v-if="!isSidebarOpen" class="desktop" />
+        <Logo :id="2" v-if="!isSidebarOpen" class="mobile" />
       <button
         id="menutrigger"
         @click="

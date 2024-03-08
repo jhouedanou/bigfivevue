@@ -70,7 +70,8 @@ onMounted(async () => {
   <ContenuAltLayout>
     <PageLoader v-if="state.isLoading" />
     <div id="menumobile">
-      <Logo :id="3" v-if="!isSidebarOpen" />
+      <Logo :id="3" v-if="!isSidebarOpen" class="desktop" />
+      <Logo :id="2" v-if="!isSidebarOpen" class="mobile" />
       <button
         id="menutrigger"
         @click="
@@ -81,7 +82,13 @@ onMounted(async () => {
         :class="{ dana: closeBlack }"
       >
         <img v-if="toClose" src="/img/btn-close.svg" alt="" />
-        <img v-if="!toClose" src="/img/btn-menu.svg" alt="" />
+        <img v-if="!toClose" src="/img/btn-menu.svg" alt="" class="desktop" />
+        <img
+          v-if="!toClose"
+          src="/img/btn-menu-mobile.svg"
+          alt=""
+          class="mobile"
+        />
       </button>
     </div>
     <div
@@ -91,6 +98,7 @@ onMounted(async () => {
     >
       <Logo :id="2" />
       <Menu :page="'/solutions'" />
+      <Menumobile />
     </div>
     <div
       id="solutionBanner"
