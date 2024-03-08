@@ -150,9 +150,8 @@ onMounted(async () => {
         },
       });
       //animations
-      import Swiper from "swiper"; // Import the Swiper class
 
-      const tipster = document.querySelector("#tipster");
+      const tipster = document.querySelectorAll("#tipster li");
       console.log(tipster);
       const liste = tipster.querySelectorAll("li");
       console.log(liste);
