@@ -24,6 +24,7 @@
       >
         <Logo :id="2" />
         <Menu :page="'/realisations'" />
+        <Menumobile />
       </div>
       <div
         id="lemain"

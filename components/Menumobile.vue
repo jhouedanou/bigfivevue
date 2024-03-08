@@ -1,5 +1,5 @@
 <script setup>
-import SocialLinks from "./SocialLinks.vue";
+import SocialLinks from "./socialLinksMobile.vue";
 </script>
 <template>
   <div id="leblablamarketing" class="mobile">

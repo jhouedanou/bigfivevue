@@ -196,7 +196,7 @@ watchEffect(() => {
     <div class="row">
       <div
         id="sidebar"
-        class="sidebar"
+        class="sidebar homepagesidebar"
         :class="{ flipit: state.isSlide1Active, open: isSidebarOpen }"
       >
         <Logo :id="2" />

@@ -50,7 +50,8 @@ onMounted(async () => {
         :class="{ flipit: state.isSlide1Active, open: isSidebarOpen }"
       >
         <Logo :id="2" />
-        <Menu :page="'/agence'" />
+        <Menu :page="'/contact'" />
+        <Menumobile />
       </div>
       <div id="contacts" class="container">
         <div class="row">
