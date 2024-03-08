@@ -175,24 +175,7 @@ onMounted(async () => {
         },
       });
     }
-    /*     swiperInstance = new Swiper(swiperContainer.value, {
-      direction: "vertical",
-      slidesPerView: 1,
-      spaceBetween: 0,
-      mousewheel: true,
-      keyboard: true,
-      rewind: true,
-      observer: true,
-      observeParents: true,
-      autoplay: {
-        delay: 5000, // delay between transitions in ms
-        disableOnInteraction: true, // enable/disable autoplay on user interaction
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    }); */
+
     state.isLoading = false;
   } catch (error) {
     state.isLoading = false;

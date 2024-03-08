@@ -2123,6 +2123,9 @@ div#pargrapheIntro {
 	}
 }
 @media screen and (max-width: 1024px) {
+	#lagence #lemain #lesrosz {
+		display: none !important;
+	}
 	div#homesolutionswrapper {
 		padding-top: 89px !important;
 	}
@@ -2169,8 +2172,8 @@ div#pargrapheIntro {
 		justify-content: flex-start !important;
 	}
 	#slide2 {
+		padding-top: 6em !important;
 		justify-content: flex-start !important;
-		margin-top: 2em !important;
 	}
 	#div-stave div#pargrapheIntro {
 		max-width: 100% !important;
@@ -2607,10 +2610,10 @@ div#pargrapheIntro {
 		}
 	}
 	#die {
-		padding: 1em !important;
+		padding: 0em !important;
 	}
 	#slide1 {
-		padding: 1em !important;
+		padding: 12.5em 1em 0 1em !important;
 
 		h3 {
 			font-size: 14px !important;
@@ -2618,35 +2621,50 @@ div#pargrapheIntro {
 		}
 		p,
 		span {
-			font-size: 18px !important;
-			line-height: 22px !important;
+			font-size: 32px !important;
+			line-height: 32px !important;
 			br {
 				display: inline !important;
 			}
 		}
 	}
 	#slide2 {
+		.slide2-p {
+			padding: 0 0 3.55em 0 !important;
+		}
 		.row {
 			padding: 0em !important;
 			margin: 0em !important;
 			max-width: 100vw !important;
 		}
 		.inner {
-			padding-top: 4px !important;
+			padding: 4px 0 0 0 !important;
 		}
 		img {
-			max-width: 45px !important;
+			max-width: 145px !important;
 		}
 		* {
 			text-align: center;
 			font-size: 11px !important;
 			line-height: 14px !important;
 		}
+		h3 {
+			font-size: 20px !important;
+			line-height: 14px !important;
+			margin-top: 21px !important;
+		}
+		p {
+			font-size: 13px !important;
+			line-height: 18px !important;
+			text-align: left !important;
+		}
 	}
 	#slide3 {
+		padding: 10.3em 1em 0em 1em !important;
 		* {
-			font-size: 12px !important;
-			line-height: 14px !important;
+			font-size: 13px !important;
+			line-height: 18px !important;
+			margin-bottom: 1em !important;
 		}
 	}
 	#slide4 {
@@ -2656,6 +2674,9 @@ div#pargrapheIntro {
 				font-size: 4vh !important;
 			}
 		}
+	}
+	body .swiper-slide .row {
+		height: auto !important;
 	}
 }
 
@@ -4508,4 +4529,11 @@ div#imagshop {
 			}
 		}
 	}
+}
+.no-bg {
+	//black to transparent gradient
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%) !important;
+	//make it cross browser compatible
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#CC000000, endColorstr=#00000000)";
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#CC000000, endColorstr=#00000000);
 }

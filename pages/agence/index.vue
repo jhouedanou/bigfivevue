@@ -15,7 +15,7 @@ let isMainFull = ref(true);
 let isSidebarOpen = ref(false);
 let toClose = ref(false);
 let closeBlack = ref(false);
-
+const windowWidth = ref(0);
 const state = reactive({
   metadesc: "",
   pageTitle: "",
@@ -23,7 +23,17 @@ const state = reactive({
   isSlide1Active: "",
   isLoading: true,
 });
+const updateWindowWidth = () => {
+  windowWidth.value = window.innerWidth;
+};
+onUnmounted(() => {
+  window.removeEventListener("resize", updateWindowWidth);
+});
+
 onMounted(() => {
+  windowWidth.value = window.innerWidth;
+  window.addEventListener("resize", updateWindowWidth);
+
   const slide1Element = document.getElementById("slide1");
   if (slide1Element) {
     setTimeout(() => {
@@ -42,97 +52,132 @@ onMounted(async () => {
     state.metadesc = textesGlobal.data.metadesc;
     state.pageTitle = textesGlobal.data.title;
     state.agence = textesGlobal.data;
-    //obtenir la largeur de la fenetre
-    const windowWidth = window.innerWidth;
     // initialisation du swiper si la largeur de la fenêtre est supérieure à 1024px
-    if (windowWidth > 1024) {
-      //initSwiper();
+    if (windowWidth.value > 1024) {
+      swiperInstance = new Swiper(swiperContainer.value, {
+        direction: "vertical", // Set the direction to vertical
+        slidesPerView: 1,
+        spaceBetween: 0,
+        mousewheel: true,
+        keyboard: true,
+        effect: "slide", // Set the slide effect
+        autoplay: {
+          delay: 30000, // Delay between transitions in ms
+          disableOnInteraction: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+      swiperInstance.on("slideChange", () => {
+        if (swiperInstance.activeIndex == 0) {
+          state.isSlide1Active = true;
+          document.querySelector(".slide1").classList.add("slide1-active");
+        } else if (swiperInstance.activeIndex == 2) {
+          state.isSlide1Active = false;
+          swiperInstance2 = new Swiper(swiperContainer2.value, {
+            direction: "horizontal",
+            slidesPerView: 1,
+            spaceBetween: 10,
+            rewind: true,
+            disabledOnInteraction: true,
+            initialSlide: 0,
+            speed: 2000,
+            draggable: true,
+            parallax: true,
+            autoplay: {
+              delay: 2000,
+              disableOnInteraction: true,
+            },
+          });
+        } else if (swiperInstance.activeIndex === 3) {
+          const tipster = document.querySelector("#tipster");
+          const liste = tipster.querySelectorAll("li");
+          const delai = 300;
+          const increment = 1;
+          const debutFadeOut = 19;
+          let i = liste.length - increment; // 34
+          let dernierElementdelaListe = liste.length - increment;
+          const lEcart = liste.length - debutFadeOut; //34-15=19
+          const interval = setInterval(() => {
+            if (i >= debutFadeOut) {
+              liste[i].classList.add(
+                "animate__animated",
+                "animate__fadeInDownBig"
+              );
+              i--;
+            } else if (i < debutFadeOut && i >= 0) {
+              liste[i + lEcart].classList.remove("animate__fadeInDownBig");
+              liste[i + lEcart].classList.add(
+                "animate__fadeOutDownBig",
+                "close"
+              );
+              liste[i].classList.add(
+                "animate__animated",
+                "animate__fadeInDownBig"
+              );
+              i--;
+            } else if (i < 0) {
+              stop();
+            } else {
+              clearInterval(interval);
+            }
+          }, delai);
+
+          state.isSlide1Active = false;
+        } else {
+          state.isSlide1Active = false;
+        }
+      });
+    } else {
+      //carousel horizontal
+      swiperInstance2 = new Swiper(swiperContainer2.value, {
+        direction: "horizontal",
+        slidesPerView: 1,
+        spaceBetween: 10,
+        //mousewheel: true,
+        rewind: true,
+        disabledOnInteraction: true,
+        initialSlide: 0,
+        speed: 2000,
+        draggable: true,
+        // keyboard: true,
+        parallax: true,
+        autoplay: {
+          delay: 2000,
+          disableOnInteraction: true,
+        },
+      });
+      //animations
+      import Swiper from "swiper"; // Import the Swiper class
+
+      const tipster = document.querySelector("#tipster");
+      console.log(tipster);
+      const liste = tipster.querySelectorAll("li");
+      console.log(liste);
+      const delai = 300;
+      const increment = 1;
+      const debutFadeOut = 19;
+      let i = liste.length - increment; // 34
+      let dernierElementdelaListe = liste.length - increment;
+      const lEcart = liste.length - debutFadeOut; //34-15=19
+      const interval = setInterval(() => {
+        if (i >= debutFadeOut) {
+          liste[i].classList.add("animate__animated", "animate__fadeInDownBig");
+          i--;
+        } else if (i < debutFadeOut && i >= 0) {
+          liste[i + lEcart].classList.remove("animate__fadeInDownBig");
+          liste[i + lEcart].classList.add("animate__fadeOutDownBig", "close");
+          liste[i].classList.add("animate__animated", "animate__fadeInDownBig");
+          i--;
+        } else if (i < 0) {
+          stop();
+        } else {
+          clearInterval(interval);
+        }
+      }, delai);
     }
-
-    swiperInstance = new Swiper(swiperContainer.value, {
-      direction: "vertical", // Set the direction to vertical
-      slidesPerView: 1,
-      spaceBetween: 0,
-      mousewheel: true,
-      keyboard: true,
-      effect: "slide", // Set the slide effect
-      autoplay: {
-        delay: 30000, // Delay between transitions in ms
-        disableOnInteraction: true, // Enable/disable autoplay on user interaction
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
-
-    //ajouter une classe animationslide1 une fois que swiperInstance a fini son initialisation
-
-    //gestion de la disposition de la sidebar
-    swiperInstance.on("slideChange", () => {
-      if (swiperInstance.activeIndex == 0) {
-        state.isSlide1Active = true;
-        document.querySelector(".slide1").classList.add("slide1-active");
-      } else if (swiperInstance.activeIndex == 2) {
-        state.isSlide1Active = false;
-        // carousel horizontal
-        swiperInstance2 = new Swiper(swiperContainer2.value, {
-          direction: "horizontal",
-          slidesPerView: 1,
-          spaceBetween: 10,
-          //mousewheel: true,
-          rewind: true,
-          disabledOnInteraction: true,
-          initialSlide: 0,
-          speed: 2000,
-          draggable: true,
-          // keyboard: true,
-          parallax: true,
-          autoplay: {
-            delay: 2000,
-            disableOnInteraction: true, // enable/disable autoplay on user interaction
-          },
-        });
-      } else if (swiperInstance.activeIndex === 3) {
-        const tipster = document.querySelector("#tipster");
-        const liste = tipster.querySelectorAll("li");
-        const delai = 300;
-        const increment = 1;
-        const debutFadeOut = 19;
-        let i = liste.length - increment; // 34
-        let dernierElementdelaListe = liste.length - increment;
-        const lEcart = liste.length - debutFadeOut; //34-15=19
-        //pour les elements 34 à 15 de la liste, fadeInDownBig tous les 500ms
-        //pour le 14e element de la liste, fadeOut du dernier element de la liste, le 34 et FadeInDownBig du 16e element. Supprimer le dernier element de la liste , de façon à ce que le 16e element devienne le 15e element de la liste
-        //pour l'element 13 de la liste; fadeInDownBig et supprimer le dernier element de la liste. Supprimmer
-
-        const interval = setInterval(() => {
-          if (i >= debutFadeOut) {
-            liste[i].classList.add(
-              "animate__animated",
-              "animate__fadeInDownBig"
-            );
-            i--;
-          } else if (i < debutFadeOut && i >= 0) {
-            liste[i + lEcart].classList.remove("animate__fadeInDownBig");
-            liste[i + lEcart].classList.add("animate__fadeOutDownBig", "close");
-            liste[i].classList.add(
-              "animate__animated",
-              "animate__fadeInDownBig"
-            );
-            i--;
-          } else if (i < 0) {
-            stop();
-          } else {
-            clearInterval(interval);
-          }
-        }, delai);
-
-        state.isSlide1Active = false;
-      } else {
-        state.isSlide1Active = false;
-      }
-    });
 
     //gestion de l'animation de la slide 5
     const slide5Element = document.getElementById("slide5");
@@ -178,9 +223,8 @@ watchEffect(() => {
 <template>
   <div id="lagence" class="container-fluid">
     <PageLoader v-if="state.isLoading" />
-    <div id="menumobile">
-      <Logo :id="3" v-if="!isSidebarOpen" class="desktop" />
-        <Logo :id="2" v-if="!isSidebarOpen" class="mobile" />
+    <div id="menumobile" class="no-bg">
+      <Logo :id="3" v-if="!isSidebarOpen" />
       <button
         id="menutrigger"
         @click="
@@ -338,17 +382,50 @@ watchEffect(() => {
   /*  overflow: hidden; */
   height: auto;
 }
+@media screen and (max-width: 1024px) {
+  .swiper {
+    width: 100%;
+    height: 100vh;
+  }
 
-.swiper {
-  width: 100%;
-  height: 100vh;
+  .swiper-horizontal {
+    height: auto;
+  }
+
+  .swiper-slide {
+    background: none !important;
+    height: auto !important;
+  }
+  .swiper-wrapper {
+    flex-direction: column;
+    overflow: auto;
+    min-height: 100%;
+    height: 100%;
+  }
+  #slide3 {
+    .swiper-wrapper {
+      flex-direction: row;
+      height: 165px !important;
+    }
+  }
+  #slide1 {
+    padding-top: 1em;
+    h3 {
+    }
+  }
 }
+@media screen and (min-width: 1024px) {
+  .swiper {
+    width: 100%;
+    height: 100vh;
+  }
 
-.swiper-horizontal {
-  height: auto;
-}
+  .swiper-horizontal {
+    height: auto;
+  }
 
-.swiper-slide {
-  /* Styles pour les slides */
+  .swiper-slide {
+    /* Styles pour les slides */
+  }
 }
 </style>
