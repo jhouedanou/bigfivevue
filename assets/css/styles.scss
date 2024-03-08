@@ -1947,7 +1947,7 @@ div#pargrapheIntro {
 		width: 100vw;
 		//	max-width: 100vw;
 		max-width: 1260px;
-		background: red;
+		/* background: red; */
 		max-width: 1380px;
 	}
 }
@@ -2134,7 +2134,7 @@ div#pargrapheIntro {
 			align-items: center;
 			justify-content: center;
 			flex-direction: column;
-			background: red;
+			/* background: red; */
 			min-height: 100vh;
 			height: auto;
 			overflow: scroll;
@@ -2144,11 +2144,13 @@ div#pargrapheIntro {
 			-moz-background-size: cover !important;
 			-o-background-size: cover !important;
 			background-size: cover !important;
-
 			width: 100vw !important;
-			height: 450px !important;
-		}
-		ul {
+			min-height: 221px !important;
+			i {
+				width: 105px !important;
+				height: 105px !important;
+				background-size: 105px !important;
+			}
 		}
 	}
 	#div-4-nicolas {
@@ -2486,7 +2488,7 @@ div#pargrapheIntro {
 		z-index: 100000;
 		justify-content: space-between;
 		padding: 10px 10px;
-
+		background: white;
 		.logocontainer {
 			img {
 				width: 52px !important;
@@ -2850,7 +2852,7 @@ textarea {
 }
 
 //rule for screens under 1680px, to have the background of #listedesolutios li being background cover
-@media (max-width: 1680px) {
+@media (max-width: 1680px) and (min-width: 1024px) {
 	#listedessolutions {
 		ul {
 			li {
@@ -4333,7 +4335,6 @@ div#imagshop {
 		height: 100%;
 	}
 }
-//media query to show .desktop when screen width is 768px or more and hide .mobile
 @media (min-width: 1024px) {
 	.desktop {
 		display: block;
@@ -4342,7 +4343,6 @@ div#imagshop {
 		display: none;
 	}
 }
-//media query to show .mobile when screen width is 767px or less and hide .desktop
 @media (max-width: 1023px) {
 	.desktop {
 		display: none;

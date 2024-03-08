@@ -6,10 +6,24 @@ import PageLoader from "@/components/PageLoader.vue";
 let isSidebarOpen = ref(false);
 let toClose = ref(false);
 let closeBlack = ref(false);
+const windowWidth = ref(0);
 const solutions = ref([]);
 const state = reactive({
   isLoading: true,
 });
+const updateWindowWidth = () => {
+  windowWidth.value = window.innerWidth;
+};
+
+onUnmounted(() => {
+  window.removeEventListener("resize", updateWindowWidth);
+});
+
+onMounted(() => {
+  windowWidth.value = window.innerWidth;
+  window.addEventListener("resize", updateWindowWidth);
+});
+
 onMounted(async () => {
   try {
     state.isLoading = true;
@@ -20,10 +34,15 @@ onMounted(async () => {
       id: solution.id,
       homepageVisuel: solution.homepageVisuel,
       nomsolution: solution.nomsolution,
+      banniere: solution.banniere,
       logo: solution.logo,
       lien: solution.lien,
     }));
     state.isLoading = false;
+    // Déterminer la largeur de la fenêtre après que solutions.value a été rempli
+    windowWidth.value = window.innerWidth;
+    window.addEventListener("resize", updateWindowWidth);
+    console.log(windowWidth.value);
   } catch (error) {
     console.log("Pas de solutions Big Five à afficher");
   }
@@ -70,10 +89,15 @@ onMounted(async () => {
         class="main indexsolutions"
         :class="{ full: isMainFull, open: isSidebarOpen }"
       >
-        <ul class="row">
+        <ul id="solutionslist" class="row">
           <li
             class="col"
-            :style="{ backgroundImage: 'url(' + solution.homepageVisuel + ')' }"
+            :style="{
+              backgroundImage:
+                windowWidth > 1024
+                  ? 'url(' + solution.homepageVisuel + ')'
+                  : 'url(' + solution.banniere + ')',
+            }"
             v-for="solution in solutions"
             :key="solution.id"
           >
