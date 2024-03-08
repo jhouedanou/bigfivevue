@@ -45,7 +45,12 @@
               :key="realisation.lien"
               :id="`slide-${realisation.id}`"
               class="swiper-slide"
-              :style="{ backgroundImage: `url(${realisation.image})` }"
+              :style="{
+                backgroundImage:
+                  windowWidth > 1024
+                    ? `url(${realisation.image})`
+                    : `url(${realisation.bannieremobile})`,
+              }"
             >
               <div class="cartouche">
                 <span>{{ realisation.client }}</span>
@@ -126,10 +131,21 @@ let isMainFull = ref(true);
 let isSidebarOpen = ref(false);
 let toClose = ref(false);
 let closeBlack = ref(false);
-
+const windowWidth = ref(0);
 const state = reactive({
   realisations: null,
   isLoading: true,
+});
+const updateWindowWidth = () => {
+  windowWidth.value = window.innerWidth;
+};
+onUnmounted(() => {
+  window.removeEventListener("resize", updateWindowWidth);
+});
+
+onMounted(() => {
+  windowWidth.value = window.innerWidth;
+  window.addEventListener("resize", updateWindowWidth);
 });
 onMounted(async () => {
   try {
@@ -138,8 +154,28 @@ onMounted(async () => {
     const response = await axios.get("/api/clients.json");
     state.realisations = response.data;
 
-    // Initialisation du swiper
-    swiperInstance = new Swiper(swiperContainer.value, {
+    // Initialisation du swiper seulement après que state.realisations a été rempli et si windowWidth.value est supérieur à 1024
+    if (windowWidth.value > 1024) {
+      swiperInstance = new Swiper(swiperContainer.value, {
+        direction: "vertical",
+        slidesPerView: 1,
+        spaceBetween: 0,
+        mousewheel: true,
+        keyboard: true,
+        rewind: true,
+        observer: true,
+        observeParents: true,
+        autoplay: {
+          delay: 5000, // delay between transitions in ms
+          disableOnInteraction: true, // enable/disable autoplay on user interaction
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    }
+    /*     swiperInstance = new Swiper(swiperContainer.value, {
       direction: "vertical",
       slidesPerView: 1,
       spaceBetween: 0,
@@ -156,7 +192,7 @@ onMounted(async () => {
         el: ".swiper-pagination",
         clickable: true,
       },
-    });
+    }); */
     state.isLoading = false;
   } catch (error) {
     state.isLoading = false;
@@ -261,24 +297,43 @@ li {
   /* Set the height of each swiper-slide to occupy the full viewport height */
   /* Enable snapping behavior to each swiper-slide */
 }
-
-.swiper-slide {
-  height: 100vh;
-  min-height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@media screen and (max-width: 1024px) {
+  .swiper-slide {
+    height: 368px !important;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+  }
+  .swiper-wrapper {
+    flex-direction: column;
+    overflow: scroll;
+    height: 100vh;
+  }
+  .swiper-slide {
+    background-size: cover !important;
+  }
 }
 
+@media screen and (min-width: 1024px) {
+  .swiper-slide {
+    height: 100vh;
+    min-height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+  }
+}
 .swiper-slide {
-  min-height: 100vh !important;
-  height: 100% !important;
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin: 0;
-  padding: 0;
-
   img {
     width: auto;
     height: 100vh;
