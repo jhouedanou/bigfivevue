@@ -33,7 +33,6 @@ onUnmounted(() => {
 onMounted(() => {
   windowWidth.value = window.innerWidth;
   window.addEventListener("resize", updateWindowWidth);
-
   const slide1Element = document.getElementById("slide1");
   if (slide1Element) {
     setTimeout(() => {
@@ -94,6 +93,8 @@ onMounted(async () => {
         } else if (swiperInstance.activeIndex === 3) {
           const tipster = document.querySelector("#tipster");
           const liste = tipster.querySelectorAll("li");
+          console.log(liste);
+
           const delai = 300;
           const increment = 1;
           const debutFadeOut = 19;
@@ -131,7 +132,7 @@ onMounted(async () => {
         }
       });
     } else {
-      //carousel horizontal
+      //carousel horizontal si la largeur de la fenêtre est inférieure à 1024px
       swiperInstance2 = new Swiper(swiperContainer2.value, {
         direction: "horizontal",
         slidesPerView: 1,
@@ -149,15 +150,13 @@ onMounted(async () => {
           disableOnInteraction: true,
         },
       });
-      //animations
-
-      const tipster = document.querySelectorAll("#tipster li");
-      console.log(tipster);
-      const liste = tipster.querySelectorAll("li");
-      console.log(liste);
+      //animation de la 2nde liste tipster
+      //element slide 4 qui vont du haut vers le bas
+      const tipster = document.querySelector("#tipster2");
+      const liste = tipster.querySelectorAll("div");
       const delai = 300;
       const increment = 1;
-      const debutFadeOut = 19;
+      const debutFadeOut = 0; //pas de fadeout sur mobile
       let i = liste.length - increment; // 34
       let dernierElementdelaListe = liste.length - increment;
       const lEcart = liste.length - debutFadeOut; //34-15=19
@@ -166,9 +165,9 @@ onMounted(async () => {
           liste[i].classList.add("animate__animated", "animate__fadeInDownBig");
           i--;
         } else if (i < debutFadeOut && i >= 0) {
-          liste[i + lEcart].classList.remove("animate__fadeInDownBig");
-          liste[i + lEcart].classList.add("animate__fadeOutDownBig", "close");
-          liste[i].classList.add("animate__animated", "animate__fadeInDownBig");
+          //  liste[i + lEcart].classList.remove("animate__fadeInDownBig");
+          //  liste[i + lEcart].classList.add("animate__fadeOutDownBig", "close");
+          //  liste[i].classList.add("animate__animated", "animate__fadeInDownBig");
           i--;
         } else if (i < 0) {
           stop();
@@ -176,11 +175,11 @@ onMounted(async () => {
           clearInterval(interval);
         }
       }, delai);
+      //fin  du emse
     }
 
     //gestion de l'animation de la slide 5
     const slide5Element = document.getElementById("slide5");
-
     // Add event listener for mouse movement
     slide5Element.addEventListener("mousemove", (event) => {
       // Calculate the new background position based on the mouse coordinates
@@ -194,6 +193,8 @@ onMounted(async () => {
     state.isLoading = false;
   } catch (error) {
     console.error(error);
+    state.isLoading = false;
+  } finally {
     state.isLoading = false;
   }
 });
@@ -305,20 +306,53 @@ watchEffect(() => {
               </div>
             </div>
             <div id="slide4" class="swiper-slide">
-              <ul id="tipster" class="slide4 full-height">
+              <ul id="tipster" class="slide4 full-height desktop">
                 <li
                   class="stack-up"
                   :id="`lestack${item.id - 1}`"
                   v-for="item in state.agence?.slide4.slice().reverse() ?? []"
                   :key="item.id"
                 >
-                  <!-- <li class="stack-up"
-                  v-for="item in state.agence?.slide4.slice(0, 3).reverse() ?? []"
-                  :id="`lestack${item.id}`"
-                  :key="item.id"> -->
                   {{ item.content }}
                 </li>
               </ul>
+              <div id="tipster2" class="mobile">
+                <div class="lepos">SOCIAL MÉDIA</div>
+                <div class="lepos">APPLICATIF</div>
+                <div class="lepos">BRAND CONTENT</div>
+                <div class="lepos">SITES VITRINE</div>
+                <div class="lepos">PROGRAMME DE FIDÉdivSATION</div>
+                <div class="lepos">LOGOTYPES</div>
+                <div class="lepos">SOLUTIONS DIGITALES</div>
+                <div class="lepos">MARKETING</div>
+                <div class="lepos">COACHING</div>
+                <div class="lepos">CAMPAGNES 360</div>
+                <div class="lepos">SEO/SEA</div>
+                <div class="lepos">LANCEMENT DE MARQUE</div>
+                <div class="lepos">DATA COLLECTION</div>
+                <div class="lepos">CONCEPT RETAIL</div>
+                <div class="lepos">NAMING</div>
+                <div class="lepos">STRATÉGIE DE MARQUE</div>
+                <div class="lepos">ANALYSE DES TENDANCES</div>
+                <div class="lepos">ARCHITECTURE DE MARQUE</div>
+                <div class="lepos">E-COMMERCE</div>
+                <div class="lepos">CHARTE GRAPHIQUE</div>
+                <div class="lepos">PUBLICITÉ</div>
+                <div class="lepos">THÉATRALISATION DES VENTES</div>
+                <div class="lepos">E-RÉPUTATION</div>
+                <div class="lepos">APPLICATIONS MOBILES</div>
+                <div class="lepos">SITES INSTITUTIONNELS</div>
+                <div class="lepos">COMMUNICATION</div>
+                <div class="lepos">M-COMMERCE</div>
+                <div class="lepos">PACKAGING</div>
+                <div class="lepos">ÉDITION AFFICHAGE</div>
+                <div class="lepos">ACTIVATIONS DIGITALES</div>
+                <div class="lepos">PRINT TV RADIO PRESSE</div>
+                <div class="lepos">IDENTITÉ DE MARQUE</div>
+                <div class="lepos">CAMPAGNE SOCIAL MEDIA</div>
+                <div class="lepos">FORMATIONS</div>
+                <div class="lepos">AUDIT</div>
+              </div>
             </div>
 
             <div id="slide5" class="swiper-slide slide5-background">
@@ -390,8 +424,19 @@ watchEffect(() => {
   .swiper-horizontal {
     height: auto;
   }
-
-  .swiper-slide {
+  #slider5 {
+    height: 203px !important;
+    background-size: 100% !important;
+    background-repeat: no-repeat !important;
+  }
+  #slide4 {
+    background: none !important;
+    height: 720px !important;
+    overflow: auto;
+  }
+  #slide1,
+  #slide2,
+  #slide3 {
     background: none !important;
     height: auto !important;
   }

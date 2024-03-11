@@ -2123,6 +2123,29 @@ div#pargrapheIntro {
 	}
 }
 @media screen and (max-width: 1024px) {
+	#slide4 {
+		height: 100vh;
+		overflow: hidden;
+		ul {
+			visibility: hidden;
+		}
+		#tipster2 {
+			padding: 0 1em !important;
+			max-width: 320px;
+			.lepos {
+				opacity: 0;
+				font-weight: bold;
+				font-weight: bold;
+				font-size: 20px;
+				line-height: 20px;
+				color: #ffffff30;
+				&:hover {
+					color: white;
+				}
+			}
+		}
+	}
+
 	#lagence #lemain #lesrosz {
 		display: none !important;
 	}
