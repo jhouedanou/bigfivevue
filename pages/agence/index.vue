@@ -152,6 +152,51 @@ onMounted(async () => {
       });
       //animation de la 2nde liste tipster
       //element slide 4 qui vont du haut vers le bas
+      //lancer tout le processus seulement lordsque la #slide4 est affichée dans le viewport
+      //et que le viewport est en mode mobile
+      // Create an Intersection Observer instance
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.target.id === "slide4" && entry.isIntersecting) {
+            //alert("slide4 est dans le viewport");
+            // Execute the code when #slide4 reaches the top of the viewport
+            const tipster = document.querySelector("#tipster2");
+            const liste = tipster.querySelectorAll("div");
+            const delai = 300;
+            const increment = 1;
+            const debutFadeOut = 0; //pas de fadeout sur mobile
+            let i = liste.length - increment; // 34
+            let dernierElementdelaListe = liste.length - increment;
+            const lEcart = liste.length - debutFadeOut; //34-15=19
+            const interval = setInterval(() => {
+              if (i >= debutFadeOut) {
+                liste[i].classList.add(
+                  "animate__animated",
+                  "animate__fadeInDownBig"
+                );
+                i--;
+              } else if (i < debutFadeOut && i >= 0) {
+                i--;
+              } else if (i < 0) {
+                stop();
+              } else {
+                clearInterval(interval);
+              }
+            }, delai);
+
+            // Stop observing once the code is executed
+            observer.unobserve(entry.target);
+          }
+        });
+      });
+
+      // Start observing #slide4
+      const slide4Element = document.getElementById("slide4");
+      observer.observe(slide4Element);
+
+      // gestion de l'animation de la slide 5
+      const slide5Element = document.getElementById("slide5");
+
       const tipster = document.querySelector("#tipster2");
       const liste = tipster.querySelectorAll("div");
       const delai = 300;
@@ -165,9 +210,6 @@ onMounted(async () => {
           liste[i].classList.add("animate__animated", "animate__fadeInDownBig");
           i--;
         } else if (i < debutFadeOut && i >= 0) {
-          //  liste[i + lEcart].classList.remove("animate__fadeInDownBig");
-          //  liste[i + lEcart].classList.add("animate__fadeOutDownBig", "close");
-          //  liste[i].classList.add("animate__animated", "animate__fadeInDownBig");
           i--;
         } else if (i < 0) {
           stop();
@@ -175,7 +217,6 @@ onMounted(async () => {
           clearInterval(interval);
         }
       }, delai);
-      //fin  du emse
     }
 
     //gestion de l'animation de la slide 5
@@ -321,7 +362,7 @@ watchEffect(() => {
                 <div class="lepos">APPLICATIF</div>
                 <div class="lepos">BRAND CONTENT</div>
                 <div class="lepos">SITES VITRINE</div>
-                <div class="lepos">PROGRAMME DE FIDÉdivSATION</div>
+                <div class="lepos">PROGRAMME DE FIDÉLISATION</div>
                 <div class="lepos">LOGOTYPES</div>
                 <div class="lepos">SOLUTIONS DIGITALES</div>
                 <div class="lepos">MARKETING</div>
@@ -354,7 +395,6 @@ watchEffect(() => {
                 <div class="lepos">AUDIT</div>
               </div>
             </div>
-
             <div id="slide5" class="swiper-slide slide5-background">
               <div id="mouf" v-html="state.agence?.slide5 ?? ''"></div>
             </div>
@@ -434,6 +474,11 @@ watchEffect(() => {
     height: 720px !important;
     overflow: auto;
   }
+  #slide3 {
+    .swiper-wrapper {
+      flex-direction: row;
+    }
+  }
   #slide1,
   #slide2,
   #slide3 {
@@ -442,9 +487,10 @@ watchEffect(() => {
   }
   .swiper-wrapper {
     flex-direction: column;
-    overflow: auto;
+    overflow-y: scroll;
     min-height: 100%;
     height: 100%;
+    overflow-x: hidden;
   }
   #slide3 {
     .swiper-wrapper {

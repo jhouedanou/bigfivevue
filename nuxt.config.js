@@ -87,7 +87,7 @@ export default defineNuxtConfig({
     },
   ],
   css: ["@/assets/css/styles.scss", "bootstrap/dist/css/bootstrap.min.css"],
-  plugins: ["~/plugins/scroll.client.ts"],
+  plugins: [],
   components: true,
   buildModules: [
     "@nuxtjs/axios",
