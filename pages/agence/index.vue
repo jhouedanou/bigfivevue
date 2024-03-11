@@ -8,6 +8,7 @@ import Menumobile from "@/components/Menumobile.vue";
 import PageLoader from "@/components/PageLoader.vue";
 let swiperContainer = ref(null);
 let swiperContainer2 = ref(null);
+let swiperContainerMobile = ref(null);
 let slide3Content = ref([]);
 let swiperInstance;
 let swiperInstance2;
@@ -143,20 +144,21 @@ onMounted(async () => {
         slide5Element.style.backgroundPosition = `${posX}% ${posY}%`;
       });
     } else {
-      //deuxieme slider sur la slide4
-
-      swiperInstance2 = new Swiper(swiperContainer2.value, {
-        direction: "horizontal",
+      //swiper on swiperContainerMobile
+      swiperInstance = new Swiper(swiperContainerMobile.value, {
+        direction: "horizontal", // Set the direction to vertical
         slidesPerView: 1,
         spaceBetween: 10,
         rewind: true,
-        disabledOnInteraction: true,
+        disableOnInteraction: true,
         initialSlide: 0,
         speed: 2000,
         draggable: true,
-        parallax: true,
+        mousewheel: true,
+        keyboard: true,
+        effect: "slide", // Set the slide effect
         autoplay: {
-          delay: 2000,
+          delay: 1000, // Delay between transitions in ms
           disableOnInteraction: true,
         },
       });
@@ -314,7 +316,38 @@ watchEffect(() => {
                   v-html="state.agence?.introslide3 ?? ''"
                 ></div>
               </div>
-              <div id="moufmideh" ref="swiperContainer2">
+              {{ windowWidth }}
+              <!-- display a div based on the windowWidth value on mobile -->
+              <div
+                id="offmideh"
+                ref="swiperContainerMobile"
+                v-if="windowWidth < 1024"
+              >
+                <div id="swidel" class="swiper-wrapper">
+                  <div
+                    :index="item.Id"
+                    class="swiper-slide"
+                    v-for="item in state.agence?.slide3 ?? []"
+                    :key="item.Id"
+                    :peek-gutter="true"
+                    :slides-per-page="1"
+                  >
+                    <div class="num">
+                      <h3>{{ item.Id }}.&nbsp;</h3>
+                    </div>
+                    <div class="cont-slide">
+                      <h3>{{ item.titre }}</h3>
+                      <h4 v-html="item.nom"></h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- display a div based on the windowWidth value on desktop -->
+              <div
+                id="moufmideh"
+                ref="swiperContainer2"
+                v-if="windowWidth > 1024"
+              >
                 <div id="swide" class="swiper-wrapper">
                   <div
                     :index="item.Id"
@@ -500,10 +533,14 @@ watchEffect(() => {
   }
 
   #slide3 {
-    .swiper-wrapper {
-      flex-direction: row;
+    #swidel {
       height: 165px !important;
       overflow: hidden;
+      background: none !important;
+      width: 84vw;
+      .swiper-slide {
+        background: none !important;
+      }
     }
   }
 
