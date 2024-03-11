@@ -158,7 +158,7 @@ onMounted(async () => {
         keyboard: true,
         effect: "slide", // Set the slide effect
         autoplay: {
-          delay: 1000, // Delay between transitions in ms
+          delay: 10000, // Delay between transitions in ms
           disableOnInteraction: true,
         },
       });
