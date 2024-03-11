@@ -31,6 +31,11 @@ onUnmounted(() => {
 });
 
 onMounted(() => {
+  //ajouter l'id de la page  #agence à la balise body
+  document.body.id = "agence";
+  // ajouter la classe .agence à la balise body
+  document.body.classList.add("agence");
+
   windowWidth.value = window.innerWidth;
   window.addEventListener("resize", updateWindowWidth);
   const slide1Element = document.getElementById("slide1");
@@ -51,7 +56,6 @@ onMounted(async () => {
     state.metadesc = textesGlobal.data.metadesc;
     state.pageTitle = textesGlobal.data.title;
     state.agence = textesGlobal.data;
-    // initialisation du swiper si la largeur de la fenêtre est supérieure à 1024px
     if (windowWidth.value > 1024) {
       swiperInstance = new Swiper(swiperContainer.value, {
         direction: "vertical", // Set the direction to vertical
@@ -94,7 +98,6 @@ onMounted(async () => {
           const tipster = document.querySelector("#tipster");
           const liste = tipster.querySelectorAll("li");
           console.log(liste);
-
           const delai = 300;
           const increment = 1;
           const debutFadeOut = 19;
@@ -131,19 +134,26 @@ onMounted(async () => {
           state.isSlide1Active = false;
         }
       });
+      //gestion de l'animation de la slide 5
+      const slide5Element = document.getElementById("slide5");
+      slide5Element.addEventListener("mousemove", (event) => {
+        const posX = (event.clientX / slide5Element.offsetWidth) * 200;
+        const posY = (event.clientY / slide5Element.offsetHeight) * 200;
+        // Set the new background position
+        slide5Element.style.backgroundPosition = `${posX}% ${posY}%`;
+      });
     } else {
-      //carousel horizontal si la largeur de la fenêtre est inférieure à 1024px
+      //deuxieme slider sur la slide4
+
       swiperInstance2 = new Swiper(swiperContainer2.value, {
         direction: "horizontal",
         slidesPerView: 1,
         spaceBetween: 10,
-        //mousewheel: true,
         rewind: true,
         disabledOnInteraction: true,
         initialSlide: 0,
         speed: 2000,
         draggable: true,
-        // keyboard: true,
         parallax: true,
         autoplay: {
           delay: 2000,
@@ -151,10 +161,6 @@ onMounted(async () => {
         },
       });
       //animation de la 2nde liste tipster
-      //element slide 4 qui vont du haut vers le bas
-      //lancer tout le processus seulement lordsque la #slide4 est affichée dans le viewport
-      //et que le viewport est en mode mobile
-      // Create an Intersection Observer instance
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.target.id === "slide4" && entry.isIntersecting) {
@@ -189,14 +195,8 @@ onMounted(async () => {
           }
         });
       });
-
-      // Start observing #slide4
       const slide4Element = document.getElementById("slide4");
       observer.observe(slide4Element);
-
-      // gestion de l'animation de la slide 5
-      const slide5Element = document.getElementById("slide5");
-
       const tipster = document.querySelector("#tipster2");
       const liste = tipster.querySelectorAll("div");
       const delai = 300;
@@ -219,17 +219,6 @@ onMounted(async () => {
       }, delai);
     }
 
-    //gestion de l'animation de la slide 5
-    const slide5Element = document.getElementById("slide5");
-    // Add event listener for mouse movement
-    slide5Element.addEventListener("mousemove", (event) => {
-      // Calculate the new background position based on the mouse coordinates
-      const posX = (event.clientX / slide5Element.offsetWidth) * 200;
-      const posY = (event.clientY / slide5Element.offsetHeight) * 200;
-
-      // Set the new background position
-      slide5Element.style.backgroundPosition = `${posX}% ${posY}%`;
-    });
     // Set isLoading to false when everything is loaded
     state.isLoading = false;
   } catch (error) {
@@ -415,7 +404,7 @@ watchEffect(() => {
 
 <style lang="scss" scoped>
 .slide5-background {
-  background: url("/img/visages.png");
+  background: url("/img/visages.png") black;
   background-position: 50% 50%;
   transition: background-position 0.3s ease-in-out;
 }
@@ -423,6 +412,17 @@ watchEffect(() => {
 .slide5-background:hover {
   background-position: 50% 70%;
   /* Adjust the background position as needed */
+}
+
+@media screen and (max-width: 1024px) {
+  .slide5-background {
+    background-size: 100% !important;
+    background-repeat: no-repeat !important;
+
+    &:hover {
+      background-position: 50% 50% !important;
+    }
+  }
 }
 
 #lagence {
@@ -455,6 +455,7 @@ watchEffect(() => {
   /*  overflow: hidden; */
   height: auto;
 }
+
 @media screen and (max-width: 1024px) {
   .swiper {
     width: 100%;
@@ -464,27 +465,32 @@ watchEffect(() => {
   .swiper-horizontal {
     height: auto;
   }
-  #slider5 {
+
+  #slide5 {
     height: 203px !important;
     background-size: 100% !important;
     background-repeat: no-repeat !important;
   }
+
   #slide4 {
     background: none !important;
     height: 720px !important;
     overflow: auto;
   }
+
   #slide3 {
     .swiper-wrapper {
       flex-direction: row;
     }
   }
+
   #slide1,
   #slide2,
   #slide3 {
     background: none !important;
     height: auto !important;
   }
+
   .swiper-wrapper {
     flex-direction: column;
     overflow-y: scroll;
@@ -492,18 +498,23 @@ watchEffect(() => {
     height: 100%;
     overflow-x: hidden;
   }
+
   #slide3 {
     .swiper-wrapper {
       flex-direction: row;
       height: 165px !important;
+      overflow: hidden;
     }
   }
+
   #slide1 {
     padding-top: 1em;
+
     h3 {
     }
   }
 }
+
 @media screen and (min-width: 1024px) {
   .swiper {
     width: 100%;
@@ -516,6 +527,9 @@ watchEffect(() => {
 
   .swiper-slide {
     /* Styles pour les slides */
+  }
+
+  div#moufmideh {
   }
 }
 </style>

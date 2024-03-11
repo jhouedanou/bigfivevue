@@ -2265,6 +2265,8 @@ div#pargrapheIntro {
 		}
 	}
 	div#moufmideh {
+		margin-top: 0em !important;
+
 		height: auto !important;
 	}
 
@@ -2335,6 +2337,7 @@ div#pargrapheIntro {
 			text-align: left !important;
 			justify-content: flex-start !important;
 			align-items: flex-start !important;
+			flex-direction: column !important;
 		}
 	}
 	div#moufmideh {
@@ -2499,9 +2502,17 @@ div#pargrapheIntro {
 		}
 	}
 	#mouf {
-		font-size: 15px !important;
+		font-size: 14px !important;
 		right: 0px !important;
-		line-height: 50px !important;
+		top: 87px !important;
+		line-height: 20px !important;
+		padding: 19px 73px 1px 12px !important;
+		display: flex;
+		flex-direction: row;
+
+		br {
+			display: inline;
+		}
 	}
 
 	#menumobile {
@@ -2684,10 +2695,37 @@ div#pargrapheIntro {
 	}
 	#slide3 {
 		padding: 10.3em 1em 0em 1em !important;
-		* {
-			font-size: 13px !important;
-			line-height: 18px !important;
-			margin-bottom: 1em !important;
+		.swiper-slide {
+			padding-left: 0em !important;
+			padding-right: 2em !important;
+			width: 100%;
+		}
+		#die {
+			* {
+				font-size: 13px !important;
+				line-height: 18px !important;
+				margin-bottom: 1em !important;
+			}
+		}
+		.num {
+			h3 {
+				font-size: 88px !important;
+				margin-top: 7px;
+			}
+			h4 {
+				font-size: 13px !important;
+				line-height: 18px !important;
+			}
+		}
+		.cont-slide {
+			h3 {
+				font-size: 23px !important;
+				line-height: 23px;
+			}
+			h4 {
+				font-size: 13px !important;
+				line-height: 13px !important;
+			}
 		}
 	}
 	#slide4 {
@@ -4562,4 +4600,11 @@ div#imagshop {
 	//make it cross browser compatible
 	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#CC000000, endColorstr=#00000000)";
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#CC000000, endColorstr=#00000000);
+}
+body {
+	&.agence {
+		#__nuxt {
+			overflow: hidden;
+		}
+	}
 }
