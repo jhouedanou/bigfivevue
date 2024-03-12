@@ -145,12 +145,22 @@ onMounted(async () => {
         slide5Element.style.backgroundPosition = `${posX}% ${posY}%`;
       });
     } else {
-      //Bootstrap carousel
+      const { default: Hammer } = await import("hammerjs");
       const { Carousel } = await import("bootstrap");
       //bootstrap
       const carouselElement = document.querySelector(
         "#carouselExampleIndicators"
       );
+      const hammer = new Hammer(carouselElement);
+      hammer.on("swipeleft", function () {
+        // Aller à la diapositive suivante
+        $("#carouselExampleIndicators").carousel("next");
+      });
+
+      hammer.on("swiperight", function () {
+        // Aller à la diapositive précédente
+        $("#carouselExampleIndicators").carousel("prev");
+      });
       const carousel = new Carousel(carouselElement, {
         interval: 2000, // Autoplay interval in milliseconds
       });
