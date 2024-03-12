@@ -644,7 +644,7 @@ onMounted(async () => {
                 </div>
               </div>
               <div class="col-md-6">
-                <img src="/img/solutions/bigcity/dashboard.png" alt />
+                <img src="/img/solutions/bigcity/dashboard.jpg" alt />
                 <p class="legende">Homepage Dashboard</p>
               </div>
             </div>

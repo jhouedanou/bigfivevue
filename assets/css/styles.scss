@@ -2125,10 +2125,16 @@ div#pargrapheIntro {
 
 @media screen and (max-width: 1024px) {
 	#introforeal {
-		margin-top: 0em !important;
+		margin: 0em auto !important;
+		max-width: 80vw !important;
+		p {
+			font-size: 13px !important;
+			line-height: 19px !important;
+			margin: 0 !important;
+		}
 	}
 	br {
-		display: none;
+		display: inline !important;
 		&::after {
 			content: " ";
 			display: inline !important;
