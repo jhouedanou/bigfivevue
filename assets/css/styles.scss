@@ -2122,16 +2122,17 @@ div#pargrapheIntro {
 		background-color: black !important;
 	}
 }
+
 @media screen and (max-width: 1024px) {
-	#solutionBanner {
-		position: relative !important;
-		background-size: contain !important;
-		width: auto !important;
-		padding: 0 !important;
-		margin: 0 !important;
-		max-height: 373px !important;
-		background: 0 0 no-repeat;
-		background-attachment: scroll !important;
+	#introforeal {
+		margin-top: 0em !important;
+	}
+	br {
+		display: none;
+		&::after {
+			content: " ";
+			display: inline !important;
+		}
 	}
 	.cartouchez {
 		padding: 0em !important;
@@ -4659,5 +4660,30 @@ body {
 		#__nuxt {
 			overflow: hidden;
 		}
+	}
+}
+
+@media screen and (min-width: 346px) and (max-width: 1024px) {
+	#solutionBanner {
+		position: relative !important;
+		background-size: cover !important;
+		width: auto !important;
+		padding: 0 !important;
+		margin: 0 !important;
+		max-height: 373px !important;
+		background: 0 0 no-repeat;
+		background-attachment: scroll !important;
+	}
+}
+@media screen and (max-width: 345px) {
+	#solutionBanner {
+		position: relative !important;
+		background-size: contain !important;
+		width: auto !important;
+		padding: 0 !important;
+		margin: 0 !important;
+		max-height: 373px !important;
+		background: 0 0 no-repeat;
+		background-attachment: scroll !important;
 	}
 }

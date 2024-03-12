@@ -13,6 +13,8 @@ const solutions = ref([]);
 const menusolutions = ref([]);
 const route = useRoute();
 const scrollPosition = ref(0);
+const windowWidth = ref(0);
+
 let isSidebarOpen = ref(false);
 let toClose = ref(false);
 let closeBlack = ref(false);
@@ -21,17 +23,27 @@ const scrollToElement = () => {
   const element = document.getElementById("restedelapage");
   element.scrollIntoView({ behavior: "smooth" });
 };
-
 const state = reactive({
   isLoading: true,
 });
 const onScroll = () => {
   scrollPosition.value = window.scrollY;
 };
+const updateWindowWidth = () => {
+  windowWidth.value = window.innerWidth;
+};
+
+onUnmounted(() => {
+  window.removeEventListener("resize", updateWindowWidth);
+});
+
 onMounted(() => {
   window.addEventListener("scroll", onScroll);
   document.body.id = filterValue;
   document.body.classList.add("solutions");
+
+  windowWidth.value = window.innerWidth;
+  window.addEventListener("resize", updateWindowWidth);
 });
 onMounted(async () => {
   try {
@@ -103,7 +115,7 @@ onMounted(async () => {
       id="solutionBanner"
       :style="{
         backgroundImage:
-          window > 1024
+          windowWidth > 1024
             ? 'url(' + matchingSolution.banniere + ')'
             : 'url(' + matchingSolution.banniereMobile + ')',
       }"
