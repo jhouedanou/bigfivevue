@@ -7,7 +7,6 @@ import PageLoader from "@/components/PageLoader.vue";
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
 import $ from "jquery";
-
 const swiperContainer = ref(null);
 let swiperInstance;
 const solutions = ref([]);
@@ -102,7 +101,12 @@ onMounted(async () => {
     </div>
     <div
       id="solutionBanner"
-      :style="{ backgroundImage: 'url(' + matchingSolution.banniere + ')' }"
+      :style="{
+        backgroundImage:
+          window > 1024
+            ? 'url(' + matchingSolution.banniere + ')'
+            : 'url(' + matchingSolution.banniereMobile + ')',
+      }"
     >
       <div class="cartouchez">
         <i
