@@ -6,9 +6,10 @@ import "swiper/css/bundle";
 import "animate.css";
 import Menumobile from "@/components/Menumobile.vue";
 import PageLoader from "@/components/PageLoader.vue";
+import "bootstrap/dist/css/bootstrap.css";
 let swiperContainer = ref(null);
 let swiperContainer2 = ref(null);
-let swiperContainerMobile = ref(null);
+let swiperContainer3 = ref(null);
 let slide3Content = ref([]);
 let swiperInstance;
 let swiperInstance2;
@@ -16,6 +17,7 @@ let isMainFull = ref(true);
 let isSidebarOpen = ref(false);
 let toClose = ref(false);
 let closeBlack = ref(false);
+
 const windowWidth = ref(0);
 const state = reactive({
   metadesc: "",
@@ -36,7 +38,6 @@ onMounted(() => {
   document.body.id = "agence";
   // ajouter la classe .agence à la balise body
   document.body.classList.add("agence");
-
   windowWidth.value = window.innerWidth;
   window.addEventListener("resize", updateWindowWidth);
   const slide1Element = document.getElementById("slide1");
@@ -144,23 +145,14 @@ onMounted(async () => {
         slide5Element.style.backgroundPosition = `${posX}% ${posY}%`;
       });
     } else {
-      //swiper on swiperContainerMobile
-      swiperInstance = new Swiper(swiperContainerMobile.value, {
-        direction: "horizontal", // Set the direction to vertical
-        slidesPerView: 1,
-        spaceBetween: 10,
-        rewind: true,
-        disableOnInteraction: true,
-        initialSlide: 0,
-        speed: 2000,
-        draggable: true,
-        mousewheel: true,
-        keyboard: true,
-        effect: "slide", // Set the slide effect
-        autoplay: {
-          delay: 10000, // Delay between transitions in ms
-          disableOnInteraction: true,
-        },
+      //Bootstrap carousel
+      const { Carousel } = await import("bootstrap");
+      //bootstrap
+      const carouselElement = document.querySelector(
+        "#carouselExampleIndicators"
+      );
+      const carousel = new Carousel(carouselElement, {
+        interval: 2000, // Autoplay interval in milliseconds
       });
       //animation de la 2nde liste tipster
       const observer = new IntersectionObserver((entries) => {
@@ -191,8 +183,6 @@ onMounted(async () => {
                 clearInterval(interval);
               }
             }, delai);
-
-            // Stop observing once the code is executed
             observer.unobserve(entry.target);
           }
         });
@@ -316,33 +306,61 @@ watchEffect(() => {
                   v-html="state.agence?.introslide3 ?? ''"
                 ></div>
               </div>
-              {{ windowWidth }}
-              <!-- display a div based on the windowWidth value on mobile -->
-              <div
-                id="offmideh"
-                ref="swiperContainerMobile"
-                v-if="windowWidth < 1024"
-              >
-                <div id="swidel" class="swiper-wrapper">
-                  <div
-                    :index="item.Id"
-                    class="swiper-slide"
-                    v-for="item in state.agence?.slide3 ?? []"
-                    :key="item.Id"
-                    :peek-gutter="true"
-                    :slides-per-page="1"
-                  >
-                    <div class="num">
-                      <h3>{{ item.Id }}.&nbsp;</h3>
-                    </div>
-                    <div class="cont-slide">
-                      <h3>{{ item.titre }}</h3>
-                      <h4 v-html="item.nom"></h4>
+              <!--  {{ windowWidth }} -->
+              <div id="offmideh" v-if="windowWidth < 1024">
+                <div id="carousel-wrapper">
+                  <div class="ensr">
+                    <div
+                      id="carouselExampleIndicators"
+                      class="carousel slide"
+                      data-bs-ride="carousel"
+                    >
+                      <div class="carousel-inner">
+                        <div
+                          :index="item.Id"
+                          class="carousel-item"
+                          v-for="(item, index) in state.agence?.slide3 ?? []"
+                          :key="item.Id"
+                          :class="{ active: index === 0 }"
+                        >
+                          <div class="num">
+                            <h3>{{ item.Id }}.&nbsp;</h3>
+                          </div>
+                          <div class="cont-slide">
+                            <h3>{{ item.titre }}</h3>
+                            <h4 v-html="item.nom"></h4>
+                          </div>
+                        </div>
+                      </div>
+                      <button
+                        class="carousel-control-prev"
+                        type="button"
+                        data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev"
+                      >
+                        <span
+                          class="carousel-control-prev-icon"
+                          aria-hidden="true"
+                        ></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button
+                        class="carousel-control-next"
+                        type="button"
+                        data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next"
+                      >
+                        <span
+                          class="carousel-control-next-icon"
+                          aria-hidden="true"
+                        ></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- display a div based on the windowWidth value on desktop -->
+
               <div
                 id="moufmideh"
                 ref="swiperContainer2"
@@ -500,15 +518,16 @@ watchEffect(() => {
   }
 
   #slide5 {
-    height: 203px !important;
-    background-size: 100% !important;
-    background-repeat: no-repeat !important;
+    height: 255px !important;
+    padding: 1em 1em 1em 1em;
+    background-position: 0 0 !important;
+    background-size: cover;
   }
 
   #slide4 {
     background: none !important;
     height: 720px !important;
-    overflow: auto;
+    overflow: hidden;
   }
 
   #slide3 {
@@ -531,16 +550,15 @@ watchEffect(() => {
     height: 100%;
     overflow-x: hidden;
   }
-
+  #offmideh {
+    display: block;
+    height: auto !important;
+    width: 80vw;
+    overflow: hidden;
+  }
+  /* 
   #slide3 {
     #swidel {
-      height: 165px !important;
-      overflow: hidden;
-      background: none !important;
-      width: 84vw;
-      .swiper-slide {
-        background: none !important;
-      }
     }
   }
 
@@ -549,7 +567,7 @@ watchEffect(() => {
 
     h3 {
     }
-  }
+  } */
 }
 
 @media screen and (min-width: 1024px) {
@@ -560,13 +578,6 @@ watchEffect(() => {
 
   .swiper-horizontal {
     height: auto;
-  }
-
-  .swiper-slide {
-    /* Styles pour les slides */
-  }
-
-  div#moufmideh {
   }
 }
 </style>

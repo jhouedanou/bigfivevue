@@ -1083,7 +1083,7 @@ div#moufmideh {
 	}
 	.carousel {
 		max-width: 100%;
-		padding: 0 0 0 14em;
+		padding: 0 0 0 0em;
 	}
 	.carousel__slide--active {
 		filter: alpha(opacity=100) !important;
@@ -2333,6 +2333,7 @@ div#pargrapheIntro {
 		justify-content: center;
 	}
 	#slide3 {
+		padding-bottom: 4em;
 		.swiper-slide {
 			text-align: left !important;
 			justify-content: flex-start !important;
@@ -2694,7 +2695,7 @@ div#pargrapheIntro {
 		}
 	}
 	#slide3 {
-		padding: 10.3em 1em 0em 1em !important;
+		padding: 10.3em 1em 13em 1em !important;
 		.swiper-slide {
 			padding-left: 0em !important;
 			padding-right: 2em !important;
@@ -2704,15 +2705,28 @@ div#pargrapheIntro {
 			* {
 				font-size: 13px !important;
 				line-height: 18px !important;
-				margin-bottom: 1em !important;
+			}
+			p {
+				&:nth-of-type(1) {
+					margin-bottom: 1em !important;
+				}
+				&:nth-of-type(2) {
+					margin-bottom: 1em !important;
+				}
 			}
 		}
 		.num {
 			h3 {
 				font-size: 88px !important;
-				margin-top: 7px;
+				margin-top: 16px;
+				font-weight: bold;
+				margin-bottom: 0;
+				padding: 0;
+				line-height: 1;
 			}
 			h4 {
+				font-weight: bold;
+
 				font-size: 13px !important;
 				line-height: 18px !important;
 			}
@@ -2721,13 +2735,20 @@ div#pargrapheIntro {
 			h3 {
 				font-size: 23px !important;
 				line-height: 23px;
+				font-weight: bold;
 			}
 			h4 {
 				font-size: 13px !important;
 				line-height: 13px !important;
+				font-weight: bold;
 			}
 		}
 	}
+	.carousel-control-prev,
+	.carousel-control-next {
+		display: none !important;
+	}
+
 	#slide4 {
 		ul {
 			li {
