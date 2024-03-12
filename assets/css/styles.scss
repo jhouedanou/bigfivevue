@@ -2123,6 +2123,9 @@ div#pargrapheIntro {
 	}
 }
 @media screen and (max-width: 1024px) {
+	#listedessolutions #main ul li:hover i {
+		background-position: 0 100% !important;
+	}
 	#slide4 {
 		height: 100vh;
 		overflow: hidden;
@@ -2162,8 +2165,8 @@ div#pargrapheIntro {
 			flex-direction: column;
 			/* background: red; */
 			min-height: 100vh;
-			height: auto;
-			overflow: scroll;
+			height: auto; /* 
+			overflow: scroll; */
 		}
 		.col {
 			-webkit-background-size: cover !important;
@@ -2175,7 +2178,7 @@ div#pargrapheIntro {
 			i {
 				width: 105px !important;
 				height: 105px !important;
-				background-size: 105px !important;
+				background-size: cover !important;
 			}
 		}
 	}
