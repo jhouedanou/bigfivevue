@@ -7,6 +7,7 @@ import "animate.css";
 import Menumobile from "@/components/Menumobile.vue";
 import PageLoader from "@/components/PageLoader.vue";
 import "bootstrap/dist/css/bootstrap.css";
+
 let swiperContainer = ref(null);
 let swiperContainer2 = ref(null);
 let swiperContainer3 = ref(null);
@@ -26,6 +27,7 @@ const state = reactive({
   isSlide1Active: "",
   isLoading: true,
 });
+
 const updateWindowWidth = () => {
   windowWidth.value = window.innerWidth;
 };
