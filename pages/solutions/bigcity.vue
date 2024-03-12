@@ -326,7 +326,7 @@ onMounted(async () => {
                   <div class="col-md-6 imgwrapper">
                     <img
                       class="img-fluid"
-                      src="/img/solutions/bigcity//19.png"
+                      src="/img/solutions/bigcity/19.png"
                       alt
                     />
                     <p class="legende">
@@ -644,7 +644,7 @@ onMounted(async () => {
                 </div>
               </div>
               <div class="col-md-6">
-                <img src="/img/solutions/bigcity/Dashboard.png" alt />
+                <img src="/img/solutions/bigcity/dashboard.png" alt />
                 <p class="legende">Homepage Dashboard</p>
               </div>
             </div>
