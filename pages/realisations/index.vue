@@ -282,7 +282,7 @@ li {
 }
 @media screen and (max-width: 1024px) {
   .swiper-slide {
-    height: 368px !important;
+    height: 230px !important;
     width: 100%;
     display: flex;
     align-items: center;
@@ -298,6 +298,7 @@ li {
     height: 100vh;
   }
   .swiper-slide {
+    background-position: center !important;
     background-size: cover !important;
   }
 }
