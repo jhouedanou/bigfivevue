@@ -524,7 +524,11 @@ watchEffect(() => {
     width: 100%;
     height: 100vh;
   }
-
+  .swiper-wrapper {
+    .swiper-slide {
+      padding: 1em !important ;
+    }
+  }
   .swiper-horizontal {
     height: auto;
   }
@@ -582,7 +586,7 @@ watchEffect(() => {
   } */
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .swiper {
     width: 100%;
     height: 100vh;

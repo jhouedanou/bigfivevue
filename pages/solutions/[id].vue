@@ -55,6 +55,7 @@ onMounted(async () => {
       logo: solution.logo,
       lien: solution.lien,
     }));
+
     state.isLoading = false;
   } catch (error) {
     console.error(error);
@@ -68,12 +69,6 @@ const matchingSolution = computed(() => {
   return {
     ...solutions.value[index],
   };
-});
-
-onMounted(async () => {
-  //check with jquery if the body has an "bigcity" id
-  if ($("#bigcity").length) {
-  }
 });
 </script>
 
