@@ -2158,18 +2158,7 @@ div#pargrapheIntro {
 		-ms-border-radius: 75px !important;
 		-o-border-radius: 75px !important;
 	}
-	.cartouchez {
-		max-height: 357px !important;
-		overflow: hidden;
-		&::before {
-			content: "";
-			width: 100%;
-			height: 100%;
-			position: absolute;
-			background: rgba(0, 0, 0, 0.308);
-			z-index: 1;
-		}
-	}
+
 	#introforeal {
 		margin-top: 1em;
 		h3 {
@@ -2254,6 +2243,10 @@ div#pargrapheIntro {
 			width: 50% !important;
 			padding: 0;
 			margin: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
 			&:nth-of-type(1),
 			&:nth-of-type(2) {
 				margin-bottom: -1.5em !important;
@@ -2301,11 +2294,11 @@ div#pargrapheIntro {
 			padding: 1em 2em;
 			font-weight: bold;
 			color: #000;
-			position: absolute;
-			bottom: 84px;
+			bottom: 0;
 		}
 	}
 	#nosautresolutons {
+		padding-bottom: 0em !important;
 		h3 {
 			font-size: 22px !important;
 			margin: -11px auto 0;
@@ -2319,7 +2312,7 @@ div#pargrapheIntro {
 		margin: 1em auto;
 	}
 	.austin {
-		margin: 0;
+		margin: 0 auto;
 		flex-direction: row;
 		max-width: 320px !important;
 		width: 100% !important;
@@ -2335,6 +2328,131 @@ div#pargrapheIntro {
 					width: 85px;
 					height: 85px;
 					background-size: 85px;
+					&:hover {
+						background-position: 0 100%;
+					}
+				}
+			}
+		}
+	}
+	#sectionunbigformations {
+		height: auto !important;
+		h3 {
+			@include titremobile(48px);
+			span {
+				display: block;
+				clear: both;
+			}
+		}
+		.row {
+			&:nth-of-type(2) {
+				.col-md-3 {
+					margin-top: 1em;
+					width: 50% !important;
+					img {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+	#sectiontwobigformations {
+		padding-top: 7em !important;
+		p {
+			@include textemobile(0);
+		}
+	}
+	#sectionthreebigformations {
+		padding-top: 0em !important;
+		margin-top: 8em !important;
+		padding-bottom: 1em !important;
+	}
+	#sectionfourbigformations {
+		margin-top: 2em !important;
+		h4 {
+			@include titremobile(0px);
+			line-height: 17px !important;
+		}
+		h6 {
+			@include titremobile(0px);
+		}
+	}
+	.formation {
+		padding-left: 1em !important;
+		padding-right: 1em !important;
+		margin-bottom: 3.6em !important;
+		padding-top: 0em !important;
+		.niveau1logo {
+			margin-top: 2.6em !important;
+			display: flex !important;
+			flex-direction: column !important;
+			img {
+				width: 54px !important;
+				height: auto !important;
+			}
+		}
+		.dre {
+			display: flex !important;
+			align-items: center !important;
+			justify-content: center !important;
+			flex-direction: column !important;
+			padding: 1em !important;
+			h2 {
+				text-align: center !important;
+				@include titremobile(0);
+				margin: 0 !important;
+			}
+			h4 {
+				text-align: center !important;
+				font-weight: 400 !important;
+				font-size: 23px !important;
+				margin: 0 !important;
+			}
+		}
+		p {
+			font-size: 12px !important;
+			line-height: 17px !important;
+		}
+		.niveau2logo {
+			h2 {
+				margin-top: 1.52rem !important;
+				font-size: 17px !important;
+			}
+			ul {
+				li {
+					@include textemobile(0);
+				}
+			}
+		}
+		.niveau3logo {
+			h2 {
+				margin-top: 1.52rem !important;
+				font-size: 17px !important;
+			}
+			ul {
+				li {
+					@include textemobile(0);
+				}
+			}
+		}
+		.niveau4logo {
+			h2 {
+				margin-top: 1.52rem !important;
+				font-size: 17px !important;
+			}
+			ul {
+				li {
+					@include textemobile(0);
+				}
+			}
+		}
+		.niveau5logo {
+			h3 {
+				font-size: 17px !important;
+			}
+			ul {
+				li {
+					@include textemobile(0);
 				}
 			}
 		}
@@ -2782,7 +2900,6 @@ div#pargrapheIntro {
 			display: inline;
 		}
 	}
-
 	#menumobile {
 		display: flex;
 		position: fixed;
@@ -2805,10 +2922,10 @@ div#pargrapheIntro {
 
 			z-index: 10000;
 			img {
-				width: 26px !important;
+				width: 21px !important;
 				position: absolute;
-				top: 25px;
-				right: 17px;
+				top: 32px;
+				right: 14px;
 				z-index: 15;
 			}
 		}
@@ -3544,17 +3661,18 @@ $violetsolutios: #482080;
 	padding: 0;
 	.col-md-12 {
 		position: relative;
-		height: 560px;
 		padding-top: 100px;
+		overflow: hidden;
 
 		img {
 			position: absolute;
-			&:nth-of-type(1) {
+			&:nth-of-type(1),
+			&:nth-of-type(2) {
 				top: 37px;
 				right: 3%;
 				z-index: 10;
 			}
-			&:nth-of-type(2) {
+			&:nth-of-type(3) {
 				bottom: -42px;
 				left: 0;
 			}
@@ -4914,7 +5032,7 @@ body {
 		width: auto !important;
 		padding: 0 !important;
 		margin: 0 !important;
-		max-height: 373px !important;
+		max-height: 358px !important;
 		background: 0 0 no-repeat;
 		background-attachment: scroll !important;
 	}
@@ -4922,7 +5040,7 @@ body {
 @media screen and (max-width: 345px) {
 	#solutionBanner {
 		position: relative !important;
-		background-size: contain !important;
+		background-size: cover !important;
 		width: auto !important;
 		padding: 0 !important;
 		margin: 0 !important;
