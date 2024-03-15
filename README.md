@@ -1,63 +1,26 @@
-# Nuxt 3 Minimal Starter
+Ceci est un projet basé sur vue et nuxt, qui génère un site 
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-## Setup
+## Installation
+Pour installer les dépendances du projet, exécutez la commande suivante :
 
-Make sure to install the dependencies:
-
-```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
 yarn install
-```
 
-## Development Server
+(on a dit yarn install, pas npm install. 
+Yarn est plus rapide. Il est tellement rapide qu'il pourrait battre Usain Bolt dans une course de 100 mètres. ⚡
+Yarn est plus fiable. Il est tellement fiable qu'il pourrait remplacer votre boussole pour vous guider dans la bonne direction.
+Yarn est plus convivial. Il est tellement convivial qu'il pourrait même apprendre à votre grand-mère à coder.
 
-Start the development server on `http://localhost:3000`:
+.... non plus sérieusement, utilisez yarn. Votre vie n'en sera que plus facile
+)
 
-```bash
-# npm
-npm run dev
 
-# pnpm
-pnpm run dev
+## Développement
+Pour lancer le développement du projet, exécutez la commande suivante :
 
-# yarn
 yarn dev
-```
 
-## Production
+## Build
+Pour générer le build final du projet, exécutez la commande suivante :
 
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
 yarn build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
