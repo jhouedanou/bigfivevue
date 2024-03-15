@@ -2132,6 +2132,16 @@ div#pargrapheIntro {
 	margin: $margin !important;
 }
 @media screen and (max-width: 1024px) {
+	.benefits {
+		padding: 1em !important;
+		ul {
+			margin-left: 10px !important;
+			padding-left: 0px !important;
+		}
+	}
+	.formation:nth-of-type(2) {
+		margin-top: 0 !important;
+	}
 	#btnDiscova {
 		margin: auto !important;
 		border: 1px solid white !important;
@@ -2197,7 +2207,8 @@ div#pargrapheIntro {
 				margin-top: 2.95em !important;
 				max-width: 77vw;
 				.col-md-3 {
-					width: 50%;
+					width: 50vw;
+					height: auto;
 					p {
 						font-size: 8px !important;
 					}
@@ -2298,7 +2309,7 @@ div#pargrapheIntro {
 		}
 	}
 	#nosautresolutons {
-		padding-bottom: 0em !important;
+		padding-bottom: 4em !important;
 		h3 {
 			font-size: 22px !important;
 			margin: -11px auto 0;
@@ -2308,8 +2319,8 @@ div#pargrapheIntro {
 		}
 	}
 	#footercontactfrom h2 {
-		font-size: 23px !important;
-		margin: 1em auto;
+		font-size: 17px !important;
+		margin: 2em auto;
 	}
 	.austin {
 		margin: 0 auto;
@@ -2367,8 +2378,56 @@ div#pargrapheIntro {
 		margin-top: 8em !important;
 		padding-bottom: 1em !important;
 	}
+	body#bigformations #contenudelapage {
+		padding-bottom: 1.5em !important;
+	}
 	#sectionfourbigformations {
-		margin-top: 2em !important;
+		margin-top: 52px !important;
+		.rowas {
+			display: grid !important;
+			width: 100% !important;
+			grid-template-columns: repeat(2, 1fr) !important;
+			grid-template-rows: repeat(2, auto) !important;
+			margin-top: 2em !important;
+			margin-top: 11em;
+			.ticket {
+				padding: 1em 0 !important;
+				margin: 0 !important;
+				&:nth-of-type(1) {
+					width: 56px;
+					height: auto;
+				}
+				&:nth-of-type(2) {
+					width: 86px;
+					height: auto;
+				}
+				&:nth-of-type(3) {
+					width: 104px;
+					height: auto;
+				}
+				&:nth-of-type(4) {
+					width: 68px;
+					height: auto;
+				}
+				&:nth-of-type(5) {
+					width: 73px;
+					height: auto;
+				}
+				&:nth-of-type(6) {
+					width: 56px;
+					height: auto;
+				}
+				&:nth-of-type(7) {
+					width: 73px;
+					height: auto;
+				}
+
+				&:nth-of-type(8) {
+					width: 73px;
+					height: auto;
+				}
+			}
+		}
 		h4 {
 			@include titremobile(0px);
 			line-height: 17px !important;
@@ -5088,7 +5147,7 @@ body {
 
 				&:hover {
 					ul {
-						height: 320px;
+						height: auto;
 						filter: alpha(opacity=100); /* internet explorer */
 						-khtml-opacity: 1; /* khtml, old safari */
 						-moz-opacity: 1; /* mozilla, netscape */
