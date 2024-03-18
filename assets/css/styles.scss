@@ -2214,6 +2214,7 @@ div#pargrapheIntro {
 			padding-top: 2.25em !important;
 			display: flex;
 			flex-direction: column;
+			min-height: auto !important;
 			&:after {
 				content: "";
 				width: 100%;
@@ -2248,7 +2249,33 @@ div#pargrapheIntro {
 			bottom: 0;
 		}
 	}
-
+	#sectionfivedashboard {
+		.col-md-3 {
+			font-family: "new-order", sans-serif;
+			font-weight: 400;
+			box-sizing: border-box;
+			margin: 0em !important;
+			font-size: 12px !important;
+			line-height: 19px !important;
+			list-style: disc;
+			list-style-type: disc;
+			padding-bottom: 3em;
+		}
+		h3 {
+			@include titremobile(15px);
+		}
+		h4 {
+			font-family: "new-order", sans-serif;
+			box-sizing: border-box;
+			padding-top: 1px !important;
+			max-width: 76vw;
+			font-size: 13px !important;
+			line-height: 17px !important;
+			margin: 2px !important;
+			font-weight: bold;
+			color: #482080;
+		}
+	}
 	#footercontactfrom {
 		form {
 			margin-top: 0em !important;
@@ -3077,7 +3104,7 @@ div#pargrapheIntro {
 		margin: 0 9px 0 0 !important;
 		display: flex !important;
 		flex-direction: column !important;
-		align-content: end;
+		align-content: flex-end;
 		align-items: flex-end;
 		#menulinks {
 			text-align: right;
