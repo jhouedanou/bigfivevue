@@ -1,4 +1,3 @@
-div
 <script setup>
 import { ref, onMounted, computed, reactive } from "vue";
 import axios from "axios";
@@ -25,13 +24,27 @@ const scrollToElement = () => {
   element.scrollIntoView({ behavior: "smooth" });
 };
 
+const windowWidth = ref(0);
 const state = reactive({
   isLoading: true,
 });
 const onScroll = () => {
   scrollPosition.value = window.scrollY;
 };
+const updateWindowWidth = () => {
+  windowWidth.value = window.innerWidth;
+};
+onUnmounted(() => {
+  window.removeEventListener("resize", updateWindowWidth);
+});
 onMounted(() => {
+  //ajouter l'id de la page  #bigcity à la balise body
+  document.body.id = "bigcity";
+  // ajouter la classe .bigcity à la balise body
+  document.body.classList.add("bigcity");
+
+  windowWidth.value = window.innerWidth;
+  window.addEventListener("resize", updateWindowWidth);
   window.addEventListener("scroll", onScroll);
   document.body.id = filterValue;
   document.body.classList.add("solutions");
@@ -62,47 +75,50 @@ const matchingSolution = computed(() => {
 });
 
 onMounted(async () => {
-  // Initialisation du swiper sur la page
-  swiperInstance = new Swiper(swiperContainer.value, {
-    direction: "vertical",
-    slidesPerView: 1,
-    spaceBetween: 0,
-    mousewheel: true,
-    keyboard: true,
-    rewind: true,
-    parallax: true,
-    draggable: true,
-    autoHeight: true,
-    lazy: true,
-    observer: true,
-    observeParents: true,
-    parallax: true,
-    autoplay: {
-      delay: 10000, // delay between transitions in ms
-      disableOnInteraction: true, // enable/disable autoplay on user interaction
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  });
-  //slider sur les images de la boutique en ligne
-  swiperInstance2 = new Swiper(swiperContainer2.value, {
-    slidesPerView: 3,
-    spaceBetween: 0,
-    direction: "horizontal",
-    draggable: true,
-    loop: true,
-    // mousewheel: true,
-    keyboard: true,
-    rewind: true,
-    observer: true,
-    observeParents: true,
-    autoplay: {
-      delay: 2000,
-      disableOnInteraction: true, // enable/disable autoplay on user interaction
-    },
-  });
+  if (windowWidth.value > 1024) {
+    // Initialisation du swiper sur la page
+    swiperInstance = new Swiper(swiperContainer.value, {
+      direction: "vertical",
+      slidesPerView: 1,
+      spaceBetween: 0,
+      mousewheel: true,
+      keyboard: true,
+      rewind: true,
+      parallax: true,
+      draggable: true,
+      autoHeight: true,
+      lazy: true,
+      observer: true,
+      observeParents: true,
+      parallax: true,
+      autoplay: {
+        delay: 10000, // delay between transitions in ms
+        disableOnInteraction: true, // enable/disable autoplay on user interaction
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+    //slider sur les images de la boutique en ligne
+    swiperInstance2 = new Swiper(swiperContainer2.value, {
+      slidesPerView: 3,
+      spaceBetween: 0,
+      direction: "horizontal",
+      draggable: true,
+      loop: true,
+      // mousewheel: true,
+      keyboard: true,
+      rewind: true,
+      observer: true,
+      observeParents: true,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: true, // enable/disable autoplay on user interaction
+      },
+    });
+  } else {
+  }
 });
 </script>
 
@@ -148,7 +164,10 @@ onMounted(async () => {
           <div
             id="solutionBanner"
             :style="{
-              backgroundImage: 'url(' + matchingSolution.banniere + ')',
+              backgroundImage:
+                windowWidth > 1024
+                  ? `url(${matchingSolution.banniere})`
+                  : `url(${matchingSolution.banniereMobile})`,
             }"
           >
             <div class="cartouchez">
@@ -726,24 +745,25 @@ onMounted(async () => {
 #header-alt {
   position: relative !important;
 }
+@media screen and (min-width: 1024px) {
+  .swiper-wrapper {
+    height: 100vh;
+  }
 
-.swiper-wrapper {
-  height: 100vh;
-}
+  .swiper {
+    width: 100%;
+    height: 100vh;
+  }
 
-.swiper {
-  width: 100%;
-  height: 100vh;
-}
+  .swiper-horizontal {
+    height: auto;
+  }
 
-.swiper-horizontal {
-  height: auto;
-}
-
-.swiper-slide {
-  /* Styles pour les slides */
-  padding: 0;
-  margin: 0 auto;
+  .swiper-slide {
+    /* Styles pour les slides */
+    padding: 0;
+    margin: 0 auto;
+  }
 }
 #restedelapage {
   padding: 0;
@@ -752,5 +772,29 @@ onMounted(async () => {
 .divwrapper {
   padding: 0;
   margin: 0 auto;
+}
+@media screen and (max-width: 1024px) {
+  .swiper-wrapper {
+    flex-direction: column;
+    overflow-y: scroll;
+    min-height: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+  }
+  .swiper {
+    width: 100%;
+    height: auto;
+  }
+  .swiper-wrapper {
+    .swiper-slide {
+      padding: 0em !important ;
+    }
+  }
+  .swiper-horizontal {
+    height: auto;
+  }
 }
 </style>

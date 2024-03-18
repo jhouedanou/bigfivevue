@@ -299,9 +299,6 @@ watchEffect(() => {
                   :key="slide.id ?? ''"
                 >
                   <div class="inner">
-                    <!-- <nuxt-img :src="slide.img ?? ''"
-                      :lazy="true"
-                      quality="80" /> -->
                     <img :src="slide.img ?? ''" alt="" />
                     <h3>{{ slide.title ?? "" }}</h3>
                     <div class="sabine">
