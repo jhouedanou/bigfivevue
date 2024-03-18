@@ -2133,10 +2133,10 @@ div#pargrapheIntro {
 	margin: $margin !important;
 }
 @media screen and (max-width: 1024px) {
-	#sectiontwobigcity{
-		.col-md-6{
-			&:nth-of-type(1){
-				img{
+	#sectiontwobigcity {
+		.col-md-6 {
+			&:nth-of-type(1) {
+				img {
 					margin: 0 auto !important;
 					width: 88%;
 					display: flex;
@@ -2144,7 +2144,7 @@ div#pargrapheIntro {
 				}
 			}
 		}
-		h4{
+		h4 {
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -2162,14 +2162,14 @@ div#pargrapheIntro {
 			margin: 12px auto 2px;
 			max-width: 79vw;
 		}
-		ul{
-		    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin: 0 !important;
-    padding: 0 !important;
-			li{
+		ul {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			margin: 0 !important;
+			padding: 0 !important;
+			li {
 				display: flex;
 				align-items: center;
 				justify-content: center;
@@ -3664,6 +3664,80 @@ div#pargrapheIntro {
 	}
 	body .swiper-slide .row {
 		height: auto !important;
+	}
+	@mixin legendemobile($maxwidth) {
+		font-size: 8px;
+		margin: 0 auto;
+		line-height: 8px;
+		max-width: $maxwidth;
+	}
+	@mixin imagemobile($margin) {
+		width: auto !important;
+		height: 300px !important;
+		margin-top: $margin !important;
+	}
+	#outildefielisation {
+		background: #edeff6 !important;
+		margin-top: 64px;
+	}
+	#sectionthreebigcity {
+		padding-top: 0em;
+		#carousel-wrapper {
+			margin-bottom: -13px;
+		}
+	}
+	#sectionfourbigcity {
+		margin-top: 3em;
+		.row {
+			margin: 0 !important;
+			padding: 0 !important;
+		}
+	}
+	#generateurdecontenu {
+		.col-md-7 {
+			align-items: center !important;
+			width: 100% !important;
+		}
+		background: white !important;
+		img {
+			@include imagemobile(0);
+		}
+		p {
+			@include legendemobile(35vw);
+		}
+	}
+	.conundrum {
+		text-align: center;
+		img {
+			width: auto !important;
+			height: 300px !important;
+		}
+		p {
+			font-size: 8px;
+			margin-bottom: 0;
+			line-height: 8px;
+		}
+	}
+	.letexte {
+		margin-top: 64px;
+
+		img {
+			height: 50px;
+			width: auto;
+		}
+		h3 {
+			font-size: 18px !important;
+			max-width: 50vw;
+			padding-bottom: 0em !important;
+		}
+		.paddingzone {
+			padding: 0em !important;
+		}
+		p {
+			font-size: 12px !important;
+			margin-bottom: 20px !important;
+			line-height: 1.5 !important;
+		}
 	}
 }
 
