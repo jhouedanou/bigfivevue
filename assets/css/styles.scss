@@ -2133,6 +2133,61 @@ div#pargrapheIntro {
 	margin: $margin !important;
 }
 @media screen and (max-width: 1024px) {
+	#sectiontwobigcity{
+		.col-md-6{
+			&:nth-of-type(1){
+				img{
+					margin: 0 auto !important;
+					width: 88%;
+					display: flex;
+					justify-content: center;
+				}
+			}
+		}
+		h4{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			text-align: center;
+			color: #240055;
+			font-size: 20px;
+			font-weight: bold;
+			font-stretch: normal;
+			font-style: normal;
+			line-height: 1.5;
+			letter-spacing: normal;
+			text-align: center;
+			font-family: "new-order", sans-serif;
+			margin: 12px auto 2px;
+			max-width: 79vw;
+		}
+		ul{
+		    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 !important;
+    padding: 0 !important;
+			li{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				text-align: center;
+				color: #240055;
+				font-size: 13px !important;
+				font-weight: bold;
+				font-stretch: normal;
+				font-style: normal;
+				line-height: 1.8 !important;
+				letter-spacing: normal;
+				text-align: center;
+				font-family: "new-order", sans-serif;
+				margin: 0 auto !important;
+			}
+		}
+	}
 	#sectionunbigdashboard {
 		h3 {
 			@include titremobile(1px);

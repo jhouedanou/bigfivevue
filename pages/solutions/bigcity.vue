@@ -5,6 +5,8 @@ import { useRoute } from "vue-router";
 import ContenuAltLayout from "@/layouts/contenuBigCity.vue";
 import Footer from "@/components/Footer.vue";
 import PageLoader from "@/components/PageLoader.vue";
+import "bootstrap/dist/css/bootstrap.css";
+
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
 let swiperContainer = ref(null);
@@ -118,6 +120,25 @@ onMounted(async () => {
       },
     });
   } else {
+    const { default: Hammer } = await import("hammerjs");
+      const { Carousel } = await import("bootstrap");
+      //bootstrap
+      const carouselElement = document.querySelector(
+        "#carouselExampleIndicators"
+      );
+      const hammer = new Hammer(carouselElement);
+      hammer.on("swipeleft", function () {
+        // Aller à la diapositive suivante
+        $("#carouselExampleIndicators").carousel("next");
+      });
+
+      hammer.on("swiperight", function () {
+        // Aller à la diapositive précédente
+        $("#carouselExampleIndicators").carousel("prev");
+      });
+      const carousel = new Carousel(carouselElement, {
+        interval: 2000, // Autoplay interval in milliseconds
+      });
   }
 });
 </script>
@@ -165,7 +186,7 @@ onMounted(async () => {
             id="solutionBanner"
             :style="{
               backgroundImage:
-                windowWidth > 1024
+                windowWidth >= 1024
                   ? `url(${matchingSolution.banniere})`
                   : `url(${matchingSolution.banniereMobile})`,
             }"
@@ -198,7 +219,7 @@ onMounted(async () => {
             class="divwrapper dflex justify-content-center align-items-center"
           >
             <div id="sectionunbigcity" class="container">
-              <div id="intro" class="obam">
+              <div v-if='windowWidth>=1024' id="intro" class="obam">
                 <h4>Avec BIG City, vous pouvez rapidement créer…</h4>
               </div>
             </div>
@@ -212,6 +233,9 @@ onMounted(async () => {
                   />
                 </div>
                 <div class="col-md-6">
+                  <div v-if='windowWidth < 1024' id="intro" class="obam">
+                <h4>Avec BIG City, vous pouvez rapidement créer…</h4>
+              </div>
                   <ul>
                     <li>une application Brand-content</li>
                     <li>une application BtoB</li>
@@ -231,6 +255,40 @@ onMounted(async () => {
         <div id="outildefielisation" class="swiper-slide">
           <div id="sectionthreebigcity" class="container-fluid">
             <div class="row no-gutters">
+              <div v-if='windowWidth<=1024' id="carousel-wrapper">
+                <div  
+                      id="carouselExampleIndicators"
+                      class="carousel slide"
+                      data-bs-ride="carousel">
+                      <div class='carousel-inner'>
+                        <div class="imgwrapper col-md-4 col-sm-12 p-0 conundrum carousel-inner active">
+                    <img
+                      class="img-fluid"
+                      src="/img/solutions/bigcity/17.png"
+                      alt
+                    />
+                    <p class="legende">Géolocalisation des établissements</p>
+                  </div>
+
+                  <div class="imgwrapper col-md-4 col-sm-12 p-0 conundrum">
+                    <img
+                      class="img-fluid"
+                      src="/img/solutions/bigcity/15.png"
+                      alt
+                    />
+                    <p class="legende">Page établissement</p>
+                  </div>
+                  <div class="imgwrapper col-md-4 col-sm-12 p-0 conundrum">
+                    <img
+                      class="img-fluid"
+                      src="/img/solutions/bigcity/16.png"
+                      alt
+                    />
+                    <p class="legende">Vue des établissements par liste</p>
+                  </div>
+                      </div>
+                    </div>
+              </div>
               <div class="col-md-4 offset-md-1 letexte">
                 <div class="paddingzone">
                   <img src="/img/solutions/bigcity/logopetit.svg" alt />
@@ -254,7 +312,7 @@ onMounted(async () => {
                 </div>
               </div>
               <div
-                class="col-md-7 d-flex align-items-center justify-content-center"
+                v-if='windowWidth>1024' class="col-md-7 d-flex align-items-center justify-content-center"
               >
                 <div
                   class="row d-flex align-items-center justify-content-center"

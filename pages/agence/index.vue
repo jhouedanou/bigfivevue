@@ -316,7 +316,7 @@ watchEffect(() => {
                 ></div>
               </div>
               <!--  {{ windowWidth }} -->
-              <div id="offmideh" v-if="windowWidth < 1024">
+              <div id="offmideh" v-if="windowWidth <= 1024">
                 <div id="carousel-wrapper">
                   <div class="ensr">
                     <div
