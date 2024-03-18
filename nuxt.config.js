@@ -1,7 +1,6 @@
 export default defineNuxtConfig({
   target: "static",
   devtools: { enabled: true },
-
   app: {
     head: {
       charset: "utf-8",
@@ -67,6 +66,8 @@ export default defineNuxtConfig({
         },
       ],
     },
+    pageTransition: { name: 'page', mode: 'out-in' }
+
   },
   script: [
     {
@@ -160,4 +161,12 @@ export default defineNuxtConfig({
   workbox: {
     // Workbox options
   },
+  build:{
+    extend(config, { isDev, isClient }) {
+      if (isDev && isClient) {
+        config.devtool = 'source-map';
+      }
+    },
+    cssSourceMap: true,
+  }
 });
