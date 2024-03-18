@@ -180,7 +180,7 @@ onMounted(async () => {
             </div>
           </div>
         </div>
-        <div class="swiper-slide">
+        <div id="avecbigcity" class="swiper-slide">
           <div
             id="restedelapage"
             class="dflex justify-content-center align-items-center"
@@ -193,7 +193,7 @@ onMounted(async () => {
             </div>
           </div>
         </div>
-        <div class="swiper-slide">
+        <div id="unannuairegeolocalise" class="swiper-slide">
           <div
             class="divwrapper dflex justify-content-center align-items-center"
           >
@@ -228,7 +228,7 @@ onMounted(async () => {
             </div>
           </div>
         </div>
-        <div class="swiper-slide">
+        <div id="outildefielisation" class="swiper-slide">
           <div id="sectionthreebigcity" class="container-fluid">
             <div class="row no-gutters">
               <div class="col-md-4 offset-md-1 letexte">
@@ -289,7 +289,7 @@ onMounted(async () => {
             </div>
           </div>
         </div>
-        <div class="swiper-slide">
+        <div id="generateurdecontenu" class="swiper-slide">
           <div id="sectionfourbigcity" class="container-fluid">
             <div class="row no-gutters">
               <div class="row no-gutters">
@@ -326,7 +326,7 @@ onMounted(async () => {
             </div>
           </div>
         </div>
-        <div class="swiper-slide">
+        <div id="gestionactivites" class="swiper-slide">
           <div id="sectionfivebigcity" class="container-fluid">
             <div class="row no-gutters">
               <div class="col-md-4 offset-md-1 letexte">
@@ -365,7 +365,7 @@ onMounted(async () => {
             </div>
           </div>
         </div>
-        <div class="swiper-slide">
+        <div id="alternativeresociaux" class="swiper-slide">
           <div id="sectionsixbigcity" class="container-fluid">
             <div class="row no-gutters">
               <div class="col-md-8 conundrum">
@@ -413,7 +413,7 @@ onMounted(async () => {
             </div>
           </div>
         </div>
-        <div class="swiper-slide">
+        <div id="createuractivation" class="swiper-slide">
           <div id="sectionsevenbigcity" class="container-fluid">
             <div class="row no-gutters">
               <div class="col-md-4 offset-md-1 letexte">
@@ -452,7 +452,7 @@ onMounted(async () => {
             </div>
           </div>
         </div>
-        <div class="swiper-slide">
+        <div id="boutiqueintegree" class="swiper-slide">
           <div id="sectioneightbigcity" class="container-fluid">
             <div class="row no-gutters">
               <div class="col-md-8 conundrum">
@@ -500,7 +500,7 @@ onMounted(async () => {
             </div>
           </div>
         </div>
-        <div class="swiper-slide">
+        <div id="billeterie" class="swiper-slide">
           <div id="sectionninebigcity" class="container-fluid">
             <div class="row no-gutters">
               <div class="col-md-4 offset-md-1 letexte">
@@ -601,7 +601,7 @@ onMounted(async () => {
             </div>
           </div>
         </div>
-        <div class="swiper-slide">
+        <div id="aspirateurdate" class="swiper-slide">
           <div id="sectiontenbigcity" class="container-fluid">
             <div class="row no-gutters">
               <div class="col-md-8 conundrum">
@@ -663,7 +663,7 @@ onMounted(async () => {
                 </div>
               </div>
               <div class="col-md-6">
-                <img src="/img/solutions/bigcity/dashboard.jpg" alt />
+                <img src="/img/solutions/bigcity/dashboard.png" alt />
                 <p class="legende">Homepage Dashboard</p>
               </div>
             </div>
@@ -745,6 +745,7 @@ onMounted(async () => {
 #header-alt {
   position: relative !important;
 }
+
 @media screen and (min-width: 1024px) {
   .swiper-wrapper {
     height: 100vh;
@@ -765,14 +766,17 @@ onMounted(async () => {
     margin: 0 auto;
   }
 }
+
 #restedelapage {
   padding: 0;
   margin: 0 auto;
 }
+
 .divwrapper {
   padding: 0;
   margin: 0 auto;
 }
+
 @media screen and (max-width: 1024px) {
   .swiper-wrapper {
     flex-direction: column;
@@ -784,17 +788,32 @@ onMounted(async () => {
     padding: 0;
     width: 100vw;
   }
+
   .swiper {
     width: 100%;
     height: auto;
   }
+
   .swiper-wrapper {
     .swiper-slide {
-      padding: 0em !important ;
+      padding: 0em !important;
     }
   }
+
   .swiper-horizontal {
     height: auto;
+  }
+
+  #introforeal {
+    p {
+      &:nth-of-type(1) {
+        margin-bottom: 1em !important;
+      }
+
+      &:nth-of-type(2) {
+        margin-bottom: 1em !important;
+      }
+    }
   }
 }
 </style>
