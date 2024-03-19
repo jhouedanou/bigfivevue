@@ -20,7 +20,7 @@
     "core-js": "^3.36.0",
     "nuxt": "3.11.0",
     "scrollmagic": "^2.0.8",
-    "typescript": "latest",
+    "typescript": "^5.4.2",
     "vite-imagetools": "^6.2.9",
     "vite-plugin-imagemin": "^0.6.1",
     "vue": "^3.4.21"
