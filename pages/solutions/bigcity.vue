@@ -206,6 +206,20 @@ onMounted(async () => {
     const carousel6 = new Carousel(carouselElement6, {
       interval: 2000,
     });
+    //7e carousel
+    const carouselElement7 = document.querySelector(
+      "#carouselExampleIndicators7"
+    );
+    const hammer7 = new Hammer(carouselElement7);
+    hammer7.on("swipeleft", function () {
+      $("#carouselExampleIndicators7").carousel("next");
+    });
+    hammer7.on("swiperight", function () {
+      $("#carouselExampleIndicators7").carousel("prev");
+    });
+    const carousel7 = new Carousel(carouselElement7, {
+      interval: 2000,
+    });
   }
 });
 </script>
@@ -1061,7 +1075,41 @@ onMounted(async () => {
         <div id="aspirateurdate" class="swiper-slide">
           <div id="sectiontenbigcity" class="container-fluid">
             <div class="row no-gutters">
-              <div class="col-md-8 conundrum">
+              <div v-if="windowWidth <= 1024" id="carousel-wrapper7">
+                <div
+                  id="carouselExampleIndicators7"
+                  class="carousel slide"
+                  data-bs-ride="carousel"
+                >
+                  <div class="carousel-inner">
+                    <div class="imgwrapper carousel-item active">
+                      <img
+                        class="img-fluid"
+                        src="/img/solutions/bigcity/32.png"
+                        alt
+                      />
+                      <p class="legende">Page événement</p>
+                    </div>
+                    <div class="imgwrapper carousel-item">
+                      <img
+                        class="img-fluid"
+                        src="/img/solutions/bigcity/31.png"
+                        alt
+                      />
+                      <p class="legende">Billetterie événementielle</p>
+                    </div>
+                    <div class="imgwrapper carousel-item">
+                      <img
+                        class="img-fluid"
+                        src="/img/solutions/bigcity/30.png"
+                        alt
+                      />
+                      <p class="legende">Billet événement</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div v-if="windowWidth >= 1024" class="col-md-8 conundrum">
                 <div class="row fusbal">
                   <div class="col-md-4 imgwrapper">
                     <img
