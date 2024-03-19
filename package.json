@@ -14,11 +14,11 @@
     "@nuxt/image": "^1.4.0",
     "@nuxtjs/pwa": "^3.3.5",
     "@types/jquery": "^3.5.29",
-    "@types/node": "^20.11.28",
+    "@types/node": "^20.11.30",
     "bootstrap": "^5.3.3",
     "bootstrap-vue": "^2.23.1",
-    "core-js": "^3.36.0",
-    "nuxt": "3.11.0",
+    "core-js": "^3.36.1",
+    "nuxt": "^3.11.1",
     "scrollmagic": "^2.0.8",
     "typescript": "^5.4.2",
     "vite-imagetools": "^6.2.9",
@@ -48,7 +48,6 @@
     "vue-awesome-swiper": "^5.0.1",
     "vue-flickity": "^1.2.1",
     "vue-ico": "^1.0.15",
-    "vue-scrollmagic": "^1.2.0",
     "vue-slick-ts": "^1.1.0"
   }
 }

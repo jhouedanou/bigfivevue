@@ -26,6 +26,9 @@
       "consola": [
         "../node_modules/consola"
       ],
+      "ofetch": [
+        "../node_modules/ofetch"
+      ],
       "~": [
         ".."
       ],
@@ -72,13 +75,13 @@
         "../node_modules/nuxt/dist/app/compat/vue-demi"
       ],
       "#mdc-configs": [
-        "./mdc-configs"
+        "./mdc-configs.mjs"
       ],
       "#mdc-highlighter": [
-        "./mdc-highlighter"
+        "./mdc-highlighter.mjs"
       ],
       "#mdc-imports": [
-        "./mdc-imports"
+        "./mdc-imports.mjs"
       ],
       "#image": [
         "../node_modules/@nuxt/image/dist/runtime"
