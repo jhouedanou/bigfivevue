@@ -2419,6 +2419,47 @@ div#pargrapheIntro {
 			-o-border-radius: 100%;
 		}
 	}
+	#sectionsevenbigcity {
+		padding: 0 !important;
+	}
+	#createuractivation {
+		margin: 4rem 0 0 0 !important;
+		padding-top: 3em !important;
+		#carousel-wrapper4 {
+			padding-top: 0em !important;
+			margin-top: 2em !important;
+		}
+	}
+	#boutiqueintegree {
+		padding-top: 43px !important;
+		padding-bottom: 82px !important;
+		.imgwrapper {
+			text-align: center;
+			img {
+				width: auto;
+				height: 300px;
+			}
+		}
+		h3 {
+			max-width: 54vw !important;
+		}
+	}
+
+	#billeterie {
+		.row {
+			padding: 1em !important;
+		}
+		.imgwrapper {
+			text-align: center;
+			img {
+				width: auto;
+				height: 300px;
+			}
+		}
+		h3 {
+			max-width: 54vw !important;
+		}
+	}
 	#shefg,
 	#occident {
 		max-width: 62% !important;
@@ -3695,7 +3736,7 @@ div#pargrapheIntro {
 			padding: 0 !important;
 		}
 	}
-	#gestionactivites {
+	#sectionsevenbigcity .imgwrapper {
 	}
 	#sectionfivebigcity {
 		.letexte {
@@ -3705,7 +3746,7 @@ div#pargrapheIntro {
 			}
 		}
 	}
-	#gestionactivites {
+	#sectionsevenbigcity .imgwrapper #gestionactivites {
 		background: #edeff6 !important;
 		margin-top: 25px;
 		padding-top: 0 !important;
@@ -5293,7 +5334,6 @@ body {
 		}
 	}
 	.imgwrapper {
-		display: flex;
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
@@ -5480,6 +5520,11 @@ div#imagshop {
 	}
 }
 @media (min-width: 1024px) {
+	#sectionsevenbigcity {
+		.imgwrapper {
+			display: flex;
+		}
+	}
 	.desktop {
 		display: block;
 	}

@@ -164,6 +164,48 @@ onMounted(async () => {
     const carousel3 = new Carousel(carouselElement3, {
       interval: 2000,
     });
+    //4e carousel
+    const carouselElement4 = document.querySelector(
+      "#carouselExampleIndicators4"
+    );
+    const hammer4 = new Hammer(carouselElement4);
+    hammer4.on("swipeleft", function () {
+      $("#carouselExampleIndicators4").carousel("next");
+    });
+    hammer4.on("swiperight", function () {
+      $("#carouselExampleIndicators4").carousel("prev");
+    });
+    const carousel4 = new Carousel(carouselElement4, {
+      interval: 2000,
+    });
+    //5e carousel
+    const carouselElement5 = document.querySelector(
+      "#carouselExampleIndicators5"
+    );
+    const hammer5 = new Hammer(carouselElement5);
+    hammer5.on("swipeleft", function () {
+      $("#carouselExampleIndicators5").carousel("next");
+    });
+    hammer5.on("swiperight", function () {
+      $("#carouselExampleIndicators5").carousel("prev");
+    });
+    const carousel5 = new Carousel(carouselElement5, {
+      interval: 2000,
+    });
+    //6e carousel
+    const carouselElement6 = document.querySelector(
+      "#carouselExampleIndicators6"
+    );
+    const hammer6 = new Hammer(carouselElement6);
+    hammer6.on("swipeleft", function () {
+      $("#carouselExampleIndicators6").carousel("next");
+    });
+    hammer6.on("swiperight", function () {
+      $("#carouselExampleIndicators6").carousel("prev");
+    });
+    const carousel6 = new Carousel(carouselElement6, {
+      interval: 2000,
+    });
   }
 });
 </script>
@@ -537,7 +579,6 @@ onMounted(async () => {
                     </div>
                   </div>
                 </div>
-
                 <button
                   class="carousel-control-prev"
                   type="button"
@@ -563,7 +604,6 @@ onMounted(async () => {
                   <span class="visually-hidden">Next</span>
                 </button>
               </div>
-
               <div v-if="windowWidth > 1024" class="col-md-8 conundrum">
                 <div class="row fusbal">
                   <div class="col-md-4 imgwrapper">
@@ -612,6 +652,63 @@ onMounted(async () => {
         <div id="createuractivation" class="swiper-slide">
           <div id="sectionsevenbigcity" class="container-fluid">
             <div class="row no-gutters">
+              <div
+                v-if="windowWidth <= 1024"
+                id="carousel-wrapper4"
+                class="col-md-7 conundrum"
+              >
+                <div
+                  id="carouselExampleIndicators4"
+                  class="carousel slide"
+                  data-bs-ride="carousel"
+                >
+                  <div class="carousel-inner">
+                    <div class="imgwrapper carousel-item active">
+                      <img
+                        class="img-fluid"
+                        src="/img/solutions/bigcity/24.png"
+                        alt
+                      />
+                      <p class="legende">
+                        Catégorie Fanwall<br />d’un établissement
+                      </p>
+                    </div>
+                    <div class="imgwrapper carousel-item">
+                      <img
+                        class="img-fluid"
+                        src="/img/solutions/bigcity/24a.png"
+                        alt
+                      />
+                      <p class="legende">Notifications de bons plans</p>
+                    </div>
+                  </div>
+                </div>
+
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
               <div class="col-md-4 offset-md-1 letexte">
                 <div class="paddingzone">
                   <img src="/img/solutions/bigcity/logopetit.svg" alt />
@@ -623,7 +720,7 @@ onMounted(async () => {
                   </p>
                 </div>
               </div>
-              <div class="col-md-7 conundrum">
+              <div v-if="windowWidth > 1024" class="col-md-7 conundrum">
                 <div class="row fusbal">
                   <div class="col-md-6 imgwrapper">
                     <img
@@ -651,7 +748,71 @@ onMounted(async () => {
         <div id="boutiqueintegree" class="swiper-slide">
           <div id="sectioneightbigcity" class="container-fluid">
             <div class="row no-gutters">
-              <div class="col-md-8 conundrum">
+              <div
+                v-if="windowWidth < 1024"
+                class="col-md-8"
+                id="carousel-wrapper5"
+              >
+                <div
+                  id="carouselExampleIndicators5"
+                  class="carousel slide"
+                  data-bs-ride="carousel"
+                >
+                  <div class="carousel-inner">
+                    <div class="imgwrapper carousel-item active">
+                      <img
+                        class="img-fluid"
+                        src="/img/solutions/bigcity/26.png"
+                        alt
+                      />
+                      <p class="legende">
+                        Homepage utilisateur<br />Jeu concours
+                      </p>
+                    </div>
+                    <div class="imgwrapper carousel-item">
+                      <img
+                        class="img-fluid"
+                        src="/img/solutions/bigcity/27.png"
+                        alt
+                      />
+                      <p class="legende">Module Pronostiques</p>
+                    </div>
+                    <div class="imgwrapper carousel-item">
+                      <img
+                        class="img-fluid"
+                        src="/img/solutions/bigcity/26a.png"
+                        alt
+                      />
+                      <p class="legende">Module Pronostiques<br />Classement</p>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+              <div v-if="windowWidth >= 1024" class="col-md-8 conundrum">
                 <div class="row fusbal">
                   <div class="col-md-4 imgwrapper">
                     <img
@@ -687,10 +848,12 @@ onMounted(async () => {
                 <p>
                   BIG CITY permet la mise en place d’activations digitales
                   (jeux, concours, loteries, cartes à gratter…) qui renforcent
-                  le lien entre la marque et le consommateur. Le module
-                  PRONOSTICS permet une animation originale en ligne et dans les
-                  points de vente autour de grands événements sportifs
-                  (ponctuels ou tout au long de l’année) fédérateurs.
+                  le lien entre la marque et le consommateur.
+                </p>
+                <p>
+                  Le module PRONOSTICS permet une animation originale en ligne
+                  et dans les points de vente autour de grands événements
+                  sportifs (ponctuels ou tout au long de l’année) fédérateurs.
                 </p>
               </div>
             </div>
@@ -699,6 +862,104 @@ onMounted(async () => {
         <div id="billeterie" class="swiper-slide">
           <div id="sectionninebigcity" class="container-fluid">
             <div class="row no-gutters">
+              <div v-if="windowWidth <= 1024" id="carousel-wrapper6">
+                <div
+                  id="carouselExampleIndicators6"
+                  class="carousel slide"
+                  data-bs-ride="carousel"
+                >
+                  <div class="carousel-inner">
+                    <div class="imgwrapper carousel-item active">
+                      <img
+                        class="img-fluid"
+                        src="/img/solutions/bigcity/ndole1.png"
+                      />
+
+                      <p class="legende">Vue par liste</p>
+                    </div>
+                    <div class="imgwrapper carousel-item">
+                      <img
+                        class="img-fluid"
+                        src="/img/solutions/bigcity/ndole2.png"
+                      />
+                      <p class="legende">Commande</p>
+                    </div>
+                    <div class="imgwrapper carousel-item">
+                      <img
+                        class="img-fluid"
+                        src="/img/solutions/bigcity/ndole3.png"
+                      />
+                      <p class="legende">
+                        Prise recommande sur place<br />ou en ligne
+                      </p>
+                    </div>
+                    <div class="imgwrapper carousel-item">
+                      <img
+                        class="img-fluid"
+                        src="/img/solutions/bigcity/ndole4.png"
+                      />
+                      <p class="legende">Suivi de commande en temps direct</p>
+                    </div>
+                    <div class="imgwrapper carousel-item">
+                      <img
+                        class="img-fluid"
+                        src="/img/solutions/bigcity/ndole5.png"
+                      />
+                      <p class="legende">Solution de Paiement digital</p>
+                    </div>
+                    <div class="imgwrapper carousel-item">
+                      <img
+                        class="img-fluid"
+                        src="/img/solutions/bigcity/ndole6.png"
+                      />
+                      <p class="legende">Visualisation des commandes</p>
+                    </div>
+
+                    <div class="imgwrapper carousel-item">
+                      <img
+                        class="img-fluid"
+                        src="/img/solutions/bigcity/ndole7.png"
+                      />
+                      <p class="legende">
+                        Visualisation en temps réel <br />de la livraison
+                      </p>
+                    </div>
+
+                    <div class="imgwrapper carousel-item">
+                      <img
+                        class="img-fluid"
+                        src="/img/solutions/bigcity/ndole8.png"
+                      />
+                      <p class="legende">Notification de livraison</p>
+                    </div>
+                  </div>
+                </div>
+
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
               <div class="col-md-4 offset-md-1 letexte">
                 <div class="paddingzone">
                   <img src="/img/solutions/bigcity/logopetit.svg" alt />
@@ -723,7 +984,7 @@ onMounted(async () => {
                   </p>
                 </div>
               </div>
-              <div class="col-md-7 conundrum">
+              <div v-if="windowWidth > 1024" class="col-md-7 conundrum">
                 <div id="galerieimg">
                   <div id="imagshop" ref="swiperContainer2">
                     <div id="swidel" class="swiper-wrapper">
