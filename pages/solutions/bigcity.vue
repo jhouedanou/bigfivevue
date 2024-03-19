@@ -426,7 +426,6 @@ onMounted(async () => {
         <div id="gestionactivites" class="swiper-slide">
           <div id="sectionfivebigcity" class="container-fluid">
             <div class="row no-gutters">
-              <!-- div s"affichant si la résoluton d'écran est inférieure ou égale à 1024px.  -->
               <div v-if="windowWidth <= 1024" id="carousel-wrapper2">
                 <div
                   id="carouselExampleIndicators2"
