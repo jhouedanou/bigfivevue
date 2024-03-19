@@ -116,28 +116,53 @@ onMounted(async () => {
       observeParents: true,
       autoplay: {
         delay: 2000,
-        disableOnInteraction: true, // enable/disable autoplay on user interaction
+        disableOnInteraction: true,
       },
     });
   } else {
     const { default: Hammer } = await import("hammerjs");
     const { Carousel } = await import("bootstrap");
-    //bootstrap
+    // 1st carousel
     const carouselElement = document.querySelector(
       "#carouselExampleIndicators"
     );
     const hammer = new Hammer(carouselElement);
     hammer.on("swipeleft", function () {
-      // Aller à la diapositive suivante
       $("#carouselExampleIndicators").carousel("next");
     });
-
     hammer.on("swiperight", function () {
-      // Aller à la diapositive précédente
       $("#carouselExampleIndicators").carousel("prev");
     });
     const carousel = new Carousel(carouselElement, {
-      interval: 2000, // Autoplay interval in milliseconds
+      interval: 2000,
+    });
+    // 2nd carousel
+    const carouselElement2 = document.querySelector(
+      "#carouselExampleIndicators2"
+    );
+    const hammer2 = new Hammer(carouselElement2);
+    hammer2.on("swipeleft", function () {
+      $("#carouselExampleIndicators2").carousel("next");
+    });
+    hammer2.on("swiperight", function () {
+      $("#carouselExampleIndicators2").carousel("prev");
+    });
+    const carousel2 = new Carousel(carouselElement2, {
+      interval: 2000,
+    });
+    //3e carousel
+    const carouselElement3 = document.querySelector(
+      "#carouselExampleIndicators3"
+    );
+    const hammer3 = new Hammer(carouselElement3);
+    hammer3.on("swipeleft", function () {
+      $("#carouselExampleIndicators3").carousel("next");
+    });
+    hammer3.on("swiperight", function () {
+      $("#carouselExampleIndicators3").carousel("prev");
+    });
+    const carousel3 = new Carousel(carouselElement3, {
+      interval: 2000,
     });
   }
 });
@@ -401,6 +426,52 @@ onMounted(async () => {
         <div id="gestionactivites" class="swiper-slide">
           <div id="sectionfivebigcity" class="container-fluid">
             <div class="row no-gutters">
+              <!-- div s"affichant si la résoluton d'écran est inférieure ou égale à 1024px.  -->
+              <div v-if="windowWidth <= 1024" id="carousel-wrapper2">
+                <div
+                  id="carouselExampleIndicators2"
+                  class="carousel slide"
+                  data-bs-ride="carousel"
+                >
+                  <div class="carousel-inner">
+                    <div class="imgwrapper p-0 conundrum carousel-item active">
+                      <img src="/img/solutions/bigcity/19.png" alt />
+                      <p class="legende">
+                        Homepage utilisateur<br />Catégorie Bons plans
+                      </p>
+                    </div>
+                    <div class="imgwrapper p-0 conundrum carousel-item">
+                      <img src="/img/solutions/bigcity/20.png" alt />
+                      <p class="legende">Catégorie Actualités</p>
+                    </div>
+                  </div>
+                </div>
+
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
               <div class="col-md-4 offset-md-1 letexte">
                 <div class="paddingzone">
                   <img src="/img/solutions/bigcity/logopetit.svg" alt />
@@ -412,7 +483,7 @@ onMounted(async () => {
                   </p>
                 </div>
               </div>
-              <div class="col-md-7 d-flex conundrum">
+              <div v-if="windowWidth > 1024" class="col-md-7 d-flex conundrum">
                 <div class="row d-flex fusbal">
                   <div class="col-md-6 imgwrapper">
                     <img
@@ -440,7 +511,61 @@ onMounted(async () => {
         <div id="alternativeresociaux" class="swiper-slide">
           <div id="sectionsixbigcity" class="container-fluid">
             <div class="row no-gutters">
-              <div class="col-md-8 conundrum">
+              <!-- div s"affichant si la résoluton d'écran est inférieure ou égale à 1024px.  -->
+
+              <div v-if="windowWidth <= 1024" id="carousel-wrapper3">
+                <div
+                  id="carouselExampleIndicators3"
+                  class="carousel slide"
+                  data-bs-ride="carousel"
+                >
+                  <div class="carousel-inner">
+                    <div class="imgwrapper p-0 conundrum carousel-item active">
+                      <img src="/img/solutions/bigcity/21.png" alt />
+                      <p class="legende">
+                        Homepage Pros<br />Programme de motivation
+                      </p>
+                    </div>
+                    <div class="imgwrapper p-0 conundrum carousel-item">
+                      <img src="/img/solutions/bigcity/22.png" alt />
+                      <p class="legende">Homepage Pros<br />Rapports</p>
+                    </div>
+                    <div class="imgwrapper p-0 conundrum carousel-item">
+                      <img src="/img/solutions/bigcity/23.png" alt />
+                      <p class="legende">
+                        ajout d'un nouvel<br />établissement
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+
+              <div v-if="windowWidth > 1024" class="col-md-8 conundrum">
                 <div class="row fusbal">
                   <div class="col-md-4 imgwrapper">
                     <img

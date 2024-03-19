@@ -42,14 +42,6 @@ onMounted(() => {
   document.body.classList.add("agence");
   windowWidth.value = window.innerWidth;
   window.addEventListener("resize", updateWindowWidth);
-  const slide1Element = document.getElementById("slide1");
-  if (slide1Element) {
-    setTimeout(() => {
-      slide1Element.classList.add("slide1-active");
-    }, 1000);
-  } else {
-    slide1Element.classList.remove("slide1-active");
-  }
 });
 onMounted(async () => {
   try {
@@ -77,6 +69,14 @@ onMounted(async () => {
           clickable: true,
         },
       });
+      const slide1Element = document.getElementById("slide1");
+      if (slide1Element) {
+        setTimeout(() => {
+          slide1Element.classList.add("slide1-active");
+        }, 1000);
+      } else {
+        slide1Element.classList.remove("slide1-active");
+      }
       swiperInstance.on("slideChange", () => {
         if (swiperInstance.activeIndex == 0) {
           state.isSlide1Active = true;

@@ -3679,6 +3679,7 @@ div#pargrapheIntro {
 	#outildefielisation {
 		background: #edeff6 !important;
 		margin-top: 64px;
+		padding-top: 54px !important;
 	}
 	#sectionthreebigcity {
 		padding-top: 0em;
@@ -3688,10 +3689,26 @@ div#pargrapheIntro {
 	}
 	#sectionfourbigcity {
 		margin-top: 3em;
+		height: auto !important;
 		.row {
 			margin: 0 !important;
 			padding: 0 !important;
 		}
+	}
+	#gestionactivites {
+	}
+	#sectionfivebigcity {
+		.letexte {
+			padding: 1em !important;
+			h3 {
+				max-width: 55vw !important;
+			}
+		}
+	}
+	#gestionactivites {
+		background: #edeff6 !important;
+		margin-top: 25px;
+		padding-top: 0 !important;
 	}
 	#generateurdecontenu {
 		.col-md-7 {
@@ -3699,11 +3716,24 @@ div#pargrapheIntro {
 			width: 100% !important;
 		}
 		background: white !important;
-		img {
-			@include imagemobile(0);
+		.letexte {
+			margin: 0 !important;
+			padding: 0 !important;
+			img {
+				margin-bottom: 0em !important;
+			}
+			h3 {
+				max-width: 43vw !important;
+				padding-bottom: 0em !important;
+			}
 		}
-		p {
-			@include legendemobile(35vw);
+		.col-md-7 {
+			img {
+				@include imagemobile(0);
+			}
+			p {
+				@include legendemobile(35vw);
+			}
 		}
 	}
 	.conundrum {
