@@ -262,7 +262,6 @@ onMounted(async () => {
   align-items: center;
   justify-content: center;
 }
-
 ul,
 li {
   list-style: none;
@@ -286,8 +285,6 @@ li {
 
 .swiper-slide {
   height: 100vh;
-  /* Set the height of each swiper-slide to occupy the full viewport height */
-  /* Enable snapping behavior to each swiper-slide */
 }
 @media screen and (max-width: 1024px) {
   .cartouche {
