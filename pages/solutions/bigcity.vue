@@ -1151,7 +1151,7 @@ onMounted(async () => {
             </div>
           </div>
         </div>
-        <div class="swiper-slide">
+        <div id="lastfreakingsection" class="swiper-slide">
           <div id="sectionelevenbigcity" class="container-fluid">
             <div class="row no-gutters">
               <div class="col-md-5 offset-md-1 letexte">
@@ -1174,9 +1174,10 @@ onMounted(async () => {
             </div>
           </div>
         </div>
-        <div class="swiper-slide">
+        <div id="tantquelepoussin" class="swiper-slide">
           <div id="sectiontwelvebigcity" class="container-fluid">
             <div class="row no-gutters">
+              <div class="col-md-7" v-if="windowWidth < 1024"></div>
               <div class="col-md-7"></div>
               <div class="col-md-5 letexte">
                 <div class="paddingzone">

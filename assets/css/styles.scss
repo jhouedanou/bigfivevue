@@ -2802,6 +2802,38 @@ div#pargrapheIntro {
 			}
 		}
 	}
+	#tantquelepoussin {
+		background: #edeff6;
+		padding: 1em !important;
+		.container-fluid {
+			background: #edeff6 !important;
+		}
+	}
+	#lastfreakingsection {
+		.container-fluid {
+			background: none !important;
+			margin: 0em !important;
+			.row {
+				background: #edeff6;
+				padding-top: 1em !important;
+			}
+			.col-md-5 {
+				order: 2;
+				padding: 1em !important;
+			}
+			.col-md-6 {
+				order: 1;
+				img {
+					position: relative !important;
+					width: 100% !important;
+					left: 10vw;
+				}
+			}
+		}
+	}
+	#nosautresolutons {
+		padding: 1em !important;
+	}
 	#sectiontwobigformations {
 		padding-top: 7em !important;
 		p {
