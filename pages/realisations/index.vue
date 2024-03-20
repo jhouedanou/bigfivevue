@@ -55,8 +55,17 @@
               <div class="cartouche">
                 <span>{{ realisation.client }}</span>
                 <h3 v-html="realisation.titre"></h3>
-                <NuxtLink :to="`/realisations/${realisation.lien}`" class="btn"
+                <NuxtLink
+                  v-if="windowWidth >= 1024"
+                  :to="`/realisations/${realisation.lien}`"
+                  class="btn"
                   >Voir plus</NuxtLink
+                >
+                <NuxtLink
+                  v-if="windowWidth < 1024"
+                  :to="`/realisations/${realisation.lien}`"
+                  class="btn"
+                  >Voir</NuxtLink
                 >
               </div>
             </div>
@@ -281,6 +290,19 @@ li {
   /* Enable snapping behavior to each swiper-slide */
 }
 @media screen and (max-width: 1024px) {
+  .cartouche {
+    padding: 2em !important;
+    width: auto !important;
+    display: block !important;
+    max-width: 83vw !important;
+    a {
+      border: 1px solid white !important;
+      font-size: 11px !important;
+      height: 32px !important;
+      width: 100px !important;
+      line-height: 20px !important;
+    }
+  }
   .swiper-slide {
     height: 230px !important;
     width: 100%;
@@ -304,6 +326,9 @@ li {
 }
 
 @media screen and (min-width: 1024px) {
+  .cartouche {
+    padding: 0em !important;
+  }
   .swiper-slide {
     height: 100vh;
     min-height: 100%;
@@ -325,7 +350,6 @@ li {
 
   .cartouche {
     width: 100vw !important;
-    padding: 0em !important;
     max-width: 86vw;
     margin: 0 auto;
     display: flex;

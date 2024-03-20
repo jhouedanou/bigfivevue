@@ -1177,7 +1177,9 @@ onMounted(async () => {
         <div id="tantquelepoussin" class="swiper-slide">
           <div id="sectiontwelvebigcity" class="container-fluid">
             <div class="row no-gutters">
-              <div class="col-md-7" v-if="windowWidth < 1024"></div>
+              <div class="col-md-7" v-if="windowWidth < 1024">
+              <img src="/img/formules.jpg" alt /> 
+              </div>
               <div class="col-md-7"></div>
               <div class="col-md-5 letexte">
                 <div class="paddingzone">
