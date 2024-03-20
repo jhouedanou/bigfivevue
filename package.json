@@ -49,5 +49,8 @@
     "vue-flickity": "^1.2.1",
     "vue-ico": "^1.0.15",
     "vue-slick-ts": "^1.1.0"
+  },
+  "resolutions": {
+    "string-width": "4.2.3"
   }
 }
