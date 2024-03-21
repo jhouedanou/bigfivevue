@@ -932,17 +932,6 @@ textarea::placeholder {
 
 #slide1 {
 	background: linear-gradient(to bottom, #82368c 0%, #82368c 100%);
-	/* span {
-		
-		display: inline-block;
-		transform: scale(22.5) rotateX(-21deg) rotateY(0deg) rotateZ(0deg) translateX(-12px) translateY(27px) translateZ(0px) skewX(1deg) skewY(12deg);
-		-webkit-transform: scale(22.5) rotateX(-21deg) rotateY(0deg) rotateZ(0deg) translateX(-12px) translateY(27px) translateZ(0px) skewX(1deg) skewY(12deg);
-		-moz-transform: scale(22.5) rotateX(-21deg) rotateY(0deg) rotateZ(0deg) translateX(-12px) translateY(27px) translateZ(0px) skewX(1deg) skewY(12deg);
-		-ms-transform: scale(22.5) rotateX(-21deg) rotateY(0deg) rotateZ(0deg) translateX(-12px) translateY(27px) translateZ(0px) skewX(1deg) skewY(12deg);
-		-o-transform: scale(22.5) rotateX(-21deg) rotateY(0deg) rotateZ(0deg) translateX(-12px) translateY(27px) translateZ(0px) skewX(1deg) skewY(12deg);
-		transition: transform 0.5s ease-in-out;
-		backface-visibility: hidden; 
-	} */
 	span {
 		display: inline-block;
 		transform: scale(1); /* Valeur initiale */
