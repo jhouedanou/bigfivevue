@@ -836,7 +836,8 @@ input[type="submit"] {
 	border-bottom: 1px solid #ffffff;
 	padding: 18px 0;
 	color: white;
-	min-width: 55vw !important;
+	width: 100vw !important;
+	max-width: 55vw !important;
 	font-size: 22px !important;
 	outline: none;
 	transition: border-bottom-color 0.3s ease;
