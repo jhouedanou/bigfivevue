@@ -819,7 +819,9 @@ form {
 	justify-content: center;
 	flex-direction: column;
 }
-
+#untel {
+	margin-top: 2em !important;
+}
 form div {
 	margin-bottom: 10px;
 }
@@ -834,8 +836,8 @@ input[type="submit"] {
 	border-bottom: 1px solid #ffffff;
 	padding: 18px 0;
 	color: white;
-	width: 49vw;
-	font-size: 16px;
+	min-width: 55vw !important;
+	font-size: 22px !important;
 	outline: none;
 	transition: border-bottom-color 0.3s ease;
 }
@@ -878,52 +880,52 @@ input::placeholder {
 }
 input::-webkit-input-placeholder {
 	color: #ffffff;
-	font-size: 14px;
+	font-size: 19px;
 	font-weight: bold;
 }
 input::-moz-placeholder {
 	color: #ffffff;
-	font-size: 14px;
+	font-size: 19px;
 	font-weight: bold;
 }
 input:-ms-input-placeholder {
 	color: #ffffff;
-	font-size: 14px;
+	font-size: 19px;
 	font-weight: bold;
 }
 input::-ms-input-placeholder {
 	color: #ffffff;
-	font-size: 14px;
+	font-size: 19px;
 	font-weight: bold;
 }
 input::placeholder {
 	color: #ffffff;
-	font-size: 14px;
+	font-size: 19px;
 	font-weight: bold;
 }
 textarea::-webkit-input-placeholder {
 	color: #ffffff;
-	font-size: 14px;
+	font-size: 19px;
 	font-weight: bold;
 }
 textarea::-moz-placeholder {
 	color: #ffffff;
-	font-size: 14px;
+	font-size: 19px;
 	font-weight: bold;
 }
 textarea:-ms-input-placeholder {
 	color: #ffffff;
-	font-size: 14px;
+	font-size: 19px;
 	font-weight: bold;
 }
 textarea::-ms-input-placeholder {
 	color: #ffffff;
-	font-size: 14px;
+	font-size: 19px;
 	font-weight: bold;
 }
 textarea::placeholder {
 	color: #ffffff;
-	font-size: 14px;
+	font-size: 19px;
 	font-weight: bold;
 }
 
