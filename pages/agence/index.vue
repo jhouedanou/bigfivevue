@@ -4,6 +4,8 @@ import axios from "axios";
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
 import "animate.css";
+import { useRoute } from "vue-router";
+
 import Menumobile from "@/components/Menumobile.vue";
 import PageLoader from "@/components/PageLoader.vue";
 import "bootstrap/dist/css/bootstrap.css";
@@ -18,7 +20,10 @@ let isMainFull = ref(true);
 let isSidebarOpen = ref(false);
 let toClose = ref(false);
 let closeBlack = ref(false);
+const route = useRoute();
 
+const filterValue = route.fullPath.substring("/".length);
+//console.log(filterValue);
 const windowWidth = ref(0);
 const state = reactive({
   metadesc: "",
@@ -36,10 +41,12 @@ onUnmounted(() => {
 });
 
 onMounted(() => {
-  //ajouter l'id de la page  #agence à la balise body
-  document.body.id = "agence";
+  //ajouter l'id de la page  #agence à la balise body si et seulement agence est dans la barre adresse
+  if (filterValue == "agence") {
+    document.body.id = "agence";
+  }
+
   // ajouter la classe .agence à la balise body
-  document.body.classList.add("agence");
   windowWidth.value = window.innerWidth;
   window.addEventListener("resize", updateWindowWidth);
 });
