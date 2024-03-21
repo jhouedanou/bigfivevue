@@ -7,6 +7,7 @@
     "lien": "solibra",
     "image": "/img/socity/index_compressed.jpg",
     "banniere": "/img/socity/banniere_compressed.jpg",
+    "bannieremobile": "/img/socity/indexmobile.jpg",
     "galerie": [
       "/img/socity/01_compressed.jpg",
       "/img/socity/02_compressed.jpg",
@@ -28,6 +29,8 @@
     "lien": "stave",
     "image": "/img/stave/index_compressed.jpg",
     "banniere": "/img/stave/banniere_compressed.jpg",
+    "bannieremobile": "/img/stave/indexmobile.jpg",
+
     "galerie": [
       "/img/stave/01_compressed.jpg",
       "/img/stave/02_compressed.jpg",
@@ -54,6 +57,8 @@
     "lien": "candia",
     "image": "/img/candia/index_compressed.jpg",
     "banniere": "/img/candia/banniere_compressed.jpg",
+    "bannieremobile": "/img/candia/indexmobile.jpg",
+
     "galerie": [],
     "description": "<h3>Candia a confié à Big Five sa stratégie média que l’agence à basée sur 3 points clés : l’enfance, la santé et le recyclage.</h3><p>Conscients des enjeux que rencontre la marque, de son positionnement et de ses objectifs, ces axes sont venus se glisser tout naturellement dans une communication continue déjà existante. Pour pousser toujours plus loin et se démarquer de la concurrence, différentes actions ont été imaginées, qu’elles soient online ou offline, comme par exemple un ATELIER DE NOËL CANDIA dont le thème était la récupération à partir des emballages Candia.</p><p>L’ atelier a permis a Candia d’augmenter son capital sympathie auprès de ses consommateurs par son engagement, ainsi que de s’affirmer plus encore dans sa démarche RSE. </p><ul id='naafa'><li><img src='/img/candia/01_compressed.jpg'></li><li><img src='/img/candia/02_compressed.jpg'></li></ul><ul id='naafa2'><li><img src='/img/candia/03_compressed.jpg'></li><li><img src='/img/candia/04_compressed.jpg'></li><li><img src='/img/candia/05_compressed.jpg'></li><li><img src='/img/candia/06_compressed.jpg'></li></ul><ul id='naafa3'><li><img src='/img/candia/07_compressed.jpg'></li><li><img src='/img/candia/08_compressed.jpg'></li><li><img src='/img/candia/09_compressed.jpg'></li><li><img src='/img/candia/10_compressed.jpg'></li><li><img src='/img/candia/11_compressed.jpg'></li><li><img src='/img/candia/12_compressed.jpg'></li><li><img src='/img/candia/13_compressed.jpg'></li><li><video autoplay loop muted class='nikola'><source src='/img/candia/14.mp4' type='video/mp4'>Your browser does not support the video tag.</video></li><li><img src='/img/candia/15_compressed.jpg'></li><li><img src='/img/candia/16_compressed.jpg'></li><li><img src='/img/candia/17_compressed.jpg'></li><li><img src='/img/candia/18_compressed.jpg'></li></ul>",
     "alaune": "oui",
@@ -67,6 +72,8 @@
     "lien": "nicolas",
     "image": "/img/nicolas/index_compressed.jpg",
     "banniere": "/img/nicolas/banniere_compressed.jpg",
+    "bannieremobile": "/img/nicolas/indexmobile.jpg",
+
     "galerie": [
       "/img/nicolas/01_compressed.jpg",
       "/img/nicolas/02_compressed.jpg",
@@ -86,6 +93,8 @@
     "lien": "castelafrique",
     "image": "/img/castelafrique/index_compressed.jpg",
     "banniere": "/img/castelafrique/banniere_compressed.jpg",
+    "bannieremobile": "/img/castelafrique/indexmobile.jpg",
+
     "galerie": [],
     "description": "<h3>Castel Afrique.com, enfin un site à la hauteur du groupe !</h3><p>S’inscrivant dans une stratégie de développement responsable pérenne sur le continent Africain, le Groupe Castel a confié à Big Five la conception de son site Internet présentant l’ensemble de ses filiales, marques et surtout engagements sociétaux.</p><p><img id='red' src='/img/castelafrique/01_compressed.jpg'/></p><img  id='reds' src='/img/castelafrique/02_compressed.jpg'/><p><div id='lefeu'><div class='isn'><span>Castel Beer, one people, one Beer</span><p>Castel a également confié à BIG FIVE la création d’un film CASTEL BEER pour l’Angola</p><iframe  id='rsed'src='https://player.vimeo.com/video/158155028?h=f1f2e5973a&autoplay=1&loop=1' width='100%'  frameborder='0' allow='autoplay; fullscreen; picture-in-picture' allowfullscreen></iframe></div></div>",
     "alaune": "oui",
@@ -99,6 +108,8 @@
     "lien": "stark",
     "image": "/img/stark/index_compressed.jpg",
     "banniere": "/img/stark/banniere_compressed.jpg",
+    "bannieremobile": "/img/stark/indexmobile.jpg",
+
     "galerie": [],
     "description": "<h3>Bralico a fait appel à Big Five pour bâtir l’identité et l’univers de sa bière premium 100% malt, 100% congolaise.</h3><p>En concurrence directe avec Heineken sur le marché congolais, Bralico a décidé de produire une bière premium 100% malt,100% congolaise.</p><p>Pour son lancement, Bralico a confié le soin à Big Five de créer un univers reflétant la qualité et la singularité de cette nouvelle boisson. Big Five a donc proposé de baptiser la bière “STÄRK” et l’a dotée d’un contenant vert sombre avec un papier aluminisé. Un design très luxe pour une boisson d’exception, qui trouve ainsi parfaitement sa place au milieu des références internationales.</p><p><img src='/img/stark/01_compressed.jpg'/></p><p><img src='/img/stark/02_compressed.jpg'/></p><iframe src='https://player.vimeo.com/video/129356550?h=0835a88800&autoplay=1&loop=1' width='640' height='360' frameborder='0' allow='autoplay; fullscreen; picture-in-picture' allowfullscreen></iframe><p><img src='/img/stark/03_compressed.jpg '/></p>",
     "alaune": "oui",
@@ -112,6 +123,8 @@
     "lien": "craftbeer",
     "image": "/img/craftbeer/index_compressed.jpg",
     "banniere": "/img/craftbeer/banniere_compressed.jpg",
+    "bannieremobile": "/img/craftbeer/indexmobile.jpg",
+
     "galerie": [
       "/img/craftbeer/01_compressed.jpg",
       "/img/craftbeer/02_compressed.jpg",
@@ -132,6 +145,8 @@
     "lien": "dinor",
     "image": "/img/dinor/index_compressed.jpg",
     "banniere": "/img/dinor/banniere_compressed.jpg",
+    "bannieremobile": "/img/dinor/indexmobile.jpg",
+
     "galerie": [
       "/img/dinor/01_compressed.jpg",
       "/img/dinor/02_compressed.jpg",
@@ -152,6 +167,8 @@
     "lien": "socavins",
     "image": "/img/socavins/index_compressed.jpg",
     "banniere": "/img/socavins/banniere_compressed.jpg",
+    "bannieremobile": "/img/socavins/indexmobile.jpg",
+
     "galerie": [],
     "description": "<h3>Socavins conçoit et embouteille à Pointe-Noire de véritables vins et spiritueux dans une usine regroupant sur 6000 m2 de surface de production, et 7 lignes d’embouteillage.</h3><div id='leftright'><div id='ralo'><div id='leftsoca'><h4>GAMME ST-PÈRES</h4><p>Big Five a accompagné SOCAVINS dans la création d’une gamme de cinq vins de qualité en imaginant un nom, un design et un univers de marque faisant directement référence aux grands domaines et vinicoles français. Cette gamme, forte de 4 cépages (Cabernet Sauvignon, Chardonnay, Merlot et Rosé Grenache) et d’une appellation est directement importée des célèbres vignobles bordelais et embouteillée à Pointe-Noire dans le plus grand respect du savoir-faire français</p><img src='/img/socavins/stperes_compressed.jpg' alt=''></div><div id='rightsocz'><img src='/img/socavins/stpere4_compressed.jpg' alt=''></div></div><div id='cantodelsol' class='mouff'><h4>GAMME CANTO DEL SOL</h4><p>Composée de vins issus d’Espagne et riches en saveurs, Canto del Sol est la gamme du soleil. Quoi de plus naturel qu’une identité basée sur des couleurs franches et rappelant l’Espagne ainsi qu’une iconographie représentant les composants essentiels à la fabrication du vin : le soleil et les champs de vigne</p><img src='/img/socavins/bannierecantodelsol_compressed.jpg' class='img-fluid' alt=''></div><div id='whiskey' class='mouff'><img src='/img/socavins/whisky_compressed.jpg' alt=''><div class='whiskyrapper'><h4>Les whisky</h4><p>Sir Malcolm Wallace, véritable whisky vieilli en Écosse et embouteillé en République du Congo. L’identité graphique du plus africain des whiskys écossais s’inspire donc tout naturellement du fameux tartan, étoffe symbolique des Highlands, lui conférant ainsi une image premium. King’s Horses, dont le positionnement se veut plus mainstream. Son caractère artisanal, son nom évoquant une certaine élite royale ainsi que les attributs graphiques de son packaging participent entièrement à la perception d’un produit de qualité… pour des gens de qualité. Enfin, Black Officers joue sur la corde virile et symbolique de l’officier militaire, du choix typographique jusque dans la forme de l’étiquette rappelant ainsi que malgré son positionnement mass market, ce whisky n’est réservé qu’à ceux qui le méritent.</p></div></div><div id='gins' class='mouff'><img src='/img/socavins/gin_compressed.jpg' alt=''><div class='whiskyrapper'><h4>LES GINS ET RHUMS</h4><p>SOCAVINS a également voulu marquer l’excellence grâce à un GIN et un Rhum blanc élaborés de manière artisanale dans des Alambics d’exception à Pointe-Noire : Rivière Bleue, qui tire son nom d’une célèbre rivière au cœur de la République du Congo connue pour sa pureté et sa limpidité et sa déclinaison Terre Ivoire.</p></div></div><div id='suko' class='mouff'><img src='/img/socavins/suko_compressed.jpg' alt=''><div class='whiskyrapper'><h4>LES SODAS</h4><p>Une gamme de sodas a également été lancée autour de trois saveurs : l’orange, les fruits rouges et les fruits tropicaux. Qualité du produit, design coloré et tonalité locale sont les trois éléments forts de l’ADN de Suko dont l’identité graphique est basée sur littéralement sur l’explosion des saveurs.</p></div></div></div>",
     "alaune": "oui",
