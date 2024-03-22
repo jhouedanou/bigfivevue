@@ -42,7 +42,18 @@ onMounted(async () => {
     // Déterminer la largeur de la fenêtre après que solutions.value a été rempli
     windowWidth.value = window.innerWidth;
     window.addEventListener("resize", updateWindowWidth);
-    console.log(windowWidth.value);
+    if (windowWidth.value > 1024) {
+      //get the height of each #solutionslist li
+      const solutionList = document.querySelectorAll("#solutionslist .col");
+
+      let maxHeight = 0;
+      solutionList.forEach((solution) => {
+        if (solution.clientHeight > maxHeight) {
+          maxHeight = solution.clientHeight;
+        }
+      });
+    } else {
+    }
   } catch (error) {
     console.log("Pas de solutions Big Five à afficher");
   }
