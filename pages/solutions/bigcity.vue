@@ -100,14 +100,14 @@ onMounted(async () => {
         clickable: true,
       },
     });
-    //slider sur les images de la boutique en ligne
     swiperInstance2 = new Swiper(swiperContainer2.value, {
       slidesPerView: 3,
       spaceBetween: 0,
       direction: "horizontal",
       draggable: true,
+      keyboard: true,
       loop: true,
-      // mousewheel: true,
+      mousewheel: true,
       keyboard: true,
       rewind: true,
       observer: true,
@@ -1005,7 +1005,6 @@ onMounted(async () => {
                           class="img-fluid"
                           src="/img/solutions/bigcity/ndole1.png"
                         />
-
                         <p class="legende">Vue par liste</p>
                       </div>
                       <div class="imgwrapper swiper-slide">
@@ -1045,7 +1044,6 @@ onMounted(async () => {
                         />
                         <p class="legende">Visualisation des commandes</p>
                       </div>
-
                       <div class="imgwrapper swiper-slide">
                         <img
                           class="img-fluid"
@@ -1055,7 +1053,6 @@ onMounted(async () => {
                           Visualisation en temps réel <br />de la livraison
                         </p>
                       </div>
-
                       <div class="imgwrapper swiper-slide">
                         <img
                           class="img-fluid"
