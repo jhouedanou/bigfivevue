@@ -1,5 +1,5 @@
 <template>
-  <div id="footercontactfrom">
+  <div id="footercontactfrom" class="philippe">
     <div id="contactsz">
       <div class="row56">
         <h2 class="vanhouan">{{ state?.labels?.rencontronsnous }}</h2>
@@ -10,7 +10,7 @@
           method="post"
           accept-charset="UTF-8"
         >
-          <div id="shefg" class="row">
+          <div id="shefgrave" class="row">
             <div class="col-md-6 col-sm-12">
               <input
                 name="email"
@@ -99,10 +99,34 @@ onMounted(async () => {
 });
 </script>
 <style>
-.row56 {
-  height: auto !important;
+#bigcityfooterinner {
+  #footercontactfrom {
+    .row56 {
+      height: auto !important;
+    }
+  }
 }
+
 #footer-footer {
-  min-height: 40vh !important;
+  height: 30vh !important;
+  .row {
+    height: auto !important;
+  }
+}
+.philippe {
+  height: 70vh !important;
+
+  .row {
+    height: auto !important;
+  }
+}
+#shefgrave {
+  z-index: 10000 !important;
+
+  height: 171px !important;
+}
+#occident {
+  height: 70px !important;
+  z-index: 10000 !important;
 }
 </style>

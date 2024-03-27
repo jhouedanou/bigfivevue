@@ -6,7 +6,6 @@ import ContenuAltLayout from "@/layouts/contenuBigCity.vue";
 import FooterBigCity from "@/components/FooterBigCity.vue";
 import PageLoader from "@/components/PageLoader.vue";
 import "bootstrap/dist/css/bootstrap.css";
-
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
 let swiperContainer = ref(null);
@@ -22,17 +21,16 @@ let toClose = ref(false);
 let closeBlack = ref(false);
 const filterValue = route.fullPath.substring("/solutions/".length);
 const scrollToElement = () => {
-  const element = document.getElementById("btnDiscova");
-  element.scrollIntoView({ behavior: "smooth" });
+  const element = document.getElementById("avecbigcity");
+  //  element.scrollIntoView({ behavior: "smooth" });
+  //element.scrollIntoView();
+  //go the next swiper slide
+  swiperInstance.slideNext();
 };
-
 const windowWidth = ref(0);
 const state = reactive({
   isLoading: true,
 });
-/* const onScroll = () => {
-  scrollPosition.value = window.scrollY;
-}; */
 const updateWindowWidth = () => {
   windowWidth.value = window.innerWidth;
 };
@@ -1169,7 +1167,7 @@ onMounted(async () => {
               </div>
               <div id="mathers" class="col-md-6">
                 <img
-                  src="/img/solutions/bigcity/Groupe576.png"
+                  src="/img/solutions/bigcity/salome.jpg"
                   class="img-fluid responsive-img"
                   alt
                 />

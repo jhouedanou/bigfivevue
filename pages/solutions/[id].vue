@@ -6,7 +6,7 @@ import ContenuAltLayout from "@/layouts/contenuAlt.vue";
 import PageLoader from "@/components/PageLoader.vue";
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
-import $ from "jquery";
+
 const swiperContainer = ref(null);
 let swiperInstance;
 const solutions = ref([]);
