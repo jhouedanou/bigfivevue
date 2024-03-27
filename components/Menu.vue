@@ -38,7 +38,7 @@ onMounted(async () => {
             :key="subLink.id"
             :class="{ active: subLink.url === props.page }"
           >
-            <nuxt-link :to="subLink.url">{{ subLink.nom }}</nuxt-link>
+            <a :href="subLink.url">{{ subLink.nom }}</a>
           </li>
         </ul>
       </li>

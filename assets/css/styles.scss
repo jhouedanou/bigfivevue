@@ -3616,7 +3616,7 @@ div#pargrapheIntro {
 			@include open();
 		}
 		#menulinks {
-			padding: 3em 0 0 0em !important;
+			padding: 0.25rem 0 0 0em !important;
 			text-align: center !important;
 			justify-content: center !important;
 			align-items: center !important;
@@ -5663,7 +5663,7 @@ div#imagshop {
 	position: absolute;
 	left: 0;
 	right: 0;
-	bottom: 16vh;
+	bottom: 0vh;
 	margin: 0 auto;
 	display: flex;
 	align-items: center;
