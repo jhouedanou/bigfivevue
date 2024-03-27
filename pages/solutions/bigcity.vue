@@ -1167,7 +1167,7 @@ onMounted(async () => {
               </div>
               <div id="mathers" class="col-md-6">
                 <img
-                  src="/img/solutions/bigcity/salome.jpg"
+                  src="/img/solutions/bigcity/sulat.png"
                   class="img-fluid responsive-img"
                   alt
                 />

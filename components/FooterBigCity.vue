@@ -122,7 +122,7 @@ onMounted(async () => {
 }
 #shefgrave {
   z-index: 10000 !important;
-
+  margin-bottom: 4em !important;
   height: 171px !important;
 }
 #occident {
