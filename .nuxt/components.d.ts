@@ -2,6 +2,7 @@
 declare module 'vue' {
   export interface GlobalComponents {
     'Footer': typeof import("../components/Footer.vue")['default']
+    'FooterBigCity': typeof import("../components/FooterBigCity.vue")['default']
     'Header': typeof import("../components/Header.vue")['default']
     'HeaderAlt': typeof import("../components/HeaderAlt.vue")['default']
     'HeaderForSolutions': typeof import("../components/HeaderForSolutions.vue")['default']
@@ -179,6 +180,7 @@ declare module 'vue' {
     'Html': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Html']
     'Body': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
     'LazyFooter': typeof import("../components/Footer.vue")['default']
+    'LazyFooterBigCity': typeof import("../components/FooterBigCity.vue")['default']
     'LazyHeader': typeof import("../components/Header.vue")['default']
     'LazyHeaderAlt': typeof import("../components/HeaderAlt.vue")['default']
     'LazyHeaderForSolutions': typeof import("../components/HeaderForSolutions.vue")['default']
@@ -359,6 +361,7 @@ declare module 'vue' {
 }
 
 export const Footer: typeof import("../components/Footer.vue")['default']
+export const FooterBigCity: typeof import("../components/FooterBigCity.vue")['default']
 export const Header: typeof import("../components/Header.vue")['default']
 export const HeaderAlt: typeof import("../components/HeaderAlt.vue")['default']
 export const HeaderForSolutions: typeof import("../components/HeaderForSolutions.vue")['default']
@@ -536,6 +539,7 @@ export const Head: typeof import("../node_modules/nuxt/dist/head/runtime/compone
 export const Html: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Html']
 export const Body: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
 export const LazyFooter: typeof import("../components/Footer.vue")['default']
+export const LazyFooterBigCity: typeof import("../components/FooterBigCity.vue")['default']
 export const LazyHeader: typeof import("../components/Header.vue")['default']
 export const LazyHeaderAlt: typeof import("../components/HeaderAlt.vue")['default']
 export const LazyHeaderForSolutions: typeof import("../components/HeaderForSolutions.vue")['default']

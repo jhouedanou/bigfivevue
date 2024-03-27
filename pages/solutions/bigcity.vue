@@ -3,7 +3,7 @@ import { ref, onMounted, computed, reactive } from "vue";
 import axios from "axios";
 import { useRoute } from "vue-router";
 import ContenuAltLayout from "@/layouts/contenuBigCity.vue";
-import Footer from "@/components/Footer.vue";
+import FooterBigCity from "@/components/FooterBigCity.vue";
 import PageLoader from "@/components/PageLoader.vue";
 import "bootstrap/dist/css/bootstrap.css";
 
@@ -1244,11 +1244,9 @@ onMounted(async () => {
           </div>
         </div>
         <!--footer-->
-        <div class="swiper-slide">
-          <div class="d-flex align-items-center justify-content-center">
-            <div id="oman">
-              <Footer />
-            </div>
+        <div id="bigcityfooter" class="swiper-slide">
+          <div id="bigcityfooterinner">
+            <FooterBigCity />
           </div>
         </div>
       </div>
@@ -1259,6 +1257,46 @@ onMounted(async () => {
 </template>
 
 <style lang="scss" scoped>
+#footercontactfrom {
+  display: none !important;
+  height: 100vh !important;
+  .container {
+    max-width: 100vw !important;
+  }
+  .container {
+    width: 100vw !important;
+  }
+}
+#shefg {
+  width: 100vw !important;
+  height: auto !important;
+}
+#oman {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-direction: column !important;
+}
+#bigcityfooterinner {
+  flex-direction: column !important;
+}
+#bigcityfooter {
+  flex-direction: column !important;
+}
+#nosautresolutons {
+  padding-bottom: 0em !important;
+  h3 {
+    margin-top: 0em !important;
+    padding-top: 0em !important;
+  }
+}
+#sectionthirteenbigcity {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 #header-alt {
   position: relative !important;
 }
@@ -1332,26 +1370,6 @@ onMounted(async () => {
         margin-bottom: 1em !important;
       }
     }
-  }
-}
-@min-width (1024px) {
-  #nosautresolutons {
-    padding-bottom: 0em !important;
-    h3 {
-      margin-top: 0em !important;
-      padding-top: 0em !important;
-    }
-  }
-  #sectionthirteenbigcity {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-  }
-  #oman {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
   }
 }
 </style>
