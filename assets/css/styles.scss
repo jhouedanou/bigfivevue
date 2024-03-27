@@ -5243,6 +5243,11 @@ body {
 		height: auto;
 	}
 }
+#tantquelepoussin {
+	.letexte {
+		background: #edeff6;
+	}
+}
 #rakimz {
 	.swiper-slide {
 		h3 {
@@ -5253,6 +5258,7 @@ body {
 			align-items: flex-start;
 			justify-content: center;
 			flex-direction: column;
+
 			h3 {
 				font-family: "new-order", sans-serif;
 				font-size: 40px;
@@ -5603,6 +5609,12 @@ div#imagshop {
 	}
 }
 @media (min-width: 1024px) {
+	#mathers {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
 	#sectionsevenbigcity {
 		.imgwrapper {
 			display: flex;

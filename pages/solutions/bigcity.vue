@@ -1167,8 +1167,12 @@ onMounted(async () => {
                   </p>
                 </div>
               </div>
-              <div class="col-md-6">
-                <img src="/img/solutions/bigcity/Groupe576.png" alt />
+              <div id="mathers" class="col-md-6">
+                <img
+                  src="/img/solutions/bigcity/Groupe576.png"
+                  class="img-fluid responsive-img"
+                  alt
+                />
                 <p class="legende">Homepage Dashboard</p>
               </div>
             </div>
@@ -1211,7 +1215,9 @@ onMounted(async () => {
               class="dflex align-content-center align-items-center justify-content-center"
             >
               <div class="container">
-                <div class="row no-gutters">
+                <div
+                  class="row no-gutters d-flex align-items-center justify-content-center"
+                >
                   <h3>Découvrez nos autres solutions</h3>
                   <div class="dflex austin">
                     <div
@@ -1237,12 +1243,15 @@ onMounted(async () => {
             </div>
           </div>
         </div>
-        <!--     <div class="swiper-slide">
+        <!--footer-->
+        <div class="swiper-slide">
           <div class="d-flex align-items-center justify-content-center">
+            <div id="oman">
+              <Footer />
+            </div>
           </div>
-        </div> -->
+        </div>
       </div>
-      <Footer />
 
       <div class="swiper-pagination"></div>
     </div>
@@ -1323,6 +1332,26 @@ onMounted(async () => {
         margin-bottom: 1em !important;
       }
     }
+  }
+}
+@min-width (1024px) {
+  #nosautresolutons {
+    padding-bottom: 0em !important;
+    h3 {
+      margin-top: 0em !important;
+      padding-top: 0em !important;
+    }
+  }
+  #sectionthirteenbigcity {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  #oman {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
   }
 }
 </style>
