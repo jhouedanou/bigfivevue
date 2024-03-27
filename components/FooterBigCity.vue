@@ -1,7 +1,7 @@
 <template>
   <div id="footercontactfrom">
     <div id="contactsz">
-      <div class="row">
+      <div class="row56">
         <h2 class="vanhouan">{{ state?.labels?.rencontronsnous }}</h2>
       </div>
       <div id="untel">
@@ -99,7 +99,7 @@ onMounted(async () => {
 });
 </script>
 <style>
-.row {
+.row56 {
   height: auto !important;
 }
 #footer-footer {
