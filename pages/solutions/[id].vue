@@ -20,15 +20,15 @@ let toClose = ref(false);
 let closeBlack = ref(false);
 const filterValue = route.fullPath.substring("/solutions/".length);
 const scrollToElement = () => {
-  const element = document.getElementById("restedelapage");
+  const element = document.getElementById("btnDiscova");
   element.scrollIntoView({ behavior: "smooth" });
 };
 const state = reactive({
   isLoading: true,
 });
-const onScroll = () => {
+/* const onScroll = () => {
   scrollPosition.value = window.scrollY;
-};
+}; */
 const updateWindowWidth = () => {
   windowWidth.value = window.innerWidth;
 };
@@ -38,7 +38,7 @@ onUnmounted(() => {
 });
 
 onMounted(() => {
-  window.addEventListener("scroll", onScroll);
+  //  window.addEventListener("scroll", onScroll);
   document.body.id = filterValue;
   document.body.classList.add("solutions");
 

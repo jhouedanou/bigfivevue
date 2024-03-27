@@ -22,7 +22,7 @@ let toClose = ref(false);
 let closeBlack = ref(false);
 const filterValue = route.fullPath.substring("/solutions/".length);
 const scrollToElement = () => {
-  const element = document.getElementById("restedelapage");
+  const element = document.getElementById("btnDiscova");
   element.scrollIntoView({ behavior: "smooth" });
 };
 
@@ -30,9 +30,9 @@ const windowWidth = ref(0);
 const state = reactive({
   isLoading: true,
 });
-const onScroll = () => {
+/* const onScroll = () => {
   scrollPosition.value = window.scrollY;
-};
+}; */
 const updateWindowWidth = () => {
   windowWidth.value = window.innerWidth;
 };
@@ -47,7 +47,7 @@ onMounted(() => {
 
   windowWidth.value = window.innerWidth;
   window.addEventListener("resize", updateWindowWidth);
-  window.addEventListener("scroll", onScroll);
+  //window.addEventListener("scroll", onScroll);
   document.body.id = filterValue;
   document.body.classList.add("solutions");
 });
@@ -1178,7 +1178,7 @@ onMounted(async () => {
           <div id="sectiontwelvebigcity" class="container-fluid">
             <div class="row no-gutters">
               <div class="col-md-7" v-if="windowWidth < 1024">
-              <img src="/img/formules.jpg" alt /> 
+                <img src="/img/formules.jpg" alt />
               </div>
               <div class="col-md-7"></div>
               <div class="col-md-5 letexte">
@@ -1305,6 +1305,7 @@ onMounted(async () => {
   .swiper-wrapper {
     .swiper-slide {
       padding: 0em !important;
+      min-height: 100% !important;
     }
   }
 

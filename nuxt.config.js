@@ -66,8 +66,7 @@ export default defineNuxtConfig({
         },
       ],
     },
-    pageTransition: { name: 'page', mode: 'out-in' }
-
+    pageTransition: { name: "page", mode: "out-in" },
   },
   script: [
     {
@@ -99,7 +98,7 @@ export default defineNuxtConfig({
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
     baseURL: "/",
-    maxRedirects: 3,
+    maxRedirects: 15,
     abortOnRedirect: true,
   },
   modules: [
@@ -121,8 +120,15 @@ export default defineNuxtConfig({
     dir: "content", // Path to the "content" directory
     fullTextSearchFields: ["title", "description"], // Optional: Specify fields for full-text search
   },
-  // In your nuxt.config.js file
   router: {
+    //definit la page "agence" comme page d'accueil
+    extendRoutes(routes, resolve) {
+      routes.push({
+        name: "default",
+        path: "/",
+        redirect: "/agence",
+      });
+    },
     routes: [
       {
         path: "/realisations/:id",
@@ -161,12 +167,12 @@ export default defineNuxtConfig({
   workbox: {
     // Workbox options
   },
-  build:{
+  build: {
     extend(config, { isDev, isClient }) {
       if (isDev && isClient) {
-        config.devtool = 'source-map';
+        config.devtool = "source-map";
       }
     },
     cssSourceMap: true,
-  }
+  },
 });

@@ -4114,9 +4114,9 @@ textarea {
 	#listedessolutions {
 		ul {
 			li {
-				background-size: 105% !important;
+				background-size: 40vh !important;
 				&:hover {
-					background-size: 115% !important;
+					background-size: 45vh !important;
 				}
 			}
 		}
@@ -4144,6 +4144,13 @@ textarea {
 				background-size: 20vw;
 				transition: background-size 0.5s ease-in-out; /* durée augmentée à 0.5s */
 				background-repeat: no-repeat;
+				&:nth-of-type(2) {
+					background-position: 100% 0% !important;
+				}
+
+				&:nth-of-type(4) {
+					background-position: 100% 0% !important;
+				}
 				a {
 					display: block !important;
 					height: 100%;
