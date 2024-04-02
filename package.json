@@ -10,7 +10,6 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@nuxt/devtools": "latest",
     "@nuxt/image": "^1.4.0",
     "@nuxtjs/pwa": "^3.3.5",
     "@types/jquery": "^3.5.29",
@@ -18,11 +17,11 @@
     "bootstrap": "^5.3.3",
     "bootstrap-vue": "^2.23.1",
     "core-js": "^3.36.1",
-    "nuxt": "^3.9.0",
+    "nuxt": "^3.11.1",
     "typescript": "^5.4.3",
     "vite-imagetools": "^7.0.1",
     "vite-plugin-imagemin": "^0.6.1",
-    "vue": "^3.4.0"
+    "vue": "^3.4.21"
   },
   "dependencies": {
     "@bootstrap-vue-next/nuxt": "^0.16.6",
@@ -41,7 +40,9 @@
     "sass": "^1.72.0",
     "swiper": "^11.1.0",
     "vue-awesome-swiper": "^5.0.1",
-    "vue-ico": "^1.0.15"
+    "vue-ico": "^1.0.15",
+    "jquery": "^3.6.4",
+    "vite": "^2.9.18"
   },
   "resolutions": {
     "string-width": "4.2.3"
