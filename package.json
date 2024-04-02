@@ -18,11 +18,11 @@
     "bootstrap": "^5.3.3",
     "bootstrap-vue": "^2.23.1",
     "core-js": "^3.36.1",
-    "nuxt": "^3.11.1",
+    "nuxt": "^3.9.0",
     "typescript": "^5.4.3",
     "vite-imagetools": "^7.0.1",
     "vite-plugin-imagemin": "^0.6.1",
-    "vue": "^3.4.21"
+    "vue": "^3.4.0"
   },
   "dependencies": {
     "@bootstrap-vue-next/nuxt": "^0.16.6",
