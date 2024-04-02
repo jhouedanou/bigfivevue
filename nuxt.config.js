@@ -23,7 +23,7 @@ export default defineNuxtConfig({
         },
         {
           property: "og:title",
-          content: "Big Five",
+          content: "Big Five Solutions | Agence de communication digitale",
         },
         {
           property: "og:description",
