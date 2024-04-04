@@ -3625,8 +3625,8 @@ div#pargrapheIntro {
 			@include open();
 		}
 		#menulinks {
-			margin-top: 2em !important;
-			padding: 4em 0em 0em 0em !important;
+			margin-top: 0em !important;
+			padding: 3em 0em 0em 0em !important;
 			text-align: center !important;
 			justify-content: center !important;
 			align-items: center !important;
@@ -3648,7 +3648,7 @@ div#pargrapheIntro {
 			padding-top: 0em !important;
 			justify-content: flex-start !important;
 			#menulinks {
-				padding: 4em 0em 0em 0em !important;
+				padding: 3em 0em 0em 0em !important;
 				text-align: center !important;
 				justify-content: center !important;
 				a {
