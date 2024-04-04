@@ -266,8 +266,8 @@ onMounted(async () => {
             :style="{
               backgroundImage:
                 windowWidth >= 1024
-                  ? `url(${matchingSolution.banniere})`
-                  : `url(${matchingSolution.banniereMobile})`,
+                  ? `url(/${matchingSolution.banniere})`
+                  : `url(/${matchingSolution.banniereMobile})`,
             }"
           >
             <div class="cartouchez">

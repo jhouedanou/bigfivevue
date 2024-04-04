@@ -97,8 +97,8 @@ onMounted(async () => {
             :style="{
               backgroundImage:
                 windowWidth > 1024
-                  ? 'url(' + solution.homepageVisuel + ')'
-                  : 'url(' + solution.banniere + ')',
+                  ? 'url(/' + solution.homepageVisuel + ')'
+                  : 'url(/' + solution.banniere + ')',
             }"
             v-for="solution in solutions"
             :key="solution.id"
