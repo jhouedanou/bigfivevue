@@ -17,11 +17,11 @@
     "bootstrap": "^5.3.3",
     "bootstrap-vue": "^2.23.1",
     "core-js": "^3.36.1",
-    "nuxt": "^3.11.1",
+    "nuxt": "latest",
     "typescript": "^5.4.3",
     "vite-imagetools": "^7.0.1",
     "vite-plugin-imagemin": "^0.6.1",
-    "vue": "3.4.21"
+    "vue": "latest"
   },
   "dependencies": {
     "@bootstrap-vue-next/nuxt": "^0.16.6",
@@ -37,7 +37,7 @@
     "masonry-layout": "^4.2.2",
     "nuxt-font-loader": "^2.3.5",
     "sass": "^1.74.1",
-    "swiper": "8.0.0",
+    "swiper": "8.4.7",
     "vue-awesome-swiper": "^5.0.1",
     "vue-ico": "^1.0.15",
     "jquery": "^3.7.1",

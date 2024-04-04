@@ -89,11 +89,7 @@ export default defineNuxtConfig({
   css: ["@/assets/css/styles.scss", "bootstrap/dist/css/bootstrap.min.css"],
   plugins: [],
   components: true,
-  buildModules: [
-    "@nuxtjs/axios",
-    "@nuxtjs/composition-api/module",
-    "@nuxtjs/pwa",
-  ],
+  buildModules: ["@nuxtjs/axios", "@nuxtjs/composition-api/module"],
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
@@ -102,11 +98,6 @@ export default defineNuxtConfig({
     abortOnRedirect: true,
   },
   modules: ["@bootstrap-vue-next/nuxt", "@nuxt/content", "@nuxt/image"],
-  googleFonts: {
-    families: {
-      "Source+Sans+Pro": [400, 700, 800],
-    },
-  },
   image: {
     format: ["webp"],
     quality: 80,
@@ -122,32 +113,12 @@ export default defineNuxtConfig({
         component: "~/pages/realisations.vue",
       },
       {
-        path: "/solutions/:id",
-        component: "~/pages/solutions.vue",
-      },
-      {
         path: "/solutions/bigcity",
         redirect: "~/pages/solutions/bigcity.vue",
       },
-    ],
-  },
-  pwa: {
-    manifest: {
-      name: "Big Five Abidjan",
-      short_name: "Big Five Abidjan",
-      lang: "fr",
-      display: "standalone",
-    },
-    icons: [
       {
-        src: "/img/android-chrome-192x192.png",
-        sizes: "192x192",
-        type: "image/png",
-      },
-      {
-        src: "/img/android-chrome-256x256.png",
-        sizes: "256x256",
-        type: "image/png",
+        path: "/solutions/:id",
+        component: "~/pages/solutions.vue",
       },
     ],
   },

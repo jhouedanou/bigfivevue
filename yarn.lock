@@ -6675,7 +6675,7 @@ nuxt-font-loader@^2.3.5:
   resolved "https://registry.yarnpkg.com/nuxt-font-loader/-/nuxt-font-loader-2.3.5.tgz#35587e926bb35d620b4b6e112c3117ae6335c75e"
   integrity sha512-UntuIRFVspNEbkkWEpOgtkRlfGclUZFdUOYk01M2sVolku9KPSWgt+dekpr4REMhVpJX1P99WXhPHWJGFSmKwg==
 
-nuxt@^3.11.1:
+nuxt@latest:
   version "3.11.1"
   resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-3.11.1.tgz#82f0d90c00af64295dbed1c7316ff431266893a7"
   integrity sha512-CsncE1dxP0cmOYT+PBdjMD0bOK8eZizG5tgNWUOJAAAtU45sO38maoBumYYL2kUpT/SC/dMP+831DAcVPvi9pQ==
@@ -8553,10 +8553,10 @@ svgo@^3.2.0:
     csso "^5.0.5"
     picocolors "^1.0.0"
 
-swiper@8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/swiper/-/swiper-8.0.0.tgz#62682a72148db5c312152b05ee796e5eaa205a63"
-  integrity sha512-ue0ybmUIQXZccKo7KutJ2dKM1RgFt7JgJHM7F6adr0JAbG7dJUnTTSQ5l/2AS8/mwv3t4sPCL9lFh9pUAtq1iw==
+swiper@8.4.7:
+  version "8.4.7"
+  resolved "https://registry.yarnpkg.com/swiper/-/swiper-8.4.7.tgz#0301d385c3efc8efe8b66a64187edcb30e3067ee"
+  integrity sha512-VwO/KU3i9IV2Sf+W2NqyzwWob4yX9Qdedq6vBtS0rFqJ6Fa5iLUJwxQkuD4I38w0WDJwmFl8ojkdcRFPHWD+2g==
   dependencies:
     dom7 "^4.0.4"
     ssr-window "^4.0.2"
@@ -9335,7 +9335,7 @@ vue-virtual-scroller@2.0.0-beta.8:
     vue-observe-visibility "^2.0.0-alpha.1"
     vue-resize "^2.0.0-alpha.1"
 
-vue@3.4.21, vue@^3.4.21:
+vue@^3.4.21, vue@latest:
   version "3.4.21"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.4.21.tgz#69ec30e267d358ee3a0ce16612ba89e00aaeb731"
   integrity sha512-5hjyV/jLEIKD/jYl4cavMcnzKwjMKohureP8ejn3hhEjwhWIhWeuzL2kJAjzl/WyVsgPY56Sy4Z40C3lVshxXA==
