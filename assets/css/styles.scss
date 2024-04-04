@@ -2411,6 +2411,13 @@ div#pargrapheIntro {
 			-o-border-radius: 100%;
 		}
 	}
+	#mathers {
+		img {
+			width: 100% !important;
+			left: auto !important;
+			right: auto !important;
+		}
+	}
 
 	#sectionsevenbigcity {
 		padding: 0 !important;
@@ -2433,6 +2440,7 @@ div#pargrapheIntro {
 		padding-top: 3em !important;
 		background-size: cover !important;
 		background-position: center !important;
+		background: rgb(231, 227, 252) !important;
 		#carousel-wrapper4 {
 			padding-top: 0em !important;
 			margin-top: 2em !important;

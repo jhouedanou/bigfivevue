@@ -121,14 +121,6 @@ export default defineNuxtConfig({
     fullTextSearchFields: ["title", "description"], // Optional: Specify fields for full-text search
   },
   router: {
-    //definit la page "agence" comme page d'accueil
-    extendRoutes(routes, resolve) {
-      routes.push({
-        name: "default",
-        path: "/",
-        redirect: "/agence",
-      });
-    },
     routes: [
       {
         path: "/realisations/:id",
