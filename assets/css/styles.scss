@@ -3616,7 +3616,8 @@ div#pargrapheIntro {
 			@include open();
 		}
 		#menulinks {
-			padding: 0.25rem 0 0 0em !important;
+			margin-top: 2em !important;
+			padding: 4em 0em 0em 0em !important;
 			text-align: center !important;
 			justify-content: center !important;
 			align-items: center !important;
@@ -5747,8 +5748,20 @@ div#imagshop {
 	li {
 		@media (max-width: 1024px) {
 			&:nth-of-type(3) {
+				height: auto;
+				overflow: hidden;
 				ul {
-					display: none;
+					margin-top: 10px !important;
+					display: block !important;
+					height: auto !important;
+					filter: alpha(opacity=100) !important;
+					/*internetexplorer*/
+					-khtml-opacity: 1 !important;
+					/*khtml,oldsafari*/
+					-moz-opacity: 1 !important;
+					/*mozilla,netscape*/
+					opacity: 1 !important;
+					-webkit-filter: alpha(opacity=100) !important;
 				}
 				&:hover {
 					ul {

@@ -3,7 +3,6 @@
 /// <reference types="@nuxt/content" />
 /// <reference types="@nuxt/image" />
 /// <reference types="@nuxtjs/google-fonts" />
-/// <reference types="@nuxt/devtools" />
 /// <reference types="@nuxt/telemetry" />
 /// <reference types="nuxt" />
 /// <reference path="types/plugins.d.ts" />

@@ -38,7 +38,7 @@ onMounted(async () => {
             :key="subLink.id"
             :class="{ active: subLink.url === props.page }"
           >
-            <a :href="subLink.url">{{ subLink.nom }}</a>
+            <a v-if="subLink.url" :href="subLink.url">{{ subLink.nom }}</a>
           </li>
         </ul>
       </li>
