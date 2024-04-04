@@ -68,9 +68,6 @@
       "#app": [
         "../node_modules/nuxt/dist/app"
       ],
-      "#app/*": [
-        "../node_modules/nuxt/dist/app/*"
-      ],
       "vue-demi": [
         "../node_modules/nuxt/dist/app/compat/vue-demi"
       ],
@@ -86,9 +83,6 @@
       "#image": [
         "../node_modules/@nuxt/image/dist/runtime"
       ],
-      "#image/*": [
-        "../node_modules/@nuxt/image/dist/runtime/*"
-      ],
       "#vue-router": [
         "./vue-router-stub"
       ],
@@ -96,7 +90,7 @@
         "./imports"
       ],
       "#app-manifest": [
-        "./manifest/meta/1be03dd1-3a2f-42de-993d-85eb58ae392f.json"
+        "./manifest/meta/dev.json"
       ],
       "#build": [
         "."
@@ -131,23 +125,21 @@
     "./nuxt.d.ts",
     "../.config/nuxt.*",
     "../**/*",
-    "../node_modules/@bootstrap-vue-next/nuxt/runtime",
-    "../node_modules/@nuxtjs/mdc/runtime",
-    "../node_modules/@nuxt/content/runtime",
-    "../node_modules/@nuxt/image/runtime",
-    "../node_modules/@nuxtjs/google-fonts/runtime",
-    "../node_modules/@nuxt/telemetry/runtime",
+    "../@bootstrap-vue-next/nuxt/runtime",
+    "../@nuxtjs/mdc/runtime",
+    "../@nuxt/content/runtime",
+    "../@nuxt/image/runtime",
+    "../@nuxt/telemetry/runtime",
     ".."
   ],
   "exclude": [
     "../node_modules",
     "../node_modules/nuxt/node_modules",
-    "../node_modules/@bootstrap-vue-next/nuxt/runtime/server",
-    "../node_modules/@nuxtjs/mdc/runtime/server",
-    "../node_modules/@nuxt/content/runtime/server",
-    "../node_modules/@nuxt/image/runtime/server",
-    "../node_modules/@nuxtjs/google-fonts/runtime/server",
-    "../node_modules/@nuxt/telemetry/runtime/server",
+    "../@bootstrap-vue-next/nuxt/runtime/server",
+    "../@nuxtjs/mdc/runtime/server",
+    "../@nuxt/content/runtime/server",
+    "../@nuxt/image/runtime/server",
+    "../@nuxt/telemetry/runtime/server",
     "../dist",
     "../.output"
   ]

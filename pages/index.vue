@@ -306,7 +306,7 @@ watchEffect(() => {
                   :key="slide.id ?? ''"
                 >
                   <div class="inner">
-                    <img :src="slide.img ?? ''" alt="" />
+                    <NuxtImg :src="slide.img ?? ''" :alt="slide.alt ?? ''" />
                     <h3>{{ slide.title ?? "" }}</h3>
                     <div class="sabine">
                       <p v-html="slide.content ?? ''"></p>

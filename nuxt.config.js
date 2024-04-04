@@ -98,15 +98,10 @@ export default defineNuxtConfig({
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
     baseURL: "/",
-    maxRedirects: 15,
+    maxRedirects: 5,
     abortOnRedirect: true,
   },
-  modules: [
-    "@bootstrap-vue-next/nuxt",
-    "@nuxt/content",
-    "@nuxt/image",
-    "@nuxtjs/google-fonts",
-  ],
+  modules: ["@bootstrap-vue-next/nuxt", "@nuxt/content", "@nuxt/image"],
   googleFonts: {
     families: {
       "Source+Sans+Pro": [400, 700, 800],
