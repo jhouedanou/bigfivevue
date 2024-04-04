@@ -38,7 +38,9 @@ onMounted(async () => {
             :key="subLink.id"
             :class="{ active: subLink.url === props.page }"
           >
-            <a v-if="subLink.url" :href="subLink.url">{{ subLink.nom }}</a>
+            <nuxt-link v-if="subLink && subLink.url" :to="subLink.url">{{
+              subLink.nom
+            }}</nuxt-link>
           </li>
         </ul>
       </li>
