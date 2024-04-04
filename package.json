@@ -37,7 +37,7 @@
     "masonry-layout": "^4.2.2",
     "nuxt-font-loader": "^2.3.5",
     "sass": "^1.74.1",
-    "swiper": "^11.1.0",
+    "swiper": "8.0.0",
     "vue-awesome-swiper": "^5.0.1",
     "vue-ico": "^1.0.15",
     "jquery": "^3.7.1",
