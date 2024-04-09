@@ -89,7 +89,12 @@ export default defineNuxtConfig({
   css: ["@/assets/css/styles.scss", "bootstrap/dist/css/bootstrap.min.css"],
   plugins: [],
   components: true,
-  buildModules: ["@nuxtjs/axios", "@nuxtjs/composition-api/module"],
+  buildModules: [
+    "@nuxtjs/axios",
+    "@nuxtjs/composition-api/module",
+    "@nuxt/image",
+    { provider: "static", dir: "assets/images" },
+  ],
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308

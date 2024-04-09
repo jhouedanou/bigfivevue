@@ -275,8 +275,20 @@ watchEffect(() => {
         "
         :class="{ dana: closeBlack }"
       >
-        <img v-if="toClose" src="/img/btn-close.png" alt="" />
-        <img v-if="!toClose" src="/img/btn-menu.png" alt="" />
+        <!--         <img v-if="toClose" src="/img/btn-close.png" alt="" />
+        <img v-if="!toClose" src="/img/btn-menu.png" alt="" /> -->
+        <NuxtImg
+          v-if="toClose"
+          src="/img/btn-close.png"
+          alt=""
+          :options="{ format: 'webp', quality: 80 }"
+        />
+        <NuxtImg
+          v-if="!toClose"
+          src="/img/btn-menu.png"
+          alt=""
+          :options="{ format: 'webp', quality: 80 }"
+        />
       </button>
     </div>
     <div class="row">
