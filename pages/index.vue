@@ -279,13 +279,13 @@ watchEffect(() => {
         <img v-if="!toClose" src="/img/btn-menu.png" alt="" /> -->
         <NuxtImg
           v-if="toClose"
-          src="/img/btn-close.png"
+          src="@/assets/img/btn-close.png"
           alt=""
           :options="{ format: 'webp', quality: 80 }"
         />
         <NuxtImg
           v-if="!toClose"
-          src="/img/btn-menu.png"
+          src="@/assets/img/btn-menu.png"
           alt=""
           :options="{ format: 'webp', quality: 80 }"
         />
@@ -318,7 +318,11 @@ watchEffect(() => {
                   :key="slide.id ?? ''"
                 >
                   <div class="inner">
-                    <img :src="slide.img ?? ''" :alt="slide.alt ?? ''" />
+                    <NuxtImg
+                      :src="slide.img ?? ''"
+                      :alt="slide.alt ?? ''"
+                      :options="{ format: 'webp', quality: 80 }"
+                    />
                     <h3>{{ slide.title ?? "" }}</h3>
                     <div class="sabine">
                       <p v-html="slide.content ?? ''"></p>
@@ -483,7 +487,7 @@ watchEffect(() => {
 
 <style lang="scss" scoped>
 .slide5-background {
-  background: url("/img/visages.png") black;
+  background: url("@/assets/img/visages.png") black;
   background-position: 50% 50%;
   transition: background-position 0.3s ease-in-out;
 }
@@ -500,13 +504,6 @@ watchEffect(() => {
 
     &:hover {
       background-position: 50% 50% !important;
-    }
-  }
-}
-
-#lagence {
-  .sidebar {
-    &.flipit {
     }
   }
 }
