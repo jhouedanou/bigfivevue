@@ -64,6 +64,14 @@ export default defineNuxtConfig({
           href: "/img/safari-pinned-tab.svg",
           color: "#5bbad5",
         },
+        { rel: "preconnect", href: "https://fonts.googleapis.com" },
+        {
+          rel: "preconnect",
+          href: "https://fonts.gstatic.com",
+          crossorigin: true,
+        },
+        // Préconnecter à Adobe Fonts (remplacez `use.typekit.net` par votre URL Adobe Fonts)
+        { rel: "preconnect", href: "https://use.typekit.net" },
       ],
     },
     pageTransition: { name: "page", mode: "out-in" },
@@ -136,12 +144,12 @@ export default defineNuxtConfig({
   workbox: {
     // Workbox options
   },
-  build: {
+  /* build: {
     extend(config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.devtool = "source-map";
       }
     },
     cssSourceMap: true,
-  },
+  }, */
 });

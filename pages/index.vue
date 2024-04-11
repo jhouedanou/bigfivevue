@@ -108,7 +108,7 @@ onMounted(async () => {
         } else if (swiperInstance.activeIndex === 3) {
           const tipster = document.querySelector("#tipster");
           const liste = tipster.querySelectorAll("li");
-          console.log(liste);
+          // console.log(liste);
           const delai = 300;
           const increment = 1;
           const debutFadeOut = 19;
@@ -277,12 +277,8 @@ watchEffect(() => {
       >
         <!--         <img v-if="toClose" src="/img/btn-close.png" alt="" />
         <img v-if="!toClose" src="/img/btn-menu.png" alt="" /> -->
-        <NuxtImg v-if="toClose" src="@/assets/img/btn-close.png" alt="" />
-        <NuxtImg
-          v-if="!toClose"
-          src="@/assets/img/btn-menu.png"
-          alt=""
-        />
+        <NuxtImg v-if="toClose" src="/img/btn-close.png" alt="" />
+        <NuxtImg v-if="!toClose" src="/img/btn-menu.png" alt="" />
       </button>
     </div>
     <div class="row">
@@ -312,10 +308,7 @@ watchEffect(() => {
                   :key="slide.id ?? ''"
                 >
                   <div class="inner">
-                    <NuxtImg
-                      :src="slide.img ?? ''"
-                      :alt="slide.alt ?? ''"
-                    />
+                    <NuxtImg :src="slide.img ?? ''" :alt="slide.alt ?? ''" />
                     <h3>{{ slide.title ?? "" }}</h3>
                     <div class="sabine">
                       <p v-html="slide.content ?? ''"></p>
@@ -480,7 +473,7 @@ watchEffect(() => {
 
 <style lang="scss" scoped>
 .slide5-background {
-  background: url("@/assets/img/visages.jpg") black;
+  background: url("/img/visages.jpg") black;
   background-position: 50% 50%;
   transition: background-position 0.3s ease-in-out;
 }

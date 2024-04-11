@@ -67,16 +67,11 @@ onMounted(async () => {
           "
           :class="{ dana: closeBlack }"
         >
-          <img v-if="toClose" src="@/assets/img/btn-close.png" alt="" />
+          <img v-if="toClose" src="/img/btn-close.png" alt="" />
+          <img v-if="!toClose" src="/img/btn-menu.png" alt="" class="desktop" />
           <img
             v-if="!toClose"
-            src="@/assets/img/btn-menu.png"
-            alt=""
-            class="desktop"
-          />
-          <img
-            v-if="!toClose"
-            src="@/assets/img/btn-menu-mobile.svg"
+            src="/img/btn-menu-mobile.svg"
             alt=""
             class="mobile"
           />
@@ -108,12 +103,12 @@ onMounted(async () => {
             v-for="solution in solutions"
             :key="solution.id"
           >
-            <NuxtLink :to="`/solutions/${solution.lien}`">
+            <a :href="`/solutions/${solution.lien}`">
               <i
                 :style="{ backgroundImage: 'url(' + solution.logo + ')' }"
                 alt="logo"
               ></i
-            ></NuxtLink>
+            ></a>
           </li>
         </ul>
       </div>

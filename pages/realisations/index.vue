@@ -14,17 +14,17 @@
           "
           :class="{ dana: closeBlack }"
         >
-          <img v-if="toClose" src="@/assets/img/btn-close.png" alt="" />
+          <img v-if="toClose" src="/img/btn-close.png" alt="" />
           <NuxtImg
             v-if="!toClose"
-            src="@/assets/img/btn-menu.png"
+            src="/img/btn-menu.png"
             alt=""
             class="desktop"
             :options="{ quality: 80, webp: true }"
           />
           <NuxtImg
             v-if="!toClose"
-            src="@/assets/img/btn-menu-mobile.svg"
+            src="/img/btn-menu-mobile.svg"
             alt=""
             class="mobile"
             :options="{ quality: 80, webp: true }"

@@ -4,9 +4,7 @@ import SocialLinks from "./socialLinksMobile.vue";
 <template>
   <div id="leblablamarketing" class="mobile">
     <h4>Parlez nous de votre projet<br />nous allons le rendre réel</h4>
-    <NuxtLink class="michou" id="michou" :to="`/contact`"
-      >Contactez-nous</NuxtLink
-    >
+    <a class="michou" id="michou" :href="`/contact`">Contactez-nous</a>
     <SocialLinks />
     <div id="muthaf">
       <a href="#">Mentions légales</a>
