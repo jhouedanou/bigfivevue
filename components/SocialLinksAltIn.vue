@@ -21,12 +21,12 @@ onMounted(async () => {
     <ul id="lesrosz" class="d-flex flex-row justify-content-end">
       <li>
         <a href="https://selectivecity.co.za/selective-live/" target="_blank">
-          <NuxtImg src="/img/selectivelive.svg" alt="" />
+          <img src="/img/selectivelive.svg" alt="" />
         </a>
       </li>
       <li v-for="link in state.socialLinks" :key="link.id">
         <a :href="link.url" target="_blank">
-          <NuxtImg :src="link.iconAlt" :alt="link.platform" />
+          <img :src="link.iconAlt" :alt="link.platform" />
         </a>
       </li>
     </ul>

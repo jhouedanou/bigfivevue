@@ -13,8 +13,8 @@
           "
           :class="{ dana: closeBlack }"
         >
-          <NuxtImg v-if="toClose" src="/img/btn-close.png" alt="" />
-          <NuxtImg v-if="!toClose" src="/img/btn-menu.png" alt="" />
+          <img v-if="toClose" src="/img/btn-close.png" alt="" />
+          <img v-if="!toClose" src="/img/btn-menu.png" alt="" />
         </button>
       </div>
       <div

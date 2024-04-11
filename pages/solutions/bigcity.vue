@@ -13,14 +13,9 @@
         "
         :class="{ dana: closeBlack }"
       >
-        <NuxtImg v-if="toClose" src="/img/btn-close.png" alt="" />
-        <NuxtImg
-          v-if="!toClose"
-          src="/img/btn-menu.png"
-          alt=""
-          class="desktop"
-        />
-        <NuxtImg
+        <img v-if="toClose" src="/img/btn-close.png" alt="" />
+        <img v-if="!toClose" src="/img/btn-menu.png" alt="" class="desktop" />
+        <img
           v-if="!toClose"
           src="/img/btn-menu-mobile.svg"
           alt=""
@@ -86,7 +81,7 @@
             <div id="sectiontwobigcity" class="container">
               <div class="row no-gutters noh">
                 <div class="col-md-6">
-                  <NuxtImg
+                  <img
                     class="img-fluid"
                     loading="lazy"
                     src="/img/solutions/bigcity/igcityanim_2.png"
@@ -124,16 +119,16 @@
                 >
                   <div class="carousel-inner">
                     <div class="imgwrapper p-0 conundrum carousel-item active">
-                      <NuxtImg src="/img/solutions/bigcity/17.png" alt />
+                      <img src="/img/solutions/bigcity/17.png" alt />
                       <p class="legende">Géolocalisation des établissements</p>
                     </div>
 
                     <div class="imgwrapper p-0 carousel-item conundrum">
-                      <NuxtImg src="/img/solutions/bigcity/15.png" alt />
+                      <img src="/img/solutions/bigcity/15.png" alt />
                       <p class="legende">Page établissement</p>
                     </div>
                     <div class="imgwrapper p-0 conundrum carousel-item">
-                      <NuxtImg src="/img/solutions/bigcity/16.png" alt />
+                      <img src="/img/solutions/bigcity/16.png" alt />
                       <p class="legende">Vue des établissements par liste</p>
                     </div>
                   </div>
@@ -165,7 +160,7 @@
               </div>
               <div class="col-md-4 offset-md-1 letexte">
                 <div class="paddingzone">
-                  <NuxtImg src="/img/solutions/bigcity/logopetit.svg" alt />
+                  <img src="/img/solutions/bigcity/logopetit.svg" alt />
                   <h3>C’est un annuaire géolocalisé</h3>
                   <p>
                     Vous avez désormais le moyen de valoriser l’expertise de vos
@@ -193,7 +188,7 @@
                   class="row d-flex align-items-center justify-content-center"
                 >
                   <div class="imgwrapper col-md-4 col-sm-12 p-0 conundrum">
-                    <NuxtImg
+                    <img
                       class="img-fluid"
                       src="/img/solutions/bigcity/17.png"
                       alt
@@ -202,7 +197,7 @@
                   </div>
 
                   <div class="imgwrapper col-md-4 col-sm-12 p-0 conundrum">
-                    <NuxtImg
+                    <img
                       class="img-fluid"
                       src="/img/solutions/bigcity/15.png"
                       alt
@@ -210,7 +205,7 @@
                     <p class="legende">Page établissement</p>
                   </div>
                   <div class="imgwrapper col-md-4 col-sm-12 p-0 conundrum">
-                    <NuxtImg
+                    <img
                       class="img-fluid"
                       src="/img/solutions/bigcity/16.png"
                       alt
@@ -230,7 +225,7 @@
                   class="col-md-7 fusbal d-flex align-items-end justify-content-center flex-column"
                 >
                   <div class="paddingzone imgwrapper">
-                    <NuxtImg
+                    <img
                       class="img-fluid"
                       src="/img/solutions/bigcity/18.png"
                       alt
@@ -242,7 +237,7 @@
                   </div>
                 </div>
                 <div class="col-md-5 letexte">
-                  <NuxtImg src="/img/solutions/bigcity/logopetit.svg" alt />
+                  <img src="/img/solutions/bigcity/logopetit.svg" alt />
                   <h3>C’est un outil de fidélisation</h3>
                   <p>
                     BIG CITY permet la mise en place de programmes de fidélité
@@ -270,13 +265,13 @@
                 >
                   <div class="carousel-inner">
                     <div class="imgwrapper p-0 conundrum carousel-item active">
-                      <NuxtImg src="/img/solutions/bigcity/19.png" alt />
+                      <img src="/img/solutions/bigcity/19.png" alt />
                       <p class="legende">
                         Homepage utilisateur<br />Catégorie Bons plans
                       </p>
                     </div>
                     <div class="imgwrapper p-0 conundrum carousel-item">
-                      <NuxtImg src="/img/solutions/bigcity/20.png" alt />
+                      <img src="/img/solutions/bigcity/20.png" alt />
                       <p class="legende">Catégorie Actualités</p>
                     </div>
                   </div>
@@ -309,7 +304,7 @@
               </div>
               <div class="col-md-4 offset-md-1 letexte">
                 <div class="paddingzone">
-                  <NuxtImg src="/img/solutions/bigcity/logopetit.svg" alt />
+                  <img src="/img/solutions/bigcity/logopetit.svg" alt />
                   <h3>C’est un Générateur de contenu…</h3>
                   <p>
                     … pour la marque, ses produits et ses événements, mais
@@ -321,7 +316,7 @@
               <div v-if="windowWidth > 1024" class="col-md-7 d-flex conundrum">
                 <div class="row d-flex fusbal">
                   <div class="col-md-6 imgwrapper">
-                    <NuxtImg
+                    <img
                       class="img-fluid"
                       src="/img/solutions/bigcity/19.png"
                       alt
@@ -331,7 +326,7 @@
                     </p>
                   </div>
                   <div class="col-md-6 imgwrapper">
-                    <NuxtImg
+                    <img
                       class="img-fluid"
                       src="/img/solutions/bigcity/20.png"
                       alt
@@ -356,17 +351,17 @@
                 >
                   <div class="carousel-inner">
                     <div class="imgwrapper p-0 conundrum carousel-item active">
-                      <NuxtImg src="/img/solutions/bigcity/21.png" alt />
+                      <img src="/img/solutions/bigcity/21.png" alt />
                       <p class="legende">
                         Homepage Pros<br />Programme de motivation
                       </p>
                     </div>
                     <div class="imgwrapper p-0 conundrum carousel-item">
-                      <NuxtImg src="/img/solutions/bigcity/22.png" alt />
+                      <img src="/img/solutions/bigcity/22.png" alt />
                       <p class="legende">Homepage Pros<br />Rapports</p>
                     </div>
                     <div class="imgwrapper p-0 conundrum carousel-item">
-                      <NuxtImg src="/img/solutions/bigcity/23.png" alt />
+                      <img src="/img/solutions/bigcity/23.png" alt />
                       <p class="legende">
                         ajout d'un nouvel<br />établissement
                       </p>
@@ -401,7 +396,7 @@
               <div v-if="windowWidth > 1024" class="col-md-8 conundrum">
                 <div class="row fusbal">
                   <div class="col-md-4 imgwrapper">
-                    <NuxtImg
+                    <img
                       class="img-fluid"
                       src="/img/solutions/bigcity/21.png"
                       alt
@@ -411,7 +406,7 @@
                     </p>
                   </div>
                   <div class="col-md-4 imgwrapper">
-                    <NuxtImg
+                    <img
                       class="img-fluid"
                       src="/img/solutions/bigcity/22.png"
                       alt
@@ -419,7 +414,7 @@
                     <p class="legende">Homepage Pros<br />Rapports</p>
                   </div>
                   <div class="col-md-4 imgwrapper">
-                    <NuxtImg
+                    <img
                       class="img-fluid"
                       src="/img/solutions/bigcity/23.png"
                       alt
@@ -429,7 +424,7 @@
                 </div>
               </div>
               <div class="col-md-4 letexte">
-                <NuxtImg src="/img/solutions/bigcity/logopetit.svg" alt />
+                <img src="/img/solutions/bigcity/logopetit.svg" alt />
                 <h3>C’est un gestionnaire d’activité pour les pros</h3>
                 <p>
                   Les propriétaires des PDV peuvent créer et piloter leur page
@@ -458,7 +453,7 @@
                 >
                   <div class="carousel-inner">
                     <div class="imgwrapper carousel-item active">
-                      <NuxtImg
+                      <img
                         class="img-fluid"
                         src="/img/solutions/bigcity/24.png"
                         alt
@@ -468,7 +463,7 @@
                       </p>
                     </div>
                     <div class="imgwrapper carousel-item">
-                      <NuxtImg
+                      <img
                         class="img-fluid"
                         src="/img/solutions/bigcity/24a.png"
                         alt
@@ -505,7 +500,7 @@
               </div>
               <div class="col-md-4 offset-md-1 letexte">
                 <div class="paddingzone">
-                  <NuxtImg src="/img/solutions/bigcity/logopetit.svg" alt />
+                  <img src="/img/solutions/bigcity/logopetit.svg" alt />
                   <h3>C’est une alternative aux réseaux sociaux</h3>
                   <p>
                     La marque crée son propre réseau social. La marque devient
@@ -517,7 +512,7 @@
               <div v-if="windowWidth > 1024" class="col-md-7 conundrum">
                 <div class="row fusbal">
                   <div class="col-md-6 imgwrapper">
-                    <NuxtImg
+                    <img
                       class="img-fluid"
                       src="/img/solutions/bigcity/24.png"
                       alt
@@ -527,7 +522,7 @@
                     </p>
                   </div>
                   <div class="col-md-6 imgwrapper">
-                    <NuxtImg
+                    <img
                       class="img-fluid"
                       src="/img/solutions/bigcity/24a.png"
                       alt
@@ -554,7 +549,7 @@
                 >
                   <div class="carousel-inner">
                     <div class="imgwrapper carousel-item active">
-                      <NuxtImg
+                      <img
                         class="img-fluid"
                         src="/img/solutions/bigcity/26.png"
                         alt
@@ -564,7 +559,7 @@
                       </p>
                     </div>
                     <div class="imgwrapper carousel-item">
-                      <NuxtImg
+                      <img
                         class="img-fluid"
                         src="/img/solutions/bigcity/27.png"
                         alt
@@ -572,7 +567,7 @@
                       <p class="legende">Module Pronostiques</p>
                     </div>
                     <div class="imgwrapper carousel-item">
-                      <NuxtImg
+                      <img
                         class="img-fluid"
                         src="/img/solutions/bigcity/26a.png"
                         alt
@@ -609,7 +604,7 @@
               <div v-if="windowWidth >= 1024" class="col-md-8 conundrum">
                 <div class="row fusbal">
                   <div class="col-md-4 imgwrapper">
-                    <NuxtImg
+                    <img
                       class="img-fluid"
                       src="/img/solutions/bigcity/26.png"
                       alt
@@ -619,7 +614,7 @@
                     </p>
                   </div>
                   <div class="col-md-4 imgwrapper">
-                    <NuxtImg
+                    <img
                       class="img-fluid"
                       src="/img/solutions/bigcity/27.png"
                       alt
@@ -627,7 +622,7 @@
                     <p class="legende">Module Pronostiques</p>
                   </div>
                   <div class="col-md-4 imgwrapper">
-                    <NuxtImg
+                    <img
                       class="img-fluid"
                       src="/img/solutions/bigcity/26a.png"
                       alt
@@ -637,7 +632,7 @@
                 </div>
               </div>
               <div class="col-md-4 letexte">
-                <NuxtImg src="/img/solutions/bigcity/logopetit.svg" alt />
+                <img src="/img/solutions/bigcity/logopetit.svg" alt />
                 <h3>C’est un créateur d’activations</h3>
                 <p>
                   BIG CITY permet la mise en place d’activations digitales
@@ -664,7 +659,7 @@
                 >
                   <div class="carousel-inner">
                     <div class="imgwrapper carousel-item active">
-                      <NuxtImg
+                      <img
                         class="img-fluid"
                         src="/img/solutions/bigcity/ndole1.png"
                       />
@@ -672,14 +667,14 @@
                       <p class="legende">Vue par liste</p>
                     </div>
                     <div class="imgwrapper carousel-item">
-                      <NuxtImg
+                      <img
                         class="img-fluid"
                         src="/img/solutions/bigcity/ndole2.png"
                       />
                       <p class="legende">Commande</p>
                     </div>
                     <div class="imgwrapper carousel-item">
-                      <NuxtImg
+                      <img
                         class="img-fluid"
                         src="/img/solutions/bigcity/ndole3.png"
                       />
@@ -688,21 +683,21 @@
                       </p>
                     </div>
                     <div class="imgwrapper carousel-item">
-                      <NuxtImg
+                      <img
                         class="img-fluid"
                         src="/img/solutions/bigcity/ndole4.png"
                       />
                       <p class="legende">Suivi de commande en temps direct</p>
                     </div>
                     <div class="imgwrapper carousel-item">
-                      <NuxtImg
+                      <img
                         class="img-fluid"
                         src="/img/solutions/bigcity/ndole5.png"
                       />
                       <p class="legende">Solution de Paiement digital</p>
                     </div>
                     <div class="imgwrapper carousel-item">
-                      <NuxtImg
+                      <img
                         class="img-fluid"
                         src="/img/solutions/bigcity/ndole6.png"
                       />
@@ -710,7 +705,7 @@
                     </div>
 
                     <div class="imgwrapper carousel-item">
-                      <NuxtImg
+                      <img
                         class="img-fluid"
                         src="/img/solutions/bigcity/ndole7.png"
                       />
@@ -720,7 +715,7 @@
                     </div>
 
                     <div class="imgwrapper carousel-item">
-                      <NuxtImg
+                      <img
                         class="img-fluid"
                         src="/img/solutions/bigcity/ndole8.png"
                       />
@@ -756,7 +751,7 @@
               </div>
               <div class="col-md-4 offset-md-1 letexte">
                 <div class="paddingzone">
-                  <NuxtImg src="/img/solutions/bigcity/logopetit.svg" alt />
+                  <img src="/img/solutions/bigcity/logopetit.svg" alt />
                   <h3>C’est une boutique intégrée</h3>
                   <p>
                     L’application dispose d’un module e-commerce intégré
@@ -783,21 +778,21 @@
                   <div ref="swiperContainer2" id="imagshop" class="swiper">
                     <div id="swidel" class="swiper-wrapper">
                       <div class="imgwrapper swiper-slide">
-                        <NuxtImg
+                        <img
                           class="img-fluid"
                           src="/img/solutions/bigcity/ndole1.png"
                         />
                         <p class="legende">Vue par liste</p>
                       </div>
                       <div class="imgwrapper swiper-slide">
-                        <NuxtImg
+                        <img
                           class="img-fluid"
                           src="/img/solutions/bigcity/ndole2.png"
                         />
                         <p class="legende">Commande</p>
                       </div>
                       <div class="imgwrapper swiper-slide">
-                        <NuxtImg
+                        <img
                           class="img-fluid"
                           src="/img/solutions/bigcity/ndole3.png"
                         />
@@ -806,28 +801,28 @@
                         </p>
                       </div>
                       <div class="imgwrapper swiper-slide">
-                        <NuxtImg
+                        <img
                           class="img-fluid"
                           src="/img/solutions/bigcity/ndole4.png"
                         />
                         <p class="legende">Suivi de commande en temps direct</p>
                       </div>
                       <div class="imgwrapper swiper-slide">
-                        <NuxtImg
+                        <img
                           class="img-fluid"
                           src="/img/solutions/bigcity/ndole5.png"
                         />
                         <p class="legende">Solution de Paiement digital</p>
                       </div>
                       <div class="imgwrapper swiper-slide">
-                        <NuxtImg
+                        <img
                           class="img-fluid"
                           src="/img/solutions/bigcity/ndole6.png"
                         />
                         <p class="legende">Visualisation des commandes</p>
                       </div>
                       <div class="imgwrapper swiper-slide">
-                        <NuxtImg
+                        <img
                           class="img-fluid"
                           src="/img/solutions/bigcity/ndole7.png"
                         />
@@ -836,7 +831,7 @@
                         </p>
                       </div>
                       <div class="imgwrapper swiper-slide">
-                        <NuxtImg
+                        <img
                           class="img-fluid"
                           src="/img/solutions/bigcity/ndole8.png"
                         />
@@ -860,7 +855,7 @@
                 >
                   <div class="carousel-inner">
                     <div class="imgwrapper carousel-item active">
-                      <NuxtImg
+                      <img
                         class="img-fluid"
                         src="/img/solutions/bigcity/32.png"
                         alt
@@ -868,7 +863,7 @@
                       <p class="legende">Page événement</p>
                     </div>
                     <div class="imgwrapper carousel-item">
-                      <NuxtImg
+                      <img
                         class="img-fluid"
                         src="/img/solutions/bigcity/31.png"
                         alt
@@ -876,7 +871,7 @@
                       <p class="legende">Billetterie événementielle</p>
                     </div>
                     <div class="imgwrapper carousel-item">
-                      <NuxtImg
+                      <img
                         class="img-fluid"
                         src="/img/solutions/bigcity/30.png"
                         alt
@@ -889,7 +884,7 @@
               <div v-if="windowWidth >= 1024" class="col-md-8 conundrum">
                 <div class="row fusbal">
                   <div class="col-md-4 imgwrapper">
-                    <NuxtImg
+                    <img
                       class="img-fluid"
                       src="/img/solutions/bigcity/32.png"
                       alt
@@ -897,7 +892,7 @@
                     <p class="legende">Page événement</p>
                   </div>
                   <div class="col-md-4 imgwrapper">
-                    <NuxtImg
+                    <img
                       class="img-fluid"
                       src="/img/solutions/bigcity/31.png"
                       alt
@@ -905,7 +900,7 @@
                     <p class="legende">Billetterie événementielle</p>
                   </div>
                   <div class="col-md-4 imgwrapper">
-                    <NuxtImg
+                    <img
                       class="img-fluid"
                       src="/img/solutions/bigcity/30.png"
                       alt
@@ -916,7 +911,7 @@
               </div>
               <div class="col-md-4 letexte">
                 <div class="paddingzone">
-                  <NuxtImg src="/img/solutions/bigcity/logopetit.svg" alt />
+                  <img src="/img/solutions/bigcity/logopetit.svg" alt />
 
                   <h3>C’est un guide et une billetterie événementielle</h3>
                   <p>
@@ -933,7 +928,7 @@
             <div class="row no-gutters">
               <div class="col-md-5 offset-md-1 letexte">
                 <div class="paddingzone">
-                  <NuxtImg src="/img/solutions/bigcity/logopetit.svg" alt />
+                  <img src="/img/solutions/bigcity/logopetit.svg" alt />
                   <h3>C’est un aspirateur de datas</h3>
                   <p>
                     Depuis le dashboard de l’application, directement depuis
@@ -945,7 +940,7 @@
                 </div>
               </div>
               <div id="mathers" class="col-md-6">
-                <NuxtImg
+                <img
                   src="/img/solutions/bigcity/sulat.png"
                   class="img-fluid responsive-img"
                   alt
@@ -959,12 +954,12 @@
           <div id="sectiontwelvebigcity" class="container-fluid">
             <div class="row no-gutters">
               <div class="col-md-7" v-if="windowWidth < 1024">
-                <NuxtImg src="/img/formules.jpg" alt />
+                <img src="/img/formules.jpg" alt />
               </div>
               <div class="col-md-7"></div>
               <div class="col-md-5 letexte">
                 <div class="paddingzone">
-                  <NuxtImg src="/img/solutions/bigcity/logopetit.svg" alt />
+                  <img src="/img/solutions/bigcity/logopetit.svg" alt />
                   <h3>Formule 1</h3>
                   <p>
                     <strong
@@ -1033,7 +1028,7 @@
   </ContenuAltLayout>
 </template>
 <script setup>
-import { ref, onMounted, computed, reactive } from "vue";
+import { ref, onMounted, computed, reactive, nextTick } from "vue";
 import axios from "axios";
 import { useRoute } from "vue-router";
 import ContenuAltLayout from "@/layouts/contenuBigCity.vue";
@@ -1134,6 +1129,29 @@ onMounted(async () => {
         init: function () {},
       },
     });
+    await nextTick();
+    swiperInstance2 = new Swiper(swiperContainer2.value, {
+      direction: "horizontal",
+      slidesPerView: 3,
+      spaceBetween: 0,
+      rewind: true,
+      draggable: true,
+      autoHeight: true,
+      lazy: false,
+      loop: true,
+      observer: true,
+      observeParents: true,
+      parallax: true,
+      autoplay: {
+        delay: 10000, // delay between transitions in ms
+        disableOnInteraction: true, // enable/disable autoplay on user interaction
+      },
+
+      on: {
+        init: function () {},
+      },
+    });
+    console.log(swiperContainer2.value);
   } else {
     const { default: Hammer } = await import("hammerjs");
     const { Carousel } = await import("bootstrap");
@@ -1290,12 +1308,12 @@ onMounted(async () => {
 
   .imgwrapper {
     img {
-      min-width: 280px;
+      //   min-width: 280px;
     }
   }
   .conundrum {
     img {
-      min-width: 280px;
+      //  min-width: 280px;
     }
   }
   .swiper {
@@ -1311,7 +1329,6 @@ onMounted(async () => {
     /* Styles pour les slides */
     padding: 0;
     margin: 0 auto;
-    overflow: hidden;
   }
 }
 

@@ -29,13 +29,13 @@ const selectedLogo = computed(() => {
 <template>
   <div class="logocontainer">
     <nuxt-link to="/">
-      <!--     <NuxtImg
+      <!--     <img
         v-if="selectedLogo"
         :src="selectedLogo.src"
         alt="Big Five Solutions"
         class="img-fluid"
       /> -->
-      <NuxtImg
+      <img
         v-if="selectedLogo"
         :src="selectedLogo.src"
         alt="Big Five Solutions"

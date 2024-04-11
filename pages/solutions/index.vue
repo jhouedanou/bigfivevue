@@ -67,14 +67,9 @@ onMounted(async () => {
           "
           :class="{ dana: closeBlack }"
         >
-          <NuxtImg v-if="toClose" src="/img/btn-close.png" alt="" />
-          <NuxtImg
-            v-if="!toClose"
-            src="/img/btn-menu.png"
-            alt=""
-            class="desktop"
-          />
-          <NuxtImg
+          <img v-if="toClose" src="/img/btn-close.png" alt="" />
+          <img v-if="!toClose" src="/img/btn-menu.png" alt="" class="desktop" />
+          <img
             v-if="!toClose"
             src="/img/btn-menu-mobile.svg"
             alt=""
