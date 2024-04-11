@@ -237,9 +237,14 @@ onMounted(async () => {
         "
         :class="{ dana: closeBlack }"
       >
-        <img v-if="toClose" src="/img/btn-close.png" alt="" />
-        <img v-if="!toClose" src="/img/btn-menu.png" alt="" class="desktop" />
-        <img
+        <NuxtImg v-if="toClose" src="/img/btn-close.png" alt="" />
+        <NuxtImg
+          v-if="!toClose"
+          src="/img/btn-menu.png"
+          alt=""
+          class="desktop"
+        />
+        <NuxtImg
           v-if="!toClose"
           src="/img/btn-menu-mobile.svg"
           alt=""
@@ -305,8 +310,9 @@ onMounted(async () => {
             <div id="sectiontwobigcity" class="container">
               <div class="row no-gutters noh">
                 <div class="col-md-6">
-                  <img
+                  <NuxtImg
                     class="img-fluid"
+                    loading="lazy"
                     src="/img/solutions/bigcity/igcityanim_2.png"
                     alt
                   />
@@ -342,16 +348,16 @@ onMounted(async () => {
                 >
                   <div class="carousel-inner">
                     <div class="imgwrapper p-0 conundrum carousel-item active">
-                      <img src="/img/solutions/bigcity/17.png" alt />
+                      <NuxtImg src="/img/solutions/bigcity/17.png" alt />
                       <p class="legende">Géolocalisation des établissements</p>
                     </div>
 
                     <div class="imgwrapper p-0 carousel-item conundrum">
-                      <img src="/img/solutions/bigcity/15.png" alt />
+                      <NuxtImg src="/img/solutions/bigcity/15.png" alt />
                       <p class="legende">Page établissement</p>
                     </div>
                     <div class="imgwrapper p-0 conundrum carousel-item">
-                      <img src="/img/solutions/bigcity/16.png" alt />
+                      <NuxtImg src="/img/solutions/bigcity/16.png" alt />
                       <p class="legende">Vue des établissements par liste</p>
                     </div>
                   </div>
@@ -383,7 +389,7 @@ onMounted(async () => {
               </div>
               <div class="col-md-4 offset-md-1 letexte">
                 <div class="paddingzone">
-                  <img src="/img/solutions/bigcity/logopetit.svg" alt />
+                  <NuxtImg src="/img/solutions/bigcity/logopetit.svg" alt />
                   <h3>C’est un annuaire géolocalisé</h3>
                   <p>
                     Vous avez désormais le moyen de valoriser l’expertise de vos
@@ -411,7 +417,7 @@ onMounted(async () => {
                   class="row d-flex align-items-center justify-content-center"
                 >
                   <div class="imgwrapper col-md-4 col-sm-12 p-0 conundrum">
-                    <img
+                    <NuxtImg
                       class="img-fluid"
                       src="/img/solutions/bigcity/17.png"
                       alt
@@ -420,7 +426,7 @@ onMounted(async () => {
                   </div>
 
                   <div class="imgwrapper col-md-4 col-sm-12 p-0 conundrum">
-                    <img
+                    <NuxtImg
                       class="img-fluid"
                       src="/img/solutions/bigcity/15.png"
                       alt
@@ -428,7 +434,7 @@ onMounted(async () => {
                     <p class="legende">Page établissement</p>
                   </div>
                   <div class="imgwrapper col-md-4 col-sm-12 p-0 conundrum">
-                    <img
+                    <NuxtImg
                       class="img-fluid"
                       src="/img/solutions/bigcity/16.png"
                       alt
@@ -448,7 +454,7 @@ onMounted(async () => {
                   class="col-md-7 fusbal d-flex align-items-end justify-content-center flex-column"
                 >
                   <div class="paddingzone imgwrapper">
-                    <img
+                    <NuxtImg
                       class="img-fluid"
                       src="/img/solutions/bigcity/18.png"
                       alt
@@ -460,7 +466,7 @@ onMounted(async () => {
                   </div>
                 </div>
                 <div class="col-md-5 letexte">
-                  <img src="/img/solutions/bigcity/logopetit.svg" alt />
+                  <NuxtImg src="/img/solutions/bigcity/logopetit.svg" alt />
                   <h3>C’est un outil de fidélisation</h3>
                   <p>
                     BIG CITY permet la mise en place de programmes de fidélité
@@ -488,13 +494,13 @@ onMounted(async () => {
                 >
                   <div class="carousel-inner">
                     <div class="imgwrapper p-0 conundrum carousel-item active">
-                      <img src="/img/solutions/bigcity/19.png" alt />
+                      <NuxtImg src="/img/solutions/bigcity/19.png" alt />
                       <p class="legende">
                         Homepage utilisateur<br />Catégorie Bons plans
                       </p>
                     </div>
                     <div class="imgwrapper p-0 conundrum carousel-item">
-                      <img src="/img/solutions/bigcity/20.png" alt />
+                      <NuxtImg src="/img/solutions/bigcity/20.png" alt />
                       <p class="legende">Catégorie Actualités</p>
                     </div>
                   </div>
@@ -527,7 +533,7 @@ onMounted(async () => {
               </div>
               <div class="col-md-4 offset-md-1 letexte">
                 <div class="paddingzone">
-                  <img src="/img/solutions/bigcity/logopetit.svg" alt />
+                  <NuxtImg src="/img/solutions/bigcity/logopetit.svg" alt />
                   <h3>C’est un Générateur de contenu…</h3>
                   <p>
                     … pour la marque, ses produits et ses événements, mais
@@ -539,7 +545,7 @@ onMounted(async () => {
               <div v-if="windowWidth > 1024" class="col-md-7 d-flex conundrum">
                 <div class="row d-flex fusbal">
                   <div class="col-md-6 imgwrapper">
-                    <img
+                    <NuxtImg
                       class="img-fluid"
                       src="/img/solutions/bigcity/19.png"
                       alt
@@ -549,7 +555,7 @@ onMounted(async () => {
                     </p>
                   </div>
                   <div class="col-md-6 imgwrapper">
-                    <img
+                    <NuxtImg
                       class="img-fluid"
                       src="/img/solutions/bigcity/20.png"
                       alt
@@ -574,17 +580,17 @@ onMounted(async () => {
                 >
                   <div class="carousel-inner">
                     <div class="imgwrapper p-0 conundrum carousel-item active">
-                      <img src="/img/solutions/bigcity/21.png" alt />
+                      <NuxtImg src="/img/solutions/bigcity/21.png" alt />
                       <p class="legende">
                         Homepage Pros<br />Programme de motivation
                       </p>
                     </div>
                     <div class="imgwrapper p-0 conundrum carousel-item">
-                      <img src="/img/solutions/bigcity/22.png" alt />
+                      <NuxtImg src="/img/solutions/bigcity/22.png" alt />
                       <p class="legende">Homepage Pros<br />Rapports</p>
                     </div>
                     <div class="imgwrapper p-0 conundrum carousel-item">
-                      <img src="/img/solutions/bigcity/23.png" alt />
+                      <NuxtImg src="/img/solutions/bigcity/23.png" alt />
                       <p class="legende">
                         ajout d'un nouvel<br />établissement
                       </p>
@@ -619,7 +625,7 @@ onMounted(async () => {
               <div v-if="windowWidth > 1024" class="col-md-8 conundrum">
                 <div class="row fusbal">
                   <div class="col-md-4 imgwrapper">
-                    <img
+                    <NuxtImg
                       class="img-fluid"
                       src="/img/solutions/bigcity/21.png"
                       alt
@@ -629,7 +635,7 @@ onMounted(async () => {
                     </p>
                   </div>
                   <div class="col-md-4 imgwrapper">
-                    <img
+                    <NuxtImg
                       class="img-fluid"
                       src="/img/solutions/bigcity/22.png"
                       alt
@@ -637,7 +643,7 @@ onMounted(async () => {
                     <p class="legende">Homepage Pros<br />Rapports</p>
                   </div>
                   <div class="col-md-4 imgwrapper">
-                    <img
+                    <NuxtImg
                       class="img-fluid"
                       src="/img/solutions/bigcity/23.png"
                       alt
@@ -647,7 +653,7 @@ onMounted(async () => {
                 </div>
               </div>
               <div class="col-md-4 letexte">
-                <img src="/img/solutions/bigcity/logopetit.svg" alt />
+                <NuxtImg src="/img/solutions/bigcity/logopetit.svg" alt />
                 <h3>C’est un gestionnaire d’activité pour les pros</h3>
                 <p>
                   Les propriétaires des PDV peuvent créer et piloter leur page
@@ -676,7 +682,7 @@ onMounted(async () => {
                 >
                   <div class="carousel-inner">
                     <div class="imgwrapper carousel-item active">
-                      <img
+                      <NuxtImg
                         class="img-fluid"
                         src="/img/solutions/bigcity/24.png"
                         alt
@@ -686,7 +692,7 @@ onMounted(async () => {
                       </p>
                     </div>
                     <div class="imgwrapper carousel-item">
-                      <img
+                      <NuxtImg
                         class="img-fluid"
                         src="/img/solutions/bigcity/24a.png"
                         alt
@@ -723,7 +729,7 @@ onMounted(async () => {
               </div>
               <div class="col-md-4 offset-md-1 letexte">
                 <div class="paddingzone">
-                  <img src="/img/solutions/bigcity/logopetit.svg" alt />
+                  <NuxtImg src="/img/solutions/bigcity/logopetit.svg" alt />
                   <h3>C’est une alternative aux réseaux sociaux</h3>
                   <p>
                     La marque crée son propre réseau social. La marque devient
@@ -735,7 +741,7 @@ onMounted(async () => {
               <div v-if="windowWidth > 1024" class="col-md-7 conundrum">
                 <div class="row fusbal">
                   <div class="col-md-6 imgwrapper">
-                    <img
+                    <NuxtImg
                       class="img-fluid"
                       src="/img/solutions/bigcity/24.png"
                       alt
@@ -745,7 +751,7 @@ onMounted(async () => {
                     </p>
                   </div>
                   <div class="col-md-6 imgwrapper">
-                    <img
+                    <NuxtImg
                       class="img-fluid"
                       src="/img/solutions/bigcity/24a.png"
                       alt
@@ -772,7 +778,7 @@ onMounted(async () => {
                 >
                   <div class="carousel-inner">
                     <div class="imgwrapper carousel-item active">
-                      <img
+                      <NuxtImg
                         class="img-fluid"
                         src="/img/solutions/bigcity/26.png"
                         alt
@@ -782,7 +788,7 @@ onMounted(async () => {
                       </p>
                     </div>
                     <div class="imgwrapper carousel-item">
-                      <img
+                      <NuxtImg
                         class="img-fluid"
                         src="/img/solutions/bigcity/27.png"
                         alt
@@ -790,7 +796,7 @@ onMounted(async () => {
                       <p class="legende">Module Pronostiques</p>
                     </div>
                     <div class="imgwrapper carousel-item">
-                      <img
+                      <NuxtImg
                         class="img-fluid"
                         src="/img/solutions/bigcity/26a.png"
                         alt
@@ -827,7 +833,7 @@ onMounted(async () => {
               <div v-if="windowWidth >= 1024" class="col-md-8 conundrum">
                 <div class="row fusbal">
                   <div class="col-md-4 imgwrapper">
-                    <img
+                    <NuxtImg
                       class="img-fluid"
                       src="/img/solutions/bigcity/26.png"
                       alt
@@ -837,7 +843,7 @@ onMounted(async () => {
                     </p>
                   </div>
                   <div class="col-md-4 imgwrapper">
-                    <img
+                    <NuxtImg
                       class="img-fluid"
                       src="/img/solutions/bigcity/27.png"
                       alt
@@ -845,7 +851,7 @@ onMounted(async () => {
                     <p class="legende">Module Pronostiques</p>
                   </div>
                   <div class="col-md-4 imgwrapper">
-                    <img
+                    <NuxtImg
                       class="img-fluid"
                       src="/img/solutions/bigcity/26a.png"
                       alt
@@ -855,7 +861,7 @@ onMounted(async () => {
                 </div>
               </div>
               <div class="col-md-4 letexte">
-                <img src="/img/solutions/bigcity/logopetit.svg" alt />
+                <NuxtImg src="/img/solutions/bigcity/logopetit.svg" alt />
                 <h3>C’est un créateur d’activations</h3>
                 <p>
                   BIG CITY permet la mise en place d’activations digitales
@@ -882,7 +888,7 @@ onMounted(async () => {
                 >
                   <div class="carousel-inner">
                     <div class="imgwrapper carousel-item active">
-                      <img
+                      <NuxtImg
                         class="img-fluid"
                         src="/img/solutions/bigcity/ndole1.png"
                       />
@@ -890,14 +896,14 @@ onMounted(async () => {
                       <p class="legende">Vue par liste</p>
                     </div>
                     <div class="imgwrapper carousel-item">
-                      <img
+                      <NuxtImg
                         class="img-fluid"
                         src="/img/solutions/bigcity/ndole2.png"
                       />
                       <p class="legende">Commande</p>
                     </div>
                     <div class="imgwrapper carousel-item">
-                      <img
+                      <NuxtImg
                         class="img-fluid"
                         src="/img/solutions/bigcity/ndole3.png"
                       />
@@ -906,21 +912,21 @@ onMounted(async () => {
                       </p>
                     </div>
                     <div class="imgwrapper carousel-item">
-                      <img
+                      <NuxtImg
                         class="img-fluid"
                         src="/img/solutions/bigcity/ndole4.png"
                       />
                       <p class="legende">Suivi de commande en temps direct</p>
                     </div>
                     <div class="imgwrapper carousel-item">
-                      <img
+                      <NuxtImg
                         class="img-fluid"
                         src="/img/solutions/bigcity/ndole5.png"
                       />
                       <p class="legende">Solution de Paiement digital</p>
                     </div>
                     <div class="imgwrapper carousel-item">
-                      <img
+                      <NuxtImg
                         class="img-fluid"
                         src="/img/solutions/bigcity/ndole6.png"
                       />
@@ -928,7 +934,7 @@ onMounted(async () => {
                     </div>
 
                     <div class="imgwrapper carousel-item">
-                      <img
+                      <NuxtImg
                         class="img-fluid"
                         src="/img/solutions/bigcity/ndole7.png"
                       />
@@ -938,7 +944,7 @@ onMounted(async () => {
                     </div>
 
                     <div class="imgwrapper carousel-item">
-                      <img
+                      <NuxtImg
                         class="img-fluid"
                         src="/img/solutions/bigcity/ndole8.png"
                       />
@@ -974,7 +980,7 @@ onMounted(async () => {
               </div>
               <div class="col-md-4 offset-md-1 letexte">
                 <div class="paddingzone">
-                  <img src="/img/solutions/bigcity/logopetit.svg" alt />
+                  <NuxtImg src="/img/solutions/bigcity/logopetit.svg" alt />
                   <h3>C’est une boutique intégrée</h3>
                   <p>
                     L’application dispose d’un module e-commerce intégré
@@ -1001,21 +1007,21 @@ onMounted(async () => {
                   <div id="imagshop" ref="swiperContainer2">
                     <div id="swidel" class="swiper-wrapper">
                       <div class="imgwrapper swiper-slide">
-                        <img
+                        <NuxtImg
                           class="img-fluid"
                           src="/img/solutions/bigcity/ndole1.png"
                         />
                         <p class="legende">Vue par liste</p>
                       </div>
                       <div class="imgwrapper swiper-slide">
-                        <img
+                        <NuxtImg
                           class="img-fluid"
                           src="/img/solutions/bigcity/ndole2.png"
                         />
                         <p class="legende">Commande</p>
                       </div>
                       <div class="imgwrapper swiper-slide">
-                        <img
+                        <NuxtImg
                           class="img-fluid"
                           src="/img/solutions/bigcity/ndole3.png"
                         />
@@ -1024,28 +1030,28 @@ onMounted(async () => {
                         </p>
                       </div>
                       <div class="imgwrapper swiper-slide">
-                        <img
+                        <NuxtImg
                           class="img-fluid"
                           src="/img/solutions/bigcity/ndole4.png"
                         />
                         <p class="legende">Suivi de commande en temps direct</p>
                       </div>
                       <div class="imgwrapper swiper-slide">
-                        <img
+                        <NuxtImg
                           class="img-fluid"
                           src="/img/solutions/bigcity/ndole5.png"
                         />
                         <p class="legende">Solution de Paiement digital</p>
                       </div>
                       <div class="imgwrapper swiper-slide">
-                        <img
+                        <NuxtImg
                           class="img-fluid"
                           src="/img/solutions/bigcity/ndole6.png"
                         />
                         <p class="legende">Visualisation des commandes</p>
                       </div>
                       <div class="imgwrapper swiper-slide">
-                        <img
+                        <NuxtImg
                           class="img-fluid"
                           src="/img/solutions/bigcity/ndole7.png"
                         />
@@ -1054,7 +1060,7 @@ onMounted(async () => {
                         </p>
                       </div>
                       <div class="imgwrapper swiper-slide">
-                        <img
+                        <NuxtImg
                           class="img-fluid"
                           src="/img/solutions/bigcity/ndole8.png"
                         />
@@ -1078,7 +1084,7 @@ onMounted(async () => {
                 >
                   <div class="carousel-inner">
                     <div class="imgwrapper carousel-item active">
-                      <img
+                      <NuxtImg
                         class="img-fluid"
                         src="/img/solutions/bigcity/32.png"
                         alt
@@ -1086,7 +1092,7 @@ onMounted(async () => {
                       <p class="legende">Page événement</p>
                     </div>
                     <div class="imgwrapper carousel-item">
-                      <img
+                      <NuxtImg
                         class="img-fluid"
                         src="/img/solutions/bigcity/31.png"
                         alt
@@ -1094,7 +1100,7 @@ onMounted(async () => {
                       <p class="legende">Billetterie événementielle</p>
                     </div>
                     <div class="imgwrapper carousel-item">
-                      <img
+                      <NuxtImg
                         class="img-fluid"
                         src="/img/solutions/bigcity/30.png"
                         alt
@@ -1107,7 +1113,7 @@ onMounted(async () => {
               <div v-if="windowWidth >= 1024" class="col-md-8 conundrum">
                 <div class="row fusbal">
                   <div class="col-md-4 imgwrapper">
-                    <img
+                    <NuxtImg
                       class="img-fluid"
                       src="/img/solutions/bigcity/32.png"
                       alt
@@ -1115,7 +1121,7 @@ onMounted(async () => {
                     <p class="legende">Page événement</p>
                   </div>
                   <div class="col-md-4 imgwrapper">
-                    <img
+                    <NuxtImg
                       class="img-fluid"
                       src="/img/solutions/bigcity/31.png"
                       alt
@@ -1123,7 +1129,7 @@ onMounted(async () => {
                     <p class="legende">Billetterie événementielle</p>
                   </div>
                   <div class="col-md-4 imgwrapper">
-                    <img
+                    <NuxtImg
                       class="img-fluid"
                       src="/img/solutions/bigcity/30.png"
                       alt
@@ -1134,7 +1140,7 @@ onMounted(async () => {
               </div>
               <div class="col-md-4 letexte">
                 <div class="paddingzone">
-                  <img src="/img/solutions/bigcity/logopetit.svg" alt />
+                  <NuxtImg src="/img/solutions/bigcity/logopetit.svg" alt />
 
                   <h3>C’est un guide et une billetterie événementielle</h3>
                   <p>
@@ -1151,7 +1157,7 @@ onMounted(async () => {
             <div class="row no-gutters">
               <div class="col-md-5 offset-md-1 letexte">
                 <div class="paddingzone">
-                  <img src="/img/solutions/bigcity/logopetit.svg" alt />
+                  <NuxtImg src="/img/solutions/bigcity/logopetit.svg" alt />
                   <h3>C’est un aspirateur de datas</h3>
                   <p>
                     Depuis le dashboard de l’application, directement depuis
@@ -1163,7 +1169,7 @@ onMounted(async () => {
                 </div>
               </div>
               <div id="mathers" class="col-md-6">
-                <img
+                <NuxtImg
                   src="/img/solutions/bigcity/sulat.png"
                   class="img-fluid responsive-img"
                   alt
@@ -1177,12 +1183,12 @@ onMounted(async () => {
           <div id="sectiontwelvebigcity" class="container-fluid">
             <div class="row no-gutters">
               <div class="col-md-7" v-if="windowWidth < 1024">
-                <img src="/img/formules.jpg" alt />
+                <NuxtImg src="/img/formules.jpg" alt />
               </div>
               <div class="col-md-7"></div>
               <div class="col-md-5 letexte">
                 <div class="paddingzone">
-                  <img src="/img/solutions/bigcity/logopetit.svg" alt />
+                  <NuxtImg src="/img/solutions/bigcity/logopetit.svg" alt />
                   <h3>Formule 1</h3>
                   <p>
                     <strong
@@ -1301,6 +1307,16 @@ onMounted(async () => {
     height: 100vh;
   }
 
+  .imgwrapper {
+    img {
+      min-width: 280px;
+    }
+  }
+  .conundrum {
+    img {
+      min-width: 280px;
+    }
+  }
   .swiper {
     width: 100%;
     height: 100vh;

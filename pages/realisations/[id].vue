@@ -13,9 +13,14 @@
         "
         :class="{ dana: closeBlack }"
       >
-        <img v-if="toClose" src="/img/btn-close.png" alt="" />
-        <img v-if="!toClose" src="/img/btn-menu.png" alt="" class="desktop" />
-        <img
+        <NuxtImg v-if="toClose" src="/img/btn-close.png" alt="" />
+        <NuxtImg
+          v-if="!toClose"
+          src="/img/btn-menu.png"
+          alt=""
+          class="desktop"
+        />
+        <NuxtImg
           v-if="!toClose"
           src="/img/btn-menu-mobile.svg"
           alt=""
@@ -36,7 +41,11 @@
       :id="`banner`"
       :class="{ fixed: scrollPosition > 200, visible: scrollPosition > 200 }"
     >
-      <img :src="matchingRealisation.banniere" alt="Image" class="img-fluid" />
+      <NuxtImg
+        :src="matchingRealisation.banniere"
+        alt="Image"
+        class="img-fluid"
+      />
     </div>
     <div
       :id="`div-${matchingRealisation.lien}`"
@@ -51,7 +60,7 @@
         <div v-html="matchingRealisation.description"></div>
         <div id="gridcontainer">
           <div id="galerie" class="grid-wrapper" ref="grid">
-            <img
+            <NuxtImg
               v-for="(image, index) in matchingRealisation?.galerie"
               :key="index"
               :id="'div-' + index + '-' + matchingRealisation.lien"
@@ -76,7 +85,7 @@
         </li>
         <li>
           <nuxt-link to="/realisations">
-            <img src="/img/PATCWORK.svg" alt="" />
+            <NuxtImg src="/img/PATCWORK.svg" alt="" />
           </nuxt-link>
         </li>
         <li>
