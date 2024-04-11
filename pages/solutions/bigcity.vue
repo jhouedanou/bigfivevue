@@ -13,9 +13,16 @@
         "
         :class="{ dana: closeBlack }"
       >
-        <img v-if="toClose" src="/img/btn-close.png" alt="" />
-        <img v-if="!toClose" src="/img/btn-menu.png" alt="" class="desktop" />
+        <img loading="lazy" v-if="toClose" src="/img/btn-close.png" alt="" />
         <img
+          loading="lazy"
+          v-if="!toClose"
+          src="/img/btn-menu.png"
+          alt=""
+          class="desktop"
+        />
+        <img
+          loading="lazy"
           v-if="!toClose"
           src="/img/btn-menu-mobile.svg"
           alt=""
@@ -82,8 +89,8 @@
               <div class="row no-gutters noh">
                 <div class="col-md-6">
                   <img
-                    class="img-fluid"
                     loading="lazy"
+                    class="img-fluid"
                     src="/img/solutions/bigcity/igcityanim_2.png"
                     alt
                   />
@@ -119,16 +126,28 @@
                 >
                   <div class="carousel-inner">
                     <div class="imgwrapper p-0 conundrum carousel-item active">
-                      <img src="/img/solutions/bigcity/17.png" alt />
+                      <img
+                        loading="lazy"
+                        src="/img/solutions/bigcity/17.png"
+                        alt
+                      />
                       <p class="legende">Géolocalisation des établissements</p>
                     </div>
 
                     <div class="imgwrapper p-0 carousel-item conundrum">
-                      <img src="/img/solutions/bigcity/15.png" alt />
+                      <img
+                        loading="lazy"
+                        src="/img/solutions/bigcity/15.png"
+                        alt
+                      />
                       <p class="legende">Page établissement</p>
                     </div>
                     <div class="imgwrapper p-0 conundrum carousel-item">
-                      <img src="/img/solutions/bigcity/16.png" alt />
+                      <img
+                        loading="lazy"
+                        src="/img/solutions/bigcity/16.png"
+                        alt
+                      />
                       <p class="legende">Vue des établissements par liste</p>
                     </div>
                   </div>
@@ -160,7 +179,11 @@
               </div>
               <div class="col-md-4 offset-md-1 letexte">
                 <div class="paddingzone">
-                  <img src="/img/solutions/bigcity/logopetit.svg" alt />
+                  <img
+                    loading="lazy"
+                    src="/img/solutions/bigcity/logopetit.svg"
+                    alt
+                  />
                   <h3>C’est un annuaire géolocalisé</h3>
                   <p>
                     Vous avez désormais le moyen de valoriser l’expertise de vos
@@ -189,6 +212,7 @@
                 >
                   <div class="imgwrapper col-md-4 col-sm-12 p-0 conundrum">
                     <img
+                      loading="lazy"
                       class="img-fluid"
                       src="/img/solutions/bigcity/17.png"
                       alt
@@ -198,6 +222,7 @@
 
                   <div class="imgwrapper col-md-4 col-sm-12 p-0 conundrum">
                     <img
+                      loading="lazy"
                       class="img-fluid"
                       src="/img/solutions/bigcity/15.png"
                       alt
@@ -206,6 +231,7 @@
                   </div>
                   <div class="imgwrapper col-md-4 col-sm-12 p-0 conundrum">
                     <img
+                      loading="lazy"
                       class="img-fluid"
                       src="/img/solutions/bigcity/16.png"
                       alt
@@ -226,6 +252,7 @@
                 >
                   <div class="paddingzone imgwrapper">
                     <img
+                      loading="lazy"
                       class="img-fluid"
                       src="/img/solutions/bigcity/18.png"
                       alt
@@ -237,7 +264,11 @@
                   </div>
                 </div>
                 <div class="col-md-5 letexte">
-                  <img src="/img/solutions/bigcity/logopetit.svg" alt />
+                  <img
+                    loading="lazy"
+                    src="/img/solutions/bigcity/logopetit.svg"
+                    alt
+                  />
                   <h3>C’est un outil de fidélisation</h3>
                   <p>
                     BIG CITY permet la mise en place de programmes de fidélité
@@ -265,13 +296,21 @@
                 >
                   <div class="carousel-inner">
                     <div class="imgwrapper p-0 conundrum carousel-item active">
-                      <img src="/img/solutions/bigcity/19.png" alt />
+                      <img
+                        loading="lazy"
+                        src="/img/solutions/bigcity/19.png"
+                        alt
+                      />
                       <p class="legende">
                         Homepage utilisateur<br />Catégorie Bons plans
                       </p>
                     </div>
                     <div class="imgwrapper p-0 conundrum carousel-item">
-                      <img src="/img/solutions/bigcity/20.png" alt />
+                      <img
+                        loading="lazy"
+                        src="/img/solutions/bigcity/20.png"
+                        alt
+                      />
                       <p class="legende">Catégorie Actualités</p>
                     </div>
                   </div>
@@ -304,7 +343,11 @@
               </div>
               <div class="col-md-4 offset-md-1 letexte">
                 <div class="paddingzone">
-                  <img src="/img/solutions/bigcity/logopetit.svg" alt />
+                  <img
+                    loading="lazy"
+                    src="/img/solutions/bigcity/logopetit.svg"
+                    alt
+                  />
                   <h3>C’est un Générateur de contenu…</h3>
                   <p>
                     … pour la marque, ses produits et ses événements, mais
@@ -317,6 +360,7 @@
                 <div class="row d-flex fusbal">
                   <div class="col-md-6 imgwrapper">
                     <img
+                      loading="lazy"
                       class="img-fluid"
                       src="/img/solutions/bigcity/19.png"
                       alt
@@ -327,6 +371,7 @@
                   </div>
                   <div class="col-md-6 imgwrapper">
                     <img
+                      loading="lazy"
                       class="img-fluid"
                       src="/img/solutions/bigcity/20.png"
                       alt
@@ -351,17 +396,29 @@
                 >
                   <div class="carousel-inner">
                     <div class="imgwrapper p-0 conundrum carousel-item active">
-                      <img src="/img/solutions/bigcity/21.png" alt />
+                      <img
+                        loading="lazy"
+                        src="/img/solutions/bigcity/21.png"
+                        alt
+                      />
                       <p class="legende">
                         Homepage Pros<br />Programme de motivation
                       </p>
                     </div>
                     <div class="imgwrapper p-0 conundrum carousel-item">
-                      <img src="/img/solutions/bigcity/22.png" alt />
+                      <img
+                        loading="lazy"
+                        src="/img/solutions/bigcity/22.png"
+                        alt
+                      />
                       <p class="legende">Homepage Pros<br />Rapports</p>
                     </div>
                     <div class="imgwrapper p-0 conundrum carousel-item">
-                      <img src="/img/solutions/bigcity/23.png" alt />
+                      <img
+                        loading="lazy"
+                        src="/img/solutions/bigcity/23.png"
+                        alt
+                      />
                       <p class="legende">
                         ajout d'un nouvel<br />établissement
                       </p>
@@ -397,6 +454,7 @@
                 <div class="row fusbal">
                   <div class="col-md-4 imgwrapper">
                     <img
+                      loading="lazy"
                       class="img-fluid"
                       src="/img/solutions/bigcity/21.png"
                       alt
@@ -407,6 +465,7 @@
                   </div>
                   <div class="col-md-4 imgwrapper">
                     <img
+                      loading="lazy"
                       class="img-fluid"
                       src="/img/solutions/bigcity/22.png"
                       alt
@@ -415,6 +474,7 @@
                   </div>
                   <div class="col-md-4 imgwrapper">
                     <img
+                      loading="lazy"
                       class="img-fluid"
                       src="/img/solutions/bigcity/23.png"
                       alt
@@ -424,7 +484,11 @@
                 </div>
               </div>
               <div class="col-md-4 letexte">
-                <img src="/img/solutions/bigcity/logopetit.svg" alt />
+                <img
+                  loading="lazy"
+                  src="/img/solutions/bigcity/logopetit.svg"
+                  alt
+                />
                 <h3>C’est un gestionnaire d’activité pour les pros</h3>
                 <p>
                   Les propriétaires des PDV peuvent créer et piloter leur page
@@ -454,6 +518,7 @@
                   <div class="carousel-inner">
                     <div class="imgwrapper carousel-item active">
                       <img
+                        loading="lazy"
                         class="img-fluid"
                         src="/img/solutions/bigcity/24.png"
                         alt
@@ -464,6 +529,7 @@
                     </div>
                     <div class="imgwrapper carousel-item">
                       <img
+                        loading="lazy"
                         class="img-fluid"
                         src="/img/solutions/bigcity/24a.png"
                         alt
@@ -500,7 +566,11 @@
               </div>
               <div class="col-md-4 offset-md-1 letexte">
                 <div class="paddingzone">
-                  <img src="/img/solutions/bigcity/logopetit.svg" alt />
+                  <img
+                    loading="lazy"
+                    src="/img/solutions/bigcity/logopetit.svg"
+                    alt
+                  />
                   <h3>C’est une alternative aux réseaux sociaux</h3>
                   <p>
                     La marque crée son propre réseau social. La marque devient
@@ -513,6 +583,7 @@
                 <div class="row fusbal">
                   <div class="col-md-6 imgwrapper">
                     <img
+                      loading="lazy"
                       class="img-fluid"
                       src="/img/solutions/bigcity/24.png"
                       alt
@@ -523,6 +594,7 @@
                   </div>
                   <div class="col-md-6 imgwrapper">
                     <img
+                      loading="lazy"
                       class="img-fluid"
                       src="/img/solutions/bigcity/24a.png"
                       alt
@@ -550,6 +622,7 @@
                   <div class="carousel-inner">
                     <div class="imgwrapper carousel-item active">
                       <img
+                        loading="lazy"
                         class="img-fluid"
                         src="/img/solutions/bigcity/26.png"
                         alt
@@ -560,6 +633,7 @@
                     </div>
                     <div class="imgwrapper carousel-item">
                       <img
+                        loading="lazy"
                         class="img-fluid"
                         src="/img/solutions/bigcity/27.png"
                         alt
@@ -568,6 +642,7 @@
                     </div>
                     <div class="imgwrapper carousel-item">
                       <img
+                        loading="lazy"
                         class="img-fluid"
                         src="/img/solutions/bigcity/26a.png"
                         alt
@@ -605,6 +680,7 @@
                 <div class="row fusbal">
                   <div class="col-md-4 imgwrapper">
                     <img
+                      loading="lazy"
                       class="img-fluid"
                       src="/img/solutions/bigcity/26.png"
                       alt
@@ -615,6 +691,7 @@
                   </div>
                   <div class="col-md-4 imgwrapper">
                     <img
+                      loading="lazy"
                       class="img-fluid"
                       src="/img/solutions/bigcity/27.png"
                       alt
@@ -623,6 +700,7 @@
                   </div>
                   <div class="col-md-4 imgwrapper">
                     <img
+                      loading="lazy"
                       class="img-fluid"
                       src="/img/solutions/bigcity/26a.png"
                       alt
@@ -632,7 +710,11 @@
                 </div>
               </div>
               <div class="col-md-4 letexte">
-                <img src="/img/solutions/bigcity/logopetit.svg" alt />
+                <img
+                  loading="lazy"
+                  src="/img/solutions/bigcity/logopetit.svg"
+                  alt
+                />
                 <h3>C’est un créateur d’activations</h3>
                 <p>
                   BIG CITY permet la mise en place d’activations digitales
@@ -660,6 +742,7 @@
                   <div class="carousel-inner">
                     <div class="imgwrapper carousel-item active">
                       <img
+                        loading="lazy"
                         class="img-fluid"
                         src="/img/solutions/bigcity/ndole1.png"
                       />
@@ -668,6 +751,7 @@
                     </div>
                     <div class="imgwrapper carousel-item">
                       <img
+                        loading="lazy"
                         class="img-fluid"
                         src="/img/solutions/bigcity/ndole2.png"
                       />
@@ -675,6 +759,7 @@
                     </div>
                     <div class="imgwrapper carousel-item">
                       <img
+                        loading="lazy"
                         class="img-fluid"
                         src="/img/solutions/bigcity/ndole3.png"
                       />
@@ -684,6 +769,7 @@
                     </div>
                     <div class="imgwrapper carousel-item">
                       <img
+                        loading="lazy"
                         class="img-fluid"
                         src="/img/solutions/bigcity/ndole4.png"
                       />
@@ -691,6 +777,7 @@
                     </div>
                     <div class="imgwrapper carousel-item">
                       <img
+                        loading="lazy"
                         class="img-fluid"
                         src="/img/solutions/bigcity/ndole5.png"
                       />
@@ -698,6 +785,7 @@
                     </div>
                     <div class="imgwrapper carousel-item">
                       <img
+                        loading="lazy"
                         class="img-fluid"
                         src="/img/solutions/bigcity/ndole6.png"
                       />
@@ -706,6 +794,7 @@
 
                     <div class="imgwrapper carousel-item">
                       <img
+                        loading="lazy"
                         class="img-fluid"
                         src="/img/solutions/bigcity/ndole7.png"
                       />
@@ -716,6 +805,7 @@
 
                     <div class="imgwrapper carousel-item">
                       <img
+                        loading="lazy"
                         class="img-fluid"
                         src="/img/solutions/bigcity/ndole8.png"
                       />
@@ -751,7 +841,11 @@
               </div>
               <div class="col-md-4 offset-md-1 letexte">
                 <div class="paddingzone">
-                  <img src="/img/solutions/bigcity/logopetit.svg" alt />
+                  <img
+                    loading="lazy"
+                    src="/img/solutions/bigcity/logopetit.svg"
+                    alt
+                  />
                   <h3>C’est une boutique intégrée</h3>
                   <p>
                     L’application dispose d’un module e-commerce intégré
@@ -779,6 +873,7 @@
                     <div id="swidel" class="swiper-wrapper">
                       <div class="imgwrapper swiper-slide">
                         <img
+                          loading="lazy"
                           class="img-fluid"
                           src="/img/solutions/bigcity/ndole1.png"
                         />
@@ -786,6 +881,7 @@
                       </div>
                       <div class="imgwrapper swiper-slide">
                         <img
+                          loading="lazy"
                           class="img-fluid"
                           src="/img/solutions/bigcity/ndole2.png"
                         />
@@ -793,6 +889,7 @@
                       </div>
                       <div class="imgwrapper swiper-slide">
                         <img
+                          loading="lazy"
                           class="img-fluid"
                           src="/img/solutions/bigcity/ndole3.png"
                         />
@@ -802,6 +899,7 @@
                       </div>
                       <div class="imgwrapper swiper-slide">
                         <img
+                          loading="lazy"
                           class="img-fluid"
                           src="/img/solutions/bigcity/ndole4.png"
                         />
@@ -809,6 +907,7 @@
                       </div>
                       <div class="imgwrapper swiper-slide">
                         <img
+                          loading="lazy"
                           class="img-fluid"
                           src="/img/solutions/bigcity/ndole5.png"
                         />
@@ -816,6 +915,7 @@
                       </div>
                       <div class="imgwrapper swiper-slide">
                         <img
+                          loading="lazy"
                           class="img-fluid"
                           src="/img/solutions/bigcity/ndole6.png"
                         />
@@ -823,6 +923,7 @@
                       </div>
                       <div class="imgwrapper swiper-slide">
                         <img
+                          loading="lazy"
                           class="img-fluid"
                           src="/img/solutions/bigcity/ndole7.png"
                         />
@@ -832,6 +933,7 @@
                       </div>
                       <div class="imgwrapper swiper-slide">
                         <img
+                          loading="lazy"
                           class="img-fluid"
                           src="/img/solutions/bigcity/ndole8.png"
                         />
@@ -856,6 +958,7 @@
                   <div class="carousel-inner">
                     <div class="imgwrapper carousel-item active">
                       <img
+                        loading="lazy"
                         class="img-fluid"
                         src="/img/solutions/bigcity/32.png"
                         alt
@@ -864,6 +967,7 @@
                     </div>
                     <div class="imgwrapper carousel-item">
                       <img
+                        loading="lazy"
                         class="img-fluid"
                         src="/img/solutions/bigcity/31.png"
                         alt
@@ -872,6 +976,7 @@
                     </div>
                     <div class="imgwrapper carousel-item">
                       <img
+                        loading="lazy"
                         class="img-fluid"
                         src="/img/solutions/bigcity/30.png"
                         alt
@@ -885,6 +990,7 @@
                 <div class="row fusbal">
                   <div class="col-md-4 imgwrapper">
                     <img
+                      loading="lazy"
                       class="img-fluid"
                       src="/img/solutions/bigcity/32.png"
                       alt
@@ -893,6 +999,7 @@
                   </div>
                   <div class="col-md-4 imgwrapper">
                     <img
+                      loading="lazy"
                       class="img-fluid"
                       src="/img/solutions/bigcity/31.png"
                       alt
@@ -901,6 +1008,7 @@
                   </div>
                   <div class="col-md-4 imgwrapper">
                     <img
+                      loading="lazy"
                       class="img-fluid"
                       src="/img/solutions/bigcity/30.png"
                       alt
@@ -911,7 +1019,11 @@
               </div>
               <div class="col-md-4 letexte">
                 <div class="paddingzone">
-                  <img src="/img/solutions/bigcity/logopetit.svg" alt />
+                  <img
+                    loading="lazy"
+                    src="/img/solutions/bigcity/logopetit.svg"
+                    alt
+                  />
 
                   <h3>C’est un guide et une billetterie événementielle</h3>
                   <p>
@@ -928,7 +1040,11 @@
             <div class="row no-gutters">
               <div class="col-md-5 offset-md-1 letexte">
                 <div class="paddingzone">
-                  <img src="/img/solutions/bigcity/logopetit.svg" alt />
+                  <img
+                    loading="lazy"
+                    src="/img/solutions/bigcity/logopetit.svg"
+                    alt
+                  />
                   <h3>C’est un aspirateur de datas</h3>
                   <p>
                     Depuis le dashboard de l’application, directement depuis
@@ -941,6 +1057,7 @@
               </div>
               <div id="mathers" class="col-md-6">
                 <img
+                  loading="lazy"
                   src="/img/solutions/bigcity/sulat.png"
                   class="img-fluid responsive-img"
                   alt
@@ -954,12 +1071,16 @@
           <div id="sectiontwelvebigcity" class="container-fluid">
             <div class="row no-gutters">
               <div class="col-md-7" v-if="windowWidth < 1024">
-                <img src="/img/formules.jpg" alt />
+                <img loading="lazy" src="/img/formules.jpg" alt />
               </div>
               <div class="col-md-7"></div>
               <div class="col-md-5 letexte">
                 <div class="paddingzone">
-                  <img src="/img/solutions/bigcity/logopetit.svg" alt />
+                  <img
+                    loading="lazy"
+                    src="/img/solutions/bigcity/logopetit.svg"
+                    alt
+                  />
                   <h3>Formule 1</h3>
                   <p>
                     <strong

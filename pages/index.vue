@@ -275,10 +275,10 @@ watchEffect(() => {
         "
         :class="{ dana: closeBlack }"
       >
-        <!--         <img v-if="toClose" src="/img/btn-close.png" alt="" />
-        <img v-if="!toClose" src="/img/btn-menu.png" alt="" /> -->
-        <img v-if="toClose" src="/img/btn-close.png" alt="" />
-        <img v-if="!toClose" src="/img/btn-menu.png" alt="" />
+        <!--         <img loading='lazy' v-if="toClose" src="/img/btn-close.png" alt="" />
+        <img loading='lazy' v-if="!toClose" src="/img/btn-menu.png" alt="" /> -->
+        <img loading="lazy" v-if="toClose" src="/img/btn-close.png" alt="" />
+        <img loading="lazy" v-if="!toClose" src="/img/btn-menu.png" alt="" />
       </button>
     </div>
     <div class="row">
@@ -308,7 +308,11 @@ watchEffect(() => {
                   :key="slide.id ?? ''"
                 >
                   <div class="inner">
-                    <img :src="slide.img ?? ''" :alt="slide.alt ?? ''" />
+                    <img
+                      loading="lazy"
+                      :src="slide.img ?? ''"
+                      :alt="slide.alt ?? ''"
+                    />
                     <h3>{{ slide.title ?? "" }}</h3>
                     <div class="sabine">
                       <p v-html="slide.content ?? ''"></p>

@@ -14,8 +14,9 @@
           "
           :class="{ dana: closeBlack }"
         >
-          <img v-if="toClose" src="/img/btn-close.png" alt="" />
+          <img loading="lazy" v-if="toClose" src="/img/btn-close.png" alt="" />
           <img
+            loading="lazy"
             v-if="!toClose"
             src="/img/btn-menu.png"
             alt=""
@@ -23,6 +24,7 @@
             :options="{ quality: 80, webp: true }"
           />
           <img
+            loading="lazy"
             v-if="!toClose"
             src="/img/btn-menu-mobile.svg"
             alt=""

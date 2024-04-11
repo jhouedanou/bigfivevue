@@ -25,12 +25,12 @@ onMounted(async () => {
           target="_blank"
           class="selectivebn"
         >
-          <img src="/img/selectivelive.svg" alt="" />
+          <img loading="lazy" src="/img/selectivelive.svg" alt="" />
         </a>
       </li>
       <li v-for="link in state.socialLinks" :key="link.id">
         <a :href="link.url" target="_blank">
-          <img :src="link.icon" :alt="link.platform" />
+          <img loading="lazy" :src="link.icon" :alt="link.platform" />
         </a>
       </li>
     </ul>
