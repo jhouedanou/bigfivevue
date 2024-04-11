@@ -1139,11 +1139,11 @@ onMounted(async () => {
       autoHeight: true,
       lazy: false,
       loop: true,
-      observer: true,
+      /*  observer: true,
       observeParents: true,
       parallax: true,
-      autoplay: {
-        delay: 10000, // delay between transitions in ms
+      */ autoplay: {
+        delay: 4000, // delay between transitions in ms
         disableOnInteraction: true, // enable/disable autoplay on user interaction
       },
 
