@@ -292,7 +292,7 @@ $secondary: #29348b;
 }
 .slide5-background {
 	background-color: linear-gradient(to bottom, #82368c 5%, #27348b 100%);
-	background-image: url("/img/visages.jpg");
+	background-image: url("@/assets/img/visages.jpg");
 	background-position: 50% 50%;
 	transition: background-position 0.5s ease-out;
 }
@@ -5309,7 +5309,7 @@ body {
 				max-width: 90vw;
 				margin: 0 auto;
 			}
-			background: url("/img/solutions/bigcity/background1.png") no-repeat center center fixed;
+			background: url("@/assets/img/solutions/bigcity/background1.png") no-repeat center center fixed;
 			-webkit-background-size: cover;
 			-moz-background-size: cover;
 			-o-background-size: cover;
@@ -5319,7 +5319,7 @@ body {
 			}
 		}
 		&:nth-of-type(5) {
-			background: url("/img/solutions/bigcity/background2.png") no-repeat center center fixed;
+			background: url("@/assets/img/solutions/bigcity/background2.png") no-repeat center center fixed;
 			-webkit-background-size: cover;
 			-moz-background-size: cover;
 			-o-background-size: cover;
@@ -5338,21 +5338,21 @@ body {
 			}
 		}
 		&:nth-of-type(6) {
-			background: url("/img/solutions/bigcity/background3.png") no-repeat center center fixed;
+			background: url("@/assets/img/solutions/bigcity/background3.png") no-repeat center center fixed;
 			-webkit-background-size: cover;
 			-moz-background-size: cover;
 			-o-background-size: cover;
 			background-size: cover;
 		}
 		&:nth-of-type(8) {
-			background: url("/img/solutions/bigcity/background4.png") no-repeat center center fixed;
+			background: url("@/assets/img/solutions/bigcity/background4.png") no-repeat center center fixed;
 			-webkit-background-size: cover;
 			-moz-background-size: cover;
 			-o-background-size: cover;
 			background-size: cover;
 		}
 		&:nth-of-type(11) {
-			background: url("/img/solutions/bigcity/background5.png") no-repeat center center fixed;
+			background: url("@/assets/img/solutions/bigcity/background5.png") no-repeat center center fixed;
 			-webkit-background-size: cover;
 			-moz-background-size: cover;
 			-o-background-size: cover;
@@ -5472,7 +5472,7 @@ div#imagshop {
 		content: "";
 		height: 100vh;
 		width: 160px;
-		background: url("/img/solutions/closing.svg") no-repeat;
+		background: url("@/assets/img/solutions/closing.svg") no-repeat;
 		display: block;
 		z-index: 100;
 		position: absolute;
@@ -5570,7 +5570,7 @@ div#imagshop {
 	}
 }
 #sectionelevenbigcity {
-	background: url("/img/solutions/bigcity/background6.png") no-repeat center center fixed;
+	background: url("@/assets/img/solutions/bigcity/background6.png") no-repeat center center fixed;
 	.col-md-5 {
 		background: #edeff6;
 		&.letexte {
@@ -5594,7 +5594,7 @@ div#imagshop {
 	}
 }
 #sectiontwelvebigcity {
-	background: url("/img/solutions/bigcity/background7.jpg") no-repeat left center fixed;
+	background: url("@/assets/img/solutions/bigcity/background7.jpg") no-repeat left center fixed;
 	.col-md-5 {
 		strong {
 			color: black;
@@ -5662,7 +5662,7 @@ div#imagshop {
 	flex-direction: column;
 }
 .parallax-bg {
-	background: url("/img/solutions/bigcity/background2.png") no-repeat center center fixed;
+	background: url("@/assets/img/solutions/bigcity/background2.png") no-repeat center center fixed;
 	background-size: cover;
 	background-position: center;
 }

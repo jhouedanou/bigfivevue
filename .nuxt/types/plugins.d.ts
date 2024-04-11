@@ -18,7 +18,7 @@ type NuxtAppInjections =
   InjectionType<typeof import("../../node_modules/@bootstrap-vue-next/nuxt/dist/runtime/useDirectives").default> &
   InjectionType<typeof import("../../node_modules/@bootstrap-vue-next/nuxt/dist/runtime/createBootstrap").default> &
   InjectionType<typeof import("../../node_modules/nuxt/dist/app/plugins/chunk-reload.client").default> &
-  InjectionType<typeof import("../../node_modules/nuxt/dist/app/plugins/dev-server-logs.client").default> &
+  InjectionType<typeof import("../../node_modules/nuxt/dist/app/plugins/dev-server-logs").default> &
   InjectionType<typeof import("../../node_modules/nuxt/dist/app/plugins/check-if-layout-used").default>
 
 declare module '#app' {

@@ -40,7 +40,6 @@ const selectedLogo = computed(() => {
         :src="selectedLogo.src"
         alt="Big Five Solutions"
         class="img-fluid"
-        :options="{ format: 'webp', quality: 80 }"
       />
     </nuxt-link>
   </div>

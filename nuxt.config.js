@@ -104,8 +104,14 @@ export default defineNuxtConfig({
   },
   modules: ["@bootstrap-vue-next/nuxt", "@nuxt/content", "@nuxt/image"],
   image: {
-    format: ["webp"],
+    format: "webp",
     quality: 80,
+    provider: "ipx",
+    provider: process.env.VERCEL_ENV ? "vercel" : "ipx",
+
+    ipx: {
+      dir: "assets/images", // Le répertoire où se trouvent vos images
+    },
   },
   content: {
     dir: "content", // Path to the "content" directory
