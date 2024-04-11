@@ -1,227 +1,3 @@
-<script setup>
-import { ref, onMounted, computed, reactive } from "vue";
-import axios from "axios";
-import { useRoute } from "vue-router";
-import ContenuAltLayout from "@/layouts/contenuBigCity.vue";
-import FooterBigCity from "@/components/FooterBigCity.vue";
-import PageLoader from "@/components/PageLoader.vue";
-import "bootstrap/dist/css/bootstrap.css";
-import Swiper from "swiper/bundle";
-import "swiper/css/bundle";
-let swiperContainer = ref(null);
-let swiperContainer2 = ref(null);
-let swiperInstance;
-let swiperInstance2;
-const solutions = ref([]);
-const menusolutions = ref([]);
-const route = useRoute();
-const scrollPosition = ref(0);
-let isSidebarOpen = ref(false);
-let toClose = ref(false);
-let closeBlack = ref(false);
-const filterValue = route.fullPath.substring("/solutions/".length);
-const scrollToElement = () => {
-  const element = document.getElementById("avecbigcity");
-  //  element.scrollIntoView({ behavior: "smooth" });
-  //element.scrollIntoView();
-  //go the next swiper slide
-  swiperInstance.slideNext();
-};
-const windowWidth = ref(0);
-const state = reactive({
-  isLoading: true,
-});
-const updateWindowWidth = () => {
-  windowWidth.value = window.innerWidth;
-};
-onUnmounted(() => {
-  window.removeEventListener("resize", updateWindowWidth);
-});
-onMounted(() => {
-  //ajouter l'id de la page  #bigcity à la balise body
-  document.body.id = "bigcity";
-  // ajouter la classe .bigcity à la balise body
-  document.body.classList.add("bigcity");
-
-  windowWidth.value = window.innerWidth;
-  window.addEventListener("resize", updateWindowWidth);
-  //window.addEventListener("scroll", onScroll);
-  document.body.id = filterValue;
-  document.body.classList.add("solutions");
-});
-onMounted(async () => {
-  try {
-    state.isLoading = true;
-    const response = await axios.get("/api/solutions.json");
-    solutions.value = response.data;
-    menusolutions.value = response.data.map((solution) => ({
-      id: solution.id,
-      logo: solution.logo,
-      lien: solution.lien,
-    }));
-    state.isLoading = false;
-  } catch (error) {
-    console.error(error);
-    state.isLoading = false;
-  }
-});
-const matchingSolution = computed(() => {
-  const index = solutions.value.findIndex(
-    (solution) => solution.lien === filterValue
-  );
-  return {
-    ...solutions.value[index],
-  };
-});
-
-onMounted(async () => {
-  if (windowWidth.value > 1024) {
-    // Initialisation du swiper sur la page
-    swiperInstance = new Swiper(swiperContainer.value, {
-      direction: "vertical",
-      slidesPerView: 1,
-      spaceBetween: 0,
-      mousewheel: true,
-      keyboard: true,
-      rewind: true,
-      parallax: true,
-      draggable: true,
-      autoHeight: true,
-      lazy: true,
-      observer: true,
-      observeParents: true,
-      parallax: true,
-      autoplay: {
-        delay: 10000, // delay between transitions in ms
-        disableOnInteraction: true, // enable/disable autoplay on user interaction
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
-    swiperInstance2 = new Swiper(swiperContainer2.value, {
-      slidesPerView: 3,
-      spaceBetween: 0,
-      direction: "horizontal",
-      draggable: true,
-      keyboard: true,
-      loop: true,
-      mousewheel: true,
-      keyboard: true,
-      rewind: true,
-      observer: true,
-      observeParents: true,
-      autoplay: {
-        delay: 2000,
-        disableOnInteraction: true,
-      },
-    });
-  } else {
-    const { default: Hammer } = await import("hammerjs");
-    const { Carousel } = await import("bootstrap");
-    // 1st carousel
-    const carouselElement = document.querySelector(
-      "#carouselExampleIndicators"
-    );
-    const hammer = new Hammer(carouselElement);
-    hammer.on("swipeleft", function () {
-      $("#carouselExampleIndicators").carousel("next");
-    });
-    hammer.on("swiperight", function () {
-      $("#carouselExampleIndicators").carousel("prev");
-    });
-    const carousel = new Carousel(carouselElement, {
-      interval: 2000,
-    });
-    // 2nd carousel
-    const carouselElement2 = document.querySelector(
-      "#carouselExampleIndicators2"
-    );
-    const hammer2 = new Hammer(carouselElement2);
-    hammer2.on("swipeleft", function () {
-      $("#carouselExampleIndicators2").carousel("next");
-    });
-    hammer2.on("swiperight", function () {
-      $("#carouselExampleIndicators2").carousel("prev");
-    });
-    const carousel2 = new Carousel(carouselElement2, {
-      interval: 2000,
-    });
-    //3e carousel
-    const carouselElement3 = document.querySelector(
-      "#carouselExampleIndicators3"
-    );
-    const hammer3 = new Hammer(carouselElement3);
-    hammer3.on("swipeleft", function () {
-      $("#carouselExampleIndicators3").carousel("next");
-    });
-    hammer3.on("swiperight", function () {
-      $("#carouselExampleIndicators3").carousel("prev");
-    });
-    const carousel3 = new Carousel(carouselElement3, {
-      interval: 2000,
-    });
-    //4e carousel
-    const carouselElement4 = document.querySelector(
-      "#carouselExampleIndicators4"
-    );
-    const hammer4 = new Hammer(carouselElement4);
-    hammer4.on("swipeleft", function () {
-      $("#carouselExampleIndicators4").carousel("next");
-    });
-    hammer4.on("swiperight", function () {
-      $("#carouselExampleIndicators4").carousel("prev");
-    });
-    const carousel4 = new Carousel(carouselElement4, {
-      interval: 2000,
-    });
-    //5e carousel
-    const carouselElement5 = document.querySelector(
-      "#carouselExampleIndicators5"
-    );
-    const hammer5 = new Hammer(carouselElement5);
-    hammer5.on("swipeleft", function () {
-      $("#carouselExampleIndicators5").carousel("next");
-    });
-    hammer5.on("swiperight", function () {
-      $("#carouselExampleIndicators5").carousel("prev");
-    });
-    const carousel5 = new Carousel(carouselElement5, {
-      interval: 2000,
-    });
-    //6e carousel
-    const carouselElement6 = document.querySelector(
-      "#carouselExampleIndicators6"
-    );
-    const hammer6 = new Hammer(carouselElement6);
-    hammer6.on("swipeleft", function () {
-      $("#carouselExampleIndicators6").carousel("next");
-    });
-    hammer6.on("swiperight", function () {
-      $("#carouselExampleIndicators6").carousel("prev");
-    });
-    const carousel6 = new Carousel(carouselElement6, {
-      interval: 2000,
-    });
-    //7e carousel
-    const carouselElement7 = document.querySelector(
-      "#carouselExampleIndicators7"
-    );
-    const hammer7 = new Hammer(carouselElement7);
-    hammer7.on("swipeleft", function () {
-      $("#carouselExampleIndicators7").carousel("next");
-    });
-    hammer7.on("swiperight", function () {
-      $("#carouselExampleIndicators7").carousel("prev");
-    });
-    const carousel7 = new Carousel(carouselElement7, {
-      interval: 2000,
-    });
-  }
-});
-</script>
-
 <template>
   <ContenuAltLayout>
     <PageLoader v-if="state.isLoading" />
@@ -1004,7 +780,7 @@ onMounted(async () => {
               </div>
               <div v-if="windowWidth > 1024" class="col-md-7 conundrum">
                 <div id="galerieimg">
-                  <div id="imagshop" ref="swiperContainer2">
+                  <div ref="swiperContainer2" id="imagshop" class="swiper">
                     <div id="swidel" class="swiper-wrapper">
                       <div class="imgwrapper swiper-slide">
                         <NuxtImg
@@ -1256,7 +1032,212 @@ onMounted(async () => {
     </div>
   </ContenuAltLayout>
 </template>
+<script setup>
+import { ref, onMounted, computed, reactive } from "vue";
+import axios from "axios";
+import { useRoute } from "vue-router";
+import ContenuAltLayout from "@/layouts/contenuBigCity.vue";
+import FooterBigCity from "@/components/FooterBigCity.vue";
+import PageLoader from "@/components/PageLoader.vue";
+import "bootstrap/dist/css/bootstrap.css";
+import Swiper from "swiper/bundle";
+import "swiper/css/bundle";
+let swiperContainer = ref(null);
+let swiperContainer2 = ref(null);
+let swiperInstance;
+let swiperInstance2;
+const solutions = ref([]);
+const menusolutions = ref([]);
+const route = useRoute();
+const scrollPosition = ref(0);
+let isSidebarOpen = ref(false);
+let toClose = ref(false);
+let closeBlack = ref(false);
+const filterValue = route.fullPath.substring("/solutions/".length);
+const scrollToElement = () => {
+  const element = document.getElementById("avecbigcity");
+  swiperInstance.slideNext();
+};
+const windowWidth = ref(0);
+const state = reactive({
+  isLoading: true,
+});
+const updateWindowWidth = () => {
+  windowWidth.value = window.innerWidth;
+};
+onUnmounted(() => {
+  window.removeEventListener("resize", updateWindowWidth);
+});
+onMounted(() => {
+  //ajouter l'id de la page  #bigcity à la balise body
+  document.body.id = "bigcity";
+  // ajouter la classe .bigcity à la balise body
+  document.body.classList.add("bigcity");
 
+  windowWidth.value = window.innerWidth;
+  window.addEventListener("resize", updateWindowWidth);
+  //window.addEventListener("scroll", onScroll);
+  document.body.id = filterValue;
+  document.body.classList.add("solutions");
+});
+onMounted(async () => {
+  try {
+    state.isLoading = true;
+    const response = await axios.get("/api/solutions.json");
+    solutions.value = response.data;
+    menusolutions.value = response.data.map((solution) => ({
+      id: solution.id,
+      logo: solution.logo,
+      lien: solution.lien,
+    }));
+    state.isLoading = false;
+  } catch (error) {
+    console.error(error);
+    state.isLoading = false;
+  }
+});
+const matchingSolution = computed(() => {
+  const index = solutions.value.findIndex(
+    (solution) => solution.lien === filterValue
+  );
+  return {
+    ...solutions.value[index],
+  };
+});
+
+onMounted(async () => {
+  if (windowWidth.value > 1024) {
+    // Initialisation du swiper sur la page
+    swiperInstance = new Swiper(swiperContainer.value, {
+      direction: "vertical",
+      slidesPerView: 1,
+      spaceBetween: 0,
+      mousewheel: true,
+      keyboard: true,
+      rewind: true,
+      parallax: true,
+      draggable: true,
+      autoHeight: true,
+      lazy: true,
+      observer: true,
+      observeParents: true,
+      parallax: true,
+      autoplay: {
+        delay: 10000, // delay between transitions in ms
+        disableOnInteraction: true, // enable/disable autoplay on user interaction
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      on: {
+        init: function () {},
+      },
+    });
+  } else {
+    const { default: Hammer } = await import("hammerjs");
+    const { Carousel } = await import("bootstrap");
+    // 1st carousel
+    const carouselElement = document.querySelector(
+      "#carouselExampleIndicators"
+    );
+    const hammer = new Hammer(carouselElement);
+    hammer.on("swipeleft", function () {
+      $("#carouselExampleIndicators").carousel("next");
+    });
+    hammer.on("swiperight", function () {
+      $("#carouselExampleIndicators").carousel("prev");
+    });
+    const carousel = new Carousel(carouselElement, {
+      interval: 2000,
+    });
+    // 2nd carousel
+    const carouselElement2 = document.querySelector(
+      "#carouselExampleIndicators2"
+    );
+    const hammer2 = new Hammer(carouselElement2);
+    hammer2.on("swipeleft", function () {
+      $("#carouselExampleIndicators2").carousel("next");
+    });
+    hammer2.on("swiperight", function () {
+      $("#carouselExampleIndicators2").carousel("prev");
+    });
+    const carousel2 = new Carousel(carouselElement2, {
+      interval: 2000,
+    });
+    //3e carousel
+    const carouselElement3 = document.querySelector(
+      "#carouselExampleIndicators3"
+    );
+    const hammer3 = new Hammer(carouselElement3);
+    hammer3.on("swipeleft", function () {
+      $("#carouselExampleIndicators3").carousel("next");
+    });
+    hammer3.on("swiperight", function () {
+      $("#carouselExampleIndicators3").carousel("prev");
+    });
+    const carousel3 = new Carousel(carouselElement3, {
+      interval: 2000,
+    });
+    //4e carousel
+    const carouselElement4 = document.querySelector(
+      "#carouselExampleIndicators4"
+    );
+    const hammer4 = new Hammer(carouselElement4);
+    hammer4.on("swipeleft", function () {
+      $("#carouselExampleIndicators4").carousel("next");
+    });
+    hammer4.on("swiperight", function () {
+      $("#carouselExampleIndicators4").carousel("prev");
+    });
+    const carousel4 = new Carousel(carouselElement4, {
+      interval: 2000,
+    });
+    //5e carousel
+    const carouselElement5 = document.querySelector(
+      "#carouselExampleIndicators5"
+    );
+    const hammer5 = new Hammer(carouselElement5);
+    hammer5.on("swipeleft", function () {
+      $("#carouselExampleIndicators5").carousel("next");
+    });
+    hammer5.on("swiperight", function () {
+      $("#carouselExampleIndicators5").carousel("prev");
+    });
+    const carousel5 = new Carousel(carouselElement5, {
+      interval: 2000,
+    });
+    //6e carousel
+    const carouselElement6 = document.querySelector(
+      "#carouselExampleIndicators6"
+    );
+    const hammer6 = new Hammer(carouselElement6);
+    hammer6.on("swipeleft", function () {
+      $("#carouselExampleIndicators6").carousel("next");
+    });
+    hammer6.on("swiperight", function () {
+      $("#carouselExampleIndicators6").carousel("prev");
+    });
+    const carousel6 = new Carousel(carouselElement6, {
+      interval: 2000,
+    });
+    //7e carousel
+    const carouselElement7 = document.querySelector(
+      "#carouselExampleIndicators7"
+    );
+    const hammer7 = new Hammer(carouselElement7);
+    hammer7.on("swipeleft", function () {
+      $("#carouselExampleIndicators7").carousel("next");
+    });
+    hammer7.on("swiperight", function () {
+      $("#carouselExampleIndicators7").carousel("prev");
+    });
+    const carousel7 = new Carousel(carouselElement7, {
+      interval: 2000,
+    });
+  }
+});
+</script>
 <style lang="scss" scoped>
 #footercontactfrom {
   display: none !important;
@@ -1330,6 +1311,7 @@ onMounted(async () => {
     /* Styles pour les slides */
     padding: 0;
     margin: 0 auto;
+    overflow: hidden;
   }
 }
 
