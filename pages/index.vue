@@ -55,7 +55,9 @@ onMounted(async () => {
     // page loading
     state.isLoading = true;
     //recupération des textes de la page
-    const textesGlobal = await axios.get("/api/agence.json");
+    const textesGlobal = await axios.get("/api/agence.json", {
+      timeout: 10000,
+    });
     state.metadesc = textesGlobal.data.metadesc;
     state.pageTitle = textesGlobal.data.title;
     state.agence = textesGlobal.data;

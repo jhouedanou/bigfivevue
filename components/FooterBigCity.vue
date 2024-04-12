@@ -98,7 +98,7 @@ onMounted(async () => {
   state.formFields = response.data.formFields;
 });
 </script>
-<style>
+<style lang="scss" scoped>
 #bigcityfooterinner {
   #footercontactfrom {
     .row56 {
@@ -123,7 +123,7 @@ onMounted(async () => {
 #shefgrave {
   z-index: 10000 !important;
   margin-bottom: 4em !important;
-  height: 171px !important;
+  min-height: 171px !important;
 }
 #occident {
   height: 70px !important;

@@ -28,7 +28,9 @@ onMounted(async () => {
   try {
     state.isLoading = true;
     //recupere la liste des solutions
-    const listeDesSolutions = await axios.get("api/solutions.json");
+    const listeDesSolutions = await axios.get("api/solutions.json", {
+      timeout: 10000,
+    });
     const data = listeDesSolutions.data;
     solutions.value = data.map((solution) => ({
       id: solution.id,
@@ -110,12 +112,15 @@ onMounted(async () => {
             v-for="solution in solutions"
             :key="solution.id"
           >
-            <a :href="`/solutions/${solution.lien}`">
+            <NuxtLink
+              v-if="solution && solution.lien"
+              :to="`/solutions/${solution.lien}`"
+            >
               <i
                 :style="{ backgroundImage: 'url(' + solution.logo + ')' }"
                 alt="logo"
               ></i
-            ></a>
+            ></NuxtLink>
           </li>
         </ul>
       </div>

@@ -128,12 +128,12 @@ export default defineNuxtConfig({
         component: "~/pages/realisations.vue",
       },
       {
-        path: "/solutions/bigcity",
-        redirect: "~/pages/solutions/bigcity.vue",
-      },
-      {
         path: "/solutions/:id",
         component: "~/pages/solutions.vue",
+      },
+      {
+        path: "/solutions/bigcity",
+        redirect: "~/pages/solutions/bigcity.vue",
       },
     ],
   },

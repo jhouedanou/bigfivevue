@@ -48,7 +48,9 @@ onMounted(() => {
 onMounted(async () => {
   try {
     state.isLoading = true;
-    const response = await axios.get("/api/solutions.json");
+    const response = await axios.get("/api/solutions.json", {
+      timeout: 10000,
+    });
     solutions.value = response.data;
     menusolutions.value = response.data.map((solution) => ({
       id: solution.id,

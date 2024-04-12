@@ -133,7 +133,9 @@ onMounted(async () => {
   try {
     state.isLoading = true;
     if (process.client && typeof window !== "undefined") {
-      const response = await axios.get("/api/clients.json");
+      const response = await axios.get("/api/clients.json", {
+        timeout: 10000,
+      });
       realisations.value = response.data;
       const Masonry = await import("masonry-layout");
       const imagesLoaded = await import("imagesloaded");

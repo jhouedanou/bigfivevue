@@ -65,13 +65,13 @@
                 <span>{{ realisation.client }}</span>
                 <h3 v-html="realisation.titre"></h3>
                 <NuxtLink
-                  v-if="windowWidth >= 1024"
+                  v-if="windowWidth >= 1024 && realisation && realisation.lien"
                   :to="`/realisations/${realisation.lien}`"
                   class="btn"
                   >Voir plus</NuxtLink
                 >
                 <NuxtLink
-                  v-if="windowWidth < 1024"
+                  v-if="windowWidth < 1024 && realisation && realisation.lien"
                   :to="`/realisations/${realisation.lien}`"
                   class="btn"
                   >Voir</NuxtLink
@@ -169,7 +169,9 @@ onMounted(async () => {
   try {
     state.isLoading = true;
     //recuperer les realisations
-    const response = await axios.get("/api/clients.json");
+    const response = await axios.get("/api/clients.json", {
+      timeout: 10000,
+    });
     state.realisations = response.data;
 
     // Initialisation du swiper seulement après que state.realisations a été rempli et si windowWidth.value est supérieur à 1024
@@ -201,6 +203,24 @@ onMounted(async () => {
 });
 </script>
 <style lang="scss" scoped>
+#untel {
+  form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .form-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 4em !important;
+    input {
+    }
+  }
+}
+#rencontres #untel form input[type="submit"] {
+  margin-top: 0em !important;
+}
 .swiper-wrapper {
   background: linear-gradient(to bottom, #80368c, #2c348b);
   height: auto;
