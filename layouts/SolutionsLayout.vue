@@ -1,6 +1,6 @@
 <template>
   <div id="homesolutionswrapper">
     <main><slot /></main>
-    <HeaderForSolutions />
+    <FooterForSolutions />
   </div>
 </template>

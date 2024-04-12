@@ -17,7 +17,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div id="menureso">
+  <div id="menureso" class="delvn">
     <ul id="lesrosz" class="d-flex flex-row justify-content-end">
       <li>
         <a href="https://selectivecity.co.za/selective-live/" target="_blank">

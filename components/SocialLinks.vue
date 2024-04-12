@@ -17,7 +17,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div id="menureso">
+  <div id="menureso" class="rest">
     <ul id="lesros" class="d-flex flex-row soc">
       <li>
         <a

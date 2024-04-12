@@ -2033,9 +2033,40 @@ div#pargrapheIntro {
 	width: 82px;
 	display: block;
 }
+#oldtme {
+	.logocontainer {
+		margin: 0 !important;
+		padding: 0 !important;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		a {
+			margin: 0 !important;
+			padding: 0 !important;
+		}
+	}
+}
 /* media queries for screen between 1440 and 1024 */
 
 @media (min-width: 1024px) and (max-width: 1440px) {
+	.restss {
+		display: flex;
+		margin: 0;
+		padding: 0;
+		ul {
+			margin: 0;
+			padding: 0;
+			align-content: center;
+			align-items: center;
+			display: flex !important;
+			flex-wrap: wrap !important;
+			li {
+				margin-bottom: 1em !important;
+			}
+		}
+	}
+
 	.mouff {
 		&:nth-of-type(5),
 		&:nth-of-type(4),
