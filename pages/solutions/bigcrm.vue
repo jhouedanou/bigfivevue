@@ -11,7 +11,6 @@ const menusolutions = ref([]);
 const route = useRoute();
 const scrollPosition = ref(0);
 const windowWidth = ref(0);
-
 let isSidebarOpen = ref(false);
 let toClose = ref(false);
 let closeBlack = ref(false);
@@ -112,22 +111,44 @@ const matchingSolution = computed(() => {
       :style="{
         backgroundImage:
           windowWidth > 1024
-            ? 'url(/' + matchingSolution.banniere + ')'
-            : 'url(/' + matchingSolution.banniereMobile + ')',
+            ? 'url(/img/solutions/bigcrm/banner.jpg)'
+            : 'url(/img/solutions/bigcrm/homeMobile.jpg)',
       }"
     >
       <div class="cartouchez">
         <i
           class="solutionlogo"
-          :style="{ backgroundImage: `url(/${matchingSolution.logo})` }"
+          :style="{ backgroundImage: `url(/img/solutions/bigcrm.svg)` }"
         ></i>
-        <h4 v-html="matchingSolution.slogan"></h4>
+        <h4>Optimisez le développement<br />commercial de votre entreprise</h4>
         <a id="btnDiscova" @click="scrollToElement">Découvrir</a>
       </div>
     </div>
     <div id="restedelapage">
       <div id="pargrapheIntros" v-if="matchingSolution">
-        <div id="introforeal" v-html="matchingSolution.introduction"></div>
+        <div id="introforeal">
+          <p>
+            Directement installé sur le smartphone des commerciaux,
+            <strong>BIG CRM</strong> automatise<br />la démarche commerciale de
+            la prise de commande à la livraison et au paiement, <br />de la
+            prise d’informations d’un prospect à la veille concurrentielle.
+          </p>
+          <p>
+            <strong>BIG CRM</strong> est une application qui permet
+            <span
+              >d’organiser et d'automatiser les échanges<br />entre les clients,
+              l’équipe commerciale et les managers.</span
+            >
+            Véritable boîte à outils d’aide<br />à la vente interactive et
+            connectée, BIG CRM est un booster d’opportunités commerciales.
+          </p>
+          <p>
+            La remontée d’informations est qualifiée et organisée pour rendre
+            les statistiques<br />de vente efficaces et constructives. De plus,
+            BIG CRM offre une multitude<br />de combinaisons pour tout type de
+            collecte et de gestion d’informations.
+          </p>
+        </div>
         <div id="contenudelapage">
           <div id="sectionunbigcrm" class="container-fluid">
             <div class="row">
