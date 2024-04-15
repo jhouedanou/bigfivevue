@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@aceforth/nuxt-optimized-images": "^1.4.0",
     "@nuxt/image": "^1.5.0",
     "@nuxtjs/pwa": "^3.3.5",
     "@types/jquery": "^3.5.29",
