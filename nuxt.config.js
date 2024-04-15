@@ -122,7 +122,7 @@ export default defineNuxtConfig({
     fullTextSearchFields: ["title", "description"], // Optional: Specify fields for full-text search
   },
   router: {
-    routes: [
+    /*     routes: [
       {
         path: "/realisations/:id",
         component: "~/pages/realisations.vue",
@@ -135,7 +135,11 @@ export default defineNuxtConfig({
         path: "/solutions/bigcity",
         redirect: "~/pages/solutions/bigcity.vue",
       },
-    ],
+      {
+        path: "/solutions/bigcrm",
+        redirect: "~/pages/solutions/bigcrm.vue",
+      },
+    ], */
   },
   workbox: {
     // Workbox options
