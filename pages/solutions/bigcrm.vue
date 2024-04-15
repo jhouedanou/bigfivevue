@@ -280,28 +280,28 @@ const matchingSolution = computed(() => {
               <div class="col-md-3">
                 <img
                   loading="lazy"
-                  src="/img/solutions/bigcrm/Groupe 281.svg"
+                  src="/img/solutions/bigcrm/Groupe 281.png"
                   alt
                 />
               </div>
               <div class="col-md-3">
                 <img
                   loading="lazy"
-                  src="/img/solutions/bigcrm/Groupe 280.svg"
+                  src="/img/solutions/bigcrm/Groupe 280.png"
                   alt
                 />
               </div>
               <div class="col-md-3">
                 <img
                   loading="lazy"
-                  src="/img/solutions/bigcrm/Groupe 282.svg"
+                  src="/img/solutions/bigcrm/Groupe 282.png"
                   alt
                 />
               </div>
               <div class="col-md-3">
                 <img
                   loading="lazy"
-                  src="/img/solutions/bigcrm/Groupe 283.svg"
+                  src="/img/solutions/bigcrm/Groupe 283.png"
                   alt
                 />
               </div>
