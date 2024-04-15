@@ -1290,7 +1290,7 @@ onMounted(async () => {
         init: function () {},
       },
     });
-    console.log(swiperContainer2.value);
+    //console.log(swiperContainer2.value);
   } else {
     const { default: Hammer } = await import("hammerjs");
     const { Carousel } = await import("bootstrap");
