@@ -49,16 +49,18 @@
             :style="{
               backgroundImage:
                 windowWidth >= 1024
-                  ? `url(/${matchingSolution.banniere})`
-                  : `url(/${matchingSolution.banniereMobile})`,
+                  ? `url(/img/solutions/bigcity/banner.jpg)`
+                  : `url(/img/solutions/bigcity/homeMobile.jpg)`,
             }"
           >
             <div class="cartouchez">
               <i
                 class="solutionlogo"
-                :style="{ backgroundImage: `url(/${matchingSolution.logo})` }"
+                :style="{ backgroundImage: `url(/img/solutions/bigcity.svg)` }"
               ></i>
-              <h4 v-html="matchingSolution.slogan"></h4>
+              <h4>
+                Fédérez votre audience et faites<br />rayonner votre marque
+              </h4>
               <a id="btnDiscova" @click="scrollToElement">Découvrir</a>
             </div>
           </div>
@@ -69,10 +71,24 @@
             class="dflex justify-content-center align-items-center"
           >
             <div id="pargrapheIntros" v-if="matchingSolution">
-              <div
-                id="introforeal"
-                v-html="matchingSolution.introduction"
-              ></div>
+              <div id="introforeal">
+                <p>
+                  <strong>BIG CITY</strong> est un CMS d’application No Code qui
+                  permet de créer des applications<br />de Brand Content
+                  personnalisées et bien plus encore pour les
+                  <span
+                    >marques, réseaux<br />franchisés, institutions,
+                    collectivités, fédérations, associations…</span
+                  >.
+                </p>
+                <p>
+                  Bien exploité, ce média permet à la marque de fédérer sa
+                  communauté de professionnels<br />au bénéfice de sa communauté
+                  de consommateurs en centralisant toute l’actualité<br />événementielle
+                  de son territoire et en la transformant en levier
+                  d’opportunités.
+                </p>
+              </div>
             </div>
           </div>
         </div>
