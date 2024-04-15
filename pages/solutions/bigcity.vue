@@ -1441,6 +1441,18 @@ onMounted(async () => {
 }
 
 @media screen and (min-width: 1024px) {
+  #galerieimg {
+    height: 100vh;
+    align-items: center;
+    display: flex;
+    .swiper-slide {
+      max-width: 402px !important;
+      max-height: none !important;
+      min-height: 722px !important;
+      display: flex !important;
+      align-items: center !important;
+    }
+  }
   .swiper-wrapper {
     height: 100vh;
   }
