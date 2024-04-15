@@ -64,17 +64,17 @@
               <div class="cartouche">
                 <span>{{ realisation.client }}</span>
                 <h3 v-html="realisation.titre"></h3>
-                <NuxtLink
+                <a
                   v-if="windowWidth >= 1024 && realisation && realisation.lien"
-                  :to="`/realisations/${realisation.lien}`"
+                  :href="`/realisations/${realisation.lien}`"
                   class="btn"
-                  >Voir plus</NuxtLink
+                  >Voir plus</a
                 >
-                <NuxtLink
+                <a
                   v-if="windowWidth < 1024 && realisation && realisation.lien"
-                  :to="`/realisations/${realisation.lien}`"
+                  :href="`/realisations/${realisation.lien}`"
                   class="btn"
-                  >Voir</NuxtLink
+                  >Voir</a
                 >
               </div>
             </div>
