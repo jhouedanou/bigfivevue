@@ -112,15 +112,15 @@ onMounted(async () => {
             v-for="solution in solutions"
             :key="solution.id"
           >
-            <NuxtLink
+            <a
               v-if="solution && solution.lien"
-              :to="`/solutions/${solution.lien}`"
+              :href="`/solutions/${solution.lien}`"
             >
               <i
                 :style="{ backgroundImage: 'url(' + solution.logo + ')' }"
                 alt="logo"
               ></i
-            ></NuxtLink>
+            ></a>
           </li>
         </ul>
       </div>
