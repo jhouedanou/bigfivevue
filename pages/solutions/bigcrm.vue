@@ -4,8 +4,6 @@ import axios from "axios";
 import { useRoute } from "vue-router";
 import ContenuAltLayout from "@/layouts/contenuAlt.vue";
 import PageLoader from "@/components/PageLoader.vue";
-import Swiper from "swiper/bundle";
-import "swiper/css/bundle";
 const solutions = ref([]);
 const menusolutions = ref([]);
 const route = useRoute();
