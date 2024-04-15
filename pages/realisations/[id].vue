@@ -79,26 +79,26 @@
     <div id="projectnavgation">
       <ul>
         <li>
-          <nuxt-link
+          <a
             v-if="matchingRealisation.previousLink"
-            :to="'/realisations/' + matchingRealisation.previousLink"
+            :href="'/realisations/' + matchingRealisation.previousLink"
           >
             projet<br />précédent
-          </nuxt-link>
+          </a>
           <span class="siam" v-else></span>
         </li>
         <li>
-          <nuxt-link to="/realisations">
+          <a href="/realisations">
             <img loading="lazy" src="/img/PATCWORK.svg" alt="" />
-          </nuxt-link>
+          </a>
         </li>
         <li>
-          <nuxt-link
+          <a
             v-if="matchingRealisation.nextLink"
-            :to="'/realisations/' + matchingRealisation.nextLink"
+            :href="'/realisations/' + matchingRealisation.nextLink"
           >
             projet<br />suivant
-          </nuxt-link>
+          </a>
           <span class="siam" v-else></span>
         </li>
       </ul>
